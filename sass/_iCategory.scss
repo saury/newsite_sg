@@ -1,0 +1,60 @@
+//import category icons
+.icons-sprite {
+    background-image: sprite-url($icons-catogory); // 只用使用过图片才会触发图片拼接,所以这两行代码只为这个而存在
+}
+
+.icons-sprite2x {
+    background-image: sprite-url($icons-catogory2x); // 同上
+}
+
+@mixin fnIconSprite($name) {
+    // 传入icon名称
+    // $icons-catogory: 拼接的图片, $name: icon名称
+    width: $icons-catogory-w; // icon宽度
+    height: $icons-catogory-w; // icon高度
+    background-image: sprite-url($icons-catogory); // *引用拼接图片
+    background-position: sprite-position($icons-catogory, $name);
+    background-repeat: no-repeat;
+    //background-size: image-width('icon-category-sdead192e6d.png') image-height('icon-category-sdead192e6d.png'); // *缩放引用的大图至小图的大小
+}
+
+;
+@mixin fnIcon2xSprite($name) {
+    //大图的引用
+    width: $icons-catogory-w;
+    height: $icons-catogory-w;
+    background-image: sprite-url($icons-catogory2x);
+    background-position: sprite-position($icons-catogory, $name); // *引用小图的拼接位置(如果使用小图会出现模糊的情况)
+    background-repeat: no-repeat;
+    background-size: 192px 192px; // 这里需要参照小图大小
+}
+
+;
+.icon-category {
+    width: $icons-catogory-w;
+    height: $icons-catogory-w;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+// .icon-category-1 {
+//     @include fnIconSprite(#{$i});
+// }
+// @media (-webkit-min-device-pixel-ratio: 2) {
+//     .icon-category-1 {
+//         @include fnIcon2xSprite(1);
+//     }
+// }
+@for $i from 1 to 13 {
+  //@debug fnIconSprite($i);
+    .icon-category-#{$i} {
+        @include fnIconSprite($i);
+    }
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min--moz-device-pixel-ratio: 2) {
+        .icon-category-#{$i} {
+            @include fnIcon2xSprite($i);
+        }
+    }
+}

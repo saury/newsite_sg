@@ -1,0 +1,364 @@
+@charset "utf-8";
+// bootstrap scss for carousel and grid
+@import "bootstrap/_carousel.scss",
+"bootstrap/_scaffolding.scss",
+"bootstrap/_modals.scss",
+"bootstrap/_grid.scss";
+//import category icons
+@import "iCategory";
+//custom style 
+.carousel {
+    margin-left: -($grid-gutter-width / 2);
+    margin-right: -($grid-gutter-width / 2);
+    margin-bottom: 15px;
+}
+
+.indexMain {
+    $brandFloor_gray: #f5f5f5;
+    margin-top: 150px;
+    min-width: $min_w;
+    position: relative;
+    // position: absolute;
+    // left: 50%;
+    // margin-left: -595px;
+    //top: 0;
+    //category on the left side of the carousel
+    &-category {
+        width: 234px;
+        height: 460px;
+        padding: 20px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #000;
+        background: rgba(0, 0, 0, .6);
+        z-index: 6;
+        @include box-sizing(border-box);
+        ul {
+            margin: 0;
+            padding: 0;
+            height: 100%
+        }
+        li {
+            list-style: none;
+            height: 9.09%;
+            line-height: 38px;
+            padding: 0 16px;
+            color: #fff;
+            cursor: pointer;
+            word-break: break-all;
+            overflow: hidden;
+            &:hover {
+                background: $btn_color;
+            }
+        }
+    }
+    //detail for the category on the left side
+    &-catDtl{
+        width: 360px;
+        height: 460px;
+        position: absolute;
+        left: 234px;
+        top: 0;
+        background: #fff;
+        color: $gray;
+        //display: none;
+        cursor: default;
+        @include box-shadow(0px 6px 16px rgba(0, 0, 0, 0.8));
+        max-width:0;
+        overflow: hidden;
+        @include transition(max-width .5s);
+        &.active{
+            max-width: 360px;
+        }
+        &-wrap{
+            width:360px;
+            margin: 10px 0;
+        }
+        &-title{
+            position: relative;
+            padding: 0px 12px;
+            border-bottom: 1px solid;
+            h3{
+                display: inline-block;
+                margin:0;
+                font-weight: normal;
+                @include fsize(18);
+                color: $gray;
+                line-height: 20px;
+                vertical-align: bottom;
+            }
+            a{
+                color: $gray-lighte;
+                height: 20px;
+                line-height: 20px;
+                position: absolute;
+                right: 12px;
+                bottom: 0px;
+            }
+        }
+        &-thumb{
+            width: 30px;
+            height: 45px;
+            display: inline-block;
+            vertical-align: bottom;
+            // TODO: this bg-image is just an example,bg sprite need to be done later after get all the thumbs...
+            background-image: image-url("underwear.png");
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        //detail list style
+        ul{
+            line-height: 0;
+            padding: 8px;
+        }
+        li{
+            display: inline-block;
+            color: $gray;
+            height: 20px;
+            line-height: 20px;
+            padding: 0 4px;
+            margin: 4px 0;
+            width: (360px - 2*8px - 2*8px - 50px)/3;
+            border-right: 1px solid $gray;
+            @include ellipsis(true);
+            &:nth-child(4n){
+                border: 0;
+                width: 50px;
+            }
+            &:nth-child(4n+1){
+                color: $btn_color;
+            }
+            &:hover{
+                background: transparent;
+                text-decoration: underline;
+            }
+        }
+    }
+    //1st row
+    .span-6 {
+        width: 234px;
+        float: left;
+        @include hoverGray;
+    }
+    .span-24 {
+        width: 956px;
+        float: right;
+        //padding-left:($grid-gutter-width / 2);
+        ul,
+        li {
+            margin: 0px;
+            padding: 0px;
+        }
+        li {
+            list-style: none;
+            float: right;
+            margin-left: 13px;
+            width: 305px;
+            //956 in all
+            @include hoverGray;
+        }
+    }
+    //brand floor
+    &-brandFloor {
+        position: relative;
+        margin-top: 26px;
+        margin-bottom: 26px;
+        height: 372px;
+        $brandFloor_bg: #3a4346;
+        border-top: 4px solid $brandFloor_bg;
+        border-bottom: 1px solid $brandFloor_bg;
+        @include box-shadow(0 1px lighten($brandFloor_bg, 50%));
+        &:after {
+            content: "";
+            position: absolute;
+            top: -4px;
+            height: 372px;
+            right: 16.666%;
+            margin-right: -1px;
+            bottom: -1px;
+            width: 1px;
+            background: #fff;
+            z-index: 1;
+        }
+        &-title {
+            height: 42px;
+            line-height: 42px;
+            background: $brandFloor_gray;
+            text-align: center;
+            margin: 0 (-$grid-gutter-width / 2);
+            margin-bottom: 4px;
+            border-left: 4px solid $btn_color;
+            cursor: pointer;
+            &:first-child {
+                font-weight: bold;
+                color: #fff;
+                background: $brandFloor_bg;
+                border: 0;
+                cursor: default;
+            }
+        }
+        &-post {
+            margin: 0 (-$grid-gutter-width / 2);
+            height: 275px;
+            cursor: pointer;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-nav {
+            height: 42px;
+            line-height: 42px;
+            background: $brandFloor_gray;
+        }
+        &-list {
+            height: 325px;
+            .col-md-2 {
+                padding: 0;
+                height: 100%;
+            }
+            ul,
+            li {
+                margin: 0px;
+                padding: 0px;
+            }
+            ul {
+                height: 100%;
+            }
+            li {
+                list-style: none;
+                height: 25%;
+                position: relative;
+                z-index: 1;
+                @include hoverGray;
+            }
+        }
+    }
+    // color floors
+    &-floor {
+        position: relative;
+        margin-bottom: 26px;
+        &-title,
+        &-countDown,
+        &-titleBar,
+        &-nav li {
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            margin: 0 (-$grid-gutter-width / 2);
+            margin-bottom: 4px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        &-titleBar {
+            text-align: left;
+            background: $brandFloor_gray !important;
+            padding-left: 45px;
+            color: $gray-light;
+            position: relative;
+            .floor-series {
+                position: absolute;
+                width: 42px;
+                height: 42px;
+                display: inline-block;
+                @include border-radius(50%);
+                background: $brandFloor_gray;
+                @include fsize(21);
+                left: -21px;
+                top: 0;
+                text-align: center;
+            }
+        }
+        &-elevator {
+            float: right;
+            padding: 0 15px;
+            @include fsize(17);
+            .glyphicon-flash {
+                width: 26px;
+                height: 26px;
+                line-height: 26px;
+                border: 1px solid $gray-light;
+                @include border-radius(50%);
+                text-align: center;
+                margin: 0 5px;
+            }
+            .glyphicon-chevron-down,
+            .glyphicon-chevron-up {
+                cursor: pointer;
+                @include transition(all .2s linear);
+                &:hover {
+                    color: $btn_color;
+                }
+            }
+        }
+        &-countDown {
+            height: 32px;
+            line-height: 32px;
+            text-align: left;
+            padding: 0 14px;
+            &.active {
+                margin-bottom: 0;
+            }
+        }
+        &-nav {
+            margin: 0px;
+            padding: 0px;
+            margin: 0 (-$grid-gutter-width / 2);
+            min-height: (310*2+8*2-32*2-4px);
+            li {
+                text-align: left;
+                padding: 0 14px;
+                list-style: none;
+                margin: 0;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+        }
+        &-item {
+            $txt-padding: 0 12px;
+            .col-md-3 {
+                padding: 0 0 8px 8px;
+            }
+            &-wrap {
+                border: 1px solid $brandFloor_gray;
+                cursor: pointer;
+                height: 310px;
+                @include hoverGray;
+            }
+            p {
+                height: 36px;
+                line-height: 36px;
+                margin: 0;
+                @include fsize(19);
+                font-weight: bold;
+                color: $brand-danger;
+                padding: $txt-padding;
+            }
+            em {
+                margin-left: 4px;
+                text-decoration: line-through;
+                font-style: normal;
+                @include fsize(11.2);
+                color: $gray-lighte;
+            }
+            span {
+                padding: $txt-padding;
+                color: $gray;
+            }
+        }
+    }
+}
+
+//colors
+.floor-purple {
+    $floor_purple_bg: #9a3585;
+    $floor_purple_bg_lite: #c360a0;
+    @include floorColor($floor_purple_bg,$floor_purple_bg_lite);
+}
+.floor-red {
+    $floor_red_bg: #ff649d;
+    $floor_red_bg_lite: #fe98bf;
+    @include floorColor($floor_red_bg,$floor_red_bg_lite);
+}

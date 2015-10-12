@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>New site</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!--[if lt IE 9]> 
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <script src="js/bootstrap/H5F.js"></script>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!-- 
+    	Notes:
+		h5f: html5 form validator
+		selectivizr: css3 psuedo selector
+     -->
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <!-- header top bar start-->
+        <nav class="navbar navbar-narrow">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!-- navs float right -->
+                    <ul class="nav navbar-nav">
+                        <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-map-marker"></i>Receiving countries:<i class="litb-icon-flag us"></i>United States<span class="caret"></span></a>
+                            <ul class="dropdown-menu country-list">
+                                <li class="country-list-search">
+                                    <div>
+                                        <i class="glyphicon glyphicon-search"></i>
+                                        <input type="text" name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);">
+                                    </div>
+                                </li>
+                                <li><a ctr="{'change_to_country':'us'}" href="javascript:void(0);"><i class="litb-icon-flag us"></i><span class="english" data-abbr="us">United States</span></a></li>
+                                <li><a ctr="{'change_to_country':'au'}" href="javascript:void(0);"><i class="litb-icon-flag au"></i><span class="english" data-abbr="au">Australia</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="glyphicon glyphicon-user"></i>My account</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#myLogin" data-active="log"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myLogin" data-active="reg"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- header top bar end-->
+        <!-- 2nd header bar start-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!-- icon button for mobile platform -->
+                    <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> -->
+                    <a class="navbar-brand" href="#top">
+                        <img alt="logo" src="img/logo.png">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <!-- navs float right -->
+                    <ul class="nav navbar-nav navbar-right navbar-search">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Costumes</a></li>
+                        <li><a href="#">Cosmetics</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <!-- <li class="dropdown navbar-search-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Product</span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Product</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </li> -->
+                        <form class="navbar-form navbar-left navbar-search-form" role="search">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search for products or links">
+                            </div>
+                            <button type="submit" class="btn navbar-search-btn"><i class="glyphicon glyphicon-search"></i></button>
+                        </form>
+                        <li>
+                            <a class="active" href="#" data-toggle="popover" title="Recently Added:">
+                                <!-- <li class="dropdown">
+                            <a class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"> -->
+                                <span class="badge">4</span><i class="glyphicon glyphicon-shopping-cart"></i><span>shopping cart</span>
+                            </a>
+                            <!-- <ul class="dropdown-menu">
+                                <li>123</li>
+                            </ul> -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+                <!-- recommend area -->
+                <!-- <div class="navbar_recommend cf">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>Popular searches:</li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </div> -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- 2nd header bar end-->
+    </header>
+    <!-- header end -->
+    <div class="container indexMain">
+        <!-- indexMain category start-->
+        <div class="indexMain-category">
+            <ul>
+                <!-- <li><i class="icon-category icon-category-1"></i>Buy of China</li> -->
+                <li>
+                    <i class="icon-category icon-category-2"></i>Women Cloth/Underwear
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-3"></i>Men Cloth/Gym suit
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-4"></i>Shoes/Bags
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-5"></i>Cosmetics/Personal protect
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-6"></i>Mobl-phone/Digital/Office
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-7"></i>Maternal and infant toys
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-8"></i>Electrical appliances
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-9"></i>Watch/Jewelry/Glasses
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-10"></i>Car-accessory
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-11"></i>Medicine
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="icon-category icon-category-12"></i>Kitchen utensils/Pet
+                    <div class="indexMain-catDtl">
+                        <div class="indexMain-catDtl-wrap">
+                            <div class="indexMain-catDtl-title">
+                            	<div class="indexMain-catDtl-thumb"></div>
+                            	<h3>Woman cloth</h3>
+                            	<a href="#" class="flr">More >></a>
+                            </div>
+                            <ul>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Woman cloth</li>
+                                <li>Dress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- indexMain category end-->
+        <!-- carousel start -->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <!-- img size:1190 460 -->
+                    <img width="1190" style="height:460px;" src="img/banner1.jpg" data-holder-rendered="true">
+                    <!-- <div class="carousel-caption">
+                </div> -->
+                </div>
+                <div class="item">
+                    <img width="1190" style="height:460px;" src="img/banner2.jpg" data-holder-rendered="true">
+                    <!-- <div class="carousel-caption">
+                </div> -->
+                </div>
+                <div class="item">
+                    <img width="1190" style="height:460px;" src="img/banner3.jpg" data-holder-rendered="true">
+                    <!-- <div class="carousel-caption">
+                </div> -->
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <!-- <span class="sr-only">Previous</span> -->
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <!-- <span class="sr-only">Next</span> -->
+            </a>
+        </div>
+        <!-- carousel end -->
+        <!-- 1st row start -->
+        <div class="row">
+            <div class="span-6">
+                <a href="#"><img class="img-responsive" src="img/ad-row1/ad1-1.jpg" style="width:234px;height:165px;"></a>
+            </div>
+            <!-- img size:234 165 -->
+            <div class="span-24">
+                <ul>
+                    <!-- img size:305 165 -->
+                    <li>
+                        <a href="#"><img class="img-responsive" src="img/ad-row1/ad1-3.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="img-responsive" src="img/ad-row1/ad1-3.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="img-responsive" src="img/ad-row1/ad1-3.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 1st row end -->
+        <!-- brands floor start -->
+        <div class="row indexMain-brandFloor">
+            <div class="col-md-2">
+                <div class="indexMain-brandFloor-title">BRAND CENTRAL</div>
+                <div class="indexMain-brandFloor-title" data-href="#">ZARA</div>
+                <div class="indexMain-brandFloor-post" data-href="#"><img src="img/brand_post.jpg" alt=""></div>
+                <!-- img size:198 275 -->
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <nav class="indexMain-brandFloor-nav"></nav>
+                </div>
+                <!-- list table -->
+                <div class="row indexMain-brandFloor-list">
+                    <div class="col-md-2">
+                        <ul>
+                            <!-- img size:132 81 -->
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/brand_item.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="indexMain-brandFloor-title">BRAND CENTRAL</div>
+                <div class="indexMain-brandFloor-title" data-href="#">ZARA</div>
+                <div class="indexMain-brandFloor-post"><img src="img/brand_post.jpg" alt=""></div>
+            </div>
+        </div>
+        <!-- brands floor end -->
+        <!-- color floors start -->
+        <!-- #1 floor start -->
+        <div class="row indexMain-floor floor-purple" id="floor_1">
+            <div class="col-md-2">
+                <div class="indexMain-floor-title">FLOOR</div>
+                <div class="indexMain-floor-countDown active">timed discount</div>
+                <div class="indexMain-floor-countDown">6days 23:21:20</div>
+                <ul class="indexMain-floor-nav">
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <div class="indexMain-floor-titleBar">
+                    <span class="floor-series">1</span>
+                    <span>Fashion Ladies</span>
+                    <span class="indexMain-floor-elevator">
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <i class="glyphicon glyphicon-flash"></i>
+                        <i class="glyphicon glyphicon-chevron-up"></i>
+                    </span>
+                </div>
+                <div class="row indexMain-floor-item">
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #1 floor end -->
+        <!-- #2 floor start -->
+        <div class="row indexMain-floor floor-red" id="floor_2">
+            <div class="col-md-2">
+                <div class="indexMain-floor-title">FLOOR</div>
+                <div class="indexMain-floor-countDown active">timed discount</div>
+                <div class="indexMain-floor-countDown">6days 23:21:20</div>
+                <ul class="indexMain-floor-nav">
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                    <li>mockup</li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <div class="indexMain-floor-titleBar">
+                    <span class="floor-series">2</span>
+                    <span>Fashion Ladies</span>
+                    <span class="indexMain-floor-elevator">
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <i class="glyphicon glyphicon-flash"></i>
+                        <i class="glyphicon glyphicon-chevron-up"></i>
+                    </span>
+                </div>
+                <div class="row indexMain-floor-item">
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="indexMain-floor-item-wrap">
+                            <img src="img/floor-item.jpg" class="img-responsive" alt="">
+                            <p>$99.00<em>$99.00</em></p>
+                            <span>Cosmetics/Personal protect</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #2 floor end -->
+        <!-- color floors end -->
+    </div>
+    <!-- footer start -->
+    <footer></footer>
+    <!-- footer end -->
+    <!-- Login Modal srart-->
+    <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myLoginLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Sign in</a></li>
+                    <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
+                </ul>
+                <form class="tab-content form-horizontal" data-toggle="validator">
+                    <input type="reset" name="reset" hidden/>
+                    <div role="tabpanel" class="tab-pane active" id="login">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="account" class="col-sm-4 control-label">Account:</label>
+                                <div class="col-sm-7">
+                                    <input type="email" class="form-control" id="account" placeholder="E-mail / phone / name ">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd" class="col-sm-4 control-label">Password:</label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="pwd" placeholder="">
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="reward" class="col-sm-4 control-label">Rewards code:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="reward" placeholder="">
+                                </div>
+                            </div> -->
+                            <div class="form-group">
+                                <label for="forget" class="col-sm-4 control-label"></label>
+                                <div class="col-sm-7">
+                                    <a class="modal-tip high-lighted" href="#">Forget the password?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-xlg">Sign in</button>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="register">
+                        <div class="modal-body">
+                            <div class="form-group has-feedback">
+                                <label for="email" class="col-sm-4 control-label">E-mail:</label>
+                                <div class="col-sm-7">
+                                    <input type="email" class="form-control" id="email" placeholder="Please enter your E-mail address" data-error="Bruh, that email address is invalid" required>
+                                    <!-- data-remote="/path/to/remote/validator" to make an AJAX request to determine if the field is valid or not. -->
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="mobile" class="col-sm-4 control-label">Mobile:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="mobile" placeholder="Please enter your mobile number" data-error="Mobile number shouldn't be blank" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="pwd-reg" class="col-sm-4 control-label">Password:</label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="pwd-reg" placeholder="" data-minlength="6" data-error="Minimum of 6 characters" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="pwd-reg2" class="col-sm-4 control-label">Confirm:</label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="pwd-reg2" data-match="#pwd-reg" data-error="Confirm your password" data-match-error="Whoops, these don't match" placeholder="" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <span class="help-block with-errors"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reward-reg" class="col-sm-4 control-label">Rewards code:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="reward-reg" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="check1" class="col-sm-4 control-label"></label>
+                                <div class="col-sm-7">
+                                    <div class="zm-checkbox">
+                                        <input type="checkbox" data-error="Check to process" name="check1" required>
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                    </div>
+                                    <div class="modal-tip flr">I have read and accepted the <a href="#" target="_blank" class="high-lighted">&lt;User Registration Agreement&gt;</a></div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-xlg">Regist Now</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-body">
+                    <div class="modal-success">
+                        <h3>Registered Success</h3>
+                        <a href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal end-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap/transition.js"></script>
+    <script src="js/bootstrap/dropdown.js"></script>
+    <script src="js/bootstrap/modal.js"></script>
+    <script src="js/bootstrap/carousel.js"></script><!-- index only -->
+    <script src="js/bootstrap/tooltip.js"></script>
+    <script src="js/bootstrap/popover.js"></script>
+    <script src="js/bootstrap/tab.js"></script>
+    <script src="js/bootstrap/validator.js"></script>
+    <script>
+    $(function() {
+        //zmall modual init
+        var zmModual = (function() {
+            //checkbox toggle
+            $(".zm-checkbox").click(function() {
+                $(this).children("i").toggle();
+            });
+            //active the login or register tab
+            function logOrReg(opt) {
+                // body...
+                switch (opt) {
+                    case "log":
+                        $("#myLogin .nav-tabs li").eq(0).children("a").trigger("click");
+                        break;
+                    default:
+                        $("#myLogin .nav-tabs li").eq(1).children("a").trigger("click");
+                }
+            };
+
+            // function for setting the html template of the cart details
+            function setCartContent(item, overflow) {
+                //hide the "Still have xx more products" when the num is 0
+                if (overflow) var _overflowStr = '<div><p><strong>Still have ' + overflow + ' more products</strong></p></div>';
+                else _overflowStr = '';
+                //return the whole cart list string
+                return '<ul>' +
+                    '<li>' + item + '</li>' +
+                    '</ul>' +
+                    _overflowStr +
+                    '<button href="#">Checking my cart</button>';
+            };
+
+            //function for the floor jumping
+            function scrollToPosition(dom) {
+                $("html, body").animate({
+                    scrollTop: dom.offset().top - 80 + "px"
+                }, {
+                    duration: 300,
+                    easing: "swing"
+                });
+                return false;
+            };
+
+            //return all the functions
+            return {
+                setCartCnt: setCartContent,
+                scroll: scrollToPosition,
+                login: logOrReg
+            };
+        })();
+        // bootstrap dropdown
+        $('.dropdown-toggle').dropdown();
+        // bootstrap carousel
+        $('.carousel').carousel();
+        // bootstrap popover
+        $('[data-toggle="popover"]').each(function() {
+            var element = $(this);
+            var tiktak = function() {};
+            var item = "aaa"; //商品内容
+            var overflow = 3; //超出商品显示限制条数
+            element.popover({
+                trigger: 'manual',
+                placement: 'bottom',
+                html: 'true',
+                content: zmModual.setCartCnt(item, overflow),
+            }).on("mouseenter", function() {
+                clearTimeout(tiktak);
+                element.popover("show");
+                element.siblings(".popover").on("mouseleave", function() {
+                    element.popover('hide');
+                });
+            }).on("mouseleave", function() {
+                tiktak = setTimeout(function() {
+                    if (!$(".popover:hover").length) {
+                        element.popover("hide")
+                    }
+                }, 2000);
+            });
+        });
+        //reset all the form value
+        $("input[type=reset]").trigger("click");
+        // init the href
+        $("*").click(function() {
+            var linkHref = $(this).attr("data-href");
+            if (linkHref) window.location.href = linkHref; //window.open(linkHref);
+        });
+        //nav scroll watch  
+        $(window).scroll(function() {
+            //hide the part of the nav when scrolled height > 120px
+            if ($(document).scrollTop() > 120) {
+                $("header").addClass("hide");
+            } else {
+                //recover  
+                $("header").removeClass("hide");
+            }
+        });
+        //click to active the login or register tab
+        $('[data-target="#myLogin"]').each(function() {
+            var element = $(this);
+            var opt = element.attr("data-active");
+            element.on("click", function() {
+                zmModual.login(opt)
+            });
+        });
+        //hover to show the category detail in banner left side
+        $(".indexMain-category li").each(function() {
+            var element = $(this);
+            var tiktak = function() {};
+            element.on("mouseenter", function() {
+                tiktak = setTimeout(function() {
+                    element.children(".indexMain-catDtl").addClass("active");
+                }, 500)
+            }).on("mouseleave", function() {
+                clearTimeout(tiktak);
+                element.children(".indexMain-catDtl").removeClass("active");
+            });
+        });
+        //floor jump
+        //go down
+        $(".glyphicon-chevron-down").click(function() {
+            var index = $(".glyphicon-chevron-down").index(this) + 1;
+            var dom = $("#floor_" + (index + 1));
+            //to bottom if it's the last icon-down
+            if (index == $(".glyphicon-chevron-down").length) {
+                dom = $("footer");
+            }
+            zmModual.scroll(dom);
+        });
+        //go up
+        $(".glyphicon-chevron-up").click(function() {
+            var index = $(".glyphicon-chevron-up").index(this);
+            var dom = $("#floor_" + (index));
+            //back to top if it's the 1st icon-up
+            if (index == 0) {
+                dom = $("html");
+            }
+            zmModual.scroll(dom);
+        });
+    });
+    </script>
+    <!--[if lt IE 9]> 
+    <script>
+    	//html5 form validator for browser lower than ie9
+		H5F.setup($('form[data-toggle="validator"]'));
+    </script>
+    <![endif]-->
+</body>
+
+</html>

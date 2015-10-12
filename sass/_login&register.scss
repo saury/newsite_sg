@@ -1,0 +1,120 @@
+#myLogin {
+    .modal {
+        &-content{
+            //remove the border radius and add the border to the login modal
+            border-radius: 0;
+            border: $loginMod-bw solid rgba(255,255,255,0.3);
+        }
+        &-header{
+            padding:0;
+            background: $header-bg;
+            line-height: $header-h;
+            padding: 0 12px;
+        }
+        &-brand {
+            height: $header-h;
+            display: inline-block;
+            img {
+                max-height: 70%;
+                width: auto;
+            }
+        }
+        &-footer{
+            text-align: center;
+        }
+        &-tip{
+            @include fsize(16);
+            color: $gray-light;
+            &.flr{
+                display: inline-block;
+                width: 90%;
+            }
+            &.high-lighted,
+            .high-lighted{
+                color: $btn_color;
+            }
+        }
+        &-success{
+            display: none;
+            height: ($modal-md - $header-h - 2*$loginMod-bw - 2*$modal-inner-padding);
+            background: image-url("reg_success.jpg") no-repeat center 100px;
+            padding-top: 280px;
+            text-align: center;
+            h3{
+                @include fsize(40);
+                color: $btn_color;
+                font-weight: normal;
+                word-spacing: -5px;
+            }
+            a{
+                @include fsize(26);
+                color: #fff;
+                background: $gray-lightee;
+                padding: 10px 50px;
+            }
+        }
+    }
+    .nav-tabs{
+        margin-top: 2px;
+        >li{
+            @include fsize(24);
+            width: 50%;
+            text-align: center;
+            background: $gray-lighter;
+            a{
+                color: $gray-darker;
+                @include border-radius(0);
+                border: 0;
+            }
+            &.active a{
+                color: #fff;
+                background: $btn_color;
+            }
+        }
+    }
+    .form-group{
+        //margin-bottom: 30px;
+        &:first-child{
+            margin-top: 30px;
+        }
+    }
+    .control-label{
+        @include fsize(20);
+        font-weight: normal;
+        padding-top: 12px;
+        color: $gray-light;
+    }
+    .form-control{
+        height: 44px;
+        @include fsize(18);
+        @include placeholder($gray-lighter);
+        @include border-radius(0);
+    }
+    .form-control-feedback{
+        line-height: 44px;
+    }
+    .close{
+        //close button
+        float: right;
+        height: $close-w;
+        width: $close-w;
+        line-height: $close-w;
+        margin: ($header-h - $close-w)/2 0;
+        @include fsize(22);
+        border: 0;
+        color: #fff;
+        background: $gray-light;
+        @include border-radius(50%);
+        i{
+            top: unset;
+            line-height: inherit;
+        }
+    }
+    .list-unstyled{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+        }
+    }
+}
