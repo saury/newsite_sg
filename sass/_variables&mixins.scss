@@ -19,6 +19,10 @@ $loginMod-bw: 14px; //border width
 $header-bg: #242424;
 $header-h: 55px;
 $close-w:34px;
+//brands page
+//brands color for 12 floors
+$brands-color: #993585,#ff649d,#f02681,#f135cc,#12a3dc,#5f7cd0,#3036a4,#154484,#3989da,#209e55,#ecbc13,#f97a09;
+$brands-item-padding: 6px;
 ///* mixins */
 //font-size px and rem
 @mixin fsize($fs) {
@@ -52,6 +56,7 @@ $close-w:34px;
     }
 }
 
+// index page floor's variety color
 @mixin floorColor($floor_bg, $floor_bg_lite) {
     border-top: 4px solid $floor_bg;
     border-bottom: 1px solid $floor_bg;
@@ -82,6 +87,27 @@ $close-w:34px;
                 &:first-child {
                     background: $floor_bg_lite;
                 }
+            }
+        }
+    }
+}
+
+// brand floors variety color
+@mixin brandColor($brand_bg){
+    .brandMain {
+        &-floor {
+            &-titleBar{
+                background: $brand_bg;
+            }
+        }
+    }
+    #brandNav {
+        li {
+            &.active a{
+                background: $brand_bg;
+            }
+            &:hover a{
+                background: $brand_bg;
             }
         }
     }

@@ -533,13 +533,13 @@
                 <ul>
                     <!-- img size:305 165 -->
                     <li>
-                        <a href="#"><img class="img-responsive" src="img/ad-row1/ad1-3.jpg"></a>
+                        <a href="#"><img class="img-responsive" src="img/ad-row1/ad1-2.jpg"></a>
                     </li>
                     <li>
                         <a href="#"><img class="img-responsive" src="img/ad-row1/ad1-3.jpg"></a>
                     </li>
                     <li>
-                        <a href="#"><img class="img-responsive" src="img/ad-row1/ad1-3.jpg"></a>
+                        <a href="#"><img class="img-responsive" src="img/ad-row1/ad1-4.jpg"></a>
                     </li>
                 </ul>
             </div>
@@ -976,19 +976,25 @@
     <script src="js/bootstrap/transition.js"></script>
     <script src="js/bootstrap/dropdown.js"></script>
     <script src="js/bootstrap/modal.js"></script>
-    <script src="js/bootstrap/carousel.js"></script><!-- index only -->
+    <script src="js/bootstrap/carousel.js"></script>
+    <!-- index only -->
     <script src="js/bootstrap/tooltip.js"></script>
     <script src="js/bootstrap/popover.js"></script>
     <script src="js/bootstrap/tab.js"></script>
     <script src="js/bootstrap/validator.js"></script>
+    <script src="js/bootstrap/scrollspy.js"></script>
+    <!-- brand page only -->
     <script>
     $(function() {
         //zmall modual init
         var zmModual = (function() {
+            var navOffset = 80;
             //checkbox toggle
             $(".zm-checkbox").click(function() {
                 $(this).children("i").toggle();
             });
+            //scrollspy for brands page
+            $('.zmBrandsPage').scrollspy({ target: '#brandNav', offset: navOffset+1})
             //active the login or register tab
             function logOrReg(opt) {
                 // body...
@@ -1017,7 +1023,7 @@
             //function for the floor jumping
             function scrollToPosition(dom) {
                 $("html, body").animate({
-                    scrollTop: dom.offset().top - 80 + "px"
+                    scrollTop: dom.offset().top - navOffset + "px"
                 }, {
                     duration: 300,
                     easing: "swing"
@@ -1027,6 +1033,7 @@
 
             //return all the functions
             return {
+                navOffset: navOffset,
                 setCartCnt: setCartContent,
                 scroll: scrollToPosition,
                 login: logOrReg
@@ -1070,8 +1077,8 @@
         });
         //nav scroll watch  
         $(window).scroll(function() {
-            //hide the part of the nav when scrolled height > 120px
-            if ($(document).scrollTop() > 120) {
+            //hide the part of the nav when scrolled height > 80px
+            if ($(document).scrollTop() > zmModual.navOffset) {
                 $("header").addClass("hide");
             } else {
                 //recover  
@@ -1120,12 +1127,21 @@
             }
             zmModual.scroll(dom);
         });
+        //brands floor nav - click jump
+        $("#brandNav a").each(function(){
+            var element = $(this);
+            var dom = element.attr("href");
+            console.log(dom);
+            element.click(function(){
+                zmModual.scroll($(dom));
+            })
+        });
     });
     </script>
     <!--[if lt IE 9]> 
     <script>
-    	//html5 form validator for browser lower than ie9
-		H5F.setup($('form[data-toggle="validator"]'));
+        //html5 form validator for browser lower than ie9
+        H5F.setup($('form[data-toggle="validator"]'));
     </script>
     <![endif]-->
 </body>

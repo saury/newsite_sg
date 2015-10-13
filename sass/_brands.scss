@@ -17,28 +17,78 @@
         position: relative;
         z-index: 2;
     }
+    //floors
+    &-floor {
+        margin-top: 40px;
+        >div {
+            float: right;
+        }
+        &-titleBar {
+            padding-left: 15px;
+            color: #fff;
+        }
+    }
+    .pure-g {
+        margin: 0 (-$grid-gutter-width / 2 - $brands-item-padding);
+    }
+    .pure-u-1-5 {
+        padding: $brands-item-padding;
+    }
+    //item auto height
+    .indexMain-floor-item-wrap {
+        height: auto;
+        background: #fff;
+        border: 0;
+    }
+    // elevator icon border
+    .glyphicon-flash {
+        border-color: #fff;
+    }
+    //logo part
+    .brands-logo {
+        text-align: center;
+        width: 90px;
+        height: 45px + 2*8px;
+        margin: 0 auto;
+        padding: 8px 0;
+        img {
+            max-height: 100%;
+            width: auto;
+        }
+    }
 }
 
 // left nav part
 #brandNav {
-    width: 150px;
+    width: 160px;
     position: fixed;
     margin-left: -($grid-gutter-width / 2);
     top: 50%;
     margin-top: -150px;
     li {
-    	// TODO variety colors
-    	@include transition(all 0.2s linear);
-    	&.active {
-                background: #ccc;
+        @include transition(all 0.2s linear);
+        // loop all the brands color for nav title
+        @for $i from 1 through length($brands-color) {
+            &.active a[href="#floor_#{$i}"] {
+                background: nth($brands-color, $i);
             }
-        &:hover {
-            background: #ccc;
+            &:hover a[href="#floor_#{$i}"] {
+                background: nth($brands-color, $i);
+            }
         }
         a {
             @include border-radius(0);
             padding: 5px 10px;
             color: #fff;
+        }
+    }
+}
+
+//loop all the brands color for right side's title
+@for $i from 1 through length($brands-color) {
+    #floor_#{$i} {
+        .brandMain-floor-titleBar {
+            background: nth($brands-color, $i) !important;
         }
     }
 }
