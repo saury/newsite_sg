@@ -16,7 +16,14 @@
 
 //import brands page main body
 @import "brands";
+//import brands' branch page body
+@import "bootstrap/pagination";
+@import "brands_branch";
 
+//import bootstrap sass for item details page
+@import "bootstrap/button-groups",
+"bootstrap/input-groups",
+"bootstrap/panels";
 //import item detals
 @import "detail";
 

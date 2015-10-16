@@ -45,7 +45,7 @@
         border-color: #fff;
     }
     //logo part
-    .brands-logo {
+    @at-root .brands-logo {
         text-align: center;
         width: 90px;
         height: 45px + 2*8px;
