@@ -3,7 +3,7 @@
  * ========================================================================
  * The MIT License (MIT)
  *
- * Copyright (c) 2015 Cina Saffary.
+ * Copyright (c) 2015 Cina Saffar
  * Made by @1000hz in the style of Bootstrap 3 era @fat
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -133,9 +133,20 @@
     $el.data('bs.validator.deferred') && $el.data('bs.validator.deferred').reject()
     $el.data('bs.validator.deferred', deferred)
 
+// add for multi validator
+    function getNativeKey(el) {
+      var key = '';
+      if(el.validity.patternMismatch) key = 'pattern-';
+      if(el.validity.tooShort) key = 'minlength-';
+      if(el.validity.tooLong) key = 'maxlength-';
+      return key;
+    }
+// add for multi validator
+
     function getErrorMessage(key) {
       return $el.data(key + '-error')
-        || $el.data('error')
+        //|| $el.data('error')
+        || $el.data(getNativeKey($el[0]) + 'error')// add for multi validator
         || key == 'native' && $el[0].validationMessage
         || options.errors[key]
     }

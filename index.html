@@ -26,7 +26,7 @@
         <!-- header top bar start-->
         <nav class="navbar navbar-narrow">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse">
                     <!-- navs float right -->
                     <ul class="nav navbar-nav">
                         <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
@@ -984,6 +984,10 @@
     <script src="js/bootstrap/validator.js"></script>
     <script src="js/bootstrap/scrollspy.js"></script>
     <!-- brand page only -->
+    <script src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/gallary-carousels.js"></script>
+    <script src="js/bootstrap/button.js"></script>
+    <!-- item detail gallary -->
     <script>
     $(function() {
         //zmall modual init
@@ -994,8 +998,11 @@
                 $(this).children("i").toggle();
             });
             //scrollspy for brands page
-            $('.zmBrandsPage').scrollspy({ target: '#brandNav', offset: navOffset+1})
-            //active the login or register tab
+            $('.zmBrandsPage').scrollspy({
+                    target: '#brandNav',
+                    offset: navOffset + 1
+                })
+                //active the login or register tab
             function logOrReg(opt) {
                 // body...
                 switch (opt) {
@@ -1128,13 +1135,33 @@
             zmModual.scroll(dom);
         });
         //brands floor nav - click jump
-        $("#brandNav a").each(function(){
+        $("#brandNav a").each(function() {
             var element = $(this);
             var dom = element.attr("href");
-            console.log(dom);
-            element.click(function(){
+            element.click(function() {
                 zmModual.scroll($(dom));
+                return false; //prevent default anchor jumping
             })
+        });
+        //item detail gallary (optional)
+        $('.carousel-stage').jcarousel({
+            // Configuration goes here
+        }).on('jcarousel:targetin', 'li', function(event, carousel) {
+            // lazyload
+            var element = $(this).find("img");
+            var src_cur = element.attr("ssrc");
+            element.attr("src", src_cur);
+        });
+        //active toggle
+        $('[active-toggle="true"]').each(function() {
+            var ul_ele = $(this);
+            ul_ele.children("li").each(function() {
+                var li_ele = $(this);
+                li_ele.on("click", function() {
+                    li_ele.toggleClass("active");
+                    li_ele.find("i").toggleClass("glyphicon-ok");
+                });
+            });
         });
     });
     </script>

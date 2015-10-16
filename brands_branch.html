@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>New site</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!--[if lt IE 9]> 
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <script src="js/bootstrap/H5F.js"></script>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!-- 
+        Notes:
+        h5f: html5 form validator
+        selectivizr: css3 psuedo selector
+     -->
+</head>
+
+<body class="zmBrandsPage">
+    <!-- header start -->
+    <header>
+        <!-- header top bar start-->
+        <nav class="navbar navbar-narrow">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <!-- navs float right -->
+                    <ul class="nav navbar-nav">
+                        <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-map-marker"></i>Receiving countries:<i class="litb-icon-flag us"></i>United States<span class="caret"></span></a>
+                            <ul class="dropdown-menu country-list">
+                                <li class="country-list-search">
+                                    <div>
+                                        <i class="glyphicon glyphicon-search"></i>
+                                        <input type="text" name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);">
+                                    </div>
+                                </li>
+                                <li><a ctr="{'change_to_country':'us'}" href="javascript:void(0);"><i class="litb-icon-flag us"></i><span class="english" data-abbr="us">United States</span></a></li>
+                                <li><a ctr="{'change_to_country':'au'}" href="javascript:void(0);"><i class="litb-icon-flag au"></i><span class="english" data-abbr="au">Australia</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="glyphicon glyphicon-user"></i>My account</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#myLogin" data-active="log"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myLogin" data-active="reg"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- header top bar end-->
+        <!-- 2nd header bar start-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#top">
+                        <img alt="logo" src="img/logo.png">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <!-- navs float right -->
+                    <ul class="nav navbar-nav navbar-right navbar-search">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Costumes</a></li>
+                        <li><a href="#">Cosmetics</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <form class="navbar-form navbar-left navbar-search-form" role="search">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search for products or links">
+                            </div>
+                            <button type="submit" class="btn navbar-search-btn"><i class="glyphicon glyphicon-search"></i></button>
+                        </form>
+                        <li>
+                            <a class="active" href="#" data-toggle="popover" title="Recently Added:">
+                                <span class="badge">4</span><i class="glyphicon glyphicon-shopping-cart"></i><span>shopping cart</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+                <!-- recommend area -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- 2nd header bar end-->
+    </header>
+    <!-- header end -->
+    <!-- brands' branch start -->
+
+    <!-- brands' branch end -->
+    <!-- footer start -->
+    <footer></footer>
+    <!-- footer end -->
+    <!-- Login Modal srart-->
+    <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myLoginLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Sign in</a></li>
+                    <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
+                </ul>
+                <form class="tab-content form-horizontal" data-toggle="validator">
+                    <input type="reset" name="reset" hidden/>
+                    <div role="tabpanel" class="tab-pane active" id="login">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="account" class="col-sm-4 control-label">Account:</label>
+                                <div class="col-sm-7">
+                                    <input type="email" class="form-control" id="account" placeholder="E-mail / phone / name ">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd" class="col-sm-4 control-label">Password:</label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="pwd" placeholder="">
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="reward" class="col-sm-4 control-label">Rewards code:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="reward" placeholder="">
+                                </div>
+                            </div> -->
+                            <div class="form-group">
+                                <label for="forget" class="col-sm-4 control-label"></label>
+                                <div class="col-sm-7">
+                                    <a class="modal-tip high-lighted" href="#">Forget the password?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-xlg">Sign in</button>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="register">
+                        <div class="modal-body">
+                            <div class="form-group has-feedback">
+                                <label for="email" class="col-sm-4 control-label">E-mail:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="email" placeholder="Please enter your E-mail address" data-error="Email shouldn't be blank" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" data-pattern-error="Bruh, that email address is invalid" data-minlength="6" data-minlength-error="Minimum of 6 characters" required>
+                                    <!-- data-remote="/path/to/remote/validator" to make an AJAX request to determine if the field is valid or not. -->
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="mobile" class="col-sm-4 control-label">Mobile:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="mobile" placeholder="Please enter your mobile number" data-error="Mobile number shouldn't be blank" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="pwd-reg" class="col-sm-4 control-label">Password:</label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="pwd-reg" placeholder="" data-minlength="6" data-error="Minimum of 6 characters" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="pwd-reg2" class="col-sm-4 control-label">Confirm:</label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="pwd-reg2" data-match="#pwd-reg" data-error="Confirm your password" data-match-error="Whoops, these don't match" placeholder="" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <span class="help-block with-errors"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reward-reg" class="col-sm-4 control-label">Rewards code:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="reward-reg" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="check1" class="col-sm-4 control-label"></label>
+                                <div class="col-sm-7">
+                                    <div class="zm-checkbox">
+                                        <input type="checkbox" data-error="Check to process" name="check1" required>
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                    </div>
+                                    <div class="modal-tip flr">I have read and accepted the <a href="#" target="_blank" class="high-lighted">&lt;User Registration Agreement&gt;</a></div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-xlg">Regist Now</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-body">
+                    <div class="modal-success">
+                        <h3>Registered Success</h3>
+                        <a href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal end-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap/transition.js"></script>
+    <script src="js/bootstrap/dropdown.js"></script>
+    <script src="js/bootstrap/modal.js"></script>
+    <script src="js/bootstrap/carousel.js"></script>
+    <!-- index only -->
+    <script src="js/bootstrap/tooltip.js"></script>
+    <script src="js/bootstrap/popover.js"></script>
+    <script src="js/bootstrap/tab.js"></script>
+    <script src="js/bootstrap/validator.js"></script>
+    <script src="js/bootstrap/scrollspy.js"></script>
+    <!-- brand page only -->
+    <script src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/gallary-carousels.js"></script>
+    <script src="js/bootstrap/button.js"></script>
+    <!-- item detail gallary -->
+    <script>
+    $(function() {
+        //zmall modual init
+        var zmModual = (function() {
+            var navOffset = 80;
+            //checkbox toggle
+            $(".zm-checkbox").click(function() {
+                $(this).children("i").toggle();
+            });
+            //scrollspy for brands page
+            $('.zmBrandsPage').scrollspy({
+                    target: '#brandNav',
+                    offset: navOffset + 1
+                })
+                //active the login or register tab
+            function logOrReg(opt) {
+                // body...
+                switch (opt) {
+                    case "log":
+                        $("#myLogin .nav-tabs li").eq(0).children("a").trigger("click");
+                        break;
+                    default:
+                        $("#myLogin .nav-tabs li").eq(1).children("a").trigger("click");
+                }
+            };
+
+            // function for setting the html template of the cart details
+            function setCartContent(item, overflow) {
+                //hide the "Still have xx more products" when the num is 0
+                if (overflow) var _overflowStr = '<div><p><strong>Still have ' + overflow + ' more products</strong></p></div>';
+                else _overflowStr = '';
+                //return the whole cart list string
+                return '<ul>' +
+                    '<li>' + item + '</li>' +
+                    '</ul>' +
+                    _overflowStr +
+                    '<button href="#">Checking my cart</button>';
+            };
+
+            //function for the floor jumping
+            function scrollToPosition(dom) {
+                $("html, body").animate({
+                    scrollTop: dom.offset().top - navOffset + "px"
+                }, {
+                    duration: 300,
+                    easing: "swing"
+                });
+                return false;
+            };
+
+            //return all the functions
+            return {
+                navOffset: navOffset,
+                setCartCnt: setCartContent,
+                scroll: scrollToPosition,
+                login: logOrReg
+            };
+        })();
+        // bootstrap dropdown
+        $('.dropdown-toggle').dropdown();
+        // bootstrap carousel
+        $('.carousel').carousel();
+        // bootstrap popover
+        $('[data-toggle="popover"]').each(function() {
+            var element = $(this);
+            var tiktak = function() {};
+            var item = "aaa"; //商品内容
+            var overflow = 3; //超出商品显示限制条数
+            element.popover({
+                trigger: 'manual',
+                placement: 'bottom',
+                html: 'true',
+                content: zmModual.setCartCnt(item, overflow),
+            }).on("mouseenter", function() {
+                clearTimeout(tiktak);
+                element.popover("show");
+                element.siblings(".popover").on("mouseleave", function() {
+                    element.popover('hide');
+                });
+            }).on("mouseleave", function() {
+                tiktak = setTimeout(function() {
+                    if (!$(".popover:hover").length) {
+                        element.popover("hide")
+                    }
+                }, 2000);
+            });
+        });
+        //reset all the form value
+        $("input[type=reset]").trigger("click");
+        // init the href
+        $("*").click(function() {
+            var linkHref = $(this).attr("data-href");
+            if (linkHref) window.location.href = linkHref; //window.open(linkHref);
+        });
+        //nav scroll watch  
+        $(window).scroll(function() {
+            //hide the part of the nav when scrolled height > 80px
+            if ($(document).scrollTop() > zmModual.navOffset) {
+                $("header").addClass("hide");
+            } else {
+                //recover  
+                $("header").removeClass("hide");
+            }
+        });
+        //click to active the login or register tab
+        $('[data-target="#myLogin"]').each(function() {
+            var element = $(this);
+            var opt = element.attr("data-active");
+            element.on("click", function() {
+                zmModual.login(opt)
+            });
+        });
+        //hover to show the category detail in banner left side
+        $(".indexMain-category li").each(function() {
+            var element = $(this);
+            var tiktak = function() {};
+            element.on("mouseenter", function() {
+                tiktak = setTimeout(function() {
+                    element.children(".indexMain-catDtl").addClass("active");
+                }, 500)
+            }).on("mouseleave", function() {
+                clearTimeout(tiktak);
+                element.children(".indexMain-catDtl").removeClass("active");
+            });
+        });
+        //floor jump
+        //go down
+        $(".glyphicon-chevron-down").click(function() {
+            var index = $(".glyphicon-chevron-down").index(this) + 1;
+            var dom = $("#floor_" + (index + 1));
+            //to bottom if it's the last icon-down
+            if (index == $(".glyphicon-chevron-down").length) {
+                dom = $("footer");
+            }
+            zmModual.scroll(dom);
+        });
+        //go up
+        $(".glyphicon-chevron-up").click(function() {
+            var index = $(".glyphicon-chevron-up").index(this);
+            var dom = $("#floor_" + (index));
+            //back to top if it's the 1st icon-up
+            if (index == 0) {
+                dom = $("html");
+            }
+            zmModual.scroll(dom);
+        });
+        //brands floor nav - click jump
+        $("#brandNav a").each(function() {
+            var element = $(this);
+            var dom = element.attr("href");
+            element.click(function() {
+                zmModual.scroll($(dom));
+                return false; //prevent default anchor jumping
+            })
+        });
+        //item detail gallary (optional)
+        $('.carousel-stage').jcarousel({
+            // Configuration goes here
+        }).on('jcarousel:targetin', 'li', function(event, carousel) {
+            // lazyload
+            var element = $(this).find("img");
+            var src_cur = element.attr("ssrc");
+            element.attr("src", src_cur);
+        });
+        //active toggle
+        $('[active-toggle="true"]').each(function() {
+            var ul_ele = $(this);
+            ul_ele.children("li").each(function() {
+                var li_ele = $(this);
+                li_ele.on("click", function() {
+                    li_ele.toggleClass("active");
+                    li_ele.find("i").toggleClass("glyphicon-ok");
+                });
+            });
+        });
+    });
+    </script>
+    <!--[if lt IE 9]> 
+    <script>
+        //html5 form validator for browser lower than ie9
+        H5F.setup($('form[data-toggle="validator"]'));
+    </script>
+    <![endif]-->
+</body>
+
+</html>

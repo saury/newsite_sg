@@ -1,0 +1,182 @@
+@charset "utf-8";
+@import "bootstrap/button-groups",
+"bootstrap/input-groups",
+"bootstrap/panels";
+.detail {
+    //item detail's nav bar
+    &-nav {
+        background: $gray-lighter;
+        .caret-nav {
+            border-top-color: $nav_dark_hover;
+            display: none;
+        }
+        a {
+            color: $nav_dark_hover;
+            padding: 10px 30px !important;
+            &:hover {
+                color: #fff;
+            }
+        }
+        .active {
+            background: $nav_dark_hover;
+            a {
+                color: #fff;
+            }
+            .caret-nav {
+                display: block;
+            }
+        }
+    }
+    // detail top exhibiton part
+    &-expo {
+        margin: 40px auto 20px;
+    }
+    // detail social list
+    &-social {
+        ul {
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            color: $gray-light;
+            cursor: pointer;
+            &:after {
+                content: "Collect the Product";
+            }
+            &:hover,
+            &.active {
+                i {
+                    color: $btn_color;
+                }
+            }
+            &.active {
+                &:after {
+                    content: "Uncollect the Product";
+                }
+                &:hover {
+                    i {
+                        color: $gray-light;
+                    }
+                }
+            }
+        }
+        i {
+            margin-right: 4px;
+            @include fsize(20);
+            top: 0;
+            line-height: inherit;
+            vertical-align: bottom;
+        }
+    }
+    //detail gallary part
+    &-gallary {
+        padding-left: 0;
+    }
+    //detail promo part
+    &-promo {
+        @include fsize(16);
+        h3 {
+            margin: 0;
+        }
+        &-price {
+            background: $gray-lighter;
+            padding: 0 10px;
+            li {
+                list-style: none;
+                padding: 10px 0;
+            }
+            //hight light the price
+            .hight-lighted {
+                @include fsize(20);
+                color: $btn_color;
+                font-weight: bold;
+            }
+        }
+        &-ammount {
+            width: 120px;
+            display: inline-table;
+            vertical-align: middle;
+            .input-group-addon {
+                @include border-radius(0);
+                cursor: pointer;
+            }
+            .form-control {
+                text-align: center;
+            }
+        }
+        dl {
+            margin-bottom: 16px;
+        }
+        dd {
+            margin: 0;
+        }
+        textarea {
+            @include border-radius(0);
+            resize: none;
+        }
+        .btn-default {
+            @include border-radius(0);
+            margin-bottom: 5px;
+            &.active {
+                background: $btn_color;
+                color: #fff;
+                box-shadow: none;
+            }
+        }
+        .btn-xlg {
+            width: 200px;
+            @include fsize(22);
+        }
+    }
+    //detail sidebar part
+    &-sidebar {
+        padding: 0;
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            list-style: none;
+            &.active {
+                .btn-warning {
+                    &:after {
+                        content: "Uncollect the shop";
+                    }
+                }
+            }
+        }
+        .btn{
+            @include border-radius(0);
+        }
+        .btn-collectShop {
+            i {
+                margin-right: 4px;
+            }
+            &:after {
+                content: "Collect the shop";
+            }
+        }
+        &-avatar {
+            width: 45px;
+            height: 45px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        &-intro {
+            display: inline-block;
+        }
+        &-prod {
+            margin: 0 -5px !important;
+            li {
+                display: inline-block;
+                padding: 5px;
+                margin: 0;
+                text-align: center;
+                img{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

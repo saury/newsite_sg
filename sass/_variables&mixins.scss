@@ -195,6 +195,16 @@ a:active {
     float: right;
 }
 
+//caret for nav bar
+$caret-nav-width: 6px;
+.caret-nav{
+    border-width: $caret-nav-width !important;
+    position: absolute;
+    bottom: -$caret-nav-width;
+    left: 50%;
+    margin-left: -($caret-nav-width / 2) !important;
+}
+
 //zmall general style
 .zm {
     // checkbox
@@ -225,4 +235,9 @@ a:active {
             z-index: 99;
         }
     }
+}
+
+//text decoration line-through
+.line-through{
+    text-decoration:line-through; 
 }

@@ -26,7 +26,7 @@
         <!-- header top bar start-->
         <nav class="navbar navbar-narrow">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse">
                     <!-- navs float right -->
                     <ul class="nav navbar-nav">
                         <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
@@ -61,12 +61,6 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <!-- icon button for mobile platform -->
-                    <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button> -->
                     <a class="navbar-brand" href="#top">
                         <img alt="logo" src="img/logo.png">
                     </a>
@@ -79,13 +73,6 @@
                         <li><a href="#">Costumes</a></li>
                         <li><a href="#">Cosmetics</a></li>
                         <li><a href="#">Electronics</a></li>
-                        <!-- <li class="dropdown navbar-search-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Product</span> <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Product</a></li>
-                                <li><a href="#">Link</a></li>
-                            </ul>
-                        </li> -->
                         <form class="navbar-form navbar-left navbar-search-form" role="search">
                             <div class="form-group">
                                 <input type="text" placeholder="Search for products or links">
@@ -94,28 +81,13 @@
                         </form>
                         <li>
                             <a class="active" href="#" data-toggle="popover" title="Recently Added:">
-                                <!-- <li class="dropdown">
-                            <a class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"> -->
                                 <span class="badge">4</span><i class="glyphicon glyphicon-shopping-cart"></i><span>shopping cart</span>
                             </a>
-                            <!-- <ul class="dropdown-menu">
-                                <li>123</li>
-                            </ul> -->
                         </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
                 <!-- recommend area -->
-                <!-- <div class="navbar_recommend cf">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>Popular searches:</li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                    </ul>
-                </div> -->
             </div>
             <!-- /.container-fluid -->
         </nav>
@@ -1936,6 +1908,10 @@
     <script src="js/bootstrap/validator.js"></script>
     <script src="js/bootstrap/scrollspy.js"></script>
     <!-- brand page only -->
+    <script src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/gallary-carousels.js"></script>
+    <script src="js/bootstrap/button.js"></script>
+    <!-- item detail gallary -->
     <script>
     $(function() {
         //zmall modual init
@@ -1946,8 +1922,11 @@
                 $(this).children("i").toggle();
             });
             //scrollspy for brands page
-            $('.zmBrandsPage').scrollspy({ target: '#brandNav', offset: navOffset+1})
-            //active the login or register tab
+            $('.zmBrandsPage').scrollspy({
+                    target: '#brandNav',
+                    offset: navOffset + 1
+                })
+                //active the login or register tab
             function logOrReg(opt) {
                 // body...
                 switch (opt) {
@@ -2080,13 +2059,33 @@
             zmModual.scroll(dom);
         });
         //brands floor nav - click jump
-        $("#brandNav a").each(function(){
+        $("#brandNav a").each(function() {
             var element = $(this);
             var dom = element.attr("href");
-            element.click(function(){
+            element.click(function() {
                 zmModual.scroll($(dom));
                 return false; //prevent default anchor jumping
             })
+        });
+        //item detail gallary (optional)
+        $('.carousel-stage').jcarousel({
+            // Configuration goes here
+        }).on('jcarousel:targetin', 'li', function(event, carousel) {
+            // lazyload
+            var element = $(this).find("img");
+            var src_cur = element.attr("ssrc");
+            element.attr("src", src_cur);
+        });
+        //active toggle
+        $('[active-toggle="true"]').each(function() {
+            var ul_ele = $(this);
+            ul_ele.children("li").each(function() {
+                var li_ele = $(this);
+                li_ele.on("click", function() {
+                    li_ele.toggleClass("active");
+                    li_ele.find("i").toggleClass("glyphicon-ok");
+                });
+            });
         });
     });
     </script>
