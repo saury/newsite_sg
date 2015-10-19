@@ -1,0 +1,127 @@
+@charset "utf-8";
+.cart {
+    //address part
+    &-address {
+        h3 {
+            font-weight: normal;
+            margin-top: 40px;
+            @include fsize(20);
+        }
+        small {
+            @include fsize(14);
+            padding-right: 13px;
+        }
+        div[data-toggle="buttons"] {
+            margin-bottom: 20px;
+        }
+        em {
+            font-style: normal;
+            @include fsize(16);
+        }
+        .btn-default {
+            border-style: dashed;
+            cursor: default;
+            background: $gray-lighterr;
+            &:hover {
+                background: $gray-lighter;
+            }
+            &.active {
+                background: $btn_color_active;
+                box-shadow: none;
+                em {
+                    color: $btn_color;
+                }
+            }
+            a {
+                color: $gray;
+            }
+        }
+    }
+    &-table {
+        &-thead {
+            padding: 4px 0;
+            border-bottom: 4px solid $btn_color;
+            .hr-line {
+                display: inline-block;
+                width: 4px;
+                height: 34px;
+                position: absolute;
+                background: #fff;
+                right: 0px;
+            }
+            div[class*="pure-u"] {
+                text-align: center;
+                position: relative;
+            }
+        }
+        .pure-u-1-2:last-child {
+            font-size: 0; // remove the gutter between inline-blocks;
+        }
+    }
+}
+
+//td part
+.td {
+    &-wrap {
+        display: inline-table;
+        height: 75px;
+    }
+    &-inner {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    &-shop {
+        padding: 8px 0px;
+    }
+    &-cnt {
+        > label {
+            padding: 10px;
+            cursor: default;
+            background: $gray-lighterr;
+            &.active {
+                background: $btn_color_active;
+                box-shadow: none;
+                .glyphicon-ok{
+                    display: inline;
+                }
+                &:hover{
+                    background: $btn_color_active;
+                }
+            }
+        }
+        ul {
+            padding: 0;
+            text-align: left;
+        }
+        li {
+            list-style: none;
+            a {
+                color: $gray;
+                &:hover {
+                    color: $btn_color;
+                }
+            }
+        }
+    }
+    &-item {
+        margin: 0 8px;
+        text-align: left;
+        dt,
+        dd {
+            margin: 0;
+            display: inline-block;
+        }
+        dt {
+            vertical-align: top;
+        }
+        dd {
+            padding: 0px 8px;
+        }
+        ul {
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+    }
+}

@@ -23,6 +23,8 @@ $close-w:34px;
 //brands color for 12 floors
 $brands-color: #993585,#ff649d,#f02681,#f135cc,#12a3dc,#5f7cd0,#3036a4,#154484,#3989da,#209e55,#ecbc13,#f97a09;
 $brands-item-padding: 6px;
+//shopping cart
+$btn_color_active: #ffe5e1;
 ///* mixins */
 //font-size px and rem
 @mixin fsize($fs) {
@@ -92,26 +94,6 @@ $brands-item-padding: 6px;
     }
 }
 
-// brand floors variety color
-@mixin brandColor($brand_bg){
-    .brandMain {
-        &-floor {
-            &-titleBar{
-                background: $brand_bg;
-            }
-        }
-    }
-    #brandNav {
-        li {
-            &.active a{
-                background: $brand_bg;
-            }
-            &:hover a{
-                background: $brand_bg;
-            }
-        }
-    }
-}
 
 ///* compass component */
 @import "compass/css3";

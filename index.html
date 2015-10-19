@@ -909,7 +909,7 @@
                             <div class="form-group has-feedback">
                                 <label for="email" class="col-sm-4 control-label">E-mail:</label>
                                 <div class="col-sm-7">
-                                    <input type="email" class="form-control" id="email" placeholder="Please enter your E-mail address" data-error="Bruh, that email address is invalid" required>
+                                    <input type="text" class="form-control" id="email" placeholder="Please enter your E-mail address" data-error="Email shouldn't be blank" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" data-pattern-error="Bruh, that email address is invalid" data-minlength="6" data-minlength-error="Minimum of 6 characters" required>
                                     <!-- data-remote="/path/to/remote/validator" to make an AJAX request to determine if the field is valid or not. -->
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors"></div>
@@ -976,14 +976,17 @@
     <script src="js/bootstrap/transition.js"></script>
     <script src="js/bootstrap/dropdown.js"></script>
     <script src="js/bootstrap/modal.js"></script>
-    <script src="js/bootstrap/carousel.js"></script>
-    <!-- index only -->
     <script src="js/bootstrap/tooltip.js"></script>
     <script src="js/bootstrap/popover.js"></script>
     <script src="js/bootstrap/tab.js"></script>
     <script src="js/bootstrap/validator.js"></script>
+    <!-- general script -->
+    <script src="js/bootstrap/carousel.js"></script>
+    <!-- index only -->
     <script src="js/bootstrap/scrollspy.js"></script>
     <!-- brand page only -->
+    <script src="js/bootstrap/affix.js"></script>
+    <!-- brands' branch page only -->
     <script src="js/jquery.jcarousel.min.js"></script>
     <script src="js/gallary-carousels.js"></script>
     <script src="js/bootstrap/button.js"></script>

@@ -1,0 +1,31 @@
+@charset "utf-8";
+.step-progress {
+    ul {
+        padding: 0;
+        li {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            background: $gray-lighter;
+            color: $gray-lighte;
+            text-align: center;
+            i {
+                position: absolute;
+                left: 5px;
+                @include fsize(20);
+                top: 10px;
+                color: $gray-lightee;
+            }
+            .caret {
+                border-top-color: $btn_color;
+            }
+            &.active {
+                background: $btn_color;
+                color: #fff;
+                i {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

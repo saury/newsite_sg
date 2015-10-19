@@ -37,17 +37,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     `-moz-` prefix version is omitted.
     */
 
-    display: -webkit-flex;
-    -webkit-flex-flow: row wrap;
-
-    /* IE10 uses display: flexbox */
-    display: -ms-flexbox;
-    -ms-flex-flow: row wrap;
-    
-    /* Prevents distributing space between rows */
-    -ms-align-content: flex-start;
-	-webkit-align-content: flex-start;
-	align-content: flex-start;
+  
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
@@ -172,6 +162,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-u-6-24 {
     width: 25%;
     *width: 24.9690%;
+    @include flex(1 1 24%);
 }
 
 .pure-u-7-24 {
@@ -211,6 +202,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-u-12-24 {
     width: 50%;
     *width: 49.9690%;
+    @include flex(1 1 49%);
 }
 
 .pure-u-13-24 {
