@@ -58,6 +58,61 @@
             font-size: 0; // remove the gutter between inline-blocks;
         }
     }
+    // affix bar
+    &-bar {
+        position: relative;
+        background: $gray-dark;
+        margin: 40px (-($grid-gutter-width / 2));
+        z-index: 3;
+        color: #fff;
+        .container {
+            height: 95px;
+            padding: 10px;
+        }
+        &.affix {
+            &-top {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                margin: 0;
+            }
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            padding: 4px 0;
+        }
+        &-transport {
+            text-align: right;
+            padding: 0px 40px !important;
+            em,
+            small {
+                margin-left: 8px;
+                color: $btn_color;
+                font-weight: bold;
+            }
+            small {
+                font-size: 100%;
+            }
+            em {
+                font-style: normal;
+                @include fsize(20);
+            }
+            .dropdown-toggle {
+                padding-top: 4px;
+                padding-bottom: 0px;
+                height: 30px;
+            }
+        }
+        .btn-xlg {
+            width: 100%;
+            @include fsize(17);
+        }
+    }
 }
 
 //td part
@@ -81,10 +136,10 @@
             &.active {
                 background: $btn_color_active;
                 box-shadow: none;
-                .glyphicon-ok{
+                .glyphicon-ok {
                     display: inline;
                 }
-                &:hover{
+                &:hover {
                     background: $btn_color_active;
                 }
             }

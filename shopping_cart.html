@@ -377,10 +377,41 @@
         </div>
         <!-- cart table end -->
         <!-- affix bar start -->
-        <div class="cart-bar">123</div>
+        <div class="row cart-bar" data-affix="overflow">
+            <div class="container pure-g">
+                <div class="pure-u-1-2 td-wrap">
+                    <div class="td-inner">
+                        <ul>
+                            <li><b>Addressee: </b>Even Liu(13752151629)</li>
+                            <li><b>Send to: </b>hangHai songjiang qu xinzhuangonglu fgwp r long 13haolou 401shi</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pure-u-3-8 td-wrap">
+                    <div class="td-inner">
+                        <ul class="cart-bar-transport">
+                            <li>
+                                <b>Transport mode:</b>
+                                <select class="selectpicker" name="transport" id="transport">
+                                    <option value="transport1">EMS 1-2days</option>
+                                    <option value="transport2">dhl 2-4days</option>
+                                </select>
+                                <small>29.00</small>
+                            </li>
+                            <li><b>Real payment: </b><em>$1196.00</em></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pure-u-1-8 td-wrap">
+                    <div class="td-inner">
+                        <a href="javascript:void(0);" class="btn btn-xlg">Submit orders</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- affix bar end -->
     </div>
-    <!-- shopping_cart>cashier>delivered>confirm_receipt start -->
+    <!-- shopping_cart>cashier>delivered>confirm_receipt end -->
     <!-- footer start -->
     <footer></footer>
     <!-- footer end -->
@@ -520,17 +551,11 @@
     <script src="js/gallary-carousels.js"></script>
     <script src="js/bootstrap/button.js"></script>
     <!-- item detail gallary -->
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <!-- shopping cart page -->
     <script>
     $(function() {
-        //TODO affix bar
-        $('.cart-bar').affix({
-                offset: {
-                    top: function() {
-                        return($('.cart-bar').offset().top - $('.cart-bar').height() - $(window).height());// distance to the top
-                    }
-                }
-            })
-            //zmall modual init
+        //zmall modual init
         var zmModual = (function() {
             var navOffset = 80;
             //checkbox toggle
@@ -539,10 +564,27 @@
             });
             //scrollspy for brands page
             $('.zmBrandsPage').scrollspy({
-                    target: '#brandNav',
-                    offset: navOffset + 1
-                })
-                //active the login or register tab
+                target: '#brandNav',
+                offset: navOffset + 1
+            });
+            //general affix overflow
+            function callAffixOverflow() {
+                $('[data-affix="overflow"]').each(function() {
+                    var ele = $(this);
+                    var offsetTop = ele.offset().top - $(window).height() - parseInt(ele.css("margin-top").split("px")[0]);
+                    //affix top = offset to top - element's margin-top - window's height
+                    ele.affix("destroy");//destroy the affix function berfore
+                    if (offsetTop < 0) return false; //no affix while it is not overflow
+                    ele.affix({
+                        offset: {
+                            top: function() {
+                                return offsetTop; // distance to the top
+                            }
+                        }
+                    });
+                });
+            };
+            //active the login or register tab
             function logOrReg(opt) {
                 // body...
                 switch (opt) {
@@ -583,7 +625,8 @@
                 navOffset: navOffset,
                 setCartCnt: setCartContent,
                 scroll: scrollToPosition,
-                login: logOrReg
+                login: logOrReg,
+                callAOF: callAffixOverflow
             };
         })();
         // bootstrap dropdown
@@ -703,6 +746,8 @@
                 });
             });
         });
+        //call Affix Overflow
+        zmModual.callAOF();
     });
     </script>
     <!--[if lt IE 9]> 
