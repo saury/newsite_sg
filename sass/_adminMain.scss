@@ -1,0 +1,22 @@
+@charset "utf-8";
+.adminMain {
+    padding: $main_padding $main_padding $main_padding ($aside_w + $main_padding);
+    &-header {
+    	margin-bottom: $main_padding;
+        .breadcrumb {
+            margin: 0px;
+            background: transparent none repeat scroll 0% 0%;
+        }
+        input{
+        	width: 220px;
+        	height: 34px;
+        	vertical-align: middle;
+        }
+    }
+    //select dropdown fix
+    .dropdown-toggle {
+        height: 34px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}

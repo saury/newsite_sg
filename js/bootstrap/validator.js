@@ -164,8 +164,8 @@
         data[$el.attr('name')] = $el.val()
         $.get($el.data('remote'), data)
           .fail(function (jqXHR, textStatus, error) { 
-            //errors.push(getErrorMessage('remote') || error) 
-            $el.attr("remote-error")
+            errors.push($el.attr("remote-error") || getErrorMessage('remote') || error) 
+            //$el.attr("remote-error")
           })
           .always(function () { deferred.resolve(errors)})
       })

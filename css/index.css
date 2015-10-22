@@ -129,6 +129,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
  Droid Sans: Ships with all versions of Android.
  Helvetica, Arial, sans-serif: Common font stack on OS X and Windows. */     /* Use flexbox when possible to avoid `letter-spacing` side-effects.
  NOTE: Firefox (as of 25) does not currently support flex-wrap, so the `-moz-` prefix version is omitted. */ }
+.pure-g-wrap { font-size: 0 !important; }
 
 /* Opera as of 12 on Windows needs word-spacing. The ".opera-only" selector is used to prevent actual prefocus styling and is not required in markup.
 */
@@ -2708,7 +2709,8 @@ hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #ee
 .detail-promo dl { margin-bottom: 16px; }
 .detail-promo dd { margin: 0; }
 .detail-promo textarea { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; resize: none; }
-.detail-promo .btn-default { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; margin-bottom: 5px; }
+.detail-promo .btn-photo { padding: 2px; min-width: 46px; min-height: 46px; }
+.detail-promo .btn-default { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; text-align: justify; white-space: normal; margin-bottom: 5px; }
 .detail-promo .btn-default.active { background: #ff6801; color: #fff; box-shadow: none; }
 .detail-promo .btn-xlg { width: 200px; font-size: 22px; font-size: 1.57143rem; }
 .detail-sidebar { padding: 0; }

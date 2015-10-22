@@ -1,0 +1,25 @@
+@charset "utf-8";
+%td-height{
+	min-height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.table{
+	//table wrap
+	&-admin{
+		margin: $main_padding 0;
+		h3{
+			margin: 0;
+		}
+	}
+	//thead part
+	&-thead{
+		@extend %td-height;
+		background: $nav_admin;
+		color: #fff;
+	}
+	//default row
+	&-row{
+		@extend %td-height;
+	}
+}

@@ -567,6 +567,8 @@
                 target: '#brandNav',
                 offset: navOffset + 1
             });
+            //disable all the form's submit function
+            $("form").submit(function() {return false}); 
             //general affix overflow
             function callAffixOverflow() {
                 $('[data-affix="overflow"]').each(function() {

@@ -1,0 +1,177 @@
+@charset "utf-8";
+// bootstrap scss for nav
+@import //"bootstrap/_glyphicons.scss",
+//"bootstrap/_badges.scss",
+"bootstrap/_navs.scss",
+"bootstrap/_dropdowns.scss",
+"bootstrap/_forms.scss",
+"bootstrap/_navbar.scss",
+"bootstrap/_buttons.scss",
+"bootstrap/_popovers.scss";
+//custom style 
+header {
+    // position: fixed;
+    // top:0;
+    // left:0;
+    // width:100%;
+    // z-index:999;
+    background: #fff;
+    @include transition(all .2s linear);
+    //nav partly hidden
+    &.hide {
+        margin-top: -50px;
+        .navbar-default {
+            background: $nav_dark;
+        }
+    }
+}
+
+//limit the max-width of the nav
+.navbar {
+    background: $gray-darker;
+    @include transition(all .2s linear);
+    // .container-fluid {
+    //     max-width: $max_w;
+    //     min-width: $min_w;
+    //     margin: 0 auto;
+    //     padding: 0 !important; //remove the padding of the container
+    a:link,
+    button {
+        @include transition(all .2s linear);
+    }
+    // }
+    &-header {
+        width: 205px\0;
+    }
+}
+
+//nav || search bar
+.navbar-brand {
+    padding: 10px 30px;
+    max-width: 250px;
+    overflow: hidden;
+    height: 60px;
+    @include transition(all .2s linear);
+    // &:hover {
+    //     max-width: 210px;
+    // }
+    img {
+        max-height: 100%;
+        width: auto;
+    }
+}
+
+.navbar-search {
+    //border: 1px solid #eee;
+    @include fsize(14);
+    padding-top: 15px;
+    li {
+        margin-top: -15px;
+        a {
+            color: #fff !important;
+            padding: 20px 40px;
+        }
+    }
+    &-dropdown {
+        $dropdown_w: 110px;
+        width: $dropdown_w;
+        text-transform: uppercase;
+        a {
+            padding: ($grid-gutter-width / 2) 0 !important;
+            text-align: center;
+        }
+        .dropdown-menu {
+            min-width: $dropdown_w;
+        }
+    }
+    &-form {
+        margin: 0 10px !important;
+        padding: 0;
+        .form-group {
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid $gray-lighte;
+            background: #fff;
+            width: 321px;
+            text-align: center;
+        }
+        input {
+            width: 300px;
+            height: 30px;
+            border: 0;
+        }
+    }
+    &-btn {
+        margin-left: -6px;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border: 1px solid $gray-lighte;
+        //color: #666;
+        color: #fff;
+        @include border-radius(0);
+        &:hover {
+            color: #fff;
+            background: $nav_admin;
+            @include box-shadow(inset 0 0 6px darken($nav_admin, 6.5%));
+        }
+    }
+    .glyphicon-shopping-cart,
+    .badge {
+        margin-right: 8px;
+    }
+    .badge {
+        color: $nav_admin;
+        background: #fff;
+    }
+    a:hover,
+    a.active,
+    a:active {
+        background: $nav_admin !important;
+        color: #fff !important;
+    }
+}
+
+// aside nav section
+.nav-aside {
+    margin-left: - $aside_w;
+    position: fixed;
+    top: 60px;
+    left: $aside_w;
+    bottom: 0px;
+    overflow-y: auto;
+    width: $aside_w;
+    background-color: $nav_admin;
+    //avatar part
+    &-avatar{
+        width: 80px;
+        height: 80px;
+        margin: 25px auto 5px;
+        @include border-radius(50%);
+        overflow: hidden;
+    }
+    // nav list part
+    .navbar-text{
+        font-weight: bold;
+    }
+    ul {
+        margin: 0;
+    }
+    li {
+        text-align: center;
+        color: #fff;
+        &.active {
+            a {
+                background: lighten($nav_admin, 10%);
+            }
+        }
+        a {
+            color: #fff;
+            &:hover,
+            &:active,
+            &:focus {
+                background: lighten($nav_admin, 10%);
+            }
+        }
+    }
+}

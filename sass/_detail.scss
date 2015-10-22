@@ -111,8 +111,15 @@
             @include border-radius(0);
             resize: none;
         }
+        .btn-photo{
+            padding: 2px;
+            min-width: 46px;
+            min-height: 46px;
+        }
         .btn-default {
             @include border-radius(0);
+            text-align: justify;
+            white-space: normal;
             margin-bottom: 5px;
             &.active {
                 background: $btn_color;

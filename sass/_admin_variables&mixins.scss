@@ -1,0 +1,34 @@
+@charset "utf-8";
+//nav admin color lightblue
+$nav_admin: #34485E;
+// btn primary override
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $nav_admin;
+$btn-primary-border:             darken($nav_admin, 5%);
+//aside nav width
+$aside_w: 200px;
+//main body padding
+$main_padding: 20px;
+//breadcrumb
+$breadcrumb-separator:">";
+$breadcrumb-padding-vertical: 7px;
+$breadcrumb-padding-horizontal: 0;
+
+$link-color:       $nav_admin;
+$link-hover-color: darken($link-color, 15%);
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus {
+    @include tab-focus;
+  }
+}
