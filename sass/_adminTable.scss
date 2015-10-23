@@ -1,25 +1,73 @@
 @charset "utf-8";
-%td-height{
-	min-height: 40px;
-	line-height: 40px;
-	text-align: center;
+%td-height {
+    min-height: 40px;
+    line-height: 40px;
+    text-align: center;
 }
-.table{
-	//table wrap
-	&-admin{
-		margin: $main_padding 0;
-		h3{
-			margin: 0;
-		}
-	}
-	//thead part
-	&-thead{
-		@extend %td-height;
-		background: $nav_admin;
-		color: #fff;
-	}
-	//default row
-	&-row{
-		@extend %td-height;
-	}
+
+.table {
+    //table wrap
+    &-admin {
+        margin: $main_padding 0;
+    }
+    //thead part
+    &-thead {
+        @extend %td-height;
+        background: $nav_admin;
+        color: #fff;
+    }
+    //default row
+    &-row {
+        @extend %td-height;
+        .btn {
+            vertical-align: unset;
+        }
+        input {
+            width: 100%;
+            height: 34px;
+        }
+        //
+        &.with-photo {
+            line-height: 60px;
+        }
+    }
+    &-label {
+        margin: 0px;
+        @extend %td-height;
+        background: $nav_admin;
+        float: none;
+        color: #fff;
+        padding-right: 0;
+    }
+    &-thumb {
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+// table row with border
+.has-border {
+    border: 1px solid $gray;
+    border-top: 0;
+}
+
+//single line ellipsis
+.td-ellipsis {
+    @include ellipsis(true);
+}
+
+//file upload button
+.btn-file {
+    position: relative;
+    input {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include opacity(0);
+        cursor: pointer;
+    }
 }

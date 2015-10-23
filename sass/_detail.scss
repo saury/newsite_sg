@@ -68,6 +68,17 @@
     //detail gallary part
     &-gallary {
         padding-left: 0;
+        // gallary override
+        &-override {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid transparent;
+            width: 381.65px;
+            height: 381.65px;
+            z-index: 10;
+        }
     }
     //detail promo part
     &-promo {
@@ -111,13 +122,14 @@
             @include border-radius(0);
             resize: none;
         }
-        .btn-photo{
+        .btn-photo {
             padding: 2px;
-            min-width: 46px;
-            min-height: 46px;
+            width: 46px;
+            height: 46px;
         }
         .btn-default {
             @include border-radius(0);
+            @include fsize(12);
             text-align: justify;
             white-space: normal;
             margin-bottom: 5px;
@@ -130,6 +142,21 @@
         .btn-xlg {
             width: 200px;
             @include fsize(22);
+        }
+        //error info style
+        .with-errors{
+            display: none;
+        }
+        .has-error {
+            border: 4px solid $btn_color;
+            padding: 10px;
+            > .pure-u-1-4 {
+                font-weight: bold;
+                color: #A94442
+            }
+            .with-errors{
+                display: block;
+            }
         }
     }
     //detail sidebar part
@@ -150,7 +177,7 @@
                 }
             }
         }
-        .btn{
+        .btn {
             @include border-radius(0);
         }
         .btn-collectShop {
@@ -177,7 +204,7 @@
                 padding: 5px;
                 margin: 0;
                 text-align: center;
-                img{
+                img {
                     margin: 0 auto;
                 }
             }

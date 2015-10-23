@@ -116,6 +116,9 @@
                                     <li><span></span><img ssrc="http://sorgalla.com/jcarousel/examples/_shared/img/img6.jpg" class="img-responsive" alt=""></li>
                                 </ul>
                             </div>
+                            <div class="detail-gallary-override">
+                                <img class="img-responsive" src="https://img.alicdn.com/bao/uploaded/i3/TB12d6DJFXXXXXxXXXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" alt="">
+                            </div>
                             <a href="#" class="prev prev-stage"><span>&lsaquo;</span></a>
                             <a href="#" class="next next-stage"><span>&rsaquo;</span></a>
                         </div>
@@ -123,7 +126,7 @@
                             <a href="#" class="prev prev-navigation">&lsaquo;</a>
                             <a href="#" class="next next-navigation">&rsaquo;</a>
                             <div class="carousel carousel-navigation">
-                                <ul>
+                                <ul gallary-override="false">
                                     <li><span></span><img src="http://sorgalla.com/jcarousel/examples/_shared/img/img1_thumb.jpg" class="img-responsive" alt=""></li>
                                     <li><span></span><img src="http://sorgalla.com/jcarousel/examples/_shared/img/img2_thumb.jpg" class="img-responsive" alt=""></li>
                                     <li><span></span><img src="http://sorgalla.com/jcarousel/examples/_shared/img/img3_thumb.jpg" class="img-responsive" alt=""></li>
@@ -170,7 +173,7 @@
                                 </div>
                             </dd>
                         </dl>
-                        <dl class="pure-g">
+                        <dl class="pure-g has-error">
                             <dt class="pure-u-1-4">Size:</dt>
                             <dd class="pure-u-3-4">
                                 <div data-toggle="buttons">
@@ -187,12 +190,13 @@
                                         <input type="radio" name="options" id="size4" autocomplete="off">XL
                                     </label>
                                 </div>
+                                <div class="help-block with-errors">Please choose one type</div>
                             </dd>
                         </dl>
                         <dl class="pure-g">
                             <dt class="pure-u-1-4">photos:</dt>
                             <dd class="pure-u-3-4">
-                                <div data-toggle="buttons">
+                                <div data-toggle="buttons" gallary-override="true">
                                     <label class="btn btn-default btn-photo active">
                                         <input type="radio" name="options" id="size1" autocomplete="off" checked>
                                         <img class="img-responsive" src="http://img.alicdn.com/bao/uploaded/i3/TB1O9bAGpXXXXcRXXXXrDNF9FXX_043224.jpg_40x40q90.jpg" alt="">
@@ -200,7 +204,6 @@
                                     <label class="btn btn-default btn-photo">
                                         <input type="radio" name="options" id="size2" autocomplete="off">
                                         <img class="img-responsive" src="http://img.alicdn.com/bao/uploaded/i3/762432022/TB2PmB0gXXXXXbSXpXXXXXXXXXX_!!762432022.jpg_40x40q90.jpg" alt="">
-                                        <!-- todo photo zoom -->
                                     </label>
                                 </div>
                             </dd>
@@ -603,6 +606,16 @@
                     li_ele.find("i").toggleClass("glyphicon-ok");
                 });
             });
+        });
+    });
+    // gallary photo override
+    $("[gallary-override]").each(function() {
+        var ele = $(this),
+            target = $(".detail-gallary-override");
+        var arg = ele.attr("gallary-override");
+        ele.on("click", function() {
+            if (arg == "true") target.show();
+            else target.hide();
         });
     });
     </script>

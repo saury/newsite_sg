@@ -1,10 +1,15 @@
 @charset "utf-8";
+$grid-gutter-width: 20px;
 //nav admin color lightblue
 $nav_admin: #34485E;
+//type override
+$headings-font-weight: bold;
 // btn primary override
-$btn-primary-color:              #fff;
-$btn-primary-bg:                 $nav_admin;
-$btn-primary-border:             darken($nav_admin, 5%);
+$btn-primary-color: #fff;
+$btn-primary-bg: $nav_admin;
+$btn-primary-border: darken($nav_admin, 5%);
+// top nav height
+$topNav_h: 60px;
 //aside nav width
 $aside_w: 200px;
 //main body padding
@@ -13,22 +18,18 @@ $main_padding: 20px;
 $breadcrumb-separator:">";
 $breadcrumb-padding-vertical: 7px;
 $breadcrumb-padding-horizontal: 0;
-
-$link-color:       $nav_admin;
+$link-color: $nav_admin;
 $link-hover-color: darken($link-color, 15%);
-
 // Links
 a {
-  color: $link-color;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
-
-  &:focus {
-    @include tab-focus;
-  }
+    color: $link-color;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+    &:focus {
+        @include tab-focus;
+    }
 }

@@ -2698,6 +2698,7 @@ hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #ee
 .detail-social li.active:hover i { color: #777777; }
 .detail-social i { margin-right: 4px; font-size: 20px; font-size: 1.42857rem; top: 0; line-height: inherit; vertical-align: bottom; }
 .detail-gallary { padding-left: 0; }
+.detail-gallary-override { display: none; position: absolute; top: 0; left: 0; border: 1px solid transparent; width: 381.65px; height: 381.65px; z-index: 10; }
 .detail-promo { font-size: 16px; font-size: 1.14286rem; }
 .detail-promo h3 { margin: 0; }
 .detail-promo-price { background: #eeeeee; padding: 0 10px; }
@@ -2709,10 +2710,14 @@ hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #ee
 .detail-promo dl { margin-bottom: 16px; }
 .detail-promo dd { margin: 0; }
 .detail-promo textarea { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; resize: none; }
-.detail-promo .btn-photo { padding: 2px; min-width: 46px; min-height: 46px; }
-.detail-promo .btn-default { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; text-align: justify; white-space: normal; margin-bottom: 5px; }
+.detail-promo .btn-photo { padding: 2px; width: 46px; height: 46px; }
+.detail-promo .btn-default { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; font-size: 12px; font-size: 0.85714rem; text-align: justify; white-space: normal; margin-bottom: 5px; }
 .detail-promo .btn-default.active { background: #ff6801; color: #fff; box-shadow: none; }
 .detail-promo .btn-xlg { width: 200px; font-size: 22px; font-size: 1.57143rem; }
+.detail-promo .with-errors { display: none; }
+.detail-promo .has-error { border: 4px solid #ff6801; padding: 10px; }
+.detail-promo .has-error > .pure-u-1-4 { font-weight: bold; color: #A94442; }
+.detail-promo .has-error .with-errors { display: block; }
 .detail-sidebar { padding: 0; }
 .detail-sidebar ul { margin: 0; padding: 0; }
 .detail-sidebar li { margin-bottom: 10px; list-style: none; }

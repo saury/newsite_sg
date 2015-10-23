@@ -10,11 +10,11 @@
 "bootstrap/_popovers.scss";
 //custom style 
 header {
-    // position: fixed;
-    // top:0;
-    // left:0;
-    // width:100%;
-    // z-index:999;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
     background: #fff;
     @include transition(all .2s linear);
     //nav partly hidden
@@ -50,7 +50,7 @@ header {
     padding: 10px 30px;
     max-width: 250px;
     overflow: hidden;
-    height: 60px;
+    height: $topNav_h;
     @include transition(all .2s linear);
     // &:hover {
     //     max-width: 210px;
@@ -69,7 +69,7 @@ header {
         margin-top: -15px;
         a {
             color: #fff !important;
-            padding: 20px 40px;
+            padding: 20px 40px !important;
         }
     }
     &-dropdown {

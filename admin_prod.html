@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <!--[if lt IE 9]> 
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <script src="js/bootstrap/H5F.js"></script>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!-- 
+        Notes:
+        h5f: html5 form validator
+        selectivizr: css3 psuedo selector
+     -->
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <!-- 2nd header bar start-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!-- icon button for mobile platform -->
+                    <a class="navbar-brand" href="#top">
+                        <img alt="logo" src="img/logo.png">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <!-- navs float right -->
+                    <ul class="nav navbar-nav navbar-left navbar-search">
+                        <li><a href="#">订单中心</a></li>
+                        <li><a class="active" href="#">站点管理</a></li>
+                        <li><a href="#">物流管理</a></li>
+                        <li><a href="#">会员管理</a></li>
+                        <li><a href="#">财务管理</a></li>
+                        <li><a href="#">数据分析</a></li>
+                        <li><a href="#">系统管理</a></li>
+                        <!-- <li class="dropdown navbar-search-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Product</span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Product</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- 2nd header bar end-->
+    </header>
+    <!-- header end -->
+    <!-- aside nav start -->
+    <aside class="nav-aside">
+        <nav>
+            <ul class="nav nav-pills nav-stacked">
+                <li>
+                    <div class="nav-aside-avatar">
+                        <img class="img-responsive" src="img/brands-thumb.jpg" alt="avatar">
+                    </div>
+                    <b>admin</b>
+                </li>
+                <hr>
+                <li class="navbar-text">首页管理</li>
+                <li><a href="#">轮播编辑</a></li>
+                <li><a href="#">楼层编辑</a></li>
+                <li class="active"><a href="#">商品编辑</a></li>
+                <li><a href="#">广告位编辑</a></li>
+                <hr>
+                <li class="navbar-text">分页管理</li>
+                <li><a href="#">店铺编辑</a></li>
+                <li><a href="#">淘宝分类管理</a></li>
+                <hr>
+            </ul>
+        </nav>
+    </aside>
+    <!-- aside nav end -->
+    <!-- main body start -->
+    <div class="adminMain">
+        <!-- breadcrumb and search form start -->
+        <div class="adminMain-header cf">
+            <ol class="breadcrumb fll">
+                <li><a href="#">站点管理</a></li>
+                <li><a href="#">首页管理</a></li>
+                <li class="active">楼层编辑</li>
+            </ol>
+            <form class="flr">
+                <select class="selectpicker">
+                    <option value="">商品搜索1</option>
+                    <option value="">商品搜索2</option>
+                </select>
+                <select class="selectpicker">
+                    <option value="">按商品ID</option>
+                    <option value="">按商品名称</option>
+                </select>
+                <input type="text">
+                <a href="#" class="btn btn-primary">搜索</a>
+            </form>
+        </div>
+        <!-- breadcrumb and search form end -->
+        <!-- products editing start -->
+        <div class="edit-floor">
+            <div class="table-admin">
+                <label class="table-label col-md-2">
+                    时尚女装
+                </label>
+                <div class="table-thead cf">
+                    <div class="col-md-4 pure-g">
+                        <div class="pure-u-1-2">商品名称</div>
+                        <div class="pure-u-1-4">价格</div>
+                        <div class="pure-u-1-4">重量</div>
+                    </div>
+                    <div class="col-md-4 td-ellipsis">
+                        链接
+                    </div>
+                    <div class="col-md-4 pure-g">
+                        <div class="pure-u-1-4">排序</div>
+                        <div class="pure-u-1-4">图片</div>
+                        <div class="pure-u-1-2">操作</div>
+                    </div>
+                </div>
+                <div class="table-row with-photo cf has-border">
+                    <div class="col-md-4 pure-g">
+                        <div class="pure-u-1-2">连衣裙</div>
+                        <div class="pure-u-1-4">199.00</div>
+                        <div class="pure-u-1-4">300g</div>
+                    </div>
+                    <div class="col-md-4 td-ellipsis">
+                        <a href="#" target="_blank">
+                            https://www.zmall.sg/dfghdfdf*^$3jHJHKFH?id=42341123#sdfhkshg
+                        </a>
+                    </div>
+                    <div class="col-md-4 pure-g">
+                        <div class="pure-u-1-4">1</div>
+                        <div class="pure-u-1-4">
+                            <div class="table-thumb">
+                                <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="pure-u-1-2">
+                            <button type="button" class="btn btn-link">修改</button>
+                            <button type="button" class="btn btn-danger">删除</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-row with-photo cf has-border">
+                    <div class="col-md-4 pure-g">
+                        <div class="pure-u-1-2">
+                            <input type="text" placeholder="名称">
+                        </div>
+                        <div class="pure-u-1-4">
+                            <input type="text" placeholder="价格">
+                        </div>
+                        <div class="pure-u-1-4">
+                            <input type="text" placeholder="重量">
+                        </div>
+                    </div>
+                    <div class="col-md-4 td-ellipsis">
+                        <input type="text" placeholder="链接">
+                    </div>
+                    <div class="col-md-4 pure-g">
+                        <div class="pure-u-1-4">
+                            <input type="text" placeholder="排序">
+                        </div>
+                        <div class="pure-u-1-4">
+                            <label class="btn btn-default btn-file">
+                                <input type="file"> 上传图片
+                            </label>
+                        </div>
+                        <div class="pure-u-1-2">
+                            <button type="button" class="btn btn-success">添加</button>
+                            <button type="button" class="btn btn-info">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- products editing end -->
+    </div>
+    <!-- main body end -->
+    <!-- footer start -->
+    <footer></footer>
+    <!-- footer end -->
+    <!-- Login Modal srart-->
+    <!-- Login Modal end-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap/transition.js"></script>
+    <script src="js/bootstrap/dropdown.js"></script>
+    <script src="js/bootstrap/modal.js"></script>
+    <script src="js/bootstrap/tooltip.js"></script>
+    <script src="js/bootstrap/popover.js"></script>
+    <script src="js/bootstrap/tab.js"></script>
+    <script src="js/bootstrap/validator.js"></script>
+    <!-- general script -->
+    <script src="js/bootstrap/carousel.js"></script>
+    <!-- index only -->
+    <script src="js/bootstrap/scrollspy.js"></script>
+    <!-- brand page only -->
+    <script src="js/bootstrap/affix.js"></script>
+    <!-- brands' branch page only -->
+    <script src="js/jquery.jcarousel.min.js"></script>
+    <script src="js/gallary-carousels.js"></script>
+    <script src="js/bootstrap/button.js"></script>
+    <!-- item detail gallary -->
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <!-- shopping cart page -->
+    <script>
+    $(function() {
+        //zmall modual init
+        var zmModual = (function() {
+            var navOffset = 80;
+            //checkbox toggle
+            $(".zm-checkbox").click(function() {
+                $(this).children("i").toggle();
+            });
+            //scrollspy for brands page
+            $('.zmBrandsPage').scrollspy({
+                target: '#brandNav',
+                offset: navOffset + 1
+            });
+            //general affix overflow
+            function callAffixOverflow() {
+                $('[data-affix="overflow"]').each(function() {
+                    var ele = $(this);
+                    var offsetTop = ele.offset().top - $(window).height() - parseInt(ele.css("margin-top").split("px")[0]);
+                    //affix top = offset to top - element's margin-top - window's height
+                    ele.affix("destroy"); //destroy the affix function berfore
+                    if (offsetTop < 0) return false; //no affix while it is not overflow
+                    ele.affix({
+                        offset: {
+                            top: function() {
+                                return offsetTop; // distance to the top
+                            }
+                        }
+                    });
+                });
+            };
+            //active the login or register tab
+            function logOrReg(opt) {
+                // body...
+                switch (opt) {
+                    case "log":
+                        $("#myLogin .nav-tabs li").eq(0).children("a").trigger("click");
+                        break;
+                    default:
+                        $("#myLogin .nav-tabs li").eq(1).children("a").trigger("click");
+                }
+            };
+
+            // function for setting the html template of the cart details
+            function setCartContent(item, overflow) {
+                //hide the "Still have xx more products" when the num is 0
+                if (overflow) var _overflowStr = '<div><p><strong>Still have ' + overflow + ' more products</strong></p></div>';
+                else _overflowStr = '';
+                //return the whole cart list string
+                return '<ul>' +
+                    '<li>' + item + '</li>' +
+                    '</ul>' +
+                    _overflowStr +
+                    '<button href="#">Checking my cart</button>';
+            };
+
+            //function for the floor jumping
+            function scrollToPosition(dom) {
+                $("html, body").animate({
+                    scrollTop: dom.offset().top - navOffset + "px"
+                }, {
+                    duration: 300,
+                    easing: "swing"
+                });
+                return false;
+            };
+
+            //return all the functions
+            return {
+                navOffset: navOffset,
+                setCartCnt: setCartContent,
+                scroll: scrollToPosition,
+                login: logOrReg,
+                callAOF: callAffixOverflow
+            };
+        })();
+        // bootstrap dropdown
+        $('.dropdown-toggle').dropdown();
+        // bootstrap carousel
+        $('.carousel').carousel();
+        // bootstrap popover
+        $('[data-toggle="popover"]').each(function() {
+            var element = $(this);
+            var tiktak = function() {};
+            var item = "aaa"; //商品内容
+            var overflow = 3; //超出商品显示限制条数
+            element.popover({
+                trigger: 'manual',
+                placement: 'bottom',
+                html: 'true',
+                content: zmModual.setCartCnt(item, overflow),
+            }).on("mouseenter", function() {
+                clearTimeout(tiktak);
+                element.popover("show");
+                element.siblings(".popover").on("mouseleave", function() {
+                    element.popover('hide');
+                });
+            }).on("mouseleave", function() {
+                tiktak = setTimeout(function() {
+                    if (!$(".popover:hover").length) {
+                        element.popover("hide")
+                    }
+                }, 2000);
+            });
+        });
+        //reset all the form value
+        $("input[type=reset]").trigger("click");
+        // init the href
+        $("*").click(function() {
+            var linkHref = $(this).attr("data-href");
+            if (linkHref) window.location.href = linkHref; //window.open(linkHref);
+        });
+        //nav scroll watch  
+        // $(window).scroll(function() {
+        //     //hide the part of the nav when scrolled height > 80px
+        //     if ($(document).scrollTop() > zmModual.navOffset) {
+        //         $("header").addClass("hide");
+        //     } else {
+        //         //recover  
+        //         $("header").removeClass("hide");
+        //     }
+        // });
+        //click to active the login or register tab
+        $('[data-target="#myLogin"]').each(function() {
+            var element = $(this);
+            var opt = element.attr("data-active");
+            element.on("click", function() {
+                zmModual.login(opt)
+            });
+        });
+        //hover to show the category detail in banner left side
+        $(".indexMain-category li").each(function() {
+            var element = $(this);
+            var tiktak = function() {};
+            element.on("mouseenter", function() {
+                tiktak = setTimeout(function() {
+                    element.children(".indexMain-catDtl").addClass("active");
+                }, 500)
+            }).on("mouseleave", function() {
+                clearTimeout(tiktak);
+                element.children(".indexMain-catDtl").removeClass("active");
+            });
+        });
+        //floor jump
+        //go down
+        $(".glyphicon-chevron-down").click(function() {
+            var index = $(".glyphicon-chevron-down").index(this) + 1;
+            var dom = $("#floor_" + (index + 1));
+            //to bottom if it's the last icon-down
+            if (index == $(".glyphicon-chevron-down").length) {
+                dom = $("footer");
+            }
+            zmModual.scroll(dom);
+        });
+        //go up
+        $(".glyphicon-chevron-up").click(function() {
+            var index = $(".glyphicon-chevron-up").index(this);
+            var dom = $("#floor_" + (index));
+            //back to top if it's the 1st icon-up
+            if (index == 0) {
+                dom = $("html");
+            }
+            zmModual.scroll(dom);
+        });
+        //brands floor nav - click jump
+        $("#brandNav a").each(function() {
+            var element = $(this);
+            var dom = element.attr("href");
+            element.click(function() {
+                zmModual.scroll($(dom));
+                return false; //prevent default anchor jumping
+            })
+        });
+        //item detail gallary (optional)
+        $('.carousel-stage').jcarousel({
+            // Configuration goes here
+        }).on('jcarousel:targetin', 'li', function(event, carousel) {
+            // lazyload
+            var element = $(this).find("img");
+            var src_cur = element.attr("ssrc");
+            element.attr("src", src_cur);
+        });
+        //active toggle
+        $('[active-toggle="true"]').each(function() {
+            var ul_ele = $(this);
+            ul_ele.children("li").each(function() {
+                var li_ele = $(this);
+                li_ele.on("click", function() {
+                    li_ele.toggleClass("active");
+                    li_ele.find("i").toggleClass("glyphicon-ok");
+                });
+            });
+        });
+        //call Affix Overflow
+        zmModual.callAOF();
+    });
+    </script>
+    <!--[if lt IE 9]> 
+    <script>
+        //html5 form validator for browser lower than ie9
+        H5F.setup($('form[data-toggle="validator"]'));
+    </script>
+    <![endif]-->
+</body>
+
+</html>
