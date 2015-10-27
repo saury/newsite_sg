@@ -458,7 +458,7 @@ $nav-pills-active-link-hover-color:         $component-active-color !default;
 //
 //##
 
-$pagination-color:                     #ff6801;//$link-color !default;
+$pagination-color:                     $gray; //$link-color !default;
 $pagination-bg:                        #fff !default;
 $pagination-border:                    #ddd !default;
 

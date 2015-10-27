@@ -54,11 +54,31 @@
             }
         }
     }
-    //pagination overwrite
+    //pagination part
     .pagination{
-        margin-right: -($grid-gutter-width / 2);
+        //margin-right: -($grid-gutter-width / 2);
+        font-size: 0; //remove the gutter
+        line-height: 0;
+        vertical-align: middle;
         >li{
-            display: inline-block;//gutters between items
+            display: inline-block;
+            @include fsize(14);
+            &:first-child,
+            &:last-child{
+                margin: 0 10px;
+            }
+        }
+        &-info,
+        &-direct{
+            display: inline-block;
+            color: $gray;
+        }
+        &-direct{
+            margin: 0 20px;
+            input{
+                width: 34px;
+                height: 34px;
+            }
         }
     }
 }

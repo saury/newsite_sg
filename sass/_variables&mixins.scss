@@ -25,6 +25,15 @@ $brands-color: #993585,#ff649d,#f02681,#f135cc,#12a3dc,#5f7cd0,#3036a4,#154484,#
 $brands-item-padding: 6px;
 //shopping cart
 $btn_color_active: #ffe5e1;
+//breadcrumb
+$breadcrumb-separator:">";
+$breadcrumb-padding-vertical: 7px;
+$breadcrumb-padding-horizontal: 0;
+$breadcrumb-bg: transparent;
+// btn border radius set to 0
+$btn-border-radius-base:         0;//$border-radius-base !default;
+$btn-border-radius-large:        0;//$border-radius-large !default;
+$btn-border-radius-small:        0;//$border-radius-small !default;
 ///* mixins */
 //font-size px and rem
 @mixin fsize($fs) {
