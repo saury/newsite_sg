@@ -73,8 +73,8 @@
                 <hr>
                 <li class="navbar-text">首页管理</li>
                 <li><a href="#">轮播编辑</a></li>
-                <li><a href="#">楼层编辑</a></li>
-                <li class="active"><a href="#">商品编辑</a></li>
+                <li class="active"><a href="#">楼层编辑</a></li>
+                <li><a href="#">商品编辑</a></li>
                 <li><a href="#">广告位编辑</a></li>
                 <hr>
                 <li class="navbar-text">分页管理</li>
@@ -107,93 +107,83 @@
                     <label for="search1"><i class="glyphicon glyphicon-search"></i></label>
                     <input type="text" id="search1">
                     <a href="#" class="btn btn-primary">搜索</a>
-                </div>
+                </div>  
             </form>
         </div>
         <!-- breadcrumb and search form end -->
-        <!-- products editing start -->
+        <!-- taobao editing start -->
         <div class="edit-floor">
-            <div>
-                <a href="#" class="btn btn-primary">新增商品</a>
+            <div class="adminMain-header">
+                <input type="text" placeholder="淘宝分类ID">
+                <a href="#" class="btn btn-primary">搜索</a>
+                <a href="#" class="btn btn-primary">新增分类</a>
             </div>
             <div class="table-admin">
-                <label class="table-label col-md-2">
-                    时尚女装
-                </label>
-                <div class="table-thead cf">
+                <div class="table-row cf has-border has-border-top">
                     <div class="col-md-4 pure-g">
-                        <div class="pure-u-1-2">商品名称</div>
-                        <div class="pure-u-1-4">价格</div>
-                        <div class="pure-u-1-4">重量</div>
+                        <div class="pure-u-1-2">
+                            <input type="text" placeholder="分类ID">
+                        </div>
+                        <div class="pure-u-1-2">
+                            <input type="text" placeholder="分类名称">
+                        </div>
                     </div>
                     <div class="col-md-4 td-ellipsis">
-                        链接
+                        <input type="text" placeholder="分类链接">
                     </div>
-                    <div class="col-md-4 pure-g">
-                        <div class="pure-u-1-4">排序</div>
-                        <div class="pure-u-1-4">图片</div>
-                        <div class="pure-u-1-2">操作</div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-success">添加</button>
+                        <button type="button" class="btn btn-info">取消</button>
                     </div>
                 </div>
-                <div class="table-row with-photo cf has-border">
+
+                <div class="table-thead cf">
                     <div class="col-md-4 pure-g">
-                        <div class="pure-u-1-2">连衣裙</div>
-                        <div class="pure-u-1-4">199.00</div>
-                        <div class="pure-u-1-4">300g</div>
+                        <div class="pure-u-1-2">分类ID</div>
+                        <div class="pure-u-1-2">分类名称</div>
+                    </div>
+                    <div class="col-md-4">
+                        分类链接
+                    </div>
+                    <div class="col-md-4">
+                        操作
+                    </div>
+                </div>
+                <div class="table-row cf has-border">
+                    <div class="col-md-4 pure-g">
+                        <div class="pure-u-1-2">50012341</div>
+                        <div class="pure-u-1-2">针织衫</div>
                     </div>
                     <div class="col-md-4 td-ellipsis">
                         <a href="#" target="_blank">
                             https://www.zmall.sg/dfghdfdf*^$3jHJHKFH?id=42341123#sdfhkshg
                         </a>
                     </div>
-                    <div class="col-md-4 pure-g">
-                        <div class="pure-u-1-4">1</div>
-                        <div class="pure-u-1-4">
-                            <div class="table-thumb">
-                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
-                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="pure-u-1-2">
-                            <button type="button" class="btn btn-link">修改</button>
-                            <button type="button" class="btn btn-danger">删除</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-row with-photo cf has-border">
-                    <div class="col-md-4 pure-g">
-                        <div class="pure-u-1-2">
-                            <input type="text" placeholder="名称">
-                        </div>
-                        <div class="pure-u-1-4">
-                            <input type="text" placeholder="价格">
-                        </div>
-                        <div class="pure-u-1-4">
-                            <input type="text" placeholder="重量">
-                        </div>
-                    </div>
-                    <div class="col-md-4 td-ellipsis">
-                        <input type="text" placeholder="链接">
-                    </div>
-                    <div class="col-md-4 pure-g">
-                        <div class="pure-u-1-4">
-                            <input type="text" placeholder="排序">
-                        </div>
-                        <div class="pure-u-1-4">
-                            <label class="btn btn-default btn-file">
-                                <input type="file"> 上传图片
-                            </label>
-                        </div>
-                        <div class="pure-u-1-2">
-                            <button type="button" class="btn btn-success">添加</button>
-                            <button type="button" class="btn btn-info">取消</button>
-                        </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-link">修改</button>
+                        <button type="button" class="btn btn-danger">删除</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- products editing end -->
+        <!-- floors editing end -->
+        <!-- pagination part start -->
+        <nav>
+            <ul class="pagination">
+                <li class="disabled"><a href="#" aria-label="Previous"><span>&laquo;</span></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- pagination part end -->
     </div>
     <!-- main body end -->
     <!-- footer start -->

@@ -30,6 +30,9 @@
         &.with-photo {
             line-height: 60px;
         }
+        [class*="pure-u"]{
+        	padding: 0 ($grid-gutter-width / 2);
+        }
     }
     &-label {
         margin: 0px;
@@ -51,6 +54,10 @@
 .has-border {
     border: 1px solid $gray;
     border-top: 0;
+    &-top{
+    	border-top: 1px solid $gray;
+    	border-bottom: 0;
+    }
 }
 
 //single line ellipsis

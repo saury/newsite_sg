@@ -1,6 +1,7 @@
 @charset "utf-8";
 $grid-gutter-width: 20px;
 //nav admin color lightblue
+$btn_color: #34485E;
 $nav_admin: #34485E;
 //type override
 $headings-font-weight: bold;
@@ -20,6 +21,22 @@ $breadcrumb-padding-vertical: 7px;
 $breadcrumb-padding-horizontal: 0;
 $link-color: $nav_admin;
 $link-hover-color: darken($link-color, 15%);
+//pagination override
+$pagination-color:                     $link-color;
+$pagination-bg:                        #fff;
+$pagination-border:                    #ddd;
+
+$pagination-hover-color:               #fff;
+$pagination-hover-bg:                  $nav_admin;
+$pagination-hover-border:              #ddd;
+
+$pagination-active-color:              #fff;
+$pagination-active-bg:                 $nav_admin;
+$pagination-active-border:             $nav_admin;
+
+$pagination-disabled-color:            $gray-lightee;
+$pagination-disabled-bg:               #fff;
+$pagination-disabled-border:           #ddd;
 // Links
 a {
     color: $link-color;

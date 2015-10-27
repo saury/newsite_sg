@@ -103,13 +103,19 @@
                     <option value="">按商品ID</option>
                     <option value="">按商品名称</option>
                 </select>
-                <input type="text">
-                <a href="#" class="btn btn-primary">搜索</a>
+                <div class="adminMain-header-input">
+                    <label for="search1"><i class="glyphicon glyphicon-search"></i></label>
+                    <input type="text" id="search1">
+                    <a href="#" class="btn btn-primary">搜索</a>
+                </div>  
             </form>
         </div>
         <!-- breadcrumb and search form end -->
-        <!-- products editing start -->
+        <!-- shop editing start -->
         <div class="edit-floor">
+            <div>
+                <a href="#" class="btn btn-primary">新增店铺</a>
+            </div>
             <div class="table-admin">
                 <div class="table-thead cf">
                     <div class="col-md-2">
@@ -151,12 +157,16 @@
                     </div>
                     <div class="col-md-1">
                         <div class="table-thumb">
-                            <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                            <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-1">
                         <div class="table-thumb">
-                            <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                            <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -194,7 +204,7 @@
                 </div>
             </div>
         </div>
-        <!-- products editing end -->
+        <!-- shop editing end -->
     </div>
     <!-- main body end -->
     <!-- footer start -->
@@ -210,19 +220,12 @@
     <script src="js/bootstrap/popover.js"></script>
     <script src="js/bootstrap/tab.js"></script>
     <script src="js/bootstrap/validator.js"></script>
-    <!-- general script -->
-    <script src="js/bootstrap/carousel.js"></script>
-    <!-- index only -->
-    <script src="js/bootstrap/scrollspy.js"></script>
-    <!-- brand page only -->
-    <script src="js/bootstrap/affix.js"></script>
-    <!-- brands' branch page only -->
-    <script src="js/jquery.jcarousel.min.js"></script>
-    <script src="js/gallary-carousels.js"></script>
     <script src="js/bootstrap/button.js"></script>
-    <!-- item detail gallary -->
+    <script src="js/bootstrap/affix.js"></script>
+    <script src="js/bootstrap/scrollspy.js"></script>
     <script src="js/bootstrap/bootstrap-select.js"></script>
-    <!-- shopping cart page -->
+    <script src="js/bootstrap/ekko-lightbox.js"></script>
+    <!-- general script -->
     <script>
     $(function() {
         //zmall modual init
@@ -301,8 +304,6 @@
         })();
         // bootstrap dropdown
         $('.dropdown-toggle').dropdown();
-        // bootstrap carousel
-        $('.carousel').carousel();
         // bootstrap popover
         $('[data-toggle="popover"]').each(function() {
             var element = $(this);
@@ -335,89 +336,17 @@
             var linkHref = $(this).attr("data-href");
             if (linkHref) window.location.href = linkHref; //window.open(linkHref);
         });
-        //nav scroll watch  
-        // $(window).scroll(function() {
-        //     //hide the part of the nav when scrolled height > 80px
-        //     if ($(document).scrollTop() > zmModual.navOffset) {
-        //         $("header").addClass("hide");
-        //     } else {
-        //         //recover  
-        //         $("header").removeClass("hide");
-        //     }
-        // });
-        //click to active the login or register tab
-        $('[data-target="#myLogin"]').each(function() {
-            var element = $(this);
-            var opt = element.attr("data-active");
-            element.on("click", function() {
-                zmModual.login(opt)
-            });
+        //expand the input area
+        $(".adminMain-header-input input").focus(function() {
+            $(this).parent().addClass("expand");
+        }).blur(function() {
+            $(this).parent().removeClass("expand");
         });
-        //hover to show the category detail in banner left side
-        $(".indexMain-category li").each(function() {
-            var element = $(this);
-            var tiktak = function() {};
-            element.on("mouseenter", function() {
-                tiktak = setTimeout(function() {
-                    element.children(".indexMain-catDtl").addClass("active");
-                }, 500)
-            }).on("mouseleave", function() {
-                clearTimeout(tiktak);
-                element.children(".indexMain-catDtl").removeClass("active");
-            });
+        // delegate calls to data-toggle="lightbox"
+        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
         });
-        //floor jump
-        //go down
-        $(".glyphicon-chevron-down").click(function() {
-            var index = $(".glyphicon-chevron-down").index(this) + 1;
-            var dom = $("#floor_" + (index + 1));
-            //to bottom if it's the last icon-down
-            if (index == $(".glyphicon-chevron-down").length) {
-                dom = $("footer");
-            }
-            zmModual.scroll(dom);
-        });
-        //go up
-        $(".glyphicon-chevron-up").click(function() {
-            var index = $(".glyphicon-chevron-up").index(this);
-            var dom = $("#floor_" + (index));
-            //back to top if it's the 1st icon-up
-            if (index == 0) {
-                dom = $("html");
-            }
-            zmModual.scroll(dom);
-        });
-        //brands floor nav - click jump
-        $("#brandNav a").each(function() {
-            var element = $(this);
-            var dom = element.attr("href");
-            element.click(function() {
-                zmModual.scroll($(dom));
-                return false; //prevent default anchor jumping
-            })
-        });
-        //item detail gallary (optional)
-        $('.carousel-stage').jcarousel({
-            // Configuration goes here
-        }).on('jcarousel:targetin', 'li', function(event, carousel) {
-            // lazyload
-            var element = $(this).find("img");
-            var src_cur = element.attr("ssrc");
-            element.attr("src", src_cur);
-        });
-        //active toggle
-        $('[active-toggle="true"]').each(function() {
-            var ul_ele = $(this);
-            ul_ele.children("li").each(function() {
-                var li_ele = $(this);
-                li_ele.on("click", function() {
-                    li_ele.toggleClass("active");
-                    li_ele.find("i").toggleClass("glyphicon-ok");
-                });
-            });
-        });
-        //call Affix Overflow
-        zmModual.callAOF();
     });
     </script>
     <!--[if lt IE 9]> 

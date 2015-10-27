@@ -2,29 +2,25 @@
 ///* import global */
 @import "variables&mixins";
 @import "admin_variables&mixins";
-
 // bootstrap scss for carousel and grid
 @import "bootstrap/_scaffolding.scss",
 "bootstrap/_type.scss",
 "bootstrap/_modals.scss",
 "bootstrap/_grid.scss";
-
 //import bootstrap components
 @import "bootstrap/pagination",
 "bootstrap/button-groups",
 "bootstrap/input-groups",
 "bootstrap/breadcrumbs",
 "bootstrap/panels";
-
 @import "bootstrap/bootstrap-select";
-
 //import pure grid system
 @import "pureGrid";
-
 //Nav part
 @import "adminNav";
 //Main part
 @import "adminMain";
-
 // admin tables
 @import "adminTable";
+// import lightbox
+@import "lightbox";
