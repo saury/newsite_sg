@@ -34,6 +34,8 @@ $breadcrumb-bg: transparent;
 $btn-border-radius-base:         0;//$border-radius-base !default;
 $btn-border-radius-large:        0;//$border-radius-large !default;
 $btn-border-radius-small:        0;//$border-radius-small !default;
+// account page
+$acc-banner-blue: #7ecef4;
 ///* mixins */
 //font-size px and rem
 @mixin fsize($fs) {
@@ -203,10 +205,10 @@ $caret-nav-width: 6px;
         position: relative;
         width: 22px;
         height: 22px;
+        @include fsize(18);
         border: 1px solid $gray-light;
         color: $btn_color;
         text-align: center;
-        @include fsize(18);
         display: inline-block;
         margin-right: 4px;
         vertical-align: bottom;
@@ -224,6 +226,11 @@ $caret-nav-width: 6px;
             border: 0 !important;
             cursor: pointer;
             z-index: 99;
+        }
+        &-sm{
+            width: 18px;
+            height: 18px;
+            @include fsize(14);
         }
     }
 }

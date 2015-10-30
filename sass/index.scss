@@ -1,12 +1,15 @@
 @charset "utf-8";
 ///* import global */
 @import "variables&mixins";
+@import "bootstrap/_component-animations.scss";
 
 //import pure grid system
 @import "pureGrid";
 
 //Nav part
 @import "topNav";
+//minicart part
+@import "mini-cart";
 
 //index main body
 @import "indexMain";
@@ -36,7 +39,14 @@
 @import "step_progress";
 @import "shopping_cart";
 
+//search page
 //breadcrumb
 @import "bootstrap/breadcrumbs";
 //filter part
 @import "product-filter";
+
+//account pages{
+//collapse
+@import "account-banner";
+@import "account-left-menu";
+@import "account-table";

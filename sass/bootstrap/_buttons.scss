@@ -92,21 +92,6 @@ a.btn {
     width: 266px;
     height: 52px;
     line-height: 36px;
-    &.hollow {
-        border-width: 2px;
-        color: $btn_color;
-        background: $btn-primary-color;
-        &:hover {
-            background: $btn_color;
-            color: $btn-primary-color;
-            border-color: $btn_color;
-        }
-        &:hover {
-            background: $btn_color;
-            color: $btn-primary-color;
-            border-color: $btn_color;
-        }
-    }
 }
 //custom
 .btn-theme{

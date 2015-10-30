@@ -1,0 +1,41 @@
+@charset "utf-8";
+.mini-cart{
+    margin-bottom: 10px;
+    &-thumb,
+    &-detail,
+    &-price{
+        display: inline-block;
+    }
+    &-item{
+        width: 240px;
+        padding: 5px 0;
+        border-bottom: 1px dotted $gray-light;
+        .pure-u-7-12,
+        .pure-u-1-4{
+            @include fsize(12);
+            line-height: 20px;
+        }
+        .pure-u-7-12{
+            padding: 0 5px;
+        }
+        p{
+            margin: 0;
+            @include text-overflow();
+        }
+        span{
+            color: $gray-light;
+            @include text-overflow();
+        }
+        em{
+            color: $btn_color;
+            font-style: normal;
+        }
+    }
+    &-hint{
+        @include fsize(12);
+        em{
+            color: $btn_color;
+            font-style: normal;
+        }
+    }
+}

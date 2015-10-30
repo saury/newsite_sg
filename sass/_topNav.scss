@@ -11,22 +11,23 @@
 //import flag icons for country select section
 @import "flag";
 //custom style 
-header{
+header {
     position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
     background: #fff;
     @include transition(all .2s linear);
     //nav partly hidden
-    &.hide{
+    &.hide {
         margin-top: -50px;
-        .navbar-default{
+        .navbar-default {
             background: $nav_dark;
         }
     }
 }
+
 //limit the max-width of the nav
 .navbar {
     @include transition(all .2s linear);
@@ -40,7 +41,7 @@ header{
             @include transition(all .2s linear);
         }
     }
-    &-header{
+    &-header {
         width: 205px\0;
     }
 }
@@ -171,10 +172,15 @@ header{
         color: $btn_color;
         background: #fff;
     }
-    a:hover,
-    a.active,
-    a:active {
-        background: $btn_color !important;
-        color: #fff !important;
+    .btn-lg {
+        height: 50px;
+    }
+    > li {
+        > a:hover,
+        > a.active,
+        > a:active {
+            background: $btn_color !important;
+            color: #fff !important;
+        }
     }
 }

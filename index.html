@@ -93,11 +93,9 @@
                             <button type="submit" class="btn navbar-search-btn"><i class="glyphicon glyphicon-search"></i></button>
                         </form>
                         <li>
-                            <a class="active" href="#" data-toggle="popover" title="Recently Added:">
-                                <!-- <li class="dropdown">
-                            <a class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"> -->
+                            <button class="btn btn-warning btn-lg" data-href="#" data-toggle="popover">
                                 <span class="badge">4</span><i class="glyphicon glyphicon-shopping-cart"></i><span>shopping cart</span>
-                            </a>
+                            </button>
                             <!-- <ul class="dropdown-menu">
                                 <li>123</li>
                             </ul> -->
@@ -965,7 +963,7 @@
                 <div class="modal-body">
                     <div class="modal-success">
                         <h3>Registered Success</h3>
-                        <a href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
+                        <a class="btn" href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
                     </div>
                 </div>
             </div>
@@ -991,6 +989,8 @@
     <script src="js/gallary-carousels.js"></script>
     <script src="js/bootstrap/button.js"></script>
     <!-- item detail gallary -->
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <!-- shopping cart page -->
     <script>
     $(function() {
         //zmall modual init
@@ -1002,10 +1002,31 @@
             });
             //scrollspy for brands page
             $('.zmBrandsPage').scrollspy({
-                    target: '#brandNav',
-                    offset: navOffset + 1
-                })
-                //active the login or register tab
+                target: '#brandNav',
+                offset: navOffset + 1
+            });
+            //disable all the form's submit function
+            $("form").submit(function() {
+                return false
+            });
+            //general affix overflow
+            function callAffixOverflow() {
+                $('[data-affix="overflow"]').each(function() {
+                    var ele = $(this);
+                    var offsetTop = ele.offset().top - $(window).height() - parseInt(ele.css("margin-top").split("px")[0]);
+                    //affix top = offset to top - element's margin-top - window's height
+                    ele.affix("destroy"); //destroy the affix function berfore
+                    if (offsetTop < 0) return false; //no affix while it is not overflow
+                    ele.affix({
+                        offset: {
+                            top: function() {
+                                return offsetTop; // distance to the top
+                            }
+                        }
+                    });
+                });
+            };
+            //active the login or register tab
             function logOrReg(opt) {
                 // body...
                 switch (opt) {
@@ -1019,15 +1040,20 @@
 
             // function for setting the html template of the cart details
             function setCartContent(item, overflow) {
-                //hide the "Still have xx more products" when the num is 0
-                if (overflow) var _overflowStr = '<div><p><strong>Still have ' + overflow + ' more products</strong></p></div>';
+                //hide the "You have xx more items" when the num is 0
+                if (overflow) var _overflowStr = '<div class="mini-cart-hint cf"><p class="fll">You have <em>' + overflow + '</em> more items</p><p class="flr">Total: <em>S$234.23</em></p></div>';
                 else _overflowStr = '';
+                var _item = '<li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="img/brands-thumb.jpg" class="img-responsive"></div><div class="pure-u-7-12"><p>Content content content</p><span>color: 1 Size: M</span></div><div class="pure-u-1-4 text-right"><em>S$234.56</em><a href="#" class="btn btn-warning hollow btn-xs">Delete</a></div><li><li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="img/brands-thumb.jpg" class="img-responsive"></div><div class="pure-u-7-12"><p>Content content content</p><span>color: 1 Size: M</span></div><div class="pure-u-1-4 text-right"><em>S$234.56</em><a href="#" class="btn btn-warning hollow btn-xs">Delete</a></div><li><li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="img/brands-thumb.jpg" class="img-responsive"></div><div class="pure-u-7-12"><p>Content content content</p><span>color: 1 Size: M</span></div><div class="pure-u-1-4 text-right"><em>S$234.56</em><a href="#" class="btn btn-warning hollow btn-xs">Delete</a></div><li>';
+                // for (var i = 0; i < item.length; i++) {
+                //     _item += "<li>"+item[i]+"</li>";
+                // }
+
                 //return the whole cart list string
-                return '<ul>' +
-                    '<li>' + item + '</li>' +
+                return '<ul class="list-unstyled mini-cart">' +
+                    _item +
                     '</ul>' +
                     _overflowStr +
-                    '<button href="#">Checking my cart</button>';
+                    '<a class="btn btn-warning btn-sm flr" href="#">Checking my cart</a>';
             };
 
             //function for the floor jumping
@@ -1046,7 +1072,8 @@
                 navOffset: navOffset,
                 setCartCnt: setCartContent,
                 scroll: scrollToPosition,
-                login: logOrReg
+                login: logOrReg,
+                callAOF: callAffixOverflow
             };
         })();
         // bootstrap dropdown
@@ -1057,25 +1084,30 @@
         $('[data-toggle="popover"]').each(function() {
             var element = $(this);
             var tiktak = function() {};
-            var item = "aaa"; //商品内容
-            var overflow = 3; //超出商品显示限制条数
-            element.popover({
-                trigger: 'manual',
-                placement: 'bottom',
-                html: 'true',
-                content: zmModual.setCartCnt(item, overflow),
-            }).on("mouseenter", function() {
+            var item = ["aaa","bbb","ccc","ddd","eee","fff"]; //商品内容
+            var overflow = item.length>5?(item.length - 5):0; //超出商品显示限制条数
+            element.on("mouseenter", function() {
+                element.popover({
+                    trigger: 'manual',
+                    placement: 'bottom',
+                    html: 'true',
+                    content: zmModual.setCartCnt(item, overflow)
+                });
                 clearTimeout(tiktak);
                 element.popover("show");
                 element.siblings(".popover").on("mouseleave", function() {
-                    element.popover('hide');
+                    //element.popover('hide');
+                    element.popover('destroy');
                 });
             }).on("mouseleave", function() {
+                item = ["aaa","bbb","ccc","ddd","eee"];
+                overflow = item.length>5?(item.length - 5):0;
                 tiktak = setTimeout(function() {
                     if (!$(".popover:hover").length) {
-                        element.popover("hide")
+                        //element.popover("hide");
+                        element.popover('destroy');
                     }
-                }, 2000);
+                }, 500);
             });
         });
         //reset all the form value
@@ -1164,6 +1196,18 @@
                     li_ele.toggleClass("active");
                     li_ele.find("i").toggleClass("glyphicon-ok");
                 });
+            });
+        });
+        //call Affix Overflow
+        zmModual.callAOF();
+        // gallary photo override
+        $("[gallary-override]").each(function() {
+            var ele = $(this),
+                target = $(".detail-gallary-override");
+            var arg = ele.attr("gallary-override");
+            ele.on("click", function() {
+                if (arg == "true") target.show();
+                else target.hide();
             });
         });
     });

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
     <title>New site</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="New%20site_files/index.css">
     <!--[if lt IE 9]> 
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.js"></script>
@@ -36,7 +35,7 @@
                                 <li class="country-list-search">
                                     <div>
                                         <i class="glyphicon glyphicon-search"></i>
-                                        <input type="text" name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);">
+                                        <input name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);" type="text">
                                     </div>
                                 </li>
                                 <li><a ctr="{'change_to_country':'us'}" href="javascript:void(0);"><i class="litb-icon-flag us"></i><span class="english" data-abbr="us">United States</span></a></li>
@@ -62,7 +61,7 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#top">
-                        <img alt="logo" src="img/logo.png">
+                        <img alt="logo" src="New%20site_files/logo.png">
                     </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,7 +74,7 @@
                         <li><a href="#">Electronics</a></li>
                         <form class="navbar-form navbar-left navbar-search-form" role="search">
                             <div class="form-group">
-                                <input type="text" placeholder="Search for products or links">
+                                <input placeholder="Search for products or links" type="text">
                             </div>
                             <button type="submit" class="btn navbar-search-btn"><i class="glyphicon glyphicon-search"></i></button>
                         </form>
@@ -94,232 +93,96 @@
         <!-- 2nd header bar end-->
     </header>
     <!-- header end -->
-    <!-- search page start -->
-    <div class="indexMain bBranch">
-        <!-- breadcrumb & filter part start -->
-        <div class="container prod-filter-wrap">
-            <!-- breadcrumb start -->
-            <ol class="breadcrumb row">
-                <li><a href="#">All</a></li>
-                <li><a href="#">Sweater woman</a></li>
-                <li class="active">Sweet and lovely</li>
-                <li>
-                    <!-- condition area start -->
-                    <a href="#">
-                        <span class="prod-filter-remove">
-                            <i class="glyphicon glyphicon-remove"></i>Nike
-                        </span>
-                    </a>
-                    <a href="#">
-                        <span class="prod-filter-remove">
-                            <i class="glyphicon glyphicon-remove"></i>condition2
-                        </span>
-                    </a>
-                    <!-- condition area end -->
-                </li>
-            </ol>
-            <!-- breadcrumb end -->
-            <!-- filter part start -->
-            <div class="row prod-filter">
-                <dl class="dl-horizontal">
-                    <dt>Brand</dt>
-                    <dd>
-                        <ul class="list-inline text-justify">
-                            <li><a href="#">Brand</a></li>
-                            <li><a href="#">Brand</a></li>
-                            <li><a href="#">Brand</a></li>
-                            <li><a href="#">Brand</a></li>
-                        </ul>
-                    </dd>
-                </dl>
-                <dl class="dl-horizontal">
-                    <dt>Hot</dt>
-                    <dd>
-                        <ul class="list-inline text-justify">
-                            <li><a href="#">Hot</a></li>
-                            <li><a href="#">Hot</a></li>
-                            <li><a href="#">Hot</a></li>
-                            <li><a href="#">Hot</a></li>
-                        </ul>
-                    </dd>
-                </dl>
-                <dl class="dl-horizontal">
-                    <dt>Classification</dt>
-                    <dd>
-                        <ul class="list-inline text-justify">
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                            <li><a href="#">Classification</a></li>
-                        </ul>
-                    </dd>
-                </dl>
-            </div>
-            <div class="row">
-                <div class="btn-group btn-group-sm fll" data-toggle="buttons">
-                    <div class="btn btn-theme active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Default
-                    </div>
-                    <div class="btn btn-theme">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Price <i class="glyphicon glyphicon-sort-by-attributes"></i>
-                    </div>
-                    <div class="btn btn-theme">
-                        <input type="radio" name="options" id="option3" autocomplete="off"> Price <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
-                    </div>
-                    <div class="btn btn-theme">
-                        <input type="radio" name="options" id="option4" autocomplete="off"> Sales volume <i class="glyphicon glyphicon-arrow-down"></i>
-                    </div>
-                    <div class="btn btn-theme">
-                        <input type="radio" name="options" id="option5" autocomplete="off"> Latest <i class="glyphicon glyphicon-arrow-down"></i>
-                    </div>
+    <!-- account page start -->
+    <div class="indexMain container">
+        <!-- top info bar start -->
+        <div class="acc-banner pure-g row">
+            <!-- avatar part start -->
+            <div class="pure-u-1-5 acc-banner-avatar-wrap">
+                <div class="acc-banner-avatar">
+                    <img class="img-responsive img-circle" src="New%20site_files/brands-thumb.jpg" alt="avatar">
+                    <span class="badge "><small>VIP 1</small></span>
+                    <i class="glyphicon glyphicon-pencil"></i>
                 </div>
-                <div class="btn-group btn-group-sm flr">
-                    <span>1/100</span>
-                    <a href="#" class="btn btn-theme"><i class="glyphicon glyphicon-menu-left"></i></a>
-                    <a href="#" class="btn btn-theme"><i class="glyphicon glyphicon-menu-right"></i></a>
+                <b>Dear Sarah</b>
+                <p>Welcome back again</p>
+            </div>
+            <!-- avatar part end -->
+            <div class="pure-u-4-5 pure-g-wrap">
+                <div class="pure-u-2-5 acc-vam">
+                    <ul class="list-unstyled acc-vam-inner acc-banner-info">
+                        <li>Account name: Sarah</li>
+                        <li>My coupons: 1 2 3 4</li>
+                        <li>Login mailbox: 546934001@qq.com</li>
+                        <li>Phone number: 13752151620</li>
+                        <li>Receiving address: ugfuerdfbrghdyt</li>
+                    </ul>
+                </div>
+                <div class="pure-u-1-5">
+                    <div class="acc-banner-avatar">
+                        <img class="img-responsive img-circle" src="New%20site_files/brands-thumb.jpg" alt="avatar">
+                    </div>
+                    <span>Available balance</span>
+                    <p><b>S$99.99</b>
+                        <button class="btn btn-warning btn-xs">Recharge</button>
+                    </p>
+                </div>
+                <div class="pure-u-1-5">
+                    <div class="acc-banner-avatar">
+                        <img class="img-responsive img-circle" src="New%20site_files/brands-thumb.jpg" alt="avatar">
+                    </div>
+                    <span>My points</span>
+                    <p><b>2399</b></p>
+                </div>
+                <div class="pure-u-1-5">
+                    <div class="acc-banner-avatar">
+                        <img class="img-responsive img-circle" src="New%20site_files/brands-thumb.jpg" alt="avatar">
+                    </div>
+                    <span>My grades</span>
+                    <p><b>V1</b></p>
                 </div>
             </div>
-            <!-- filter part end -->
-            <!-- breadcrumb & filter part end -->
+            <!-- <i class="glyphicon glyphicon-usd"></i>
+            <i class="glyphicon glyphicon-gift"></i>
+            <i class="glyphicon glyphicon-bookmark"></i> -->
         </div>
-        <!-- filter part end -->
-        <!-- branch list start -->
-        <div class="indexMain-floor-item pure-g container">
+        <!-- top info end start -->
+        <div class="pure-g row">
+            <!-- left menu start -->
             <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
+                <div class="left-menu">
+                    <h4>My account</h4>
+                    <div class="left-menu-bar">
+                        <label data-toggle="collapse" href="#menuDDL1">
+                            <i class="glyphicon glyphicon-book"></i>My order <i class="glyphicon glyphicon-chevron-down rotate"></i>
+                        </label>
+                        <ul class="left-menu-list collapse in" id="menuDDL1">
+                            <li><a href="#">To be paid</a><span class="badge flr">4</span></li>
+                            <li><a href="#">Purchased goods</a><span class="badge flr">6</span></li>
+                            <li><a href="#">Has been signed</a></li>
+                            <li><a href="#">Rights</a></li>
+                        </ul>
+                    </div>
+                    <div class="left-menu-bar">
+                        <label data-toggle="collapse" href="#menuDDL2">
+                            <i class="glyphicon glyphicon-star"></i>My Collection <i class="glyphicon glyphicon-chevron-down"></i>
+                        </label>
+                        <ul class="left-menu-list collapse" id="menuDDL2">
+                            <li><a href="#">Collection of products</a></li>
+                            <li><a href="#">Collection of brands</a></li>
+                        </ul>
+                    </div>
+                    <div class="left-menu-bar">
+                        <label data-href="#">
+                            <i class="glyphicon glyphicon-pencil"></i>Transaction records
+                        </label>
+                    </div>
                 </div>
             </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
-            <div class="pure-u-1-5">
-                <div class="indexMain-floor-item-wrap">
-                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
-                    <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
-                    <p>$99.00<em>$99.00</em></p>
-                </div>
-            </div>
+            <!-- left menu end -->
         </div>
-        <!-- banner body end -->
-        <!-- pagination part start -->
-        <nav class="container text-center">
-            <ul class="pagination">
-                <li class="disabled"><a href="#" aria-label="Previous"><span>&laquo;Last page</span></a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#" aria-label="Next"><span aria-hidden="true">Next page&raquo;</span></a></li>
-            </ul>
-            <div class="pagination-info">
-                <span>100 pages total</span>
-                <span class="pagination-direct">Turn to <input type="text" maxlength="3"> page</span>
-                <a href="#" class="btn btn-warning">GO</a>
-            </div>
-        </nav>
-        <!-- pagination part end -->
     </div>
-    <!-- search page end -->
+    <!-- account page end -->
     <!-- footer start -->
     <footer></footer>
     <!-- footer end -->
@@ -329,7 +192,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-brand">
-                        <img alt="logo" src="img/logo.png">
+                        <img alt="logo" src="New%20site_files/logo.png">
                     </div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i class="glyphicon glyphicon-remove"></i>
@@ -339,20 +202,20 @@
                     <li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Sign in</a></li>
                     <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
                 </ul>
-                <form class="tab-content form-horizontal" data-toggle="validator">
-                    <input type="reset" name="reset" hidden/>
+                <form novalidate="true" class="tab-content form-horizontal" data-toggle="validator">
+                    <input name="reset" hidden="" type="reset">
                     <div role="tabpanel" class="tab-pane active" id="login">
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="account" class="col-sm-4 control-label">Account:</label>
                                 <div class="col-sm-7">
-                                    <input type="email" class="form-control" id="account" placeholder="E-mail / phone / name ">
+                                    <input class="form-control" id="account" placeholder="E-mail / phone / name " type="email">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="pwd" class="col-sm-4 control-label">Password:</label>
                                 <div class="col-sm-7">
-                                    <input type="password" class="form-control" id="pwd" placeholder="">
+                                    <input class="form-control" id="pwd" placeholder="" type="password">
                                 </div>
                             </div>
                             <!-- <div class="form-group">
@@ -377,7 +240,7 @@
                             <div class="form-group has-feedback">
                                 <label for="email" class="col-sm-4 control-label">E-mail:</label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="email" placeholder="Please enter your E-mail address" data-error="Email shouldn't be blank" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" data-pattern-error="Bruh, that email address is invalid" data-minlength="6" data-minlength-error="Minimum of 6 characters" required>
+                                    <input class="form-control" id="email" placeholder="Please enter your E-mail address" data-error="Email shouldn't be blank" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" data-pattern-error="Bruh, that email address is invalid" data-minlength="6" data-minlength-error="Minimum of 6 characters" required="" type="text">
                                     <!-- data-remote="/path/to/remote/validator" to make an AJAX request to determine if the field is valid or not. -->
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors"></div>
@@ -386,7 +249,7 @@
                             <div class="form-group has-feedback">
                                 <label for="mobile" class="col-sm-4 control-label">Mobile:</label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="mobile" placeholder="Please enter your mobile number" data-error="Mobile number shouldn't be blank" required>
+                                    <input class="form-control" id="mobile" placeholder="Please enter your mobile number" data-error="Mobile number shouldn't be blank" required="" type="text">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors"></div>
                                 </div>
@@ -394,7 +257,7 @@
                             <div class="form-group has-feedback">
                                 <label for="pwd-reg" class="col-sm-4 control-label">Password:</label>
                                 <div class="col-sm-7">
-                                    <input type="password" class="form-control" id="pwd-reg" placeholder="" data-minlength="6" data-error="Minimum of 6 characters" required>
+                                    <input class="form-control" id="pwd-reg" placeholder="" data-minlength="6" data-error="Minimum of 6 characters" required="" type="password">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors"></div>
                                 </div>
@@ -402,7 +265,7 @@
                             <div class="form-group has-feedback">
                                 <label for="pwd-reg2" class="col-sm-4 control-label">Confirm:</label>
                                 <div class="col-sm-7">
-                                    <input type="password" class="form-control" id="pwd-reg2" data-match="#pwd-reg" data-error="Confirm your password" data-match-error="Whoops, these don't match" placeholder="" required>
+                                    <input class="form-control" id="pwd-reg2" data-match="#pwd-reg" data-error="Confirm your password" data-match-error="Whoops, these don't match" placeholder="" required="" type="password">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <span class="help-block with-errors"></span>
                                 </div>
@@ -410,14 +273,14 @@
                             <div class="form-group">
                                 <label for="reward-reg" class="col-sm-4 control-label">Rewards code:</label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="reward-reg" placeholder="">
+                                    <input class="form-control" id="reward-reg" placeholder="" type="text">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="check1" class="col-sm-4 control-label"></label>
                                 <div class="col-sm-7">
                                     <div class="zm-checkbox">
-                                        <input type="checkbox" data-error="Check to process" name="check1" required>
+                                        <input data-error="Check to process" name="check1" required="" type="checkbox">
                                         <i class="glyphicon glyphicon-ok"></i>
                                     </div>
                                     <div class="modal-tip flr">I have read and accepted the <a href="#" target="_blank" class="high-lighted">&lt;User Registration Agreement&gt;</a></div>
@@ -440,27 +303,28 @@
         </div>
     </div>
     <!-- Login Modal end-->
-    <script src="js/jquery-1.11.3.js"></script>
-    <script src="js/bootstrap/transition.js"></script>
-    <script src="js/bootstrap/dropdown.js"></script>
-    <script src="js/bootstrap/modal.js"></script>
-    <script src="js/bootstrap/tooltip.js"></script>
-    <script src="js/bootstrap/popover.js"></script>
-    <script src="js/bootstrap/tab.js"></script>
-    <script src="js/bootstrap/validator.js"></script>
+    <script src="New%20site_files/jquery-1.js"></script>
+    <script src="New%20site_files/transition.js"></script>
+    <script src="New%20site_files/dropdown.js"></script>
+    <script src="New%20site_files/modal.js"></script>
+    <script src="New%20site_files/tooltip.js"></script>
+    <script src="New%20site_files/popover.js"></script>
+    <script src="New%20site_files/tab.js"></script>
+    <script src="New%20site_files/validator.js"></script>
     <!-- general script -->
-    <script src="js/bootstrap/carousel.js"></script>
+    <script src="New%20site_files/carousel.js"></script>
     <!-- index only -->
-    <script src="js/bootstrap/scrollspy.js"></script>
+    <script src="New%20site_files/scrollspy.js"></script>
     <!-- brand page only -->
-    <script src="js/bootstrap/affix.js"></script>
+    <script src="New%20site_files/affix.js"></script>
     <!-- brands' branch page only -->
-    <script src="js/jquery.jcarousel.min.js"></script>
-    <script src="js/gallary-carousels.js"></script>
-    <script src="js/bootstrap/button.js"></script>
+    <script src="New%20site_files/jquery.js"></script>
+    <script src="New%20site_files/gallary-carousels.js"></script>
+    <script src="New%20site_files/button.js"></script>
     <!-- item detail gallary -->
-    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="New%20site_files/bootstrap-select.js"></script>
     <!-- shopping cart page -->
+    <script src="New%20site_files/collapse.js"></script>
     <script>
     $(function() {
         //zmall modual init
@@ -554,8 +418,8 @@
         $('[data-toggle="popover"]').each(function() {
             var element = $(this);
             var tiktak = function() {};
-            var item = ["aaa","bbb","ccc","ddd","eee","fff"]; //商品内容
-            var overflow = item.length>5?(item.length - 5):0; //超出商品显示限制条数
+            var item = ["aaa", "bbb", "ccc", "ddd", "eee", "fff"]; //商品内容
+            var overflow = item.length > 5 ? (item.length - 5) : 0; //超出商品显示限制条数
             element.on("mouseenter", function() {
                 element.popover({
                     trigger: 'manual',
@@ -570,8 +434,8 @@
                     element.popover('destroy');
                 });
             }).on("mouseleave", function() {
-                item = ["aaa","bbb","ccc","ddd","eee"];
-                overflow = item.length>5?(item.length - 5):0;
+                item = ["aaa", "bbb", "ccc", "ddd", "eee"];
+                overflow = item.length > 5 ? (item.length - 5) : 0;
                 tiktak = setTimeout(function() {
                     if (!$(".popover:hover").length) {
                         //element.popover("hide");
@@ -680,6 +544,15 @@
                 else target.hide();
             });
         });
+        //account page
+        //left menu accordion
+        $('.collapse').on('show.bs.collapse', function() {
+            var prntEle = $(this).parent();
+            prntEle.find(".glyphicon-chevron-down").addClass("rotate");
+            prntEle.siblings().children('.collapse').collapse('hide');
+        }).on('hide.bs.collapse', function() {
+            $(this).parent().find(".glyphicon-chevron-down").removeClass("rotate");
+        })
     });
     </script>
     <!--[if lt IE 9]> 
@@ -688,6 +561,7 @@
         H5F.setup($('form[data-toggle="validator"]'));
     </script>
     <![endif]-->
-</body>
 
-</html>
+
+
+</body></html>

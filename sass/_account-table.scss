@@ -1,0 +1,10 @@
+@charset "utf-8";
+.acc{
+    &-thead{
+        padding: 5px 10px;
+        font-size: 80%;
+        div[class*="pure-u"]{
+            @include fsize(13);
+        }
+    }
+}

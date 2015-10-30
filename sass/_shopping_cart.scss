@@ -37,8 +37,19 @@
             }
         }
     }
-    &-table {
-        &-thead {
+    //table part
+    &-t {
+        &head,
+        &body {
+            div[class*="pure-u"] {
+                text-align: center;
+                position: relative;
+            }
+            .pure-u-1-2:last-child {
+                font-size: 0; // remove the gutter between inline-blocks;
+            }
+        }
+        &head {
             padding: 4px 0;
             border-bottom: 4px solid $btn_color;
             .hr-line {
@@ -49,13 +60,12 @@
                 background: #fff;
                 right: 0px;
             }
-            div[class*="pure-u"] {
-                text-align: center;
-                position: relative;
-            }
         }
-        .pure-u-1-2:last-child {
-            font-size: 0; // remove the gutter between inline-blocks;
+        &body {
+            // gray background color for shopping cart page
+            label {
+                background: $gray-lighterr;
+            }
         }
     }
     // affix bar
@@ -80,10 +90,8 @@
         }
         ul {
             margin: 0;
-            padding: 0;
         }
         li {
-            list-style: none;
             padding: 4px 0;
         }
         &-transport {
@@ -120,6 +128,10 @@
     &-wrap {
         display: inline-table;
         height: 75px;
+        em{
+            color: $btn_color;
+            font-style: normal;
+        }
     }
     &-inner {
         display: table-cell;
@@ -132,7 +144,6 @@
         > label {
             padding: 10px;
             cursor: default;
-            background: $gray-lighterr;
             &.active {
                 background: $btn_color_active;
                 box-shadow: none;
@@ -143,19 +154,25 @@
                     background: $btn_color_active;
                 }
             }
+            &.no-gutter{
+                //margin-top: -1px;
+                margin: 0;
+            }
         }
         ul {
-            padding: 0;
-            text-align: left;
+            margin: 0;
         }
         li {
-            list-style: none;
             a {
                 color: $gray;
                 &:hover {
                     color: $btn_color;
                 }
             }
+        }
+        //border color override
+        .btn-default{
+            border-color: $gray-lighter;
         }
     }
     &-item {
@@ -167,16 +184,15 @@
             display: inline-block;
         }
         dt {
+            width: 75px;
+            height: 75px;
             vertical-align: top;
         }
         dd {
             padding: 0px 8px;
         }
-        ul {
-            padding: 0;
-        }
-        li {
-            list-style: none;
+        small {
+            color: $gray-light;
         }
     }
 }
