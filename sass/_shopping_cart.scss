@@ -128,7 +128,7 @@
     &-wrap {
         display: inline-table;
         height: 75px;
-        em{
+        em {
             color: $btn_color;
             font-style: normal;
         }
@@ -136,6 +136,8 @@
     &-inner {
         display: table-cell;
         vertical-align: middle;
+        white-space: normal;
+        word-break: break-all;
     }
     &-shop {
         padding: 8px 0px;
@@ -154,24 +156,15 @@
                     background: $btn_color_active;
                 }
             }
-            &.no-gutter{
-                //margin-top: -1px;
+            &.no-gutter {
                 margin: 0;
             }
         }
         ul {
             margin: 0;
         }
-        li {
-            a {
-                color: $gray;
-                &:hover {
-                    color: $btn_color;
-                }
-            }
-        }
         //border color override
-        .btn-default{
+        .btn-default {
             border-color: $gray-lighter;
         }
     }
@@ -182,14 +175,24 @@
         dd {
             margin: 0;
             display: inline-block;
+            position: relative;
+            height: 75px;
         }
         dt {
             width: 75px;
-            height: 75px;
             vertical-align: top;
         }
         dd {
             padding: 0px 8px;
+            width: 460px;
+        }
+        p{
+            height: 20px;
+            @include ellipsis(true);
+        }
+        .list-unstyled {
+            bottom: 0px;
+            position: absolute;
         }
         small {
             color: $gray-light;

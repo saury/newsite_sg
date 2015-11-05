@@ -15,7 +15,7 @@
 @import "indexMain";
 
 //import login & register modal
-@import "login&register";
+@import "zm-modal";
 
 //import brands page main body
 @import "brands";
@@ -27,8 +27,11 @@
 @import "bootstrap/button-groups",
 "bootstrap/input-groups",
 "bootstrap/panels";
+
 //import item detals
 @import "detail";
+// import lightbox
+@import "lightbox";
 
 //import the gallary modual
 @import "gallary-carousels";
@@ -50,3 +53,4 @@
 @import "account-banner";
 @import "account-left-menu";
 @import "account-table";
+@import "not-available";

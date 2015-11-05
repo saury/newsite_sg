@@ -83,8 +83,9 @@
     //detail promo part
     &-promo {
         @include fsize(16);
-        h3 {
-            margin: 0;
+        h4 {
+            // margin: 0;
+            margin-top: 0;
         }
         &-price {
             background: $gray-lighter;
@@ -141,7 +142,7 @@
         }
         .btn-xlg {
             width: 200px;
-            @include fsize(22);
+            @include fsize(20);
         }
         //error info style
         .with-errors{
@@ -208,6 +209,55 @@
                     margin: 0 auto;
                 }
             }
+        }
+    }
+    // attribute list
+    @at-root #detail-attr{
+        .col-md-3{
+            @include ellipsis(true);
+            line-height: 32px;
+            border-bottom: 1px solid $gray-lightee;
+        }
+    }
+    // evaluation part
+    @at-root #detail-evaluation{
+        label{
+            color: #fff;
+            background-color: $gray-dark;
+        }
+        input[type="radio"]{
+            position: relative;
+            clip: auto;
+            margin: 0 4px 0;
+        }
+    }
+    @at-root .evaluation-item{
+        li{
+            border-bottom: 1px solid $gray-lightee;
+        }
+        &-avatar{
+            width: 80px;
+            text-align: center;
+            margin: 20px auto;
+        }
+        &-shot{
+            margin-bottom: 10px;
+        }
+        &-extra{
+            border-top: 1px dashed $gray-lighter;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+        .col-md-10{
+            padding: 20px ($grid-gutter-width / 2);
+        }
+        .img-thumbnail {
+            width: 80px;
+            cursor: zoom-in;
+        }
+        em,small{
+            color: $gray-lighte;
+            font-style: normal;
         }
     }
 }

@@ -38,16 +38,15 @@
             padding: 15px;
         }
         &-wrap {
-            border-width: 4px;
+            padding: 4px;
             height: auto;
             background: #fff;
-            border-color: #fff;
             span,
             p {
                 padding: 0;
+                line-height: unset;
             }
             span {
-                display: inline-block;
                 margin-top: 6px;
                 height: 40px;
                 overflow: hidden;

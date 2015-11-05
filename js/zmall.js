@@ -18,7 +18,7 @@ $(function() {
         });
         //disable all the form's submit function
         $("form").submit(function() {
-            return false
+            return false;
         });
         //general affix overflow
         function callAffixOverflow() {
@@ -37,16 +37,17 @@ $(function() {
                 });
             });
         };
-        //active the login or register tab
-        function logOrReg(opt) {
-            // body...
-            switch (opt) {
-                case "log":
-                    $("#myLogin .nav-tabs li").eq(0).children("a").trigger("click");
-                    break;
-                default:
-                    $("#myLogin .nav-tabs li").eq(1).children("a").trigger("click");
-            }
+
+        //active the tab inside the modal
+        function activeModalTab() {
+            $('[data-target^="#modal_"]').each(function() {
+                var ele = $(this);
+                var modal_target = ele.attr("data-target");
+                var opt = ele.attr("data-active");
+                ele.on("click", function() {
+                    $(modal_target + " .nav-tabs li a[href='#" + opt + "']").trigger("click");
+                });
+            });
         };
 
         // function for setting the html template of the cart details
@@ -83,7 +84,7 @@ $(function() {
             navOffset: navOffset,
             setCartCnt: setCartContent,
             scroll: scrollToPosition,
-            login: logOrReg,
+            activeMTab: activeModalTab,
             callAOF: callAffixOverflow
         };
     })();
@@ -124,9 +125,12 @@ $(function() {
     //reset all the form value
     $("input[type=reset]").trigger("click");
     // init the href
-    $("*").click(function() {
-        var linkHref = $(this).attr("data-href");
-        if (linkHref) window.location.href = linkHref; //window.open(linkHref);
+    $(document).on("click", "*", function() {
+        var ele = $(this);
+        var linkHref = ele.attr("data-href");
+        var newWindow = ele.attr("data-newWin");
+        if (linkHref && newWindow) window.open(linkHref); //open in new window;
+        else if (linkHref) window.location.href = linkHref; //open in self window;
     });
     //nav scroll watch  
     $(window).scroll(function() {
@@ -138,14 +142,8 @@ $(function() {
             $("header").removeClass("hide");
         }
     });
-    //click to active the login or register tab
-    $('[data-target="#myLogin"]').each(function() {
-        var element = $(this);
-        var opt = element.attr("data-active");
-        element.on("click", function() {
-            zmModual.login(opt)
-        });
-    });
+    //active the tab inside the modal
+    zmModual.activeMTab();
     //hover to show the category detail in banner left side
     $(".indexMain-category li").each(function() {
         var element = $(this);
@@ -229,5 +227,20 @@ $(function() {
         prntEle.siblings().children('.collapse').collapse('hide');
     }).on('hide.bs.collapse', function() {
         $(this).parent().find(".glyphicon-chevron-down").removeClass("rotate");
+    });
+    //lightbox for item detail
+    // delegate calls to data-toggle="lightbox"
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+    //delete the collections
+    $(document).on('click', '.acc-collect-op', function() {
+        var parentEle = $(this).parent().parent();
+        if (confirm("Delete it?")) {
+            parentEle.fadeOut();
+            setTimeout(function(){parentEle.remove();},400);
+        }
+        return false;
     });
 });

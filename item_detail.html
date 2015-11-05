@@ -7,7 +7,6 @@
     <meta name="renderer" content="webkit">
     <title>New site</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="sass/gallary-carousels.css">
     <!--[if lt IE 9]> 
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.js"></script>
@@ -48,8 +47,8 @@
                         <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" data-toggle="modal" data-target="#myLogin" data-active="log"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#myLogin" data-active="reg"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="login"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="register"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -145,7 +144,7 @@
                     </div>
                 </div>
                 <form class="col-md-6 detail-promo">
-                    <h3>Liebo 2015 summer solid short Sleeve dress embroiered chiffon skirt female 91141047</h3>
+                    <h4>Liebo 2015 summer solid short Sleeve dress embroiered chiffon skirt female 91141047</h4>
                     <ul class="detail-promo-price">
                         <li class="pure-g">
                             <span class="pure-u-1-4">Original Price:</span>
@@ -286,18 +285,121 @@
         <!-- 2nd nav bar of detail -->
         <nav class="navbar navbar-narrow detail-nav container">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Product Details</a><span class="caret caret-nav"></span></li>
-                <li><a href="#">User Evaluation</a><span class="caret caret-nav"></span></li>
+                <li class="active"><a href="#detail-attr" data-toggle="tab">Product Details</a><span class="caret caret-nav"></span></li>
+                <li><a href="#detail-evaluation" data-toggle="tab">User Evaluation</a><span class="caret caret-nav"></span></li>
             </ul>
         </nav>
         <!-- 2nd nav bar of detail -->
+        <div class="tab-content container detail-cnt">
+            <!-- attribute list start -->
+            <div class="row tab-pane active" id="detail-attr" role="tabpanel">
+                <ul class="list-unstyled cf">
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">Component content: 81% (inclusive) to 90% (inclusive)</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">Component content: 81% (inclusive) to 90% (inclusive)</li>
+                    <li class="col-md-3">Component content: 81% (inclusive) to 90% (inclusive)</li>
+                    <li class="col-md-3">Component content: 81% (inclusive) to 90% (inclusive)</li>
+                    <li class="col-md-3">Component content: 81% (inclusive) to 90% (inclusive)</li>
+                    <li class="col-md-3">Component content: 81% (inclusive) to 90% (inclusive)</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">mock up</li>
+                    <li class="col-md-3">Component content: 81% (inclusive) to 90% (inclusive)</li>
+                    <li class="col-md-3">Component content: 81% (inclusive) to 90% (inclusive)</li>
+                    <li class="col-md-3">Component content: 81% (inclusive) to 90% (inclusive)</li>
+                </ul>
+                <div>mock up</div>
+            </div>
+            <!-- attribute list end -->
+            <!-- evaluation part start -->
+            <div class="row tab-pane" id="detail-evaluation" role="tabpanel">
+                <nav class="cf" data-toggle="buttons">
+                    <label class="btn btn-sm col-md-2 active">
+                        <input name="options" checked="" type="radio">All(2734)
+                    </label>
+                    <label class="btn btn-sm col-md-2">
+                        <input name="options" type="radio">Photo(275)
+                    </label>
+                    <label class="btn btn-sm col-md-2">
+                        <input name="options" type="radio">Additional comments(1275)
+                    </label>
+                    <label class="btn btn-sm col-md-2">
+                        <input name="options" type="radio">High opinion(1275)
+                    </label>
+                    <label class="btn btn-sm col-md-2">
+                        <input name="options" type="radio">Medium(1275)
+                    </label>
+                    <label class="btn btn-sm col-md-2">
+                        <input name="options" type="radio">Negative(1275)
+                    </label>
+                </nav>
+                <ul class="list-unstyled evaluation-item cf">
+                    <li class="cf">
+                        <div class="col-md-2">
+                            <div class="evaluation-item-avatar">
+                                <img class="img-responsive img-circle" src="img/brands-thumb.jpg" alt="avatar">
+                                <span>南瓜***11</span>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <p>
+                                Dianbingcheng has received, good appearance, larger than imagined. <br>
+                                Dianbingcheng has received, good appearance, larger than imagined.udfgyeb ydg f ad  vdg a agdiuqw dgvy  vadv f sd .
+                            </p>
+                            <div class="evaluation-item-shot">
+                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                    <img src="img/brands-thumb.jpg" alt="" class="img-thumbnail">
+                                </a>
+                            </div>
+                            <small>2015年10月02日 17:59版本类型：中国大陆  套餐：单机标配  颜色分类：12型黑/白+实况2016 中</small>
+                            <div class="evaluation-item-extra">
+                                <p><em>[Additional comments]</em> 买了一个星期就跌价了心理非常不爽！</p>
+                                <small>确认收货后 7 天追加</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cf">
+                        <div class="col-md-2">
+                            <div class="evaluation-item-avatar">
+                                <img class="img-responsive img-circle" src="img/brands-thumb.jpg" alt="avatar">
+                                <span>南瓜***11</span>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <p>
+                                Dianbingcheng has received, good appearance, larger than imagined. <br>
+                                Dianbingcheng has received, good appearance, larger than imagined.udfgyeb ydg f ad  vdg a agdiuqw dgvy  vadv f sd .
+                            </p>
+                            <div class="evaluation-item-shot">
+                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                    <img src="img/brands-thumb.jpg" alt="" class="img-thumbnail">
+                                </a>
+                            </div>
+                            <small>2015年10月02日 17:59版本类型：中国大陆  套餐：单机标配  颜色分类：12型黑/白+实况2016 中</small>
+                            <div class="evaluation-item-extra">
+                                <p><em>[Additional comments]</em> 买了一个星期就跌价了心理非常不爽！</p>
+                                <small>确认收货后 7 天追加</small>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- evaluation part end -->
+        </div>
     </div>
     <!-- item detail end -->
     <!-- footer start -->
     <footer></footer>
     <!-- footer end -->
     <!-- Login Modal srart-->
-    <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myLoginLabel">
+    <div class="modal fade zm-modal" id="modal_log" tabindex="-1" role="dialog" aria-labelledby="modal_logLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -309,8 +411,8 @@
                     </button>
                 </div>
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Sign in</a></li>
-                    <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab"><h3>Sign in</h3></a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab"><h3>Register</h3></a></li>
                 </ul>
                 <form class="tab-content form-horizontal" data-toggle="validator">
                     <input type="reset" name="reset" hidden/>
@@ -434,227 +536,11 @@
     <!-- item detail gallary -->
     <script src="js/bootstrap/bootstrap-select.js"></script>
     <!-- shopping cart page -->
-    <script>
-    $(function() {
-        //zmall modual init
-        var zmModual = (function() {
-            var navOffset = 80;
-            //checkbox toggle
-            $(".zm-checkbox").click(function() {
-                $(this).children("i").toggle();
-            });
-            //scrollspy for brands page
-            $('.zmBrandsPage').scrollspy({
-                target: '#brandNav',
-                offset: navOffset + 1
-            });
-            //disable all the form's submit function
-            $("form").submit(function() {
-                return false
-            });
-            //general affix overflow
-            function callAffixOverflow() {
-                $('[data-affix="overflow"]').each(function() {
-                    var ele = $(this);
-                    var offsetTop = ele.offset().top - $(window).height() - parseInt(ele.css("margin-top").split("px")[0]);
-                    //affix top = offset to top - element's margin-top - window's height
-                    ele.affix("destroy"); //destroy the affix function berfore
-                    if (offsetTop < 0) return false; //no affix while it is not overflow
-                    ele.affix({
-                        offset: {
-                            top: function() {
-                                return offsetTop; // distance to the top
-                            }
-                        }
-                    });
-                });
-            };
-            //active the login or register tab
-            function logOrReg(opt) {
-                // body...
-                switch (opt) {
-                    case "log":
-                        $("#myLogin .nav-tabs li").eq(0).children("a").trigger("click");
-                        break;
-                    default:
-                        $("#myLogin .nav-tabs li").eq(1).children("a").trigger("click");
-                }
-            };
-
-            // function for setting the html template of the cart details
-            function setCartContent(item, overflow) {
-                //hide the "You have xx more items" when the num is 0
-                if (overflow) var _overflowStr = '<div class="mini-cart-hint cf"><p class="fll">You have <em>' + overflow + '</em> more items</p><p class="flr">Total: <em>S$234.23</em></p></div>';
-                else _overflowStr = '';
-                var _item = '<li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="img/brands-thumb.jpg" class="img-responsive"></div><div class="pure-u-7-12"><p>Content content content</p><span>color: 1 Size: M</span></div><div class="pure-u-1-4 text-right"><em>S$234.56</em><a href="#" class="btn btn-warning hollow btn-xs">Delete</a></div><li><li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="img/brands-thumb.jpg" class="img-responsive"></div><div class="pure-u-7-12"><p>Content content content</p><span>color: 1 Size: M</span></div><div class="pure-u-1-4 text-right"><em>S$234.56</em><a href="#" class="btn btn-warning hollow btn-xs">Delete</a></div><li><li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="img/brands-thumb.jpg" class="img-responsive"></div><div class="pure-u-7-12"><p>Content content content</p><span>color: 1 Size: M</span></div><div class="pure-u-1-4 text-right"><em>S$234.56</em><a href="#" class="btn btn-warning hollow btn-xs">Delete</a></div><li>';
-                // for (var i = 0; i < item.length; i++) {
-                //     _item += "<li>"+item[i]+"</li>";
-                // }
-
-                //return the whole cart list string
-                return '<ul class="list-unstyled mini-cart">' +
-                    _item +
-                    '</ul>' +
-                    _overflowStr +
-                    '<a class="btn btn-warning btn-sm flr" href="#">Checking my cart</a>';
-            };
-
-            //function for the floor jumping
-            function scrollToPosition(dom) {
-                $("html, body").animate({
-                    scrollTop: dom.offset().top - navOffset + "px"
-                }, {
-                    duration: 300,
-                    easing: "swing"
-                });
-                return false;
-            };
-
-            //return all the functions
-            return {
-                navOffset: navOffset,
-                setCartCnt: setCartContent,
-                scroll: scrollToPosition,
-                login: logOrReg,
-                callAOF: callAffixOverflow
-            };
-        })();
-        // bootstrap dropdown
-        $('.dropdown-toggle').dropdown();
-        // bootstrap carousel
-        $('.carousel').carousel();
-        // bootstrap popover
-        $('[data-toggle="popover"]').each(function() {
-            var element = $(this);
-            var tiktak = function() {};
-            var item = ["aaa","bbb","ccc","ddd","eee","fff"]; //商品内容
-            var overflow = item.length>5?(item.length - 5):0; //超出商品显示限制条数
-            element.on("mouseenter", function() {
-                element.popover({
-                    trigger: 'manual',
-                    placement: 'bottom',
-                    html: 'true',
-                    content: zmModual.setCartCnt(item, overflow)
-                });
-                clearTimeout(tiktak);
-                element.popover("show");
-                element.siblings(".popover").on("mouseleave", function() {
-                    //element.popover('hide');
-                    element.popover('destroy');
-                });
-            }).on("mouseleave", function() {
-                item = ["aaa","bbb","ccc","ddd","eee"];
-                overflow = item.length>5?(item.length - 5):0;
-                tiktak = setTimeout(function() {
-                    if (!$(".popover:hover").length) {
-                        //element.popover("hide");
-                        element.popover('destroy');
-                    }
-                }, 500);
-            });
-        });
-        //reset all the form value
-        $("input[type=reset]").trigger("click");
-        // init the href
-        $("*").click(function() {
-            var linkHref = $(this).attr("data-href");
-            if (linkHref) window.location.href = linkHref; //window.open(linkHref);
-        });
-        //nav scroll watch  
-        $(window).scroll(function() {
-            //hide the part of the nav when scrolled height > 80px
-            if ($(document).scrollTop() > zmModual.navOffset) {
-                $("header").addClass("hide");
-            } else {
-                //recover  
-                $("header").removeClass("hide");
-            }
-        });
-        //click to active the login or register tab
-        $('[data-target="#myLogin"]').each(function() {
-            var element = $(this);
-            var opt = element.attr("data-active");
-            element.on("click", function() {
-                zmModual.login(opt)
-            });
-        });
-        //hover to show the category detail in banner left side
-        $(".indexMain-category li").each(function() {
-            var element = $(this);
-            var tiktak = function() {};
-            element.on("mouseenter", function() {
-                tiktak = setTimeout(function() {
-                    element.children(".indexMain-catDtl").addClass("active");
-                }, 500)
-            }).on("mouseleave", function() {
-                clearTimeout(tiktak);
-                element.children(".indexMain-catDtl").removeClass("active");
-            });
-        });
-        //floor jump
-        //go down
-        $(".glyphicon-chevron-down").click(function() {
-            var index = $(".glyphicon-chevron-down").index(this) + 1;
-            var dom = $("#floor_" + (index + 1));
-            //to bottom if it's the last icon-down
-            if (index == $(".glyphicon-chevron-down").length) {
-                dom = $("footer");
-            }
-            zmModual.scroll(dom);
-        });
-        //go up
-        $(".glyphicon-chevron-up").click(function() {
-            var index = $(".glyphicon-chevron-up").index(this);
-            var dom = $("#floor_" + (index));
-            //back to top if it's the 1st icon-up
-            if (index == 0) {
-                dom = $("html");
-            }
-            zmModual.scroll(dom);
-        });
-        //brands floor nav - click jump
-        $("#brandNav a").each(function() {
-            var element = $(this);
-            var dom = element.attr("href");
-            element.click(function() {
-                zmModual.scroll($(dom));
-                return false; //prevent default anchor jumping
-            })
-        });
-        //item detail gallary (optional)
-        $('.carousel-stage').jcarousel({
-            // Configuration goes here
-        }).on('jcarousel:targetin', 'li', function(event, carousel) {
-            // lazyload
-            var element = $(this).find("img");
-            var src_cur = element.attr("ssrc");
-            element.attr("src", src_cur);
-        });
-        //active toggle
-        $('[active-toggle="true"]').each(function() {
-            var ul_ele = $(this);
-            ul_ele.children("li").each(function() {
-                var li_ele = $(this);
-                li_ele.on("click", function() {
-                    li_ele.toggleClass("active");
-                    li_ele.find("i").toggleClass("glyphicon-ok");
-                });
-            });
-        });
-        //call Affix Overflow
-        zmModual.callAOF();
-        // gallary photo override
-        $("[gallary-override]").each(function() {
-            var ele = $(this),
-                target = $(".detail-gallary-override");
-            var arg = ele.attr("gallary-override");
-            ele.on("click", function() {
-                if (arg == "true") target.show();
-                else target.hide();
-            });
-        });
-    });
-    </script>
+    <script src="js/bootstrap/collapse.js"></script>
+    <script src="js/bootstrap/ekko-lightbox.js"></script>
+    <!-- lightbox for item detail -->
+    <script src="js/zmall.js"></script>
+    <!-- custom js -->
     <!--[if lt IE 9]> 
     <script>
         //html5 form validator for browser lower than ie9

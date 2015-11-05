@@ -47,8 +47,8 @@
                         <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" data-toggle="modal" data-target="#myLogin" data-active="log"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#myLogin" data-active="reg"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="login"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="register"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -100,10 +100,11 @@
         <div class="acc-banner pure-g row">
             <!-- avatar part start -->
             <div class="pure-u-1-5 acc-banner-avatar-wrap">
-                <div class="acc-banner-avatar revise">
+                <div class="acc-banner-avatar">
+                    <!-- add class name: "revise" to show the dashed frame -->
                     <img class="img-responsive img-circle" src="img/brands-thumb.jpg" alt="avatar">
                     <span class="badge "><small>VIP 1</small></span>
-                    <i class="glyphicon glyphicon-pencil"></i>
+                    <!-- <i class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modal_acc" data-active="avatar"></i> -->
                 </div>
                 <b>Dear Sarah</b>
                 <p>Welcome back again</p>
@@ -113,7 +114,7 @@
                 <div class="pure-u-2-5 acc-vam">
                     <ul class="list-unstyled acc-vam-inner acc-banner-info">
                         <li class="revise">Account name: Sarah
-                            <i class="glyphicon glyphicon-pencil"></i>
+                            <i class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modal_acc" data-active="basic"></i>
                         </li>
                         <li>My coupons:
                             <button class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-usd"></i></button>
@@ -124,7 +125,7 @@
                         <li>Login mailbox: 546934001@qq.com</li>
                         <li>Phone number: 13752151620</li>
                         <li class="revise">Receiving address: fdfafd ffasdf ffasdf fewfe fefw fwef wfw wfwfwe www wrwr wrwr
-                            <i class="glyphicon glyphicon-pencil"></i>
+                            <i class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#modal_acc" data-active="address"></i>
                         </li>
                     </ul>
                 </div>
@@ -175,6 +176,7 @@
                             <li class="active"><a href="#">To be paid</a><span class="badge flr">4</span></li>
                             <li><a href="#">Purchased goods</a><span class="badge flr">6</span></li>
                             <li><a href="#">Has been signed</a></li>
+                            <li><a href="#">Queston order</a></li>
                             <li><a href="#">Rights</a></li>
                         </ul>
                     </div>
@@ -196,7 +198,8 @@
             </div>
             <!-- left menu end -->
             <!-- account page content part start -->
-            <div class="pure-u-4-5">
+            <!-- To be paid start-->
+            <div class="pure-u-4-5 acc-table" style="display: none;">
                 <div class="pure-g text-center acc-thead detail-nav">
                     <div class="pure-u-2-5 pure-g-wrap">
                         <div class="pure-u-1-2 text-left">Order NO: 132952495373542</div>
@@ -238,8 +241,8 @@
                                 <div class="td-inner">13412341324</div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    <em>299.00</em>
+                                <div class="td-inner ft-warning">
+                                    299.00
                                 </div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
@@ -248,22 +251,17 @@
                                 </div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <small>Delivered</small>
-                                    </li>
-                                    <li>
-                                        <a href="#"><em><small>View Logistics</small></em></a>
-                                    </li>
-                                </ul>
+                                <div class="td-inner">
+                                    To be paid
+                                </div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
                                 <ul class="list-unstyled td-inner">
                                     <li>
-                                        <a href="#"><small>Rights</small></a>
+                                        <button class="btn btn-warning btn-xs">Pay Now</button>
                                     </li>
                                     <li>
-                                        <button class="btn btn-warning btn-xs">Confirm receipt</button>
+                                        <a href="#" class="btn btn-link btn-xs">Cancel order</a>
                                     </li>
                                 </ul>
                             </div>
@@ -296,8 +294,8 @@
                                 <div class="td-inner">13412341324</div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    <em>299.00</em>
+                                <div class="td-inner ft-warning">
+                                    299.00
                                 </div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
@@ -306,28 +304,27 @@
                                 </div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <small>Delivered</small>
-                                    </li>
-                                    <li>
-                                        <a href="#"><em><small>View Logistics</small></em></a>
-                                    </li>
-                                </ul>
+                                <div class="td-inner">
+                                    To be paid
+                                </div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
                                 <ul class="list-unstyled td-inner">
                                     <li>
-                                        <a href="#"><small>Rights</small></a>
+                                        <button class="btn btn-warning btn-xs">Pay Now</button>
                                     </li>
                                     <li>
-                                        <button class="btn btn-warning btn-xs">Confirm receipt</button>
+                                        <a href="#" class="btn btn-link btn-xs">Cancel order</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </label>
                 </div>
+            </div>
+            <!-- To be paid end-->
+            <!-- Purchased goods start-->
+            <div class="pure-u-4-5 acc-table" style="display: none;">
                 <div class="pure-g text-center acc-thead detail-nav">
                     <div class="pure-u-2-5 pure-g-wrap">
                         <div class="pure-u-1-2 text-left">Order NO: 132952495373542</div>
@@ -369,8 +366,8 @@
                                 <div class="td-inner">13412341324</div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    <em>299.00</em>
+                                <div class="td-inner ft-warning">
+                                    299.00
                                 </div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
@@ -381,17 +378,17 @@
                             <div class="pure-u-1-5 td-wrap">
                                 <ul class="list-unstyled td-inner">
                                     <li>
-                                        <small>Delivered</small>
+                                        Delivered
                                     </li>
                                     <li>
-                                        <a href="#"><em><small>View Logistics</small></em></a>
+                                        <a href="#"><em>View Logistics</em></a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
                                 <ul class="list-unstyled td-inner">
                                     <li>
-                                        <a href="#"><small>Rights</small></a>
+                                        <a href="#" class="btn btn-link btn-xs">Rights</a>
                                     </li>
                                     <li>
                                         <button class="btn btn-warning btn-xs">Confirm receipt</button>
@@ -427,8 +424,8 @@
                                 <div class="td-inner">13412341324</div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    <em>299.00</em>
+                                <div class="td-inner ft-warning">
+                                    299.00
                                 </div>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
@@ -439,279 +436,17 @@
                             <div class="pure-u-1-5 td-wrap">
                                 <ul class="list-unstyled td-inner">
                                     <li>
-                                        <small>Delivered</small>
+                                        Delivered
                                     </li>
                                     <li>
-                                        <a href="#"><em><small>View Logistics</small></em></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <a href="#"><small>Rights</small></a>
-                                    </li>
-                                    <li>
-                                        <button class="btn btn-warning btn-xs">Confirm receipt</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <div class="pure-g text-center acc-thead detail-nav">
-                    <div class="pure-u-2-5 pure-g-wrap">
-                        <div class="pure-u-1-2 text-left">Order NO: 132952495373542</div>
-                        <div class="pure-u-1-2">Time: 2015-10-18 12:34:53</div>
-                    </div>
-                    <div class="pure-u-3-5 pure-g-wrap">
-                        <div class="pure-u-1-5">Commodity ID</div>
-                        <div class="pure-u-1-5">Real payment</div>
-                        <div class="pure-u-1-5">Unit</div>
-                        <div class="pure-u-1-5">State</div>
-                        <div class="pure-u-1-5">Trading operation</div>
-                    </div>
-                </div>
-                <div class="td-cnt" data-toggle="buttons">
-                    <label class="pure-g btn btn-default btn-block no-gutter">
-                        <div class="pure-u-2-5">
-                            <div class="fll">
-                                <div class="zm-checkbox zm-checkbox-sm">
-                                    <input type="checkbox">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </div>
-                            </div>
-                            <dl class="td-item fll">
-                                <dt>
-                                    <span></span>
-                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
-                                </dt>
-                                <dd>
-                                    <p>Shop: turn&turn</p>
-                                    <ul class="list-unstyled">
-                                        <li><small>Color: Deep  Gray Size: S</small></li>
-                                        <li><small>Remark: mock up</small></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="pure-u-3-5 pure-g-wrap">
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">13412341324</div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    <em>299.00</em>
-                                </div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    2
-                                </div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <small>Delivered</small>
-                                    </li>
-                                    <li>
-                                        <a href="#"><em><small>View Logistics</small></em></a>
+                                        <a href="#"><em>View Logistics</em></a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="pure-u-1-5 td-wrap">
                                 <ul class="list-unstyled td-inner">
                                     <li>
-                                        <a href="#"><small>Rights</small></a>
-                                    </li>
-                                    <li>
-                                        <button class="btn btn-warning btn-xs">Confirm receipt</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </label>
-                    <label class="pure-g btn btn-default btn-block no-gutter">
-                        <div class="pure-u-2-5">
-                            <div class="fll">
-                                <div class="zm-checkbox zm-checkbox-sm">
-                                    <input type="checkbox">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </div>
-                            </div>
-                            <dl class="td-item fll">
-                                <dt>
-                                    <span></span>
-                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
-                                </dt>
-                                <dd>
-                                    <p>Shop: turn&turn</p>
-                                    <ul class="list-unstyled">
-                                        <li><small>Color: Deep  Gray Size: S</small></li>
-                                        <li><small>Remark: mock up</small></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="pure-u-3-5 pure-g-wrap">
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">13412341324</div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    <em>299.00</em>
-                                </div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    2
-                                </div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <small>Delivered</small>
-                                    </li>
-                                    <li>
-                                        <a href="#"><em><small>View Logistics</small></em></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <a href="#"><small>Rights</small></a>
-                                    </li>
-                                    <li>
-                                        <button class="btn btn-warning btn-xs">Confirm receipt</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <div class="pure-g text-center acc-thead detail-nav">
-                    <div class="pure-u-2-5 pure-g-wrap">
-                        <div class="pure-u-1-2 text-left">Order NO: 132952495373542</div>
-                        <div class="pure-u-1-2">Time: 2015-10-18 12:34:53</div>
-                    </div>
-                    <div class="pure-u-3-5 pure-g-wrap">
-                        <div class="pure-u-1-5">Commodity ID</div>
-                        <div class="pure-u-1-5">Real payment</div>
-                        <div class="pure-u-1-5">Unit</div>
-                        <div class="pure-u-1-5">State</div>
-                        <div class="pure-u-1-5">Trading operation</div>
-                    </div>
-                </div>
-                <div class="td-cnt" data-toggle="buttons">
-                    <label class="pure-g btn btn-default btn-block no-gutter">
-                        <div class="pure-u-2-5">
-                            <div class="fll">
-                                <div class="zm-checkbox zm-checkbox-sm">
-                                    <input type="checkbox">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </div>
-                            </div>
-                            <dl class="td-item fll">
-                                <dt>
-                                    <span></span>
-                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
-                                </dt>
-                                <dd>
-                                    <p>Shop: turn&turn</p>
-                                    <ul class="list-unstyled">
-                                        <li><small>Color: Deep  Gray Size: S</small></li>
-                                        <li><small>Remark: mock up</small></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="pure-u-3-5 pure-g-wrap">
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">13412341324</div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    <em>299.00</em>
-                                </div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    2
-                                </div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <small>Delivered</small>
-                                    </li>
-                                    <li>
-                                        <a href="#"><em><small>View Logistics</small></em></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <a href="#"><small>Rights</small></a>
-                                    </li>
-                                    <li>
-                                        <button class="btn btn-warning btn-xs">Confirm receipt</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </label>
-                    <label class="pure-g btn btn-default btn-block no-gutter">
-                        <div class="pure-u-2-5">
-                            <div class="fll">
-                                <div class="zm-checkbox zm-checkbox-sm">
-                                    <input type="checkbox">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </div>
-                            </div>
-                            <dl class="td-item fll">
-                                <dt>
-                                    <span></span>
-                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
-                                </dt>
-                                <dd>
-                                    <p>Shop: turn&turn</p>
-                                    <ul class="list-unstyled">
-                                        <li><small>Color: Deep  Gray Size: S</small></li>
-                                        <li><small>Remark: mock up</small></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="pure-u-3-5 pure-g-wrap">
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">13412341324</div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    <em>299.00</em>
-                                </div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <div class="td-inner">
-                                    2
-                                </div>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <small>Delivered</small>
-                                    </li>
-                                    <li>
-                                        <a href="#"><em><small>View Logistics</small></em></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="pure-u-1-5 td-wrap">
-                                <ul class="list-unstyled td-inner">
-                                    <li>
-                                        <a href="#"><small>Rights</small></a>
+                                        <a href="#" class="btn btn-link btn-xs">Rights</a>
                                     </li>
                                     <li>
                                         <button class="btn btn-warning btn-xs">Confirm receipt</button>
@@ -722,6 +457,703 @@
                     </label>
                 </div>
             </div>
+            <!-- Purchased goods end-->
+            <!-- Has been signed start-->
+            <div class="pure-u-4-5 acc-table" style="display: none;">
+                <div class="pure-g text-center acc-thead detail-nav">
+                    <div class="pure-u-2-5 pure-g-wrap">
+                        <div class="pure-u-1-2 text-left">Order NO: 132952495373542</div>
+                        <div class="pure-u-1-2">Time: 2015-10-18 12:34:53</div>
+                    </div>
+                    <div class="pure-u-3-5 pure-g-wrap">
+                        <div class="pure-u-1-5">Commodity ID</div>
+                        <div class="pure-u-1-5">Real payment</div>
+                        <div class="pure-u-1-5">Unit</div>
+                        <div class="pure-u-1-5">State</div>
+                        <div class="pure-u-1-5">Trading operation</div>
+                    </div>
+                </div>
+                <div class="td-cnt" data-toggle="buttons">
+                    <label class="pure-g btn btn-default btn-block no-gutter">
+                        <div class="pure-u-2-5">
+                            <div class="fll">
+                                <div class="zm-checkbox zm-checkbox-sm">
+                                    <input type="checkbox">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                </div>
+                            </div>
+                            <dl class="td-item fll">
+                                <dt>
+                                    <span></span>
+                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <p>Shop: turn&turn</p>
+                                    <ul class="list-unstyled">
+                                        <li><small>Color: Deep  Gray Size: S</small></li>
+                                        <li><small>Remark: mock up</small></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="pure-u-3-5 pure-g-wrap">
+                            <div class="pure-u-1-5 td-wrap">
+                                <div class="td-inner">13412341324</div>
+                            </div>
+                            <div class="pure-u-1-5 td-wrap">
+                                <div class="td-inner ft-warning">
+                                    299.00
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5 td-wrap">
+                                <div class="td-inner">
+                                    2
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5 td-wrap">
+                                <div class="td-inner">
+                                    Has been signed
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5 td-wrap">
+                                <ul class="list-unstyled td-inner">
+                                </ul>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="pure-g btn btn-default btn-block no-gutter">
+                        <div class="pure-u-2-5">
+                            <div class="fll">
+                                <div class="zm-checkbox zm-checkbox-sm">
+                                    <input type="checkbox">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                </div>
+                            </div>
+                            <dl class="td-item fll">
+                                <dt>
+                                    <span></span>
+                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <p>Shop: turn&turn</p>
+                                    <ul class="list-unstyled">
+                                        <li><small>Color: Deep  Gray Size: S</small></li>
+                                        <li><small>Remark: mock up</small></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="pure-u-3-5 pure-g-wrap">
+                            <div class="pure-u-1-5 td-wrap">
+                                <div class="td-inner">13412341324</div>
+                            </div>
+                            <div class="pure-u-1-5 td-wrap">
+                                <div class="td-inner ft-warning">
+                                    299.00
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5 td-wrap">
+                                <div class="td-inner">
+                                    2
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5 td-wrap">
+                                <div class="td-inner">
+                                    Has been signed
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5 td-wrap">
+                                <ul class="list-unstyled td-inner">
+                                </ul>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- Has been signed end-->
+            <!-- Question order start-->
+            <div class="pure-u-4-5 acc-table" style="display: none;">
+                <div class="pure-g text-center acc-thead detail-nav">
+                    <div class="pure-u-2-5 pure-g-wrap">
+                        <div class="pure-u-1-2 text-left">Order NO: 132952495373542</div>
+                        <div class="pure-u-1-2">Time: 2015-10-18 12:34:53</div>
+                    </div>
+                    <div class="pure-u-3-5 pure-g-wrap">
+                        <div class="pure-u-1-6">Commodity ID</div>
+                        <div class="pure-u-1-6">Real payment</div>
+                        <div class="pure-u-1-12">Unit</div>
+                        <div class="pure-u-1-4">State</div>
+                        <div class="pure-u-1-3">Reason</div>
+                    </div>
+                </div>
+                <div class="td-cnt" data-toggle="buttons">
+                    <label class="pure-g btn btn-default btn-block no-gutter">
+                        <div class="pure-u-2-5">
+                            <div class="fll">
+                                <div class="zm-checkbox zm-checkbox-sm">
+                                    <input type="checkbox">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                </div>
+                            </div>
+                            <dl class="td-item fll">
+                                <dt>
+                                    <span></span>
+                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <p>Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn</p>
+                                    <ul class="list-unstyled">
+                                        <li><small>Color: Deep  Gray Size: S</small></li>
+                                        <li><small>Remark: mock up</small></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="pure-u-3-5 pure-g-wrap">
+                            <div class="pure-u-1-6 td-wrap">
+                                <div class="td-inner">13412341324</div>
+                            </div>
+                            <div class="pure-u-1-6 td-wrap">
+                                <div class="td-inner ft-warning">
+                                    299.00
+                                </div>
+                            </div>
+                            <div class="pure-u-1-12 td-wrap">
+                                <div class="td-inner">
+                                    2
+                                </div>
+                            </div>
+                            <div class="pure-u-1-4 td-wrap">
+                                <ul class="list-unstyled td-inner">
+                                    <li>Invalid order</li>
+                                    <li>Has been refunded</li>
+                                </ul>
+                            </div>
+                            <div class="pure-u-1-3 td-wrap">
+                                <ul class="list-unstyled td-inner">
+                                    <li>Businesses have no goods</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="pure-g btn btn-default btn-block no-gutter">
+                        <div class="pure-u-2-5">
+                            <div class="fll">
+                                <div class="zm-checkbox zm-checkbox-sm">
+                                    <input type="checkbox">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                </div>
+                            </div>
+                            <dl class="td-item fll">
+                                <dt>
+                                    <span></span>
+                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <p>Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn</p>
+                                    <ul class="list-unstyled">
+                                        <li><small>Color: Deep  Gray Size: S</small></li>
+                                        <li><small>Remark: mock up</small></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="pure-u-3-5 pure-g-wrap">
+                            <div class="pure-u-1-6 td-wrap">
+                                <div class="td-inner">13412341324</div>
+                            </div>
+                            <div class="pure-u-1-6 td-wrap">
+                                <div class="td-inner ft-warning">
+                                    299.00
+                                </div>
+                            </div>
+                            <div class="pure-u-1-12 td-wrap">
+                                <div class="td-inner">
+                                    2
+                                </div>
+                            </div>
+                            <div class="pure-u-1-4 td-wrap">
+                                <ul class="list-unstyled td-inner">
+                                    <li>Invalid order</li>
+                                    <li>Has been refunded</li>
+                                </ul>
+                            </div>
+                            <div class="pure-u-1-3 td-wrap">
+                                <ul class="list-unstyled td-inner">
+                                    <li>Fragile articles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- Question order end-->
+            <!-- Rights start-->
+            <div class="pure-u-4-5 acc-table" style="display: none;">
+                <div class="pure-g text-center acc-thead detail-nav">
+                    <div class="pure-u-1-2 pure-g-wrap">
+                        <div class="pure-u-1-4">Refound number</div>
+                        <div class="pure-u-3-4">Order number/Product infor</div>
+                    </div>
+                    <div class="pure-u-1-2 pure-g-wrap">
+                        <div class="pure-u-1-4">Transaction amount</div>
+                        <div class="pure-u-1-4">Refund amount</div>
+                        <div class="pure-u-1-4">Application time</div>
+                        <div class="pure-u-1-4">Refund status</div>
+                    </div>
+                </div>
+                <div class="td-cnt">
+                    <label class="pure-g btn btn-default btn-block no-gutter">
+                        <div class="pure-u-3-24">
+                            <div class="pure-u-1-1 td-wrap">
+                                <div class="td-inner">
+                                    <!-- <div class="fll">
+                                        <div class="zm-checkbox zm-checkbox-sm">
+                                            <input type="checkbox">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </div>
+                                    </div> -->
+                                    13412341324
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pure-u-3-8">
+                            <dl class="td-item fll">
+                                <dt>
+                                    <span></span>
+                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <p>Shop: turn&turn turn&turn turn &turn turn& turn turn&turn turn&turn turn&turn turn&turn</p>
+                                    <ul class="list-unstyled">
+                                        <li><small>Color: Deep  Gray Size: S</small></li>
+                                        <li><small>Remark: mock up</small></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="pure-u-1-2 pure-g-wrap">
+                            <div class="pure-u-1-4 td-wrap">
+                                <div class="td-inner ft-warning">
+                                    299.00
+                                </div>
+                            </div>
+                            <div class="pure-u-1-4 td-wrap">
+                                <div class="td-inner ft-warning">
+                                    299.00
+                                </div>
+                            </div>
+                            <div class="pure-u-1-4 td-wrap">
+                                <ul class="list-unstyled td-inner">
+                                    <li>2015.10.19</li>
+                                    <li>23:15:13</li>
+                                </ul>
+                            </div>
+                            <div class="pure-u-1-4 td-wrap">
+                                <div class="td-inner ft-success">
+                                    Refunding
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="pure-g btn btn-default btn-block no-gutter">
+                        <div class="pure-u-3-24">
+                            <div class="pure-u-1-1 td-wrap">
+                                <div class="td-inner">
+                                    <!-- <div class="fll">
+                                        <div class="zm-checkbox zm-checkbox-sm">
+                                            <input type="checkbox">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </div>
+                                    </div> -->
+                                    13412341324
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pure-u-3-8">
+                            <dl class="td-item fll">
+                                <dt>
+                                    <span></span>
+                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
+                                </dt>
+                                <dd>
+                                    <p>Shop: turn&turn turn&turn turn &turn turn& turn turn&turn turn&turn turn&turn turn&turn</p>
+                                    <ul class="list-unstyled">
+                                        <li><small>Color: Deep  Gray Size: S</small></li>
+                                        <li><small>Remark: mock up</small></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="pure-u-1-2 pure-g-wrap">
+                            <div class="pure-u-1-4 td-wrap">
+                                <div class="td-inner ft-warning">
+                                    299.00
+                                </div>
+                            </div>
+                            <div class="pure-u-1-4 td-wrap">
+                                <div class="td-inner ft-warning">
+                                    299.00
+                                </div>
+                            </div>
+                            <div class="pure-u-1-4 td-wrap">
+                                <ul class="list-unstyled td-inner">
+                                    <li>2015.10.19</li>
+                                    <li>23:15:13</li>
+                                </ul>
+                            </div>
+                            <div class="pure-u-1-4 td-wrap">
+                                <div class="td-inner ft-danger">
+                                    Refund success
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- Rights end-->
+            <!-- collection of products start -->
+            <div class="pure-u-4-5" style="display: none;">
+                <!-- title -->
+                <div class="detail-nav text-center cf">
+                    <h4>Collection of Products</h4>
+                </div>
+                <!-- figures -->
+                <div class="pure-g bBranch indexMain-floor-item acc-collect">
+                    <div class="pure-u-1-4">
+                        <div class="indexMain-floor-item-wrap noav-item">
+                            <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                            <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
+                            <p>$199.00</p>
+                            <em>$399.00</em>
+                            <small class="acc-collect-op">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                Delete
+                            </small>
+                            <div class="noav noav-prod"><span><i class="noav-bar"></i><i class="noav-round"></i></span>
+                                <p class="text-center">N/A</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="indexMain-floor-item-wrap" data-href="#" data-newWin="true">
+                            <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                            <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
+                            <p>$199.00</p>
+                            <em>$399.00</em>
+                            <small class="acc-collect-op">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                Delete
+                            </small>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="indexMain-floor-item-wrap" data-href="#" data-newWin="true">
+                            <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                            <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
+                            <p>$199.00</p>
+                            <em>$399.00</em>
+                            <small class="acc-collect-op">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                Delete
+                            </small>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="indexMain-floor-item-wrap" data-href="#" data-newWin="true">
+                            <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                            <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
+                            <p>$199.00</p>
+                            <em>$399.00</em>
+                            <small class="acc-collect-op">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                Delete
+                            </small>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="indexMain-floor-item-wrap" data-href="#" data-newWin="true">
+                            <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                            <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
+                            <p>$199.00</p>
+                            <em>$399.00</em>
+                            <small class="acc-collect-op">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                Delete
+                            </small>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="indexMain-floor-item-wrap" data-href="#" data-newWin="true">
+                            <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                            <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
+                            <p>$199.00</p>
+                            <em>$399.00</em>
+                            <small class="acc-collect-op">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                Delete
+                            </small>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="indexMain-floor-item-wrap" data-href="#" data-newWin="true">
+                            <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                            <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
+                            <p>$199.00</p>
+                            <em>$399.00</em>
+                            <small class="acc-collect-op">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                Delete
+                            </small>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-4">
+                        <div class="indexMain-floor-item-wrap" data-href="#" data-newWin="true">
+                            <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                            <span>Cosmetics/Personal protect Cosmetics/Personal protect</span>
+                            <p>$199.00</p>
+                            <em>$399.00</em>
+                            <small class="acc-collect-op">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                Delete
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <!-- pagination part start -->
+                <nav class="text-right">
+                    <ul class="pagination pagination-sm">
+                        <li class="disabled"><a href="#" aria-label="Previous"><span>&laquo;Last page</span></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#" aria-label="Next"><span aria-hidden="true">Next page&raquo;</span></a></li>
+                    </ul>
+                </nav>
+                <!-- pagination part end -->
+            </div>
+            <!-- collection of products end -->
+            <!-- collection of brands start -->
+            <div class="pure-u-4-5">
+                <!-- title -->
+                <div class="detail-nav text-center cf">
+                    <h4>Collection of Brands</h4>
+                </div>
+                <!-- figures start -->
+                <div class="acc-collect-brand-wrap">
+                    <dl class="pure-g acc-collect bBranch indexMain-floor-item text-center td-wrap">
+                        <dt class="pure-u-5-24 acc-collect-brand td-inner">
+                            <img class="img-responsive img-circle" src="img/brands-thumb.jpg" alt="avatar">
+                            <img class="tmallicon" src="https://img.alicdn.com/tps/i3/T1DgeGFdNbXXbXX2Hb-24-18.png">
+                            <a href="#"><small>优衣库官方旗舰店</small></a>
+                            <div class="acc-collect-brand-op">
+                                <a href="#"><i class="glyphicon glyphicon-arrow-up"></i><small>Shift up</small></a>
+                                <a href="#"><i class="glyphicon glyphicon-trash"></i><small>Delete</small></a>
+                            </div>
+                        </dt>
+                        <dd class="pure-u-19-24 pure-g-wrap td-inner">
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <hr>
+                    <dl class="pure-g acc-collect bBranch indexMain-floor-item text-center td-wrap">
+                        <dt class="pure-u-5-24 acc-collect-brand td-inner">
+                            <img class="img-responsive img-circle" src="img/brands-thumb.jpg" alt="avatar">
+                            <img class="tmallicon" src="https://img.alicdn.com/tps/i3/T1DgeGFdNbXXbXX2Hb-24-18.png">
+                            <a href="#"><small>优衣库官方旗舰店</small></a>
+                            <div class="acc-collect-brand-op">
+                                <a href="#"><i class="glyphicon glyphicon-arrow-up"></i><small>Shift up</small></a>
+                                <a href="#"><i class="glyphicon glyphicon-trash"></i><small>Delete</small></a>
+                            </div>
+                        </dt>
+                        <dd class="pure-u-19-24 pure-g-wrap td-inner">
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <hr>
+                    <dl class="pure-g acc-collect bBranch indexMain-floor-item text-center td-wrap">
+                        <dt class="pure-u-5-24 acc-collect-brand td-inner">
+                            <img class="img-responsive img-circle" src="img/brands-thumb.jpg" alt="avatar">
+                            <img class="tmallicon" src="https://img.alicdn.com/tps/i3/T1DgeGFdNbXXbXX2Hb-24-18.png">
+                            <a href="#"><small>优衣库官方旗舰店</small></a>
+                            <div class="acc-collect-brand-op">
+                                <a href="#"><i class="glyphicon glyphicon-arrow-up"></i><small>Shift up</small></a>
+                                <a href="#"><i class="glyphicon glyphicon-trash"></i><small>Delete</small></a>
+                            </div>
+                        </dt>
+                        <dd class="pure-u-19-24 pure-g-wrap td-inner">
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-5">
+                                <div class="indexMain-floor-item-wrap">
+                                    <img src="img/brands-thumb.jpg" class="img-responsive" alt="">
+                                    <p>$199.00</p>
+                                    <em>$399.00</em>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <hr>
+                </div>
+                <!-- figures end -->
+                <!-- pagination part start -->
+                <nav class="text-right">
+                    <ul class="pagination pagination-sm">
+                        <li class="disabled"><a href="#" aria-label="Previous"><span>&laquo;Last page</span></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#" aria-label="Next"><span aria-hidden="true">Next page&raquo;</span></a></li>
+                    </ul>
+                </nav>
+                <!-- pagination part end -->
+            </div>
+            <!-- collection of brands end -->
+            <!-- Transaction records start-->
+            <div class="pure-u-4-5 acc-table" style="display: none;">
+                <div class="pure-g text-center acc-thead detail-nav">
+                    <div class="pure-u-1-5">Transaction number</div>
+                    <div class="pure-u-1-5">Transaction content</div>
+                    <div class="pure-u-1-5">Transaction way</div>
+                    <div class="pure-u-1-5">Transaction amount</div>
+                    <div class="pure-u-1-5">Trading time</div>
+                </div>
+                <ul class="list-unstyled td-cnt">
+                    <li class="text-center pure-g-wrap bb-dashed">
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner">1635343413412342</div>
+                        </div>
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner">Recharge</div>
+                        </div>
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner">Wechart</div>
+                        </div>
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner"><em>1000.00</em>S$</div>
+                        </div>
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner">2015/10/26 11:00:56</div>
+                        </div>
+                    </li>
+                    <li class="text-center pure-g-wrap bb-dashed">
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner">1635343413412342</div>
+                        </div>
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner">Recharge</div>
+                        </div>
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner">Wechart</div>
+                        </div>
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner"><em>1000.00</em>S$</div>
+                        </div>
+                        <div class="pure-u-1-5 td-wrap">
+                            <div class="td-inner">2015/10/26 11:00:56</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Transaction records end-->
             <!-- account page content part end -->
         </div>
     </div>
@@ -730,7 +1162,7 @@
     <footer></footer>
     <!-- footer end -->
     <!-- Login Modal srart-->
-    <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myLoginLabel">
+    <div class="modal fade zm-modal" id="modal_log" tabindex="-1" role="dialog" aria-labelledby="modal_logLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -742,32 +1174,32 @@
                     </button>
                 </div>
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Sign in</a></li>
-                    <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab"><h3>Sign in</h3></a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab"><h3>Register</h3></a></li>
                 </ul>
                 <form class="tab-content form-horizontal" data-toggle="validator">
                     <input type="reset" name="reset" hidden/>
                     <div role="tabpanel" class="tab-pane active" id="login">
                         <div class="modal-body">
-                            <div class="form-group">
+                            <div class="form-group form-group-lg">
                                 <label for="account" class="col-sm-4 control-label">Account:</label>
                                 <div class="col-sm-7">
                                     <input type="email" class="form-control" id="account" placeholder="E-mail / phone / name ">
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group form-group-lg">
                                 <label for="pwd" class="col-sm-4 control-label">Password:</label>
                                 <div class="col-sm-7">
                                     <input type="password" class="form-control" id="pwd" placeholder="">
                                 </div>
                             </div>
-                            <!-- <div class="form-group">
+                            <!-- <div class="form-group form-group-lg">
                                 <label for="reward" class="col-sm-4 control-label">Rewards code:</label>
                                 <div class="col-sm-7">
                                     <input type="text" class="form-control" id="reward" placeholder="">
                                 </div>
                             </div> -->
-                            <div class="form-group">
+                            <div class="form-group form-group-lg">
                                 <label for="forget" class="col-sm-4 control-label"></label>
                                 <div class="col-sm-7">
                                     <a class="modal-tip high-lighted" href="#">Forget the password?</a>
@@ -779,6 +1211,164 @@
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="register">
+                        <div class="modal-body">
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="email" class="col-sm-4 control-label">E-mail:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="email" placeholder="Please enter your E-mail address" data-error="Email shouldn't be blank" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" data-pattern-error="Bruh, that email address is invalid" data-minlength="6" data-minlength-error="Minimum of 6 characters" required>
+                                    <!-- data-remote="/path/to/remote/validator" to make an AJAX request to determine if the field is valid or not. -->
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="mobile" class="col-sm-4 control-label">Mobile:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="mobile" placeholder="Please enter your mobile number" data-error="Mobile number shouldn't be blank" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="pwd-reg" class="col-sm-4 control-label">Password:</label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="pwd-reg" placeholder="" data-minlength="6" data-error="Minimum of 6 characters" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="pwd-reg2" class="col-sm-4 control-label">Confirm:</label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="pwd-reg2" data-match="#pwd-reg" data-error="Confirm your password" data-match-error="Whoops, these don't match" placeholder="" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <span class="help-block with-errors"></span>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg">
+                                <label for="reward-reg" class="col-sm-4 control-label">Rewards code:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="reward-reg" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg">
+                                <label for="check1" class="col-sm-4 control-label"></label>
+                                <div class="col-sm-7">
+                                    <div class="zm-checkbox">
+                                        <input type="checkbox" data-error="Check to process" name="check1" required>
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                    </div>
+                                    <div class="modal-tip flr">I have read and accepted the <a href="#" target="_blank" class="high-lighted">&lt;User Registration Agreement&gt;</a></div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-xlg">Regist Now</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-body">
+                    <div class="modal-success">
+                        <h3>Registered Success</h3>
+                        <a class="btn" href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal end-->
+    <!-- Account Modal srart-->
+    <div class="modal fade zm-modal" id="modal_acc" tabindex="-1" role="dialog" aria-labelledby="modal_accLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <!-- <li class="pure-u-1-3" role="presentation"><a href="#avatar" aria-controls="modal_acc_avatar" role="tab" data-toggle="tab"><h4>Avatar</h4></a></li> -->
+                    <li class="pure-u-1-2" role="presentation"><a href="#basic" aria-controls="modal_acc_basic" role="tab" data-toggle="tab"><h4>Basic Information</h4></a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#address" aria-controls="modal_acc_address" role="tab" data-toggle="tab"><h4>Address Management</h4></a></li>
+                </ul>
+                <form class="tab-content form-horizontal">
+                    <!-- <div role="tabpanel" class="tab-pane active" id="avatar">
+                        <div class="modal-body">
+                            123
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-xlg">Confirm</button>
+                        </div>
+                    </div> -->
+                    <div role="tabpanel" class="tab-pane" id="basic">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="account" class="col-sm-3 control-label">User name:</label>
+                                <div class="col-sm-6">
+                                    <input type="email" class="form-control" id="user" placeholder="E-mail / phone / name ">
+                                    <span class="help-block"><small>Hey look, this one is a hint!</small></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="account" class="col-sm-3 control-label">Email:</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control-static">5469****@qq.com
+                                        <a href="#" class="btn btn-warning btn-xs">Activate this email</a>
+                                        <button class="btn btn-success btn-xs">You've actived it.</button>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-sm-3 control-label">Real name:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-sm-3 control-label">Gender</label>
+                                <div class="col-sm-6">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="gender1" name="gender" value="male">Male
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" id="gender2" name="gender" value="female">Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="col-sm-3 control-label">Phone number:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country" class="col-sm-3 control-label">Country:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city" class="col-sm-3 control-label">City:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="city">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-warning btn-block">Confirm</button>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" data-dismiss="modal" class="btn btn-warning hollow btn-block">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="address">
                         <div class="modal-body">
                             <div class="form-group has-feedback">
                                 <label for="email" class="col-sm-4 control-label">E-mail:</label>
@@ -845,7 +1435,7 @@
             </div>
         </div>
     </div>
-    <!-- Login Modal end-->
+    <!-- Account Modal end-->
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/bootstrap/transition.js"></script>
     <script src="js/bootstrap/dropdown.js"></script>

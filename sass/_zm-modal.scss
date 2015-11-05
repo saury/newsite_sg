@@ -1,12 +1,13 @@
-#myLogin {
+// #modal_log {
+.zm-modal {
     .modal {
-        &-content{
+        &-content {
             //remove the border radius and add the border to the login modal
             border-radius: 0;
-            border: $loginMod-bw solid rgba(255,255,255,0.3);
+            border: $loginMod-bw solid rgba(255, 255, 255, 0.3);
         }
-        &-header{
-            padding:0;
+        &-header {
+            padding: 0;
             background: $header-bg;
             line-height: $header-h;
             padding: 0 12px;
@@ -19,34 +20,34 @@
                 width: auto;
             }
         }
-        &-footer{
+        &-footer {
             text-align: center;
         }
-        &-tip{
+        &-tip {
             @include fsize(16);
             color: $gray-light;
-            &.flr{
+            &.flr {
                 display: inline-block;
                 width: 90%;
             }
             &.high-lighted,
-            .high-lighted{
+            .high-lighted {
                 color: $btn_color;
             }
         }
-        &-success{
+        &-success {
             display: none;
             height: ($modal-md - $header-h - 2*$loginMod-bw - 2*$modal-inner-padding);
             background: image-url("reg_success.jpg") no-repeat center 100px;
             padding-top: 280px;
             text-align: center;
-            h3{
+            h3 {
                 @include fsize(40);
                 color: $btn_color;
                 font-weight: normal;
                 word-spacing: -5px;
             }
-            a{
+            a {
                 @include fsize(26);
                 color: #fff;
                 background: $gray-lightee;
@@ -54,46 +55,53 @@
             }
         }
     }
-    .nav-tabs{
+    .nav-tabs {
         margin-top: 2px;
-        >li{
-            @include fsize(24);
-            width: 50%;
+        >li {
+            // @include fsize(24);
+            // width: 50%;
             text-align: center;
             background: $gray-lighter;
-            a{
+            a {
                 color: $gray-darker;
-                @include border-radius(0);
-                border: 0;
+                border: 0 !important;
+                margin: 0 !important;
             }
-            &.active a{
+            &.active a {
                 color: #fff;
                 background: $btn_color;
             }
         }
-    }
-    .form-group{
-        //margin-bottom: 30px;
-        &:first-child{
-            margin-top: 30px;
+        h3,
+        h4 {
+            margin: 0;
         }
     }
-    .control-label{
-        @include fsize(20);
-        font-weight: normal;
-        padding-top: 12px;
-        color: $gray-light;
+    .form-group {
+        //margin-bottom: 30px;
+        &:first-child {
+            margin-top: 30px;
+        }
+        .control-label {
+            font-weight: normal;
+            color: $gray-light;
+        }
+        // &-lgs {
+        //     .control-label {
+        //         @include fsize(20);
+        //         padding-top: 12px;
+        //     }
+        //     .form-control {
+        //         height: 44px;
+        //         @include fsize(18);
+        //         @include placeholder($gray-lighter);
+        //     }
+        //     .form-control-feedback {
+        //         line-height: 44px;
+        //     }
+        // }
     }
-    .form-control{
-        height: 44px;
-        @include fsize(18);
-        @include placeholder($gray-lighter);
-        @include border-radius(0);
-    }
-    .form-control-feedback{
-        line-height: 44px;
-    }
-    .close{
+    .close {
         //close button
         float: right;
         height: $close-w;
@@ -104,16 +112,17 @@
         border: 0;
         color: #fff;
         background: $gray-light;
+        @include opacity(100);
         @include border-radius(50%);
-        i{
+        i {
             top: unset;
             line-height: inherit;
         }
     }
-    .list-unstyled{
+    .list-unstyled {
         margin: 0;
         padding: 0;
-        li{
+        li {
             list-style: none;
         }
     }

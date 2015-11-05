@@ -2,6 +2,7 @@
 // bootstrap scss for carousel and grid
 @import "bootstrap/_carousel.scss",
 "bootstrap/_scaffolding.scss",
+"bootstrap/_close.scss",
 "bootstrap/_modals.scss",
 "bootstrap/_type.scss",
 "bootstrap/_grid.scss";
@@ -15,7 +16,7 @@
 }
 
 .indexMain {
-    $brandFloor_gray: #f5f5f5;
+    $brandFloor_gray: $gray-lighter;
     margin-top: 150px;
     min-width: $min_w;
     position: relative;
@@ -327,13 +328,12 @@
                 cursor: pointer;
                 height: 310px;
                 @include hoverGray;
+                position: relative;
             }
             p {
-                height: 36px;
                 line-height: 36px;
                 margin: 0;
                 @include fsize(19);
-                font-weight: bold;
                 color: $brand-danger;
                 padding: $txt-padding;
             }
@@ -345,6 +345,8 @@
                 color: $gray-lighte;
             }
             span {
+                display: inline-block;
+                @include fsize(12);
                 padding: $txt-padding;
                 color: $gray;
             }

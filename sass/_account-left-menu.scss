@@ -49,6 +49,7 @@
                 overflow: hidden;
                 list-style: inside disc;
                 padding-left: 10%;
+                margin: 10px 0;
                 &.active,
                 &:hover {
                     background: $btn_color;

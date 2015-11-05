@@ -1,10 +1,90 @@
 @charset "utf-8";
-.acc{
-    &-thead{
+.acc {
+    &-table {
+        div[class*="pure-u"] {
+            @include fsize(12);
+        }
+        .td-item {
+            dd {
+                width: 250px;
+                height: 75px;
+            }
+            p {
+                height: 36px;
+                white-space: normal;
+            }
+        }
+        .bb-dashed {
+            padding: 0 10px;
+            border-bottom: 2px dashed $gray-lightee;
+            .td-wrap {
+                height: 50px;
+            }
+        }
+    }
+    &-thead {
         padding: 5px 10px;
-        font-size: 80%;
-        div[class*="pure-u"]{
-            @include fsize(13);
+    }
+    //collections
+    &-collect {
+        margin-right: -10px;
+        background: #fff;
+        .pure-u-1-4,
+        .pure-u-1-5 {
+            padding: 10px;
+        }
+        em {
+            margin: 0;
+        }
+        //delete operation
+        &-op {
+            max-width: 14px;
+            height: 22px;
+            overflow: hidden;
+            position: absolute;
+            bottom: 8px;
+            right: 4px;
+            color: $gray-lighte;
+            cursor: pointer;
+            @include transition(all .2s linear);
+            &:hover {
+                color: $btn_color;
+                max-width: 200px;
+            }
+        }
+        //brand page
+        &-brand {
+            height: 220px;
+            &-wrap {
+                dl {
+                    margin-bottom: 0;
+                }
+                hr {
+                    margin: 0;
+                }
+            }
+            .img-circle {
+                width: 100px;
+                margin: 0 auto 10px;
+            }
+            .tmallicon {
+                vertical-align: top;
+            }
+            &-op {
+            	margin-top: 4px;
+                a {
+                	display: inline-block;
+                    color: $gray-lighte;
+                    &:hover{
+                    	color: $btn_color;
+                    	text-decoration: none;
+                    }
+                }
+                small{
+                	display: block;
+                	@include fsize(8);
+                }
+            }
         }
     }
 }
