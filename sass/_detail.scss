@@ -219,6 +219,12 @@
             border-bottom: 1px solid $gray-lightee;
         }
     }
+    //detail content part
+    &-cnt{
+        width: 750px;
+        padding: 10px 0;
+        margin: 0 auto;
+    }
     // evaluation part
     @at-root #detail-evaluation{
         label{
@@ -239,6 +245,9 @@
             width: 80px;
             text-align: center;
             margin: 20px auto;
+            .img-circle{
+                margin: 0 auto;
+            }
         }
         &-shot{
             margin-bottom: 10px;

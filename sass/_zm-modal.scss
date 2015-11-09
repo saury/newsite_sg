@@ -86,20 +86,9 @@
             font-weight: normal;
             color: $gray-light;
         }
-        // &-lgs {
-        //     .control-label {
-        //         @include fsize(20);
-        //         padding-top: 12px;
-        //     }
-        //     .form-control {
-        //         height: 44px;
-        //         @include fsize(18);
-        //         @include placeholder($gray-lighter);
-        //     }
-        //     .form-control-feedback {
-        //         line-height: 44px;
-        //     }
-        // }
+        .input-group {
+            padding: 0 15px;
+        }
     }
     .close {
         //close button
@@ -125,5 +114,49 @@
         li {
             list-style: none;
         }
+    }
+}
+
+//modal for account page v4
+// #modal_acc {
+//     .bootstrap-datetimepicker-widget {
+//         margin-left: 15px;
+//     }
+// }
+
+//address strip bar
+.address-strip {
+    font-size: 0;
+    span {
+        display: inline-block;
+        width: 3.5%;
+        height: 6px;
+        margin: 0.75% 0.75% 0;
+        @include transform(skew(45deg));
+        &:nth-child(2n-1) {
+            background: #335bb2;
+        }
+        &:nth-child(2n) {
+            background: #b8635e;
+        }
+    }
+}
+
+.address-chosen {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid $gray-lighte;
+    border-left: 30px solid transparent;
+    i {
+        @include fsize(14);
+        position: absolute;
+        bottom: 0px;
+        top: 13px;
+        color: #fff;
+        right: 3px;
     }
 }

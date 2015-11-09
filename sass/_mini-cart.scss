@@ -23,6 +23,7 @@
             @include text-overflow();
         }
         span{
+            display: block;
             color: $gray-light;
             @include text-overflow();
         }

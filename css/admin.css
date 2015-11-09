@@ -96,7 +96,7 @@ input::-moz-placeholder, textarea::-moz-placeholder { color: #999999; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #999999; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #999999; text-indent: 0; }
 
-input, select, textarea, button, a:focus { -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; outline: none; }
+input, select, textarea, button, a:focus, a:active { -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text; outline: 0; }
 
 .cf { *zoom: 1; }
 .cf:before, .cf:after { content: " "; display: table; }
@@ -131,7 +131,6 @@ a:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outl
 
 a { color: #34485E; text-decoration: none; }
 a:hover, a:focus { color: #19222d; text-decoration: underline; }
-a:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
 
 figure { margin: 0; }
 
@@ -170,7 +169,7 @@ h3, .h3 { font-size: 24px; }
 
 h4, .h4 { font-size: 18px; }
 
-h5, .h5 { font-size: 14px; }
+h5, .h5 { font-size: 16px; }
 
 h6, .h6 { font-size: 12px; }
 
@@ -918,7 +917,7 @@ Licensed under the BSD License.
 https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
-.pure-g { letter-spacing: -0.31em; /* Webkit: collapse white-space between units */ *letter-spacing: normal; /* reset IE < 8 */ word-spacing: -0.43em; /* IE < 8: collapse white-space between units */ text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */ font-size: 0;     /* Sets the font stack to fonts known to work properly with the above letter and word spacings. See: https://github.com/yahoo/pure/issues/41/
+.pure-g { letter-spacing: -0.31em; /* Webkit: collapse white-space between units */ *letter-spacing: normal; /* reset IE < 8 */ word-spacing: -0.43em; /* IE < 8: collapse white-space between units */ text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */ font-size: 0 !important;     /* Sets the font stack to fonts known to work properly with the above letter and word spacings. See: https://github.com/yahoo/pure/issues/41/
  The following font stack makes Pure Grids work on all known environments.
  FreeSans: Ships with many Linux distros, including Ubuntu
  Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and Arial to get picked up by the browser, even though neither is available in Chrome OS.
@@ -1875,7 +1874,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 
 .btn-default { color: #333; background-color: #fff; border-color: #ccc; }
-.btn-default.hollow { border-width: 2px; color: #fff; background: #fff; }
+.btn-default.hollow { color: #fff; background: #fff; }
 .btn-default.hollow:hover { background: #fff; color: #fff; border-color: #fff; }
 .btn-default.hollow:hover { background: #fff; color: #fff; border-color: #fff; }
 .btn-default:focus, .btn-default.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c; }
@@ -1887,7 +1886,7 @@ a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 .btn-default .badge { color: #fff; background-color: #333; }
 
 .btn-primary { color: #fff; background-color: #34485E; border-color: #2b3b4e; }
-.btn-primary.hollow { border-width: 2px; color: #34485E; background: #fff; }
+.btn-primary.hollow { color: #34485E; background: #fff; }
 .btn-primary.hollow:hover { background: #34485E; color: #fff; border-color: #34485E; }
 .btn-primary.hollow:hover { background: #34485E; color: #fff; border-color: #34485E; }
 .btn-primary:focus, .btn-primary.focus { color: #fff; background-color: #222f3d; border-color: black; }
@@ -1899,7 +1898,7 @@ a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 .btn-primary .badge { color: #34485E; background-color: #fff; }
 
 .btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c; }
-.btn-success.hollow { border-width: 2px; color: #5cb85c; background: #fff; }
+.btn-success.hollow { color: #5cb85c; background: #fff; }
 .btn-success.hollow:hover { background: #5cb85c; color: #fff; border-color: #5cb85c; }
 .btn-success.hollow:hover { background: #5cb85c; color: #fff; border-color: #5cb85c; }
 .btn-success:focus, .btn-success.focus { color: #fff; background-color: #449d44; border-color: #255625; }
@@ -1911,7 +1910,7 @@ a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 .btn-success .badge { color: #5cb85c; background-color: #fff; }
 
 .btn-info { color: #fff; background-color: #5bc0de; border-color: #46b8da; }
-.btn-info.hollow { border-width: 2px; color: #5bc0de; background: #fff; }
+.btn-info.hollow { color: #5bc0de; background: #fff; }
 .btn-info.hollow:hover { background: #5bc0de; color: #fff; border-color: #5bc0de; }
 .btn-info.hollow:hover { background: #5bc0de; color: #fff; border-color: #5bc0de; }
 .btn-info:focus, .btn-info.focus { color: #fff; background-color: #31b0d5; border-color: #1b6d85; }
@@ -1923,7 +1922,7 @@ a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 .btn-info .badge { color: #5bc0de; background-color: #fff; }
 
 .btn-warning { color: #fff; background-color: #34485E; border-color: #34485E; }
-.btn-warning.hollow { border-width: 2px; color: #34485E; background: #fff; }
+.btn-warning.hollow { color: #34485E; background: #fff; }
 .btn-warning.hollow:hover { background: #34485E; color: #fff; border-color: #34485E; }
 .btn-warning.hollow:hover { background: #34485E; color: #fff; border-color: #34485E; }
 .btn-warning:focus, .btn-warning.focus { color: #fff; background-color: #222f3d; border-color: #07090c; }
@@ -1935,7 +1934,7 @@ a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 .btn-warning .badge { color: #34485E; background-color: #fff; }
 
 .btn-danger { color: #fff; background-color: #d9534f; border-color: #d43f3a; }
-.btn-danger.hollow { border-width: 2px; color: #d9534f; background: #fff; }
+.btn-danger.hollow { color: #d9534f; background: #fff; }
 .btn-danger.hollow:hover { background: #d9534f; color: #fff; border-color: #d9534f; }
 .btn-danger.hollow:hover { background: #d9534f; color: #fff; border-color: #d9534f; }
 .btn-danger:focus, .btn-danger.focus { color: #fff; background-color: #c9302c; border-color: #761c19; }
@@ -1947,7 +1946,7 @@ a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 .btn-danger .badge { color: #d9534f; background-color: #fff; }
 
 .btn-xlg { color: #fff; background-color: #34485E; border-color: #34485E; font-size: 24px; font-size: 1.71429rem; width: 266px; height: 52px; line-height: 38px; }
-.btn-xlg.hollow { border-width: 2px; color: #34485E; background: #fff; }
+.btn-xlg.hollow { color: #34485E; background: #fff; }
 .btn-xlg.hollow:hover { background: #34485E; color: #fff; border-color: #34485E; }
 .btn-xlg.hollow:hover { background: #34485E; color: #fff; border-color: #34485E; }
 .btn-xlg:focus, .btn-xlg.focus { color: #fff; background-color: #222f3d; border-color: #07090c; }
@@ -1959,7 +1958,7 @@ a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 .btn-xlg .badge { color: #34485E; background-color: #fff; }
 
 .btn-theme { color: #333; background-color: #fff; border-color: #ccc; }
-.btn-theme.hollow { border-width: 2px; color: #fff; background: #fff; }
+.btn-theme.hollow { color: #fff; background: #fff; }
 .btn-theme.hollow:hover { background: #fff; color: #fff; border-color: #fff; }
 .btn-theme.hollow:hover { background: #fff; color: #fff; border-color: #fff; }
 .btn-theme:focus, .btn-theme.focus { color: #333; background-color: #e6e6e6; border-color: #8c8c8c; }

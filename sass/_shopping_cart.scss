@@ -138,14 +138,43 @@
         vertical-align: middle;
         white-space: normal;
         word-break: break-all;
+        input,
+        textarea{
+            width: 100%;
+        }
+        textarea{
+                        
+        }
     }
+    // &-scroll{
+    //     display: block;
+    //     height: 75px;
+    //     overflow: auto;
+    // }
     &-shop {
         padding: 8px 0px;
     }
     &-cnt {
+        &.bordered {
+            > label {
+                border-color: $gray-lightee;
+                border-top-color: transparent;
+                padding: 0;
+                .td-wrap{
+                    border-left: 1px solid $gray-lightee;
+                    &:first-of-type{
+                        border: 0;
+                    }
+                }
+                .td-inner{
+                    padding: 4px;
+                }
+            }
+        }
         > label {
             padding: 10px;
             cursor: default;
+            position: relative;
             &.active {
                 background: $btn_color_active;
                 box-shadow: none;
@@ -186,7 +215,7 @@
             padding: 0px 8px;
             width: 460px;
         }
-        p{
+        p {
             height: 20px;
             @include ellipsis(true);
         }

@@ -24,13 +24,13 @@
 
     @include keyframes(an-3) {
         0% {
-          transform: scale(1);
+          @include transform(scale(1));
         }
         80% {
-          transform: scale(1.5);
+          @include transform(scale(1.8));
         }
         100% {
-          transform: scale(1);
+          @include transform(scale(1));
         }
     }
   }

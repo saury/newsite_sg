@@ -125,7 +125,7 @@
                     </label>
                 </div>
             </div>
-            <a href="#" class="btn btn-warning"><i class="glyphicon glyphicon-plus"></i> Add New Address</a>
+            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#modal_acc" data-active="address" modal-single="true"><i class="glyphicon glyphicon-plus"></i> Add New Address</a>
             <h3>Make sure the order information</h3>
         </div>
         <!-- address box end -->
@@ -423,6 +423,286 @@
         </div>
     </div>
     <!-- Login Modal end-->
+        <!-- Account Modal srart-->
+    <div class="modal fade zm-modal" id="modal_acc" tabindex="-1" role="dialog" aria-labelledby="modal_accLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <!-- <li class="pure-u-1-3" role="presentation"><a href="#avatar" aria-controls="modal_acc_avatar" role="tab" data-toggle="tab"><h4>Avatar</h4></a></li> -->
+                    <li class="pure-u-1-2" role="presentation"><a href="#basic" aria-controls="modal_acc_basic" role="tab" data-toggle="tab"><h4>Basic Information</h4></a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#address" aria-controls="modal_acc_address" role="tab" data-toggle="tab" modal-size="lg"><h4>Address Management</h4></a></li>
+                </ul>
+                <form class="tab-content form-horizontal">
+                    <!-- <div role="tabpanel" class="tab-pane active" id="avatar">
+                        <div class="modal-body">
+                            123
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-xlg">Confirm</button>
+                        </div>
+                    </div> -->
+                    <!-- basic information start -->
+                    <div role="tabpanel" class="tab-pane" id="basic">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="account" class="col-md-4 control-label">User name:</label>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" id="user" placeholder="E-mail / phone / name ">
+                                    <span class="help-block"><small>Hey look, this one is a hint!</small></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="account" class="col-md-4 control-label">Email:</label>
+                                <div class="col-md-8">
+                                    <p class="form-control-static">5469****@qq.com
+                                        <a href="#" class="btn btn-warning btn-xs">Activate this email</a>
+                                        <a class="btn btn-success btn-xs">You've actived it.</a>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-4 control-label">Real name:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-md-4 control-label">Gender</label>
+                                <div class="col-md-6">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="gender1" name="gender" value="male">Male
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" id="gender2" name="gender" value="female">Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="birth" class="col-md-4 control-label">Birthday:</label>
+                                <div class="col-md-6 input-group date" data-active="date_picker_birth">
+                                    <input type="text" class="form-control" id="birth">
+                                    <span class="input-group-addon">
+                                         <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="col-md-4 control-label">Phone number:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country" class="col-md-4 control-label">Country:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city" class="col-md-4 control-label">City:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="city">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-warning btn-block">Confirm</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" data-dismiss="modal" class="btn btn-warning hollow btn-block">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- basic information end -->
+                    <!-- address management start -->
+                    <div role="tabpanel" class="tab-pane" id="address">
+                        <div class="modal-body acc-table">
+                            <div class="address-strip">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="text-center pure-g cart-thead">
+                                <div class="pure-u-3-24">
+                                    <h5>Consignee</h5></div>
+                                <div class="pure-u-3-24">
+                                    <h5>area</h5></div>
+                                <div class="pure-u-8-24">
+                                    <h5>Detailed address</h5></div>
+                                <div class="pure-u-3-24">
+                                    <h5>Zip code</h5></div>
+                                <div class="pure-u-3-24">
+                                    <h5>Phone number</h5></div>
+                                <div class="pure-u-4-24">
+                                    <h5>Operation</h5></div>
+                            </div>
+                            <div class="td-cnt bordered">
+                                <label class="pure-g btn btn-block no-gutter">
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            Chinese
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            Shanghai
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-8-24 td-wrap">
+                                        <div class="td-inner text-justify">
+                                            ShangHai songjiang qu xinzhuangonglu fgwp r long 13haolou 401shi
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            300387
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            12311111111
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-4-24 td-wrap">
+                                        <ul class="list-unstyled td-inner">
+                                            <li>
+                                                <a href="#" class="btn btn-link btn-xs">Revise</a>|
+                                                <a href="#" class="btn btn-link btn-xs">Delete</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="btn btn-warning btn-xs">Set as default address</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                                <label class="pure-g btn btn-block no-gutter">
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            Chinese
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            Shanghai
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-8-24 td-wrap">
+                                        <div class="td-inner text-justify">
+                                            ShangHai songjiang qu xinzhuangonglu fgwp r long 13haolou 401shi
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            300387
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            12311111111
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-4-24 td-wrap">
+                                        <ul class="list-unstyled td-inner">
+                                            <li>
+                                                <a href="#" class="btn btn-link btn-xs">Revise</a>|
+                                                <a href="#" class="btn btn-link btn-xs">Delete</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="btn btn-success btn-xs">default address</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span class="address-chosen">
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                    </span>
+                                </label>
+                                <label class="pure-g btn btn-block no-gutter" for="">
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            <input type="text" placeholder="Consignee">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            <input type="text" placeholder="Area">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-8-24 td-wrap">
+                                        <div class="td-inner text-justify">
+                                            <input type="text" placeholder="Detailed address">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            <input type="text" placeholder="Zip code">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            <input type="text" placeholder="Phone number">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-4-24 td-wrap">
+                                        <ul class="list-unstyled td-inner">
+                                            <li>
+                                                <a href="#" class="btn btn-info btn-xs">Confirm</a>
+                                                <a href="#" class="btn btn-danger btn-xs">Cancel</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="modal-footer row">
+                                <div class="col-md-8"></div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-warning btn-block">Add New</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" data-dismiss="modal" class="btn btn-warning btn-block">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- address management end -->
+                </form>
+                <div class="modal-body">
+                    <div class="modal-success">
+                        <h3>Registered Success</h3>
+                        <a class="btn" href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Account Modal end-->
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/bootstrap/transition.js"></script>
     <script src="js/bootstrap/dropdown.js"></script>
@@ -444,6 +724,9 @@
     <!-- item detail gallary -->
     <script src="js/bootstrap/bootstrap-select.js"></script>
     <!-- shopping cart page -->
+    <script src="js/bootstrap/collapse.js"></script>
+    <script src="js/bootstrap/moment.min.js"></script>
+    <script src="js/bootstrap/bootstrap-datetimepicker.min.js"></script>
     <script src="js/zmall.js"></script>
     <!-- custom js -->
     <!--[if lt IE 9]> 

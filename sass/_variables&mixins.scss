@@ -50,6 +50,8 @@ $link-hover-color: $btn_color;
 //border-radius override
 $input-border-radius-large: 0;
 $font-size-large: 16px;
+// font size override
+$font-size-h5: 16px;
 ///* mixins */
 //font-size px and rem
 @mixin fsize($fs) {
@@ -169,9 +171,10 @@ input,
 select,
 textarea,
 button,
-a:focus {
+a:focus,
+a:active {
     @include user-select(text);
-    outline: none;
+    outline: 0;
 }
 
 //clear fix

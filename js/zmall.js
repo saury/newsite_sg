@@ -42,10 +42,32 @@ $(function() {
         function activeModalTab() {
             $('[data-target^="#modal_"]').each(function() {
                 var ele = $(this);
-                var modal_target = ele.attr("data-target");
-                var opt = ele.attr("data-active");
+                var modal_target = ele.attr("data-target"); //get the whole modal target
+                var opt = ele.attr("data-active"); //get the tab option
+                var single = ele.attr("modal-single"); //check if single tab needed
                 ele.on("click", function() {
-                    $(modal_target + " .nav-tabs li a[href='#" + opt + "']").trigger("click");
+                    //trigger the tab wanted
+                    var _ele = $(modal_target + " .nav-tabs li a[href='#" + opt + "']");
+                    _ele.trigger("click");
+                    //hide the other tabs if needed 
+                    if (single) {
+                        var p_ele = _ele.parent();
+                        p_ele.attr("class","pure-u-1-1 active");//adjust the tab's width
+                        p_ele.siblings().remove();//hide tabs
+                    }
+                });
+            });
+            // adjust the size if needed
+            $('[data-toggle="tab"]').each(function() {
+                var ele = $(this);
+                var p_ele = ele.parents(".modal-dialog");
+                var size = ele.attr("modal-size");
+                ele.on("click", function() {
+                    if (size) {
+                        p_ele.addClass("modal-" + size);
+                    } else {
+                        p_ele.attr("class", "modal-dialog");
+                    };
                 });
             });
         };
@@ -239,8 +261,33 @@ $(function() {
         var parentEle = $(this).parent().parent();
         if (confirm("Delete it?")) {
             parentEle.fadeOut();
-            setTimeout(function(){parentEle.remove();},400);
+            setTimeout(function() {
+                parentEle.remove();
+            }, 400);
         }
         return false;
+    });
+    // date picker general
+    $('[data-active*="date_picker"]').each(function() {
+        var ele = $(this);
+        var date_type = ele.attr("data-active").split("_").pop(); //get the last child of the array
+        switch (date_type) {
+            case "birth": //birthday date picker
+                ele.datetimepicker({
+                    viewMode: 'years', //show the year 1st
+                    defaultDate: "1988-01-01",
+                    format: 'YYYY-MM-DD',
+                    pickTime: false
+                });
+                break;
+            default:
+                break;
+        }
+        ele.datetimepicker({
+            viewMode: 'years',
+            showTodayButton: true,
+            //defaultDate: "1988-01-01",
+            format: 'YYYY-MM-DD'
+        });
     });
 });
