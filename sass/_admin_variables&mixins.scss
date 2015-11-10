@@ -50,3 +50,19 @@ a {
         @include tab-focus;
     }
 }
+
+//pagination extend
+.pagination{
+    vertical-align: middle;
+    &-info{
+        display: inline-block;
+        color: $gray;
+    }
+    &-direct{
+        margin: 0px 20px;
+        input {
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
