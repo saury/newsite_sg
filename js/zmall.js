@@ -52,8 +52,8 @@ $(function() {
                     //hide the other tabs if needed 
                     if (single) {
                         var p_ele = _ele.parent();
-                        p_ele.attr("class","pure-u-1-1 active");//adjust the tab's width
-                        p_ele.siblings().remove();//hide tabs
+                        p_ele.attr("class", "pure-u-1-1 active"); //adjust the tab's width
+                        p_ele.siblings().remove(); //hide tabs
                     }
                 });
             });
@@ -147,12 +147,13 @@ $(function() {
     //reset all the form value
     $("input[type=reset]").trigger("click");
     // init the href
-    $(document).on("click", "*", function() {
+    $(document).on("click", "[data-href]", function() {
         var ele = $(this);
         var linkHref = ele.attr("data-href");
         var newWindow = ele.attr("data-newWin");
         if (linkHref && newWindow) window.open(linkHref); //open in new window;
         else if (linkHref) window.location.href = linkHref; //open in self window;
+        return false;
     });
     //nav scroll watch  
     $(window).scroll(function() {
@@ -281,13 +282,12 @@ $(function() {
                 });
                 break;
             default:
+                ele.datetimepicker({
+                    viewMode: 'days',
+                    showToday: true,
+                    format: 'YYYY-MM-DD HH:mm A',
+                });
                 break;
         }
-        ele.datetimepicker({
-            viewMode: 'years',
-            showTodayButton: true,
-            //defaultDate: "1988-01-01",
-            format: 'YYYY-MM-DD'
-        });
     });
 });

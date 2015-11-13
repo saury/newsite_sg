@@ -21,6 +21,11 @@
                 height: 50px;
             }
         }
+        label{
+            &:active{
+                @include box-shadow(none);
+            }
+        }
     }
     &-thead {
         padding: 5px 10px;

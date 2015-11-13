@@ -134,7 +134,7 @@
                     <div class="acc-vam-inner">
                         <div class="acc-banner-icon">
                             <i class="glyphicon glyphicon-usd"></i>
-                            <button class="btn btn-warning btn-xs">Recharge</button>
+                            <button data-toggle="modal" data-target="#modal_krypton" data-active="netBank" class="btn btn-warning btn-xs">Recharge</button>
                         </div>
                         <span>Available balance</span>
                         <h4>S$<b>99.99</b></h4>
@@ -324,7 +324,7 @@
             </div>
             <!-- To be paid end-->
             <!-- Purchased goods start-->
-            <div class="pure-u-4-5 acc-table" style="display: none;">
+            <div class="pure-u-4-5 acc-table">
                 <div class="pure-g text-center acc-thead detail-nav">
                     <div class="pure-u-2-5 pure-g-wrap">
                         <div class="pure-u-1-2 text-left">Order NO: 132952495373542</div>
@@ -388,7 +388,7 @@
                             <div class="pure-u-1-5 td-wrap">
                                 <ul class="list-unstyled td-inner">
                                     <li>
-                                        <a href="#" class="btn btn-link btn-xs">Rights</a>
+                                        <a data-toggle="modal" data-target="#modal_right" class="btn btn-link btn-xs">Rights</a>
                                     </li>
                                     <li>
                                         <button class="btn btn-warning btn-xs">Confirm receipt</button>
@@ -446,7 +446,7 @@
                             <div class="pure-u-1-5 td-wrap">
                                 <ul class="list-unstyled td-inner">
                                     <li>
-                                        <a href="#" class="btn btn-link btn-xs">Rights</a>
+                                        <a data-toggle="modal" data-target="#modal_right" class="btn btn-link btn-xs">Rights</a>
                                     </li>
                                     <li>
                                         <button class="btn btn-warning btn-xs">Confirm receipt</button>
@@ -936,7 +936,7 @@
             </div>
             <!-- collection of products end -->
             <!-- collection of brands start -->
-            <div class="pure-u-4-5">
+            <div class="pure-u-4-5" style="display: none;">
                 <!-- title -->
                 <div class="detail-nav text-center cf">
                     <h4>Collection of Brands</h4>
@@ -1320,7 +1320,6 @@
                                     <p class="form-control-static">5469****@qq.com
                                         <a href="#" class="btn btn-warning btn-xs">Activate this email</a>
                                         <a class="btn btn-success btn-xs">You've actived it.</a>
-                                        </span>
                                     </p>
                                 </div>
                             </div>
@@ -1369,8 +1368,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-md-4"></div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-md-offset-4">
                                     <button type="button" class="btn btn-warning btn-block">Confirm</button>
                                 </div>
                                 <div class="col-md-3">
@@ -1548,18 +1546,12 @@
                     </div>
                     <!-- address management end -->
                 </form>
-                <div class="modal-body">
-                    <div class="modal-success">
-                        <h3>Registered Success</h3>
-                        <a class="btn" href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     <!-- Account Modal end-->
     <!-- Recharge Modal start -->
-    <div class="modal fade zm-modal" id="krypton_acc" tabindex="-1" role="dialog" aria-labelledby="modal_krLabel">
+    <div class="modal fade zm-modal" id="modal_krypton" tabindex="-1" role="dialog" aria-labelledby="modal_krLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1576,115 +1568,399 @@
                     <li class="pure-u-1-2" role="presentation"><a href="#atmTrans" aria-controls="modal_kr_atmTrans" role="tab" data-toggle="tab"><h4>ATM Transfer</h4></a></li>
                 </ul>
                 <form class="tab-content form-horizontal">
-                    <!-- <div role="tabpanel" class="tab-pane active" id="avatar">
-                        <div class="modal-body">
-                            123
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-xlg">Confirm</button>
-                        </div>
-                    </div> -->
                     <!-- netBank information start -->
                     <div role="tabpanel" class="tab-pane modal-body cf" id="netBank">
+                        <!-- progress icons start -->
                         <div class="modal-body pure-g">
-                            <div class="pure-u-1-3 text-center">
-                                <div class="acc-banner-icon"><i class="glyphicon glyphicon-usd"></i></div>
+                            <div class="pure-u-1-3 text-center active">
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-usd"></i>
+                                </div>
                                 1. Complete Transfer
+                                <div class="progress-dot-r">
+                                    <span></span>
+                                    <span></span>
+                                </div>
                             </div>
                             <div class="pure-u-1-3 text-center">
-                                <div class="acc-banner-icon"><i class="glyphicon glyphicon-copy"></i></div>
+                                <div class="progress-dot-l">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-copy"></i>
+                                </div>
                                 2. Submit Form
+                                <div class="progress-dot-r">
+                                    <span></span>
+                                    <span></span>
+                                </div>
                             </div>
                             <div class="pure-u-1-3 text-center">
-                                <div class="acc-banner-icon"><i class="glyphicon glyphicon-time"></i></div>
+                                <div class="progress-dot-l">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-time"></i>
+                                </div>
                                 3. Waiting For Verification
                             </div>
                         </div>
-                        <div>
-                            <div class="form-group">
-                                <label for="account" class="col-md-4 control-label">User name:</label>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" id="user" placeholder="E-mail / phone / name ">
-                                    <span class="help-block"><small>Hey look, this one is a hint!</small></span>
+                        <!-- progress icons end -->
+                        <!-- recharge steps start -->
+                        <div class="panel panel-default">
+                            <!-- 1st step -->
+                            <div class="cf" style="display: none;">
+                                <div class="panel-body">
+                                    <p>Minimun Payable Amount: <span class="ft-danger">S$0.00</span></p>
+                                    <div class="col-md-10 col-md-offset-1 text-justify ft-lite">You can top up more for future payments, avoid S$100 or S$50,transfer amount like S$100.03 or S$49 instead for faster verification. </div>
                                 </div>
+                                <div class="panel-body">
+                                    <p>Choose a bank to transfer</p>
+                                    <ul class="list-unstyled ft-gray pure-g-wrap pure-u-11-12">
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall DBS Account:</p>
+                                            <p class="pure-u-7-24">054-903335-9</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to DBS website</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall OCBC Account:</p>
+                                            <p class="pure-u-7-24">514-772680-001</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to OCBC website</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall UOB Account:</p>
+                                            <p class="pure-u-7-24">388-302-811-0</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to UOB website</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="panel-body col-md-6 col-md-offset-3">
+                                    <button class="btn btn-acc btn-block">I’ve completed transfer</button>
+                                </p>
                             </div>
-                            <div class="form-group">
-                                <label for="account" class="col-md-4 control-label">Email:</label>
-                                <div class="col-md-8">
-                                    <p class="form-control-static">5469****@qq.com
-                                        <a href="#" class="btn btn-warning btn-xs">Activate this email</a>
-                                        <a class="btn btn-success btn-xs">You've actived it.</a>
+                            <!-- 2nd step -->
+                            <div class="panel-body">
+                                <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
+                                <div class="form-group cf">
+                                    <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
+                                    <div class="col-md-6">
+                                        <select class="selectpicker" name="transfer" id="transfer" data-width="100%">
+                                            <option value="">Please select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="gender" class="col-md-4 control-label">Transfer Amount:</label>
+                                    <div class="col-md-8">
+                                        <div class="radio">
+                                            <label class="text-overflow">
+                                                <input type="radio" name="transAmount" value="option1"> Minimum Payable Amount: <span class="ft-danger">S$1000.00</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <div class="radio pure-g">
+                                            <label class="pure-u-7-12">
+                                                <input type="radio" name="transAmount" value="option2"> Other Amount: S$
+                                            </label>
+                                            <span class="pure-u-5-12"><input type="text" class="btn-block" id="transAmountNum"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transNum" class="col-md-4 control-label">Transaction No:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="transNum">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transTime" class="col-md-4 control-label">Transferred Time:</label>
+                                    <div class="col-md-6 input-group date" data-active="date_picker">
+                                        <input type="text" class="form-control" id="transTime" readonly>
+                                        <span class="input-group-addon">
+                                             <span class="glyphicon glyphicon-calendar"></span>
                                         </span>
-                                    </p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transMob" class="col-md-4 control-label">Mobile No:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="transMob">
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <div class="col-md-3 col-md-offset-7">
+                                        <button type="button" class="btn btn-acc btn-block">Confirm</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="name" class="col-md-4 control-label">Real name:</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" id="name">
+                        </div>
+                        <!-- recharge steps end -->
+                    </div>
+                    <!-- netBank information end -->
+                    <!-- ATM Transfer information start -->
+                    <div role="tabpanel" class="tab-pane modal-body cf" id="atmTrans">
+                        <!-- progress icons start -->
+                        <div class="modal-body pure-g">
+                            <div class="pure-u-1-3 text-center active">
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-usd"></i>
+                                </div>
+                                1. Complete Transfer
+                                <div class="progress-dot-r">
+                                    <span></span>
+                                    <span></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="gender" class="col-md-4 control-label">Gender</label>
-                                <div class="col-md-6">
-                                    <label class="radio-inline">
-                                        <input type="radio" id="gender1" name="gender" value="male">Male
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" id="gender2" name="gender" value="female">Female
-                                    </label>
+                            <div class="pure-u-1-3 text-center">
+                                <div class="progress-dot-l">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-copy"></i>
+                                </div>
+                                2. Submit Form
+                                <div class="progress-dot-r">
+                                    <span></span>
+                                    <span></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="birth" class="col-md-4 control-label">Birthday:</label>
-                                <div class="col-md-6 input-group date" data-active="date_picker_birth">
-                                    <input type="text" class="form-control" id="birth">
-                                    <span class="input-group-addon">
-                                         <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
+                            <div class="pure-u-1-3 text-center">
+                                <div class="progress-dot-l">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-time"></i>
+                                </div>
+                                3. Waiting For Verification
+                            </div>
+                        </div>
+                        <!-- progress icons end -->
+                        <!-- recharge steps start -->
+                        <div class="panel panel-default">
+                            <!-- 1st step -->
+                            <div class="cf" style="display: none;">
+                                <div class="panel-body">
+                                    <p>Minimun Payable Amount: <span class="ft-danger">S$0.00</span></p>
+                                    <div class="col-md-10 col-md-offset-1 text-justify ft-lite">You can top up more for future payments, avoid S$100 or S$50,transfer amount like S$100.03 or S$49 instead for faster verification. </div>
+                                </div>
+                                <div class="panel-body">
+                                    <p>Choose a bank to transfer</p>
+                                    <ul class="list-unstyled ft-gray pure-g-wrap pure-u-11-12">
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall DBS Account:</p>
+                                            <p class="pure-u-7-24">054-903335-9</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to DBS website</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall OCBC Account:</p>
+                                            <p class="pure-u-7-24">514-772680-001</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to OCBC website</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall UOB Account:</p>
+                                            <p class="pure-u-7-24">388-302-811-0</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to UOB website</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="panel-body col-md-6 col-md-offset-3">
+                                    <button class="btn btn-acc btn-block">I’ve completed transfer</button>
+                                </p>
+                            </div>
+                            <!-- 2nd step -->
+                            <div class="panel-body">
+                                <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
+                                <div class="form-group cf">
+                                    <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
+                                    <div class="col-md-6">
+                                        <select class="selectpicker" name="transfer" id="transfer" data-width="100%">
+                                            <option value="">Please select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="gender" class="col-md-4 control-label">Transfer Amount:</label>
+                                    <div class="col-md-8">
+                                        <div class="radio">
+                                            <label class="text-overflow">
+                                                <input type="radio" name="transAmount" value="option1"> Minimum Payable Amount: <span class="ft-danger">S$1000.00</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <div class="radio pure-g">
+                                            <label class="pure-u-7-12">
+                                                <input type="radio" name="transAmount" value="option2"> Other Amount: S$
+                                            </label>
+                                            <span class="pure-u-5-12"><input type="text" class="btn-block" id="transAmountNum"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transNum" class="col-md-4 control-label">Transaction No:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="transNum">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transTime" class="col-md-4 control-label">Transferred Time:</label>
+                                    <div class="col-md-6 input-group date" data-active="date_picker">
+                                        <input type="text" class="form-control" id="transTime" readonly>
+                                        <span class="input-group-addon">
+                                             <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transMob" class="col-md-4 control-label">Mobile No:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="transMob">
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <div class="col-md-3 col-md-offset-7">
+                                        <button type="button" class="btn btn-acc btn-block">Confirm</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="phone" class="col-md-4 control-label">Phone number:</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" id="phone">
+                        </div>
+                        <!-- recharge steps end -->
+                    </div>
+                    <!-- ATM Transfer information end -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Recharge Modal end -->
+    <!-- Recharge Modal start -->
+    <div class="modal fade zm-modal" id="modal_right" tabindex="-1" role="dialog" aria-labelledby="modal_rightLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="pure-u-1-1 active" role="presentation"><a href="#rightServ" aria-controls="modal_right_rightServ" role="tab" data-toggle="tab"><h4>Rights Service</h4></a></li>
+                </ul>
+                <form class="tab-content form-horizontal">
+                    <!-- Rights Service start -->
+                    <div role="tabpanel" class="tab-pane modal-body cf active" id="rightServ">
+                        <!-- form start -->
+                        <div class="modal-body">
+                            <div class="form-group cf">
+                                <label for="rightType" class="col-md-4 control-label required">Right service:</label>
+                                <div class="col-md-5">
+                                    <select class="selectpicker" name="rightType" id="rightType" data-width="100%">
+                                        <option value="">Please select</option>
+                                        <option value="return">Return</option>
+                                        <option value="Refunt">Refunt</option>
+                                    </select>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="country" class="col-md-4 control-label">Country:</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" id="country">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="city" class="col-md-4 control-label">City:</label>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" id="city">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-md-4"></div>
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-warning btn-block">Confirm</button>
+                                    <p class="form-control-static text-right"><span class="ft-warning">*</span> Is required</p>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="reasons" class="col-md-4 control-label required">Reasons:</label>
+                                <div class="col-md-8">
+                                    <select class="selectpicker" name="reasons" id="reasons" data-width="100%">
+                                        <option value="">Please select reasons for return or refund</option>
+                                        <option value="1">Goods have quality problems </option>
+                                        <option value="2">The Size is wrong </option>
+                                        <option value="3">Send the wrong goods</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="refund_amount" class="col-md-4 control-label required">Refund amount:</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="refund_amount" name="refund_amount">
+                                </div>
+                                <div class="col-md-2 row">
+                                    <p class="form-control-static">S$</p>
+                                </div>
+                                <div class="col-md-8 col-md-offset-4">
+                                    <p class="help-block"><small>( Maximum <span class="ft-warning">180</span>S$,Including shipping postage <span class="ft-warning">0</span>S$ )</small></p>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="explain" class="col-md-4 control-label">
+                                    Explain:<span class="help-block"><small>(0/200 words)</small></span>
+                                </label>
+                                <div class="col-md-8">
+                                    <textarea class="form-control" id="explain" max-length="200" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="explain" class="col-md-4 control-label">Upload documents:</label>
+                                <div class="col-md-8">
+                                    <div class="form-control-static upload-wrap">
+                                        <!-- thumbnail with the delete icon -->
+                                        <div class="upload-thumb">
+                                            <img src="img/brands-thumb.jpg" class="img-responsive">
+                                            <div class="upload-op">
+                                                <i class="glyphicon glyphicon-remove"></i>
+                                            </div>
+                                        </div>
+                                        <!-- icon for uploading photos -->
+                                        <div class="upload-thumb">
+                                            <div class="upload-op">
+                                                <i class="glyphicon glyphicon-plus"></i>
+                                            </div>
+                                            <input type="file">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="transfer" class="col-md-4 control-label">Logistics company:</label>
+                                <div class="col-md-8">
+                                    <select class="selectpicker" name="transfer" id="transfer" data-width="100%">
+                                        <option value="">Please select the logistics company</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="logCom" class="col-md-4 control-label">Logistics company:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="logCom">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-3 col-md-offset-4">
+                                    <button type="button" class="btn btn-warning btn-block">Submit</button>
                                 </div>
                                 <div class="col-md-3">
                                     <button type="button" data-dismiss="modal" class="btn btn-warning hollow btn-block">Cancel</button>
                                 </div>
                             </div>
                         </div>
+                        <!-- form end -->
                     </div>
-                    <!-- netBank information end -->
-                    <!-- atmTrans management start -->
-                    <div role="tabpanel" class="tab-pane" id="atmTrans">
-                    </div>
-                    <!-- address management end -->
+                    <!-- Rights Service end -->
                 </form>
-                <div class="modal-body">
-                    <div class="modal-success">
-                        <h3>Registered Success</h3>
-                        <a class="btn" href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -1711,15 +1987,10 @@
     <script src="js/bootstrap/bootstrap-select.js"></script>
     <!-- shopping cart page -->
     <script src="js/bootstrap/collapse.js"></script>
+    <script src="js/bootstrap/ekko-lightbox.js"></script>
     <script src="js/bootstrap/moment.min.js"></script>
     <script src="js/bootstrap/bootstrap-datetimepicker.min.js"></script>
     <script src="js/zmall.js"></script>
-    <script>
-    $(document).ready(function() {
-        $("#krypton_acc").modal("show");
-        $('[data-toggle="tab"]').eq(4).click();
-    });
-    </script>
     <!-- custom js -->
     <!--[if lt IE 9]> 
     <script>

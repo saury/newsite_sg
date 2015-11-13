@@ -85,6 +85,11 @@ a.btn {
     @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
+// acc acount blue button
+.btn-acc {
+    @include button-variant($btn-primary-color, $acc-banner-blue, $acc-banner-blue);
+}
+
 // login and register appear as deep orange
 .btn-xlg {
     @include button-variant($btn-primary-color, $btn_color, $btn_color);

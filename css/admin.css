@@ -113,6 +113,8 @@ input, select, textarea, button, a:focus, a:active { -webkit-user-select: text; 
 .ft-info { color: #5bc0de; }
 .ft-warning { color: #ff6801; }
 .ft-danger { color: #d9534f; }
+.ft-gray { color: #777777; }
+.ft-lite { color: #999999; }
 
 .zm-checkbox { position: relative; width: 22px; height: 22px; font-size: 18px; font-size: 1.28571rem; border: 1px solid #777777; color: #ff6801; text-align: center; display: inline-block; margin-right: 4px; vertical-align: bottom; }
 .zm-checkbox i { display: none; }
@@ -852,11 +854,13 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 .panel-danger > .panel-footer + .panel-collapse > .panel-body { border-bottom-color: #ebccd1; }
 
 .bootstrap-select { width: 180px\0; /*IE9 and below*/ position: relative; display: inline-block; }
-.bootstrap-select > .dropdown-toggle { width: 100%; padding-right: 25px; }
+.bootstrap-select > .dropdown-toggle { width: 100%; padding-right: 25px; height: 34px; }
+.bootstrap-select > .dropdown-toggle.btn-xs, .btn-group-xs.bootstrap-select > .dropdown-toggle.btn { height: 22px; }
 .has-error .bootstrap-select .dropdown-toggle, .error .bootstrap-select .dropdown-toggle { border-color: #b94a48; }
 .bootstrap-select.fit-width { width: auto !important; }
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) { width: 180px; }
 .bootstrap-select .dropdown-toggle:focus { outline: thin dotted #333333 !important; outline: 5px auto -webkit-focus-ring-color !important; outline-offset: -2px; }
+.bootstrap-select.xs .dropdown-menu li a { font-size: 12px; padding: 2px 10px; }
 
 .bootstrap-select.form-control { margin-bottom: 0; padding: 0; border: none; }
 .bootstrap-select.form-control:not([class*="col-"]) { width: 100%; }
@@ -1949,6 +1953,18 @@ a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle { background-image: none; }
 .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active { background-color: #d9534f; border-color: #d43f3a; }
 .btn-danger .badge { color: #d9534f; background-color: #fff; }
+
+.btn-acc { color: #fff; background-color: #7ecef4; border-color: #7ecef4; }
+.btn-acc.hollow { color: #7ecef4; background: #fff; }
+.btn-acc.hollow:hover { background: #7ecef4; color: #fff; border-color: #7ecef4; }
+.btn-acc.hollow:hover { background: #7ecef4; color: #fff; border-color: #7ecef4; }
+.btn-acc:focus, .btn-acc.focus { color: #fff; background-color: #4fbcf0; border-color: #139edf; }
+.btn-acc:hover { color: #fff; background-color: #4fbcf0; border-color: #46b9ef; }
+.btn-acc:active, .btn-acc.active, .open > .btn-acc.dropdown-toggle { color: #fff; background-color: #4fbcf0; border-color: #46b9ef; }
+.btn-acc:active:hover, .btn-acc:active:focus, .btn-acc:active.focus, .btn-acc.active:hover, .btn-acc.active:focus, .btn-acc.active.focus, .open > .btn-acc.dropdown-toggle:hover, .open > .btn-acc.dropdown-toggle:focus, .open > .btn-acc.dropdown-toggle.focus { color: #fff; background-color: #2eb0ed; border-color: #139edf; }
+.btn-acc:active, .btn-acc.active, .open > .btn-acc.dropdown-toggle { background-image: none; }
+.btn-acc.disabled, .btn-acc.disabled:hover, .btn-acc.disabled:focus, .btn-acc.disabled.focus, .btn-acc.disabled:active, .btn-acc.disabled.active, .btn-acc[disabled], .btn-acc[disabled]:hover, .btn-acc[disabled]:focus, .btn-acc[disabled].focus, .btn-acc[disabled]:active, .btn-acc[disabled].active, fieldset[disabled] .btn-acc, fieldset[disabled] .btn-acc:hover, fieldset[disabled] .btn-acc:focus, fieldset[disabled] .btn-acc.focus, fieldset[disabled] .btn-acc:active, fieldset[disabled] .btn-acc.active { background-color: #7ecef4; border-color: #7ecef4; }
+.btn-acc .badge { color: #7ecef4; background-color: #fff; }
 
 .btn-xlg { color: #fff; background-color: #34485E; border-color: #34485E; font-size: 24px; font-size: 1.71429rem; width: 266px; height: 52px; line-height: 38px; }
 .btn-xlg.hollow { color: #34485E; background: #fff; }
