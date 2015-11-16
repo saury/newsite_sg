@@ -70,9 +70,13 @@
     }
     // affix bar
     &-bar {
+        &-wrap{
+            height: 95px;
+            margin: 40px 0;
+        }
         position: relative;
         background: $gray-dark;
-        margin: 40px (-($grid-gutter-width / 2));
+        // margin: 40px (-($grid-gutter-width / 2));
         z-index: 3;
         color: #fff;
         .container {
@@ -151,7 +155,7 @@
     }
     &-cnt {
         &.bordered {
-            > label {
+            label {
                 border-color: $gray-lightee;
                 border-top-color: transparent;
                 padding: 0;
@@ -166,7 +170,7 @@
                 }
             }
         }
-        > label {
+        label {
             padding: 10px;
             cursor: default;
             position: relative;

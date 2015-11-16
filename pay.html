@@ -99,210 +99,60 @@
         <!-- step part start -->
         <nav class="row step-progress">
             <ul class="pure-g">
-                <li class="active pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Shopping cart<span class="caret caret-nav"></span></li>
-                <li class="pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Cashier</li>
+                <li class="active pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Shopping cart</li>
+                <li class="active pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Cashier<span class="caret caret-nav"></span></li>
                 <li class="pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Delivered</li>
                 <li class="pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Confirm receipt</li>
             </ul>
         </nav>
         <!-- step part end -->
-        <!-- address box start -->
-        <div class="row cart-address">
-            <div class="cart-address-box">
-                <h3>Make sure the address<small class="flr">Manage the Address</small></h3>
-                <div data-toggle="buttons">
-                    <label class="btn btn-default btn-block cf active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked>
-                        <span class="fll"><em><i class="glyphicon glyphicon-map-marker"></i> Send To: </em>
-                    ShangHai songjiang qu xinzhuangonglu 518long 13haolou 401shi (Even Liu recieve it) 13454756876</span>
-                        <a href="#" class="flr">Correct the Address</a>
-                    </label>
-                    <label class="btn btn-default btn-block cf">
-                        <input type="radio" name="options" id="option2" autocomplete="off">
-                        <span class="fll"><em><i class="glyphicon glyphicon-map-marker"></i> Send To: </em>
-                    ShangHai songjiang qu xinzhuangonglu 518long 13haolou 401shi (Even Liu recieve it) 13454756876</span>
-                        <a href="#" class="flr">Correct the Address</a>
-                    </label>
+        <!-- pay info box start -->
+        <dl class="row pay-box">
+            <dt class="cf">
+                <div class="col-md-10 col-md-offset-1"> <!-- hide when the order successfully paid -->
+                    <h4>Orders have been submitted, please pay in time.</h4>
                 </div>
-            </div>
-            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#modal_acc" data-active="address" modal-single="true"><i class="glyphicon glyphicon-plus"></i> Add New Address</a>
-            <h3>Make sure the order information</h3>
-        </div>
-        <!-- address box end -->
-        <!-- cart table start -->
-        <div class="row">
-            <!-- cart table head start -->
-            <div class="pure-g cart-thead">
-                <div class="pure-u-1-2">
-                    <div class="fll">
-                        <div class="zm-checkbox">
-                            <input type="checkbox">
-                            <i class="glyphicon glyphicon-ok"></i>
-                        </div>
-                        <span>All</span>
-                    </div>
-                    Commodity information
-                    <span class="hr-line"></span>
+                <!-- subtitle end -->
+            </dt>
+            <dd class="bBranch td-wrap cf">
+                <!-- gray box start -->
+                <div class="col-md-10 col-md-offset-1"> <!-- hide when the order successfully paid -->
+                    <h3>Payment information</h3>
+                    <p>
+                        <!-- data-toggle="buttons" -->
+                        <label class="btn btn-default btn-bold btn-lg btn-block cf">
+                            <input class="fll" type="radio" name="options" id="option1" autocomplete="off" checked>
+                            <span class="col-md-8 text-left"><i class="ft-warning glyphicon glyphicon-credit-card"></i>Account blance: S$56 <small class="ft-warning">( Your credit is running low )</small></span>
+                            <span class="flr">Pay: S$<strong class="ft-warning">234</strong></span>
+                        </label>
+                    </p>
+                    <!-- button row start -->
+                    <ul class="list-inline align-left cf">
+                        <li class="col-md-3">
+                            <a href="#" class="btn btn-block btn-default">Balance payment</a>
+                        </li>
+                        <li class="col-md-3">
+                            <a href="#" class="btn btn-block btn-default btn-dashed">Other payment methods</a>
+                        </li>
+                        <li class="col-md-3">
+                            <a href="#" class="btn btn-block btn-warning" data-toggle="modal" data-target="#modal_krypton" data-active="netBank">Recharge now</a>
+                        </li>
+                    </ul>
+                    <!-- button row end -->
+                    <h4><i class="ft-success glyphicon glyphicon-ok-sign"></i><small>You are in a safe environment, please be assured that use!</small></h4>
+                    <a href="#" class="btn btn-warning btn-lg">Confirm the payment</a>
                 </div>
-                <div class="pure-u-1-2">
-                    <div class="pure-u-1-4">Price<span class="hr-line"></span></div>
-                    <div class="pure-u-1-4">Unit<span class="hr-line"></span></div>
-                    <div class="pure-u-1-4">Sum<span class="hr-line"></span></div>
-                    <div class="pure-u-1-4">Operation</div>
+                <!-- gray box end -->
+                <!-- successfully paid hint start -->
+                <div class="td-inner text-center" style="display: none;">
+                    <h2><i class="ft-success glyphicon glyphicon-ok-sign"></i><small>You have successfully paid!</small></h2>
+                    <a href="#" class="btn btn-warning">Check my goods</a>
+                    <a href="#" class="btn btn-gray">Check my goods</a>
                 </div>
-            </div>
-            <!-- cart table head end -->
-            <!-- cart table body start -->
-            <div class="cart-tbody">
-                <div class="td-shop">
-                    <div class="zm-checkbox">
-                        <input type="checkbox">
-                        <i class="glyphicon glyphicon-ok"></i>
-                    </div>
-                    Shop: turn&turn
-                </div>
-                <div class="pure-g td-cnt" data-toggle="buttons">
-                    <label class="btn btn-default btn-block">
-                        <div class="pure-u-1-2">
-                            <div class="fll">
-                                <div class="zm-checkbox">
-                                    <input type="checkbox">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </div>
-                            </div>
-                            <dl class="td-item fll">
-                                <dt>
-                                    <span></span>
-                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
-                                </dt>
-                                <dd>
-                                    <p>Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turnShop: turn&turn</p>
-                                    <ul class="list-unstyled">
-                                        <li><small>Color: Deep  Gray Size: S</small></li>
-                                        <li><small>Remark: mock up</small></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="pure-u-1-2">
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">299.00</div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">
-                                    <div class="input-group detail-promo-ammount" onclick="event.stopPropagation();">
-                                        <div class="input-group-addon" onclick="return false;"><i class="glyphicon glyphicon-minus"></i></div>
-                                        <input class="form-control" onclick="return false;" value="1" maxlength="2" title="Please enter the quantity" type="text">
-                                        <div class="input-group-addon" onclick="return false;"><i class="glyphicon glyphicon-plus"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">299.00</div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <ul class="list-unstyled td-inner text-left">
-                                    <li>
-                                        <a href="javascript:void(0);"><i class="glyphicon glyphicon-star"></i> Add to Collect cart</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"><i class="glyphicon glyphicon-trash"></i> Delete</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </label>
-                    <label class="btn btn-default btn-block">
-                        <div class="pure-u-1-2">
-                            <div class="fll">
-                                <div class="zm-checkbox">
-                                    <input type="checkbox">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </div>
-                            </div>
-                            <dl class="td-item fll">
-                                <dt>
-                                    <span></span>
-                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
-                                </dt>
-                                <dd>
-                                    <p>Shop: turn&turn</p>
-                                    <ul class="list-unstyled">
-                                        <li><small>Color: Deep  Gray Size: S</small></li>
-                                        <li><small>Remark: mock up</small></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="pure-u-1-2">
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">299.00</div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">
-                                    <div class="input-group detail-promo-ammount" onclick="event.stopPropagation();">
-                                        <div class="input-group-addon" onclick="return false;"><i class="glyphicon glyphicon-minus"></i></div>
-                                        <input class="form-control" onclick="return false;" value="1" maxlength="2" title="Please enter the quantity" type="text">
-                                        <div class="input-group-addon" onclick="return false;"><i class="glyphicon glyphicon-plus"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">299.00</div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <ul class="list-unstyled td-inner text-left">
-                                    <li>
-                                        <a href="javascript:void(0);"><i class="glyphicon glyphicon-star"></i> Add to Collect cart</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"><i class="glyphicon glyphicon-trash"></i> Delete</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <!-- cart table body end -->
-        </div>
-        <!-- cart table end -->
-        <!-- affix bar start -->
-        <div class="cart-bar-wrap">
-            <div class="row cart-bar" data-affix="overflow">
-                <div class="container pure-g">
-                    <div class="pure-u-1-2 td-wrap">
-                        <div class="td-inner">
-                            <ul class="list-unstyled">
-                                <li><b>Addressee: </b>Even Liu(13752151629)</li>
-                                <li><b>Send to: </b>hangHai songjiang qu xinzhuangonglu fgwp r long 13haolou 401shi</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pure-u-3-8 td-wrap">
-                        <div class="td-inner">
-                            <ul class="list-unstyled cart-bar-transport">
-                                <li>
-                                    <b>Transport mode:</b>
-                                    <select class="selectpicker" name="transport" id="transport">
-                                        <option value="transport1">EMS 1-2days</option>
-                                        <option value="transport2">dhl 2-4days</option>
-                                    </select>
-                                    <small>29.00</small>
-                                </li>
-                                <li><b>Real payment: </b><em>$1196.00</em></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pure-u-1-8 td-wrap">
-                        <div class="td-inner">
-                            <a href="javascript:void(0);" class="btn btn-xlg">Submit orders</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- affix bar end -->
+                <!-- successfully paid hint end -->
+            </dd>
+        </dl>
+        <!-- pay info box end -->
     </div>
     <!-- shopping_cart>cashier>delivered>confirm_receipt end -->
     <!-- footer start -->

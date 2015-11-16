@@ -280,11 +280,11 @@
             .glyphicon-flash {
                 width: 26px;
                 height: 26px;
-                line-height: 26px;
+                line-height: 24px;
                 border: 1px solid $gray-light;
                 @include border-radius(50%);
                 text-align: center;
-                margin: 0 5px;
+                margin: 7px 5px;
             }
             .glyphicon-chevron-down,
             .glyphicon-chevron-up {

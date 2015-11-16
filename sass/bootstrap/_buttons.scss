@@ -90,6 +90,11 @@ a.btn {
     @include button-variant($btn-primary-color, $acc-banner-blue, $acc-banner-blue);
 }
 
+// gray button
+.btn-gray {
+    @include button-variant($btn-primary-color, $gray-lightee, $gray-lightee);
+}
+
 // login and register appear as deep orange
 .btn-xlg {
     @include button-variant($btn-primary-color, $btn_color, $btn_color);

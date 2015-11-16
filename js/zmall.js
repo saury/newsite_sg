@@ -24,8 +24,8 @@ $(function() {
         function callAffixOverflow() {
             $('[data-affix="overflow"]').each(function() {
                 var ele = $(this);
-                var offsetTop = ele.offset().top - $(window).height() - parseInt(ele.css("margin-top").split("px")[0]);
-                //affix top = offset to top - element's margin-top - window's height
+                var offsetTop = ele.offset().top + ele.height() - $(window).height();// - parseInt(ele.css("margin-top").split("px")[0]);//element's marginTop
+                //affix top = offset to top + own height - window's height
                 ele.affix("destroy"); //destroy the affix function berfore
                 if (offsetTop < 0) return false; //no affix while it is not overflow
                 ele.affix({

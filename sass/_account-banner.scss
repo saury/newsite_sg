@@ -63,9 +63,6 @@
         line-height: 78px;
         @include fsize(40);
         @include border-radius(50%);
-        i {
-            line-height: unset;
-        }
         .btn {
             position: absolute;
             bottom: 0;

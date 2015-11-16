@@ -29,7 +29,18 @@ $header-h: 55px;
 $close-w:34px;
 //brands page
 //brands color for 12 floors
-$brands-color: #993585,#ff649d,#f02681,#f135cc,#12a3dc,#5f7cd0,#3036a4,#154484,#3989da,#209e55,#ecbc13,#f97a09;
+$brands-color: #993585,
+#ff649d,
+#f02681,
+#f135cc,
+#12a3dc,
+#5f7cd0,
+#3036a4,
+#154484,
+#3989da,
+#209e55,
+#ecbc13,
+#f97a09;
 $brands-item-padding: 6px;
 //shopping cart
 $btn_color_active: #ffe5e1;
@@ -39,9 +50,9 @@ $breadcrumb-padding-vertical: 7px;
 $breadcrumb-padding-horizontal: 0;
 $breadcrumb-bg: transparent;
 // btn border radius set to 0
-$btn-border-radius-base:         0;//$border-radius-base !default;
-$btn-border-radius-large:        0;//$border-radius-large !default;
-$btn-border-radius-small:        0;//$border-radius-small !default;
+$btn-border-radius-base: 0; //$border-radius-base !default;
+$btn-border-radius-large: 0; //$border-radius-large !default;
+$btn-border-radius-small: 0; //$border-radius-small !default;
 // account page
 $acc-banner-blue: #7ecef4;
 //link color
@@ -122,14 +133,16 @@ $font-size-h5: 16px;
 }
 
 //gray filter
-@mixin gray-filter(){
-    filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter     id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /*     Firefox 10+, Firefox on Android */
-    filter:gray; /* IE6-9 */
-    -webkit-filter:grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+@mixin gray-filter() {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter     id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    /*     Firefox 10+, Firefox on Android */
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+, Safari 6+, Safari 6+ iOS */
     -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%); 
+    -o-filter: grayscale(100%);
 }
-
 
 //import pixeled font face
 //@include font-face("Pixel Font", font-files("XPDR_02.ttf"));
@@ -159,7 +172,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    @include user-select(none);
 }
 
 input,
@@ -173,7 +185,6 @@ textarea,
 button,
 a:focus,
 a:active {
-    @include user-select(text);
     outline: 0;
 }
 
@@ -201,7 +212,7 @@ a:active {
 
 //caret for nav bar
 $caret-nav-width: 6px;
-.caret-nav{
+.caret-nav {
     border-width: $caret-nav-width !important;
     position: absolute;
     bottom: -$caret-nav-width;
@@ -210,26 +221,26 @@ $caret-nav-width: 6px;
 }
 
 // colored font
-.ft{
-    &-primary{
+.ft {
+    &-primary {
         color: $brand-primary;
     }
-    &-success{
+    &-success {
         color: $brand-success;
     }
-    &-info{
+    &-info {
         color: $brand-info;
     }
-    &-warning{
+    &-warning {
         color: $btn_color;
     }
-    &-danger{
+    &-danger {
         color: $brand-danger;
     }
-    &-gray{
+    &-gray {
         color: $gray-light;
     }
-    &-lite{
+    &-lite {
         color: $gray-lighte;
     }
 }
@@ -248,8 +259,9 @@ $caret-nav-width: 6px;
         display: inline-block;
         margin-right: 4px;
         vertical-align: bottom;
-        i{
+        i {
             display: none;
+            line-height: 1;
         }
         input {
             position: absolute;
@@ -263,7 +275,7 @@ $caret-nav-width: 6px;
             cursor: pointer;
             z-index: 99;
         }
-        &-sm{
+        &-sm {
             width: 16px;
             height: 16px;
             @include fsize(12);
@@ -271,7 +283,20 @@ $caret-nav-width: 6px;
     }
 }
 
+//expand the btn style
+.btn {
+    &.btn {
+        //dashed
+        &-dashed {
+            border-style: dashed;
+        }
+        &-bold {
+            border: 2px solid $gray;
+        }
+    }
+}
+
 //text decoration line-through
-.line-through{
-    text-decoration:line-through; 
+.line-through {
+    text-decoration: line-through;
 }

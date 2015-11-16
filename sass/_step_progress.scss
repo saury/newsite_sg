@@ -9,11 +9,11 @@
             background: $gray-lighter;
             color: $gray-lighte;
             text-align: center;
+            border-left: 1px solid #fff;
             i {
                 position: absolute;
                 left: 5px;
                 @include fsize(20);
-                top: 10px;
                 color: $gray-lightee;
             }
             .caret {

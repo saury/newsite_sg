@@ -83,8 +83,7 @@
     //detail promo part
     &-promo {
         @include fsize(16);
-        h4 {
-            // margin: 0;
+        h5 {
             margin-top: 0;
         }
         &-price {
@@ -115,6 +114,9 @@
         }
         dl {
             margin-bottom: 16px;
+        }
+        dt{
+            padding: 0 10px;
         }
         dd {
             margin: 0;
@@ -150,10 +152,14 @@
         }
         .has-error {
             border: 4px solid $btn_color;
-            padding: 10px;
+            padding: 6px;
             > .pure-u-1-4 {
                 font-weight: bold;
-                color: #A94442
+                color: #A94442;
+                padding:0;
+            }
+            > .pure-u-3-4{
+                margin-left: -5px;
             }
             .with-errors{
                 display: block;
@@ -163,21 +169,21 @@
     //detail sidebar part
     &-sidebar {
         padding: 0;
-        ul {
-            margin: 0;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-            list-style: none;
-            &.active {
-                .btn-warning {
-                    &:after {
-                        content: "Uncollect the shop";
-                    }
-                }
-            }
-        }
+        // ul {
+        //     margin: 0;
+        //     padding: 0;
+        // }
+        // li {
+        //     margin-bottom: 10px;
+        //     list-style: none;
+        //     &.active {
+        //         .btn-warning {
+        //             &:after {
+        //                 content: "Uncollect the shop";
+        //             }
+        //         }
+        //     }
+        // }
         .btn {
             @include border-radius(0);
         }
