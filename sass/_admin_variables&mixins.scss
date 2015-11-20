@@ -1,7 +1,7 @@
 @charset "utf-8";
 $grid-gutter-width: 20px;
 //nav admin color lightblue
-$btn_color: #34485E;
+// $btn_color: #34485E;
 $nav_admin: #34485E;
 //type override
 $headings-font-weight: bold;
@@ -14,6 +14,7 @@ $topNav_h: 60px;
 //aside nav width
 $aside_w: 200px;
 //main body padding
+$main_header_height: 34px;
 $main_padding: 20px;
 //breadcrumb
 $breadcrumb-separator:">";
@@ -37,6 +38,9 @@ $pagination-active-border:             $nav_admin;
 $pagination-disabled-color:            $gray-lightee;
 $pagination-disabled-bg:               #fff;
 $pagination-disabled-border:           #ddd;
+//panel override
+$panel-heading-padding:       4px 8px;
+$panel-body-padding:       0;
 // Links
 a {
     color: $link-color;
@@ -65,4 +69,103 @@ a {
             height: 34px;
         }
     }
+}
+
+// pure extend for col-15
+.pure-u-1-15,
+.pure-u-2-15,
+.pure-u-3-15,
+.pure-u-4-15,
+.pure-u-5-15,
+.pure-u-6-15,
+.pure-u-7-15,
+.pure-u-8-15,
+.pure-u-9-15,
+.pure-u-10-15,
+.pure-u-11-15,
+.pure-u-12-15,
+.pure-u-13-15,
+.pure-u-14-15,
+.pure-u-15-15 {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+}
+
+.pure-u-1-15 {
+    width: 6.6667%;
+    *width: 6.6357%;
+}
+
+.pure-u-2-15 {
+    width: 13.3333%;
+    *width: 13.3023%;
+}
+
+.pure-u-3-15 {
+    width: 20%;
+    *width: 19.9690%;
+}
+
+.pure-u-4-15 {
+    width: 26.6667%;
+    *width: 26.6357%;
+}
+
+.pure-u-5-15 {
+    width: 33.3333%;
+    *width: 33.3023%;
+}
+
+.pure-u-6-15 {
+    width: 40%;
+    *width: 39.9690%;
+}
+
+.pure-u-7-15 {
+    width: 46.6667%;
+    *width: 46.6357%;
+}
+
+.pure-u-8-15 {
+    width: 53.3333%;
+    *width: 53.3023%;
+}
+
+.pure-u-9-15 {
+    width: 60%;
+    *width: 59.9690%;
+}
+
+.pure-u-10-15 {
+    width: 66.6667%;
+    *width: 66.6357%;
+}
+
+.pure-u-11-15 {
+    width: 73.3333%;
+    *width: 73.3023%;
+}
+
+.pure-u-12-15 {
+    width: 80%;
+    *width: 79.9690%;
+}
+
+.pure-u-13-15 {
+    width: 86.6667%;
+    *width: 86.6357%;
+}
+
+.pure-u-14-15 {
+    width: 93.3333%;
+    *width: 93.3023%;
+}
+
+.pure-u-15-15 {
+    width: 100%;
 }

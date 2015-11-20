@@ -31,16 +31,6 @@ header {
 //limit the max-width of the nav
 .navbar {
     @include transition(all .2s linear);
-    .container-fluid {
-        max-width: $max_w;
-        min-width: $min_w;
-        margin: 0 auto;
-        padding: 0 !important; //remove the padding of the container
-        a:link,
-        button {
-            @include transition(all .2s linear);
-        }
-    }
     &-header {
         width: 205px\0;
     }

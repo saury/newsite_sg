@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <!--[if lt IE 9]> 
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <script src="js/bootstrap/H5F.js"></script>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!-- 
+        Notes:
+        h5f: html5 form validator
+        selectivizr: css3 psuedo selector
+     -->
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <!-- 2nd header bar start-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!-- icon button for mobile platform -->
+                    <a class="navbar-brand" href="#top">
+                        <img alt="logo" src="img/logo.png">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <!-- navs float right -->
+                    <ul class="nav navbar-nav navbar-left navbar-search">
+                        <li><a class="active" href="#">订单中心</a></li>
+                        <li><a href="#">站点管理</a></li>
+                        <li><a href="#">物流管理</a></li>
+                        <li><a href="#">会员管理</a></li>
+                        <li><a href="#">财务管理</a></li>
+                        <li><a href="#">数据分析</a></li>
+                        <li><a href="#">系统管理</a></li>
+                        <!-- <li class="dropdown navbar-search-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Product</span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Product</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- 2nd header bar end-->
+    </header>
+    <!-- header end -->
+    <!-- aside nav start -->
+    <aside class="nav-aside">
+        <nav>
+            <ul class="nav nav-pills nav-stacked">
+                <li>
+                    <div class="nav-aside-avatar">
+                        <img class="img-responsive" src="img/brands-thumb.jpg" alt="avatar">
+                    </div>
+                    <b>admin</b>
+                </li>
+                <hr>
+                <li class="navbar-text">采购中心</li>
+                <li><a href="#">未付款</a></li>
+                <li class="active"><a href="#">处理中</a></li>
+                <li><a href="#">已订购</a></li>
+                <hr>
+                <li class="navbar-text">配送中心</li>
+                <li><a href="#">已到货（签收）</a></li>
+                <li><a href="#">待发货</a></li>
+                <li><a href="#">已发货</a></li>
+                <li><a href="#">已签收</a></li>
+                <hr>
+                <li class="navbar-text">维权</li>
+                <li><a href="#">退款不退货</a></li>
+                <li><a href="#">退款并退货</a></li>
+                <li><a href="#">已退款</a></li>
+                <hr>
+            </ul>
+        </nav>
+    </aside>
+    <!-- aside nav end -->
+    <!-- main body start -->
+    <div class="adminMain">
+        <!-- breadcrumb and search form start -->
+        <div class="adminMain-header cf">
+            <ol class="breadcrumb fll">
+                <li><a href="#">采购中心</a></li>
+                <li class="active">处理中</li>
+            </ol>
+            <form class="flr">
+                <select class="selectpicker">
+                    <option value="">商品搜索1</option>
+                    <option value="">商品搜索2</option>
+                </select>
+                <select class="selectpicker">
+                    <option value="">按商品ID</option>
+                    <option value="">按商品名称</option>
+                </select>
+                <div class="adminMain-header-input">
+                    <label for="search1"><i class="glyphicon glyphicon-search"></i></label>
+                    <input type="text" id="search1">
+                    <a href="#" class="btn btn-primary">搜索</a>
+                </div>
+            </form>
+        </div>
+        <!-- breadcrumb and search form end -->
+        <!-- return accordion list start -->
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-admin">
+                <div class="panel-heading pure-g collapsed" role="tab" data-parent="#accordion" id="headingOne" data-toggle="collapse" href="#collapseOne">
+                    <div class="pure-u-2-5 pure-g-wrap">
+                        <div class="pure-u-1-2">发货单号：12443534234345345345</div>
+                        <div class="pure-u-1-2">物流单号：1232342341232342234</div>
+                    </div>
+                    <div class="pure-u-3-5 pure-g-wrap">
+                        <div class="pure-u-4-15 text-center">签收时间：2015-11-23 12:23:32</div>
+                        <div class="pure-u-2-15 text-center">Evenliu</div>
+                        <div class="pure-u-1-5 text-center">商品: 4件</div>
+                        <div class="pure-u-1-5 text-center">估重: 400g</div>
+                        <div class="pure-u-1-5 text-center">
+                            已发货
+                            <i class="glyphicon glyphicon-chevron-up flr"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <label class="pure-g btn btn-block no-gutter">
+                            <div class="pure-u-2-5 pure-g-wrap">
+                                <div class="pure-u-1-6 td-wrap">
+                                    <ul class="list-unstyled td-inner">
+                                        <li>
+                                            商品ID:
+                                        </li>
+                                        <li>
+                                            <a href="#">1413413413</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <dl class="pure-u-5-6 td-wrap td-item">
+                                    <dt class="fll">
+                                        <span></span>
+                                        <img class="img-responsive" src="img/brands-thumb.jpg" alt="">
+                                    </dt>
+                                    <dd>
+                                        <p>2015夏季新品女装收腰连衣裙淑女上班族爆款女裙2015夏季新品女装收腰连衣裙淑女上班族爆款女裙</p>
+                                        <ul class="list-unstyled">
+                                            <li class="ft-warning">颜色：蓝色波点 尺码：M</li>
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li>卖家: <a href="#">531424慧兰</a></li>
+                                                    <li><a href="#">查看备注</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="pure-u-3-5 pure-g-wrap">
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        采购单价：69.00
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        销售单价： 99.00
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        数量: 1件
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        重量: 200g
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <ul class="list-unstyled td-inner">
+                                        <li>
+                                            <a href="#" class="btn btn-primary btn-xs">同意退款</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn-warning btn-xs">拒绝受理</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="pure-u-2-5 pure-g-wrap">
+                                    <div class="pure-u-1-2 td-wrap">
+                                        <ul class="list-unstyled td-inner pure-g-wrap">
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li class="pure-u-1-3 text-left">维权类型:</li>
+                                                    <li class="pure-u-2-3">
+                                                        <input type="text" value="退款不退货" readonly>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li class="pure-u-1-3 text-left">维权原因:</li>
+                                                    <li class="pure-u-2-3">
+                                                        <input type="text" value="商品运输损毁" readonly>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pure-u-1-2 td-wrap">
+                                        <ul class="list-unstyled td-inner pure-g-wrap">
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li class="pure-u-1-3 text-left">提交时间:</li>
+                                                    <li class="pure-u-2-3">
+                                                        <input type="text" value="2015-11-23 15:23:31" readonly>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li class="pure-u-1-3 text-left">物流单号:</li>
+                                                    <li class="pure-u-2-3">
+                                                        <input type="text" value="23442257734473453354" readonly data-toggle="paneltip" data-placement="right" title="未到货">
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pure-u-3-5 pure-g-wrap">
+                                    <div class="pure-u-3-5 td-wrap">
+                                        <ul class="list-unstyled td-inner pure-g-wrap">
+                                            <li class="pure-u-1-3">提交说明:</li>
+                                            <li class="pure-u-2-3">
+                                                <textarea readonly>收到货物时发现这个杯子碎了，这个寄回来也没用我直接扔了，希望可以退款给我，下面是我拍的照片</textarea>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pure-u-2-5 td-wrap">
+                                        <div class="td-inner">
+                                            <div class="table-thumb">
+                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="table-thumb">
+                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="table-thumb">
+                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="table-thumb">
+                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-admin">
+                <div class="panel-heading pure-g collapsed" role="tab" data-parent="#accordion" id="headingOne" data-toggle="collapse" href="#collapseTwo">
+                    <div class="pure-u-2-5 pure-g-wrap">
+                        <div class="pure-u-1-2">发货单号：12443534234345345345</div>
+                        <div class="pure-u-1-2">物流单号：1232342341232342234</div>
+                    </div>
+                    <div class="pure-u-3-5 pure-g-wrap">
+                        <div class="pure-u-4-15 text-center">签收时间：2015-11-23 12:23:32</div>
+                        <div class="pure-u-2-15 text-center">Evenliu</div>
+                        <div class="pure-u-1-5 text-center">商品: 4件</div>
+                        <div class="pure-u-1-5 text-center">估重: 400g</div>
+                        <div class="pure-u-1-5 text-center">
+                            已发货
+                            <i class="glyphicon glyphicon-chevron-up flr"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <label class="pure-g btn btn-block no-gutter">
+                            <div class="pure-u-2-5 pure-g-wrap">
+                                <div class="pure-u-1-6 td-wrap">
+                                    <ul class="list-unstyled td-inner">
+                                        <li>
+                                            商品ID:
+                                        </li>
+                                        <li>
+                                            <a href="#">1413413413</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <dl class="pure-u-5-6 td-wrap td-item">
+                                    <dt class="fll">
+                                        <span></span>
+                                        <img class="img-responsive" src="img/brands-thumb.jpg" alt="">
+                                    </dt>
+                                    <dd>
+                                        <p>2015夏季新品女装收腰连衣裙淑女上班族爆款女裙2015夏季新品女装收腰连衣裙淑女上班族爆款女裙</p>
+                                        <ul class="list-unstyled">
+                                            <li class="ft-warning">颜色：蓝色波点 尺码：M</li>
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li>卖家: <a href="#">531424慧兰</a></li>
+                                                    <li><a href="#">查看备注</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="pure-u-3-5 pure-g-wrap">
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        采购单价：69.00
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        销售单价： 99.00
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        数量: 1件
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        重量: 200g
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <ul class="list-unstyled td-inner">
+                                        <li>
+                                            <a href="#" class="btn btn-primary btn-xs">同意退款</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn-warning btn-xs">拒绝受理</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="pure-u-2-5 pure-g-wrap">
+                                    <div class="pure-u-1-2 td-wrap">
+                                        <ul class="list-unstyled td-inner pure-g-wrap">
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li class="pure-u-1-3 text-left">维权类型:</li>
+                                                    <li class="pure-u-2-3">
+                                                        <input type="text" value="退款不退货" readonly>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li class="pure-u-1-3 text-left">维权原因:</li>
+                                                    <li class="pure-u-2-3">
+                                                        <input type="text" value="商品运输损毁" readonly>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pure-u-1-2 td-wrap">
+                                        <ul class="list-unstyled td-inner pure-g-wrap">
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li class="pure-u-1-3 text-left">提交时间:</li>
+                                                    <li class="pure-u-2-3">
+                                                        <input type="text" value="2015-11-23 15:23:31" readonly>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li class="pure-u-1-3 text-left">物流单号:</li>
+                                                    <li class="pure-u-2-3">
+                                                        <input type="text" value="23442257734473453354" readonly data-toggle="paneltip" data-placement="right" title="未到货">
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pure-u-3-5 pure-g-wrap">
+                                    <div class="pure-u-3-5 td-wrap">
+                                        <ul class="list-unstyled td-inner pure-g-wrap">
+                                            <li class="pure-u-1-3">提交说明:</li>
+                                            <li class="pure-u-2-3">
+                                                <textarea readonly>收到货物时发现这个杯子碎了，这个寄回来也没用我直接扔了，希望可以退款给我，下面是我拍的照片</textarea>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pure-u-2-5 td-wrap">
+                                        <div class="td-inner">
+                                            <div class="table-thumb">
+                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="table-thumb">
+                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="table-thumb">
+                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="table-thumb">
+                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- return accordion list end -->
+    </div>
+    <!-- main body end -->
+    <!-- footer start -->
+    <footer></footer>
+    <!-- footer end -->
+    <!-- Login Modal srart-->
+    <!-- Login Modal end-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap/transition.js"></script>
+    <script src="js/bootstrap/dropdown.js"></script>
+    <script src="js/bootstrap/modal.js"></script>
+    <script src="js/bootstrap/tooltip.js"></script>
+    <script src="js/bootstrap/popover.js"></script>
+    <script src="js/bootstrap/tab.js"></script>
+    <script src="js/bootstrap/validator.js"></script>
+    <script src="js/bootstrap/button.js"></script>
+    <script src="js/bootstrap/affix.js"></script>
+    <script src="js/bootstrap/scrollspy.js"></script>
+    <script src="js/bootstrap/bootstrap-select.js"></script>
+    <script src="js/bootstrap/ekko-lightbox.js"></script>
+    <script src="js/bootstrap/collapse.js"></script>
+    <!-- general script -->
+    <script>
+    $(function() {
+        //zmall modual init
+        var zmModual = (function() {
+            var navOffset = 80;
+            //checkbox toggle
+            $(".zm-checkbox").click(function() {
+                $(this).children("i").toggle();
+            });
+            //scrollspy for brands page
+            $('.zmBrandsPage').scrollspy({
+                target: '#brandNav',
+                offset: navOffset + 1
+            });
+            //general affix overflow
+            function callAffixOverflow() {
+                $('[data-affix="overflow"]').each(function() {
+                    var ele = $(this);
+                    var offsetTop = ele.offset().top - $(window).height() - parseInt(ele.css("margin-top").split("px")[0]);
+                    //affix top = offset to top - element's margin-top - window's height
+                    ele.affix("destroy"); //destroy the affix function berfore
+                    if (offsetTop < 0) return false; //no affix while it is not overflow
+                    ele.affix({
+                        offset: {
+                            top: function() {
+                                return offsetTop; // distance to the top
+                            }
+                        }
+                    });
+                });
+            };
+            //active the login or register tab
+            function logOrReg(opt) {
+                // body...
+                switch (opt) {
+                    case "log":
+                        $("#myLogin .nav-tabs li").eq(0).children("a").trigger("click");
+                        break;
+                    default:
+                        $("#myLogin .nav-tabs li").eq(1).children("a").trigger("click");
+                }
+            };
+
+            // function for setting the html template of the cart details
+            function setCartContent(item, overflow) {
+                //hide the "Still have xx more products" when the num is 0
+                if (overflow) var _overflowStr = '<div><p><strong>Still have ' + overflow + ' more products</strong></p></div>';
+                else _overflowStr = '';
+                //return the whole cart list string
+                return '<ul>' +
+                    '<li>' + item + '</li>' +
+                    '</ul>' +
+                    _overflowStr +
+                    '<button href="#">Checking my cart</button>';
+            };
+
+            //function for the floor jumping
+            function scrollToPosition(dom) {
+                $("html, body").animate({
+                    scrollTop: dom.offset().top - navOffset + "px"
+                }, {
+                    duration: 300,
+                    easing: "swing"
+                });
+                return false;
+            };
+
+            //return all the functions
+            return {
+                navOffset: navOffset,
+                setCartCnt: setCartContent,
+                scroll: scrollToPosition,
+                login: logOrReg,
+                callAOF: callAffixOverflow
+            };
+        })();
+        // bootstrap dropdown
+        $('.dropdown-toggle').dropdown();
+        // bootstrap popover
+        $('[data-toggle="popover"]').each(function() {
+            var element = $(this);
+            var tiktak = function() {};
+            var item = "aaa"; //商品内容
+            var overflow = 3; //超出商品显示限制条数
+            element.popover({
+                trigger: 'manual',
+                placement: 'bottom',
+                html: 'true',
+                content: zmModual.setCartCnt(item, overflow),
+            }).on("mouseenter", function() {
+                clearTimeout(tiktak);
+                element.popover("show");
+                element.siblings(".popover").on("mouseleave", function() {
+                    element.popover('hide');
+                });
+            }).on("mouseleave", function() {
+                tiktak = setTimeout(function() {
+                    if (!$(".popover:hover").length) {
+                        element.popover("hide")
+                    }
+                }, 2000);
+            });
+        });
+        //reset all the form value
+        $("input[type=reset]").trigger("click");
+        // init the href
+        $(document).on("click", "[data-href]", function() {
+            var ele = $(this);
+            var linkHref = ele.attr("data-href");
+            var newWindow = ele.attr("data-newWin");
+            if (linkHref && newWindow) window.open(linkHref); //open in new window;
+            else if (linkHref) window.location.href = linkHref; //open in self window;
+            return false;
+        });
+        //expand the input area
+        $(".adminMain-header-input input").focus(function() {
+            $(this).parent().addClass("expand");
+        }).blur(function() {
+            $(this).parent().removeClass("expand");
+        });
+        // delegate calls to data-toggle="lightbox"
+        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+        //call of tooltips
+        $('.panel-collapse').on('shown.bs.collapse', function() {
+            $('[data-toggle="paneltip"]').tooltip({
+                trigger: 'manual', //won't hide
+            }).tooltip('show'); //show the tip
+        }).on('hide.bs.collapse',function(){
+            $('[data-toggle="paneltip"]').tooltip('destroy');//destoy the tooltips to avoid style issue
+        })
+    });
+    </script>
+    <!--[if lt IE 9]> 
+    <script>
+        //html5 form validator for browser lower than ie9
+        H5F.setup($('form[data-toggle="validator"]'));
+    </script>
+    <![endif]-->
+</body>
+
+</html>

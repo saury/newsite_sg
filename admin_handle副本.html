@@ -37,8 +37,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                     <!-- navs float right -->
                     <ul class="nav navbar-nav navbar-left navbar-search">
-                        <li><a href="#">订单中心</a></li>
-                        <li><a class="active" href="#">站点管理</a></li>
+                        <li><a class="active" href="#">订单中心</a></li>
+                        <li><a href="#">站点管理</a></li>
                         <li><a href="#">物流管理</a></li>
                         <li><a href="#">会员管理</a></li>
                         <li><a href="#">财务管理</a></li>
@@ -71,15 +71,21 @@
                     <b>admin</b>
                 </li>
                 <hr>
-                <li class="navbar-text">首页管理</li>
-                <li><a href="#">轮播编辑</a></li>
-                <li class="active"><a href="#">楼层编辑</a></li>
-                <li><a href="#">商品编辑</a></li>
-                <li><a href="#">广告位编辑</a></li>
+                <li class="navbar-text">采购中心</li>
+                <li><a href="#">未付款</a></li>
+                <li class="active"><a href="#">处理中</a></li>
+                <li><a href="#">已定购</a></li>
                 <hr>
-                <li class="navbar-text">分页管理</li>
-                <li><a href="#">店铺编辑</a></li>
-                <li><a href="#">淘宝分类管理</a></li>
+                <li class="navbar-text">配送中心</li>
+                <li><a href="#">已到货（签收）</a></li>
+                <li><a href="#">待发货</a></li>
+                <li><a href="#">已发货</a></li>
+                <li><a href="#">已签收</a></li>
+                <hr>
+                <li class="navbar-text">维权</li>
+                <li><a href="#">退款不退货</a></li>
+                <li><a href="#">退款并退货</a></li>
+                <li><a href="#">已退款</a></li>
                 <hr>
             </ul>
         </nav>
@@ -90,9 +96,8 @@
         <!-- breadcrumb and search form start -->
         <div class="adminMain-header cf">
             <ol class="breadcrumb fll">
-                <li><a href="#">站点管理</a></li>
-                <li><a href="#">首页管理</a></li>
-                <li class="active">楼层编辑</li>
+                <li><a href="#">采购中心</a></li>
+                <li class="active">处理中</li>
             </ol>
             <form class="flr">
                 <select class="selectpicker">
@@ -113,32 +118,7 @@
         <!-- breadcrumb and search form end -->
         <!-- taobao editing start -->
         <div class="edit-floor">
-            <div class="adminMain-header">
-                <div class="col-md-2">
-                    <input type="text" placeholder="淘宝分类ID">
-                </div>
-                <a href="#" class="btn btn-primary">搜索</a>
-                <a href="#" class="btn btn-primary">新增分类</a>
-            </div>
             <div class="table-admin">
-                <div class="table-row cf has-border has-border-top">
-                    <div class="col-md-4 pure-g">
-                        <div class="pure-u-1-2">
-                            <input type="text" placeholder="分类ID">
-                        </div>
-                        <div class="pure-u-1-2">
-                            <input type="text" placeholder="分类名称">
-                        </div>
-                    </div>
-                    <div class="col-md-4 td-ellipsis">
-                        <input type="text" placeholder="分类链接">
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-success">添加</button>
-                        <button type="button" class="btn btn-info">取消</button>
-                    </div>
-                </div>
-
                 <div class="table-thead cf">
                     <div class="col-md-4 pure-g">
                         <div class="pure-u-1-2">分类ID</div>
@@ -169,28 +149,6 @@
             </div>
         </div>
         <!-- floors editing end -->
-        <!-- pagination part start -->
-        <nav>
-            <ul class="pagination">
-                <li class="disabled"><a href="#" aria-label="Previous"><span>&laquo;</span></a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>
-                    <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="pagination-info">
-                <span>&nbsp;总共100页&nbsp;&nbsp;</span>
-                <span class="pagination-direct">到 <input type="text" maxlength="3"> 页&nbsp;&nbsp;</span>
-                <a href="#" class="btn btn-primary">跳转</a>
-            </div>
-        </nav>
-        <!-- pagination part end -->
     </div>
     <!-- main body end -->
     <!-- footer start -->
@@ -211,6 +169,7 @@
     <script src="js/bootstrap/scrollspy.js"></script>
     <script src="js/bootstrap/bootstrap-select.js"></script>
     <script src="js/bootstrap/ekko-lightbox.js"></script>
+    <script src="js/bootstrap/collapse.js"></script>
     <!-- general script -->
     <script>
     $(function() {

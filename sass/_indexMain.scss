@@ -56,7 +56,7 @@
         }
     }
     //detail for the category on the left side
-    &-catDtl{
+    &-catDtl {
         width: 360px;
         height: 460px;
         position: absolute;
@@ -67,30 +67,30 @@
         //display: none;
         cursor: default;
         @include box-shadow(0px 6px 16px rgba(0, 0, 0, 0.8));
-        max-width:0;
+        max-width: 0;
         overflow: hidden;
         @include transition(max-width .5s);
-        &.active{
+        &.active {
             max-width: 360px;
         }
-        &-wrap{
-            width:360px;
+        &-wrap {
+            width: 360px;
             margin: 10px 0;
         }
-        &-title{
+        &-title {
             position: relative;
             padding: 0px 12px;
             border-bottom: 1px solid;
-            h3{
+            h3 {
                 display: inline-block;
-                margin:0;
+                margin: 0;
                 font-weight: normal;
                 @include fsize(18);
                 color: $gray;
                 line-height: 20px;
                 vertical-align: bottom;
             }
-            a{
+            a {
                 color: $gray-lighte;
                 height: 20px;
                 line-height: 20px;
@@ -99,7 +99,7 @@
                 bottom: 0px;
             }
         }
-        &-thumb{
+        &-thumb {
             width: 30px;
             height: 45px;
             display: inline-block;
@@ -110,11 +110,11 @@
             background-position: center bottom;
         }
         //detail list style
-        ul{
+        ul {
             line-height: 0;
             padding: 8px;
         }
-        li{
+        li {
             display: inline-block;
             color: $gray;
             height: 20px;
@@ -124,14 +124,14 @@
             width: (360px - 2*8px - 2*8px - 50px)/3;
             border-right: 1px solid $gray;
             @include ellipsis(true);
-            &:nth-child(4n){
+            &:nth-child(4n) {
                 border: 0;
                 width: 50px;
             }
-            &:nth-child(4n+1){
+            &:nth-child(4n+1) {
                 color: $btn_color;
             }
-            &:hover{
+            &:hover {
                 background: transparent;
                 text-decoration: underline;
             }
@@ -250,7 +250,7 @@
             text-align: center;
             margin: 0 (-$grid-gutter-width / 2);
             margin-bottom: 4px;
-            font-weight: bold;
+            // font-weight: bold;
             color: #fff;
             text-transform: uppercase;
         }
@@ -321,7 +321,7 @@
         &-item {
             $txt-padding: 0 12px;
             .col-md-3 {
-                padding: 0 0 8px 8px;
+                padding: 0 0 20px 20px;//8px in old version
             }
             &-wrap {
                 border: 1px solid $brandFloor_gray;
@@ -345,10 +345,15 @@
                 color: $gray-lighte;
             }
             span {
-                display: inline-block;
                 @include fsize(12);
                 padding: $txt-padding;
                 color: $gray;
+                position: absolute;
+                bottom: 14px;
+                height: 32px;
+                width: 100%;
+                line-height: 16px;
+                overflow: hidden;
             }
         }
     }
@@ -358,10 +363,13 @@
 .floor-purple {
     $floor_purple_bg: #9a3585;
     $floor_purple_bg_lite: #c360a0;
-    @include floorColor($floor_purple_bg,$floor_purple_bg_lite);
+    @include floorColor($floor_purple_bg,
+    $floor_purple_bg_lite);
 }
+
 .floor-red {
     $floor_red_bg: #ff649d;
     $floor_red_bg_lite: #fe98bf;
-    @include floorColor($floor_red_bg,$floor_red_bg_lite);
+    @include floorColor($floor_red_bg,
+    $floor_red_bg_lite);
 }

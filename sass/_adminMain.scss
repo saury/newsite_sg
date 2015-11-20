@@ -1,63 +1,71 @@
-@charset "utf-8";
+@charset 'utf-8';
 .adminMain {
-    padding: ($main_padding + $topNav_h) $main_padding $main_padding ($aside_w + $main_padding);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: ($main_padding + $topNav_h) $main_padding $main_padding ($aside_w + $main_padding);
     &-header {
-    	margin-bottom: $main_padding;
+        margin-bottom: $main_padding;
         .breadcrumb {
-            margin: 0px;
-            background: transparent none repeat scroll 0% 0%;
+            margin: 0;
+            background: transparent none repeat scroll 0 0;
+            li {
+                float: left;
+            }
         }
-        &-input{
-        	display: inline-block;
-        	position: relative;
-        	border: 1px solid $gray-lightee;
-        	//padding: 0 8px;
-        	overflow: hidden;
-			vertical-align: middle;
-			white-space: nowrap;
-			max-width: 34px;
-			height: 34px;
-        	@include transition(all .3s linear);
-        	label{
-        		cursor: pointer;
-        		width: 34px;
-        		height: 34px;
-        		line-height: 32px;
-        		text-align: center;
-        		vertical-align: top;
-        	}
-        	&:hover{
-        		background: $nav_admin;
-        		color: #fff;
-        	}
-        	&.expand{
-        		max-width: 240px;
-        		&:hover{
-        			background: #fff;
-        			color: $gray;
-        		}
-        	}
-        	input{
-        		width: 140px !important;
-        		border: 0;
-        		font-weight: normal;
-        		vertical-align: top;
-        	}
-        	.btn{
-        		vertical-align: top;
-        	}
+        &-input {
+            position: relative;
+            display: inline-block;
+            //padding: 0 8px;
+            overflow: hidden;
+            max-width: $main_header_height;
+            height: $main_header_height;
+            vertical-align: middle;
+            white-space: nowrap;
+            border: 1px solid $gray-lightee;
+            @include transition(all .2s linear);
+            label {
+                line-height: 32px;
+                width: $main_header_height;
+                height: $main_header_height;
+                cursor: pointer;
+                text-align: center;
+                vertical-align: top;
+            }
+            &:hover {
+                color: #fff;
+                background: $nav_admin;
+            }
+            &.expand {
+                max-width: 240px;
+                &:hover {
+                    color: $gray;
+                    background: #fff;
+                }
+            }
+            input {
+                font-weight: normal;
+                width: 140px !important;
+                vertical-align: top;
+                border: 0;
+            }
+            .btn {
+                vertical-align: top;
+            }
         }
-        input{
-        	//width: 220px;
-        	width: 100%;
-        	height: 34px;
-        	vertical-align: middle;
+        input {
+            //width: 220px;
+            width: 100%;
+            height: $main_header_height;
+            vertical-align: middle;
         }
     }
     //select dropdown fix
-    .dropdown-toggle {
-        height: 34px;
-        padding-top: 7px;
-        padding-bottom: 7px;
-    }
+    // .dropdown-toggle {
+    //     height: $main_header_height;
+    //     padding-top: 7px;
+    //     padding-bottom: 7px;
+    // }
 }

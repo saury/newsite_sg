@@ -2,6 +2,7 @@
 ///* import global */
 @import "variables&mixins";
 @import "admin_variables&mixins";
+@import "bootstrap/_component-animations.scss";
 // bootstrap scss for carousel and grid
 @import "bootstrap/_scaffolding.scss",
 "bootstrap/_type.scss",
@@ -21,7 +22,13 @@
 @import "adminNav";
 //Main part
 @import "adminMain";
+//inner stretch part
+@import "adminStretch";
 // admin tables
 @import "adminTable";
 // import lightbox
 @import "lightbox";
+// import collapse accordion
+@import "adminPanel";
+// import tool tips
+@import "bootstrap/tooltip";
