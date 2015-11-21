@@ -1213,33 +1213,20 @@
         </div>
     </div>
     <!-- Recharge Modal end -->
-    <script src="js/jquery-1.11.3.js"></script>
-    <script src="js/bootstrap/transition.js"></script>
-    <script src="js/bootstrap/dropdown.js"></script>
-    <script src="js/bootstrap/modal.js"></script>
-    <script src="js/bootstrap/tooltip.js"></script>
-    <script src="js/bootstrap/popover.js"></script>
-    <script src="js/bootstrap/tab.js"></script>
-    <script src="js/bootstrap/validator.js"></script>
-    <!-- general script -->
-    <script src="js/bootstrap/carousel.js"></script>
-    <!-- index only -->
-    <script src="js/bootstrap/scrollspy.js"></script>
-    <!-- brand page only -->
-    <script src="js/bootstrap/affix.js"></script>
-    <!-- brands' branch page only -->
-    <script src="js/jquery.jcarousel.min.js"></script>
-    <script src="js/gallary-carousels.js"></script>
-    <script src="js/bootstrap/button.js"></script>
-    <!-- item detail gallary -->
-    <script src="js/bootstrap/bootstrap-select.js"></script>
-    <!-- shopping cart page -->
-    <script src="js/bootstrap/collapse.js"></script>
-    <script src="js/bootstrap/ekko-lightbox.js"></script>
-    <script src="js/bootstrap/moment.min.js"></script>
-    <script src="js/bootstrap/bootstrap-datetimepicker.min.js"></script>
-    <script src="js/zmall.js"></script>
-    <!-- custom js -->
+    <!-- sea.js -->
+    <script src="sea-modules/sea.js"></script>
+    <!-- sea modules import -->
+    <script>
+    // seajs config
+    seajs.config({
+        base: "./sea-modules/",
+        alias: {
+            "jquery": "jquery-1.11.3.min.js",
+        }
+    });
+    // zmall main modules import
+    seajs.use(['jquery','zmall.js']);
+    </script>
     <!--[if lt IE 9]> 
     <script>
         //html5 form validator for browser lower than ie9

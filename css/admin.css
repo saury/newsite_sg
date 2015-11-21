@@ -2132,6 +2132,11 @@ header.hide .navbar-default { background: #333; }
 .nav-aside li a { color: #fff; }
 .nav-aside li a:hover, .nav-aside li a:active, .nav-aside li a:focus { background: #46617f; }
 
+.navbar-narrow { max-height: 40px; margin-bottom: 10px; background: #34485E; }
+.navbar-narrow li { color: #fff !important; padding: 10px 10px !important; }
+.navbar-narrow i { margin-right: 8px; }
+.navbar-narrow .badge { margin-left: 8px; }
+
 .adminMain { position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: 80px 20px 20px 220px; }
 .adminMain-header { margin-bottom: 20px; }
 .adminMain-header .breadcrumb { margin: 0; background: transparent none repeat scroll 0 0; }
