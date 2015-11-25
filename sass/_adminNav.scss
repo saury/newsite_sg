@@ -179,16 +179,39 @@ header {
 //nav || top narrow bar
 .navbar-narrow {
     max-height: 40px;
-    margin-bottom: 10px;
+    line-height: 40px;
     background: $nav_admin;
-    li {
-        color: #fff !important;
-        padding: 10px ($grid-gutter-width / 2) !important;
-    }
     i {
-        margin-right: 8px;
+        margin-right: 6px;
+        @include fsize(20);
     }
-    .badge {
-        margin-left: 8px;
+    .dropdown-toggle{
+        @include opacity(0);
+        width: 26px;
+    }
+    //logo icon
+    &-logo{
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: (40px - 26px) / 2;
+        background: #fff;
+        .logo-cross{
+            position: absolute;
+            display: inline-block;
+            background: $nav_admin;
+            &.horizontal{
+                width: 26px;
+                height: 4px;
+                top: 50%;
+                margin-top: -(4px / 2);
+            }
+            &.vertical{
+                height: 26px;
+                width: 4px;
+                left: 50%;
+                margin-left: -(4px / 2);
+            }
+        }
     }
 }

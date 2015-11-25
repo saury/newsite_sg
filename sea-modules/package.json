@@ -1,0 +1,12 @@
+{
+  "family": "dist",
+  "name": "js",
+  "version": "1.0.0",
+
+  "spm": {
+    "alias": {
+      "jquery": "jquery"
+    },
+    "output": ["zmall.js"]
+  }
+}

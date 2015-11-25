@@ -29,6 +29,10 @@
         &:active {
             @include box-shadow(none);
         }
+        &.lost{
+            background: $gray-lighter;
+            color: $gray-lighte;
+        }
     }
 }
 

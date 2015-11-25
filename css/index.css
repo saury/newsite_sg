@@ -112,9 +112,11 @@ input, select, textarea, button, a:focus, a:active { outline: 0; }
 .ft-success { color: #5cb85c; }
 .ft-info { color: #5bc0de; }
 .ft-warning { color: #ff6801; }
+.ft-orange { color: #f0ad4e; }
 .ft-danger { color: #d9534f; }
 .ft-gray { color: #777777; }
 .ft-lite { color: #999999; }
+.ft-white { color: #fff; }
 
 .zm-checkbox { position: relative; width: 22px; height: 22px; font-size: 18px; font-size: 1.28571rem; border: 1px solid #777777; color: #ff6801; text-align: center; display: inline-block; margin-right: 4px; vertical-align: bottom; }
 .zm-checkbox i { display: none; line-height: 1; }
@@ -1261,7 +1263,7 @@ a.btn.disabled, fieldset[disabled] a.btn { pointer-events: none; }
 
 input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block { width: 100%; }
 
-.popover { position: absolute; top: 0; left: 0; z-index: 1060; display: none; max-width: 276px; padding: 1px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; line-break: auto; line-height: 1.42857; text-align: left; text-align: start; text-decoration: none; text-shadow: none; text-transform: none; white-space: normal; word-break: normal; word-spacing: normal; word-wrap: normal; font-size: 14px; background-color: #fff; background-clip: padding-box; border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 6px; -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+.popover { position: absolute; top: 0; left: 0; z-index: 1060; display: none; max-width: 276px; padding: 1px; font-style: normal; font-weight: normal; letter-spacing: normal; line-break: auto; line-height: 1.42857; text-align: left; text-align: start; text-decoration: none; text-shadow: none; text-transform: none; white-space: normal; word-break: normal; word-spacing: normal; word-wrap: normal; font-size: 14px; background-color: #fff; background-clip: padding-box; border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 6px; -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 .popover.top { margin-top: -10px; }
 .popover.right { margin-left: 10px; }
 .popover.bottom { margin-top: 10px; }

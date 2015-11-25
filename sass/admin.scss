@@ -6,6 +6,7 @@
 // bootstrap scss for carousel and grid
 @import "bootstrap/_scaffolding.scss",
 "bootstrap/_type.scss",
+"bootstrap/badges",
 "bootstrap/_close.scss",
 "bootstrap/_modals.scss",
 "bootstrap/_grid.scss";
@@ -22,8 +23,6 @@
 @import "adminNav";
 //Main part
 @import "adminMain";
-//inner stretch part
-@import "adminStretch";
 // admin tables
 @import "adminTable";
 // import lightbox
@@ -32,3 +31,7 @@
 @import "adminPanel";
 // import tool tips
 @import "bootstrap/tooltip";
+// import media
+@import "bootstrap/media";
+// import warehouse
+@import "adminWarehouse";

@@ -234,6 +234,9 @@ $caret-nav-width: 6px;
     &-warning {
         color: $btn_color;
     }
+    &-orange {
+        color: $brand-warning;
+    }
     &-danger {
         color: $brand-danger;
     }
@@ -242,6 +245,9 @@ $caret-nav-width: 6px;
     }
     &-lite {
         color: $gray-lighte;
+    }
+    &-white {
+        color: #fff;
     }
 }
 

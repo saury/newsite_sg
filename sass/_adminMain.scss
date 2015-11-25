@@ -69,3 +69,26 @@
     //     padding-bottom: 7px;
     // }
 }
+
+// main area stretch
+.admin-stretch {
+    position: absolute;
+    top: $main_padding + $main_header_height;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    &.scroll{
+        overflow-y: scroll;
+        &.panel-group{
+            margin-bottom: 42px;
+        }
+    }
+    @at-root .stretch-footer{
+        background: #fff;
+        position: fixed;
+        left:0;
+        right: 0;
+        bottom:0;
+        margin: 0 $main_padding $main_padding ($aside_w + $main_padding);
+    }
+}

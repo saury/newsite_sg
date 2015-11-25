@@ -116,30 +116,38 @@
             </form>
         </div>
         <!-- breadcrumb and search form end -->
-        <!-- return accordion list start -->
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <!-- sent accordion list start -->
+        <div class="panel-group admin-stretch scroll" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-admin">
-                <div class="panel-heading pure-g collapsed" role="tab" data-parent="#accordion" id="headingOne" data-toggle="collapse" href="#collapseOne">
-                    <div class="pure-u-2-5 pure-g-wrap">
-                        <div class="pure-u-1-2">发货单号：12443534234345345345</div>
-                        <div class="pure-u-1-2">物流单号：1232342341232342234</div>
+                <div class="panel-heading pure-g" role="tab" data-parent="#accordion" id="headingOne" data-toggle="collapse" href="#collapseOne">
+                    <div class="pure-u-1-2 pure-g-wrap">
+                        <div class="pure-u-1-5">库位号：A-3-30</div>
+                        <div class="pure-u-2-5">订单编号：445234352</div>
+                        <div class="pure-u-2-5">到货时间: 2015-09-28 16:24:42</div>
                     </div>
-                    <div class="pure-u-3-5 pure-g-wrap">
-                        <div class="pure-u-4-15 text-center">签收时间：2015-11-23 12:23:32</div>
-                        <div class="pure-u-2-15 text-center">Evenliu</div>
-                        <div class="pure-u-1-5 text-center">商品: 4件</div>
+                    <div class="pure-u-1-2 pure-g-wrap">
+                        <div class="pure-u-1-5 text-center">采购总价: 125.00</div>
+                        <div class="pure-u-1-5 text-center">销售总价：198.00</div>
+                        <div class="pure-u-1-5 text-center">商品: 2件</div>
                         <div class="pure-u-1-5 text-center">估重: 400g</div>
                         <div class="pure-u-1-5 text-center">
-                            已发货
+                            占仓2/3
                             <i class="glyphicon glyphicon-chevron-up flr"></i>
                         </div>
                     </div>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse">
-                    <div class="panel-body">
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <form class="panel-body">
+                        <input type="reset" hidden>
                         <label class="pure-g btn btn-block no-gutter">
-                            <div class="pure-u-2-5 pure-g-wrap">
-                                <div class="pure-u-1-6 td-wrap">
+                            <div class="pure-u-1-2 pure-g-wrap">
+                                <div class="pure-u-1-4 td-wrap">
+                                    <div class="td-inner">
+                                        <div class="zm-checkbox zm-checkbox-sm">
+                                            <input type="checkbox">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </div>
+                                    </div>
                                     <ul class="list-unstyled td-inner">
                                         <li>
                                             商品ID:
@@ -149,7 +157,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <dl class="pure-u-5-6 td-wrap td-item">
+                                <dl class="pure-u-3-4 td-wrap td-item">
                                     <dt class="fll">
                                         <span></span>
                                         <img class="img-responsive" src="img/brands-thumb.jpg" alt="">
@@ -168,7 +176,135 @@
                                     </dd>
                                 </dl>
                             </div>
-                            <div class="pure-u-3-5 pure-g-wrap">
+                            <div class="pure-u-1-2 pure-g-wrap">
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        采购单价：69.00
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        销售单价： 99.00
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        数量: 1件
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        重量: 200g
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <ul class="list-unstyled td-inner">
+                                        <li class="col-md-6 col-md-offset-3">
+                                            <a href="#" class="btn btn-primary btn-xs btn-block">丢失</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="pure-g btn btn-block no-gutter">
+                            <div class="pure-u-1-2 pure-g-wrap">
+                                <div class="pure-u-1-4 td-wrap">
+                                    <div class="td-inner">
+                                        <div class="zm-checkbox zm-checkbox-sm">
+                                            <input type="checkbox">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </div>
+                                    </div>
+                                    <ul class="list-unstyled td-inner">
+                                        <li>
+                                            商品ID:
+                                        </li>
+                                        <li>
+                                            <a href="#">1413413413</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <dl class="pure-u-3-4 td-wrap td-item">
+                                    <dt class="fll">
+                                        <span></span>
+                                        <img class="img-responsive" src="img/brands-thumb.jpg" alt="">
+                                    </dt>
+                                    <dd>
+                                        <p>2015夏季新品女装收腰连衣裙淑女上班族爆款女裙2015夏季新品女装收腰连衣裙淑女上班族爆款女裙</p>
+                                        <ul class="list-unstyled">
+                                            <li class="ft-warning">颜色：蓝色波点 尺码：M</li>
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li>卖家: <a href="#">531424慧兰</a></li>
+                                                    <li><a href="#">查看备注</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="pure-u-1-2 pure-g-wrap">
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        采购单价：69.00
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        销售单价： 99.00
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        数量: 1件
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <div class="td-inner">
+                                        重量: 200g
+                                    </div>
+                                </div>
+                                <div class="pure-u-1-5 td-wrap">
+                                    <ul class="list-unstyled td-inner">
+                                        <li class="col-md-6 col-md-offset-3">
+                                            <a href="#" class="btn btn-primary btn-xs btn-block">丢失</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="pure-g btn btn-block no-gutter lost">
+                            <div class="pure-u-1-2 pure-g-wrap">
+                                <div class="pure-u-1-4 td-wrap">
+                                    <ul class="list-unstyled td-inner">
+                                        <li>
+                                            商品ID:
+                                        </li>
+                                        <li>
+                                            <a href="#">1413413413</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <dl class="pure-u-3-4 td-wrap td-item">
+                                    <dt class="fll">
+                                        <span></span>
+                                        <img class="img-responsive" src="img/brands-thumb.jpg" alt="">
+                                    </dt>
+                                    <dd>
+                                        <p>2015夏季新品女装收腰连衣裙淑女上班族爆款女裙2015夏季新品女装收腰连衣裙淑女上班族爆款女裙</p>
+                                        <ul class="list-unstyled">
+                                            <li class="ft-warning">颜色：蓝色波点 尺码：M</li>
+                                            <li>
+                                                <ul class="list-inline">
+                                                    <li>卖家: <a href="#">531424慧兰</a></li>
+                                                    <li><a href="#">查看备注</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="pure-u-1-2 pure-g-wrap">
                                 <div class="pure-u-1-5 td-wrap">
                                     <div class="td-inner">
                                         采购单价：69.00
@@ -192,262 +328,26 @@
                                 <div class="pure-u-1-5 td-wrap">
                                     <ul class="list-unstyled td-inner">
                                         <li>
-                                            <a href="#" class="btn btn-primary btn-xs">同意退款</a>
+                                            <a href="#" class="btn btn-primary btn-xs">物流跟踪</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="btn btn-warning btn-xs">拒绝受理</a>
+                                            <a href="#" class="btn btn-warning btn-xs">取消订购</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div>
-                                <div class="pure-u-2-5 pure-g-wrap">
-                                    <div class="pure-u-1-2 td-wrap">
-                                        <ul class="list-unstyled td-inner pure-g-wrap">
-                                            <li>
-                                                <ul class="list-inline">
-                                                    <li class="pure-u-1-3 text-left">维权类型:</li>
-                                                    <li class="pure-u-2-3">
-                                                        <input type="text" value="退款不退货" readonly>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <ul class="list-inline">
-                                                    <li class="pure-u-1-3 text-left">维权原因:</li>
-                                                    <li class="pure-u-2-3">
-                                                        <input type="text" value="商品运输损毁" readonly>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pure-u-1-2 td-wrap">
-                                        <ul class="list-unstyled td-inner pure-g-wrap">
-                                            <li>
-                                                <ul class="list-inline">
-                                                    <li class="pure-u-1-3 text-left">提交时间:</li>
-                                                    <li class="pure-u-2-3">
-                                                        <input type="text" value="2015-11-23 15:23:31" readonly>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <ul class="list-inline">
-                                                    <li class="pure-u-1-3 text-left">物流单号:</li>
-                                                    <li class="pure-u-2-3">
-                                                        <input type="text" value="23442257734473453354" readonly data-toggle="paneltip" data-placement="right" title="未到货">
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="pure-u-3-5 pure-g-wrap">
-                                    <div class="pure-u-3-5 td-wrap">
-                                        <ul class="list-unstyled td-inner pure-g-wrap">
-                                            <li class="pure-u-1-3">提交说明:</li>
-                                            <li class="pure-u-2-3">
-                                                <textarea readonly>收到货物时发现这个杯子碎了，这个寄回来也没用我直接扔了，希望可以退款给我，下面是我拍的照片</textarea>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pure-u-2-5 td-wrap">
-                                        <div class="td-inner">
-                                            <div class="table-thumb">
-                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
-                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
-                                                </a>
-                                            </div>
-                                            <div class="table-thumb">
-                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
-                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
-                                                </a>
-                                            </div>
-                                            <div class="table-thumb">
-                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
-                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
-                                                </a>
-                                            </div>
-                                            <div class="table-thumb">
-                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
-                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </label>
-                    </div>
+                    </form>
                 </div>
             </div>
-            <div class="panel panel-admin">
-                <div class="panel-heading pure-g collapsed" role="tab" data-parent="#accordion" id="headingOne" data-toggle="collapse" href="#collapseTwo">
-                    <div class="pure-u-2-5 pure-g-wrap">
-                        <div class="pure-u-1-2">发货单号：12443534234345345345</div>
-                        <div class="pure-u-1-2">物流单号：1232342341232342234</div>
-                    </div>
-                    <div class="pure-u-3-5 pure-g-wrap">
-                        <div class="pure-u-4-15 text-center">签收时间：2015-11-23 12:23:32</div>
-                        <div class="pure-u-2-15 text-center">Evenliu</div>
-                        <div class="pure-u-1-5 text-center">商品: 4件</div>
-                        <div class="pure-u-1-5 text-center">估重: 400g</div>
-                        <div class="pure-u-1-5 text-center">
-                            已发货
-                            <i class="glyphicon glyphicon-chevron-up flr"></i>
-                        </div>
-                    </div>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <label class="pure-g btn btn-block no-gutter">
-                            <div class="pure-u-2-5 pure-g-wrap">
-                                <div class="pure-u-1-6 td-wrap">
-                                    <ul class="list-unstyled td-inner">
-                                        <li>
-                                            商品ID:
-                                        </li>
-                                        <li>
-                                            <a href="#">1413413413</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <dl class="pure-u-5-6 td-wrap td-item">
-                                    <dt class="fll">
-                                        <span></span>
-                                        <img class="img-responsive" src="img/brands-thumb.jpg" alt="">
-                                    </dt>
-                                    <dd>
-                                        <p>2015夏季新品女装收腰连衣裙淑女上班族爆款女裙2015夏季新品女装收腰连衣裙淑女上班族爆款女裙</p>
-                                        <ul class="list-unstyled">
-                                            <li class="ft-warning">颜色：蓝色波点 尺码：M</li>
-                                            <li>
-                                                <ul class="list-inline">
-                                                    <li>卖家: <a href="#">531424慧兰</a></li>
-                                                    <li><a href="#">查看备注</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="pure-u-3-5 pure-g-wrap">
-                                <div class="pure-u-1-5 td-wrap">
-                                    <div class="td-inner">
-                                        采购单价：69.00
-                                    </div>
-                                </div>
-                                <div class="pure-u-1-5 td-wrap">
-                                    <div class="td-inner">
-                                        销售单价： 99.00
-                                    </div>
-                                </div>
-                                <div class="pure-u-1-5 td-wrap">
-                                    <div class="td-inner">
-                                        数量: 1件
-                                    </div>
-                                </div>
-                                <div class="pure-u-1-5 td-wrap">
-                                    <div class="td-inner">
-                                        重量: 200g
-                                    </div>
-                                </div>
-                                <div class="pure-u-1-5 td-wrap">
-                                    <ul class="list-unstyled td-inner">
-                                        <li>
-                                            <a href="#" class="btn btn-primary btn-xs">同意退款</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="btn btn-warning btn-xs">拒绝受理</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="pure-u-2-5 pure-g-wrap">
-                                    <div class="pure-u-1-2 td-wrap">
-                                        <ul class="list-unstyled td-inner pure-g-wrap">
-                                            <li>
-                                                <ul class="list-inline">
-                                                    <li class="pure-u-1-3 text-left">维权类型:</li>
-                                                    <li class="pure-u-2-3">
-                                                        <input type="text" value="退款不退货" readonly>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <ul class="list-inline">
-                                                    <li class="pure-u-1-3 text-left">维权原因:</li>
-                                                    <li class="pure-u-2-3">
-                                                        <input type="text" value="商品运输损毁" readonly>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pure-u-1-2 td-wrap">
-                                        <ul class="list-unstyled td-inner pure-g-wrap">
-                                            <li>
-                                                <ul class="list-inline">
-                                                    <li class="pure-u-1-3 text-left">提交时间:</li>
-                                                    <li class="pure-u-2-3">
-                                                        <input type="text" value="2015-11-23 15:23:31" readonly>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <ul class="list-inline">
-                                                    <li class="pure-u-1-3 text-left">物流单号:</li>
-                                                    <li class="pure-u-2-3">
-                                                        <input type="text" value="23442257734473453354" readonly data-toggle="paneltip" data-placement="right" title="未到货">
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="pure-u-3-5 pure-g-wrap">
-                                    <div class="pure-u-3-5 td-wrap">
-                                        <ul class="list-unstyled td-inner pure-g-wrap">
-                                            <li class="pure-u-1-3">提交说明:</li>
-                                            <li class="pure-u-2-3">
-                                                <textarea readonly>收到货物时发现这个杯子碎了，这个寄回来也没用我直接扔了，希望可以退款给我，下面是我拍的照片</textarea>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pure-u-2-5 td-wrap">
-                                        <div class="td-inner">
-                                            <div class="table-thumb">
-                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
-                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
-                                                </a>
-                                            </div>
-                                            <div class="table-thumb">
-                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
-                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
-                                                </a>
-                                            </div>
-                                            <div class="table-thumb">
-                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
-                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
-                                                </a>
-                                            </div>
-                                            <div class="table-thumb">
-                                                <a href="img/brands-thumb.jpg" data-toggle="lightbox">
-                                                    <img src="img/brands-thumb.jpg" alt="" class="img-responsive">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
+            <div class="stretch-footer">
+                <div class="col-md-4 col-md-offset-4">
+                    <a href="#" class="btn btn-primary btn-xs col-md-4 disabled">打印发货单</a>
+                    <a href="#" class="btn btn-primary btn-xs col-md-4 col-md-offset-4">打印面单</a>
                 </div>
             </div>
         </div>
-        <!-- return accordion list end -->
+        <!-- sent accordion list end -->
     </div>
     <!-- main body end -->
     <!-- footer start -->
@@ -594,14 +494,6 @@
         $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
             event.preventDefault();
             $(this).ekkoLightbox();
-        });
-        //call of tooltips
-        $('.panel-collapse').on('shown.bs.collapse', function() {
-            $('[data-toggle="paneltip"]').tooltip({
-                trigger: 'manual', //won't hide
-            }).tooltip('show'); //show the tip
-        }).on('hide.bs.collapse',function(){
-            $('[data-toggle="paneltip"]').tooltip('destroy');//destoy the tooltips to avoid style issue
         });
     });
     </script>

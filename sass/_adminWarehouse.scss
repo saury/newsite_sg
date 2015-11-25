@@ -1,0 +1,41 @@
+@charset 'utf-8';
+.warehouse {
+    // media part override
+    &.media,
+    .list-inline {
+        margin: 0;
+    }
+    .media-left {
+        background: $nav_admin;
+        color: #fff;
+        padding: 13px;
+        text-align: center;
+    }
+    .media-body,
+    .pure-u-1-20{
+        padding: 6px;
+    }
+    .media-body{
+        border: 1px solid $nav_admin;
+        border-top: 0;
+    }
+    .media-left,
+    .media-right,
+    .media-body {
+        vertical-align: middle;
+    }
+    &-wrap{
+        top: 54px + 40px;//original top num + nav's height
+    }
+    //item
+    &-item{
+        cursor: pointer;
+        border: 1px solid $gray;
+        &.full{
+            background: $brand-danger;
+        }
+        &.possess{
+            background: $brand-warning;
+        }
+    }
+}
