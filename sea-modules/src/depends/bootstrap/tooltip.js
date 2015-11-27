@@ -42,6 +42,7 @@ var $ = jQuery = require('$');
     delay: 0,
     html: false,
     container: false,
+    autoPosition: false, // option to insert the tool tip before the element when the placement's left
     viewport: {
       selector: 'body',
       padding: 0
@@ -207,6 +208,18 @@ var $ = jQuery = require('$');
         .data('bs.' + this.type, this)
 
       this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
+      
+      // insert before the element when the placement's left
+      if(this.options.autoPosition){
+        if(placement == "right"){
+          $tip.insertAfter(this.$element);
+        }
+        else if(placement == "left"){
+          $tip.css("text-align","right");//fix the align issue for display inline-block condition
+          $tip.insertBefore(this.$element);
+        }
+      }
+ 
       this.$element.trigger('inserted.bs.' + this.type)
 
       var pos          = this.getPosition()

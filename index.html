@@ -1640,11 +1640,18 @@
     seajs.config({
         base: "./sea-modules/",
         alias: {
-            "jquery": "jquery-1.11.3.min.js",
-        }
+            "$": "jquery.js"
+        },
     });
     // zmall main modules import
-    seajs.use(['jquery','zmall.js']);
+    // For development
+    if (location.href.indexOf("?dev") > 0) {
+        seajs.use(['src/zmall']);
+    }
+    // For production
+    else {
+        seajs.use(['dist/js/1.0.0/zmall']);
+    }
     </script>
 
     <!--[if lt IE 9]> 

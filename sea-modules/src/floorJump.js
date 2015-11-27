@@ -3,8 +3,8 @@ define(function(require) {
     var jumpFunc = require('./consAndFunc.js');
     //floor jump
     //glyphicon go down
-    $("indexMain-floor .glyphicon-chevron-down").click(function() {
-        var ele = $("indexMain-floor .glyphicon-chevron-down");
+    $(".indexMain-floor .glyphicon-chevron-down").click(function() {
+        var ele = $(".indexMain-floor .glyphicon-chevron-down");
         var index = ele.index(this) + 1;
         var dom = $("#floor_" + (index + 1));
         //to bottom if it's the last icon-down
@@ -14,8 +14,8 @@ define(function(require) {
         jumpFunc.scrollToFloor(dom);
     });
     //glyphicon go up
-    $("indexMain-floor .glyphicon-chevron-up").click(function() {
-        var ele = $("indexMain-floor .glyphicon-chevron-up");
+    $(".indexMain-floor .glyphicon-chevron-up").click(function() {
+        var ele = $(".indexMain-floor .glyphicon-chevron-up");
         var index = ele.index(this);
         var dom = $("#floor_" + (index));
         //back to top if it's the 1st icon-up

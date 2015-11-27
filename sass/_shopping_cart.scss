@@ -145,11 +145,6 @@
                         
         }
     }
-    // &-scroll{
-    //     display: block;
-    //     height: 75px;
-    //     overflow: auto;
-    // }
     &-shop {
         padding: 8px 0px;
     }
@@ -197,30 +192,33 @@
         }
     }
     &-item {
-        margin: 0 8px;
+        margin: 0;
         text-align: left;
         dt,
         dd {
-            margin: 0;
-            display: inline-block;
             position: relative;
             height: 75px;
+            margin: 0;
         }
         dt {
             width: 75px;
+            float: left;
             vertical-align: top;
         }
         dd {
-            padding: 0px 8px;
-            width: 460px;
+            width: 100%;
+            padding: 0 8px 0 8px+75px;
         }
         p {
-            height: 20px;
+            height: 18px;
             @include ellipsis(true);
         }
         .list-unstyled {
-            bottom: 0px;
-            position: absolute;
+            position: relative;
+            bottom: -7px;
+            li {
+                @include ellipsis(true);
+            }
         }
         small {
             color: $gray-light;

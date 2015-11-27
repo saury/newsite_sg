@@ -25,31 +25,33 @@
     <header>
         <!-- header top bar start-->
         <nav class="navbar navbar-narrow">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse">
-                    <!-- navs float right -->
-                    <ul class="nav navbar-nav">
-                        <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-map-marker"></i>Receiving countries:<i class="litb-icon-flag us"></i>United States<span class="caret"></span></a>
-                            <ul class="dropdown-menu country-list">
-                                <li class="country-list-search">
-                                    <div>
-                                        <i class="glyphicon glyphicon-search"></i>
-                                        <input type="text" name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);">
-                                    </div>
-                                </li>
-                                <li><a ctr="{'change_to_country':'us'}" href="javascript:void(0);"><i class="litb-icon-flag us"></i><span class="english" data-abbr="us">United States</span></a></li>
-                                <li><a ctr="{'change_to_country':'au'}" href="javascript:void(0);"><i class="litb-icon-flag au"></i><span class="english" data-abbr="au">Australia</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="glyphicon glyphicon-user"></i>My account</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="login"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="register"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
-                    </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="collapse navbar-collapse">
+                        <!-- navs float right -->
+                        <ul class="nav navbar-nav">
+                            <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-map-marker"></i>Receiving countries:<i class="litb-icon-flag us"></i>United States<span class="caret"></span></a>
+                                <ul class="dropdown-menu country-list">
+                                    <li class="country-list-search">
+                                        <div>
+                                            <i class="glyphicon glyphicon-search"></i>
+                                            <input type="text" name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);">
+                                        </div>
+                                    </li>
+                                    <li><a ctr="{'change_to_country':'us'}" href="javascript:void(0);"><i class="litb-icon-flag us"></i><span class="english" data-abbr="us">United States</span></a></li>
+                                    <li><a ctr="{'change_to_country':'au'}" href="javascript:void(0);"><i class="litb-icon-flag au"></i><span class="english" data-abbr="au">Australia</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="glyphicon glyphicon-user"></i>My account</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="login"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="register"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -58,33 +60,35 @@
         <!-- header top bar end-->
         <!-- 2nd header bar start-->
         <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#top">
-                        <img alt="logo" src="img/logo.png">
-                    </a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                    <!-- navs float right -->
-                    <ul class="nav navbar-nav navbar-right navbar-search">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Costumes</a></li>
-                        <li><a href="#">Cosmetics</a></li>
-                        <li><a href="#">Electronics</a></li>
-                        <form class="navbar-form navbar-left navbar-search-form" role="search">
-                            <div class="form-group">
-                                <input type="text" placeholder="Search for products or links">
-                            </div>
-                            <button type="submit" class="btn navbar-search-btn"><i class="glyphicon glyphicon-search"></i></button>
-                        </form>
-                        <li>
-                            <button class="btn btn-warning btn-lg" data-href="#" data-toggle="popover">
-                                <span class="badge">4</span><i class="glyphicon glyphicon-shopping-cart"></i><span>shopping cart</span>
-                            </button>
-                        </li>
-                    </ul>
+            <div class="container">
+                <div class="row">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#top">
+                            <img alt="logo" src="img/logo.png">
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                        <!-- navs float right -->
+                        <ul class="nav navbar-nav navbar-right navbar-search">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Costumes</a></li>
+                            <li><a href="#">Cosmetics</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <form class="navbar-form navbar-left navbar-search-form" role="search">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Search for products or links">
+                                </div>
+                                <button type="submit" class="btn navbar-search-btn"><i class="glyphicon glyphicon-search"></i></button>
+                            </form>
+                            <li>
+                                <button class="btn btn-warning btn-lg" data-href="#" data-toggle="popover">
+                                    <span class="badge">4</span><i class="glyphicon glyphicon-shopping-cart"></i><span>shopping cart</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
                 <!-- recommend area -->
@@ -746,7 +750,7 @@
                                     <span></span>
                                 </div>
                             </div>
-                            <div class="pure-u-1-3 text-center">
+                            <div class="pure-u-1-3 text-center active">
                                 <div class="progress-dot-l">
                                     <span></span>
                                     <span></span>
@@ -762,7 +766,7 @@
                                     <span></span>
                                 </div>
                             </div>
-                            <div class="pure-u-1-3 text-center">
+                            <div class="pure-u-1-3 text-center active">
                                 <div class="progress-dot-l">
                                     <span></span>
                                     <span></span>
@@ -779,10 +783,11 @@
                         <!-- recharge steps start -->
                         <div class="panel panel-default">
                             <!-- 1st step -->
-                            <div class="cf" style="display: none;">
-                                <div class="panel-body">
-                                    <p>Minimun Payable Amount: <span class="ft-danger">S$0.00</span></p>
-                                    <div class="col-md-10 col-md-offset-1 text-justify ft-lite">You can top up more for future payments, avoid S$100 or S$50,transfer amount like S$100.03 or S$49 instead for faster verification. </div>
+                            <div class="cf" style="display: ;">
+                                <div class="panel-body pure-g">
+                                    <!-- <p>Minimun Payable Amount: <span class="ft-danger">S$0.00</span></p> -->
+                                    <div class="pure-u-1-24 ft-info"><i class="glyphicon glyphicon-info-sign"></i></div>
+                                    <div class="pure-u-21-24 text-justify ft-lite">You can top up more for future payments, avoid S$100 or S$50,transfer amount like S$100.03 or S$49 instead for faster verification. </div>
                                 </div>
                                 <div class="panel-body">
                                     <p>Choose a bank to transfer</p>
@@ -809,7 +814,7 @@
                                 </p>
                             </div>
                             <!-- 2nd step -->
-                            <div class="panel-body">
+                            <div class="panel-body" style="display: none;">
                                 <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
                                 <div class="form-group cf">
                                     <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
@@ -861,6 +866,45 @@
                                 <div class="form-group cf">
                                     <div class="col-md-3 col-md-offset-7">
                                         <button type="button" class="btn btn-acc btn-block">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3rd step -->
+                            <div class="panel-body">
+                                <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
+                                <div class="form-group cf">
+                                    <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">Your choise</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="gender" class="col-md-4 control-label">Transfer Amount:</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control-static">Amount: <span class="ft-danger">S$1000.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transNum" class="col-md-4 control-label">Transaction No:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">7164341243123</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transTime" class="col-md-4 control-label">Transferred Time:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">2015-11-11 11:11</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transMob" class="col-md-4 control-label">Mobile No:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">+65-81306643</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <button type="button" class="btn btn-acc btn-block">We'll help you with it ASAP.Thank you!</button>
                                     </div>
                                 </div>
                             </div>
@@ -918,9 +962,10 @@
                         <div class="panel panel-default">
                             <!-- 1st step -->
                             <div class="cf" style="display: none;">
-                                <div class="panel-body">
-                                    <p>Minimun Payable Amount: <span class="ft-danger">S$0.00</span></p>
-                                    <div class="col-md-10 col-md-offset-1 text-justify ft-lite">You can top up more for future payments, avoid S$100 or S$50,transfer amount like S$100.03 or S$49 instead for faster verification. </div>
+                                <div class="panel-body pure-g">
+                                    <!-- <p>Minimun Payable Amount: <span class="ft-danger">S$0.00</span></p> -->
+                                    <div class="pure-u-1-24 ft-info"><i class="glyphicon glyphicon-info-sign"></i></div>
+                                    <div class="pure-u-21-24 text-justify ft-lite">You can top up more for future payments, avoid S$100 or S$50,transfer amount like S$100.03 or S$49 instead for faster verification. </div>
                                 </div>
                                 <div class="panel-body">
                                     <p>Choose a bank to transfer</p>
@@ -947,7 +992,7 @@
                                 </p>
                             </div>
                             <!-- 2nd step -->
-                            <div class="panel-body">
+                            <div class="panel-body" style="display: none;">
                                 <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
                                 <div class="form-group cf">
                                     <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
@@ -1002,6 +1047,45 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- 3rd step -->
+                            <div class="panel-body">
+                                <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
+                                <div class="form-group cf">
+                                    <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">Your choise</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="gender" class="col-md-4 control-label">Transfer Amount:</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control-static">Amount: <span class="ft-danger">S$1000.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transNum" class="col-md-4 control-label">Transaction No:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">7164341243123</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transTime" class="col-md-4 control-label">Transferred Time:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">2015-11-11 11:11</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transMob" class="col-md-4 control-label">Mobile No:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">+65-81306643</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <button type="button" class="btn btn-acc btn-block">We'll help you with it ASAP.Thank you!</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- recharge steps end -->
                     </div>
@@ -1011,7 +1095,7 @@
         </div>
     </div>
     <!-- Recharge Modal end -->
-    <!-- Recharge Modal start -->
+    <!-- Rights Modal start -->
     <div class="modal fade zm-modal" id="modal_right" tabindex="-1" role="dialog" aria-labelledby="modal_rightLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1126,6 +1210,7 @@
             </div>
         </div>
     </div>
+    <!-- Rights Modal end -->
     <!-- sea.js -->
     <script src="sea-modules/sea.js"></script>
     <!-- sea modules import -->
@@ -1134,11 +1219,18 @@
     seajs.config({
         base: "./sea-modules/",
         alias: {
-            "jquery": "jquery-1.11.3.min.js",
-        }
+            "$": "jquery.js"
+        },
     });
     // zmall main modules import
-    seajs.use(['jquery','zmall.js']);
+    // For development
+    if (location.href.indexOf("?dev") > 0) {
+        seajs.use(['src/zmall']);
+    }
+    // For production
+    else {
+        seajs.use(['dist/js/1.0.0/zmall']);
+    }
     </script>
     <!--[if lt IE 9]> 
     <script>

@@ -10,11 +10,13 @@ define(function(require, exports, module) {
 
     // bootstrap carousel
     var indexCarousel = require('./depends/bootstrap/carousel.js');
-    $('.carousel').carousel();
 
     // bootstrap button 
     var indexCarousel = require('./depends/bootstrap/button.js');
     $('[data-toggle="buttons"]').button();
+
+    // bootstrap select 
+    var indexCarousel = require('./depends/bootstrap/bootstrap-select.js');
 
     // validator for bootstrap
     var indexCarousel = require('./depends/bootstrap/validator.js');
@@ -52,6 +54,9 @@ define(function(require, exports, module) {
 
     //item detail gallary config and lazy load
     var itemGallery = require('./itemGallery.js');
+
+    //tool tips
+    var toolTip = require('./toolTips.js');
 
     //mini cart
     var miniCart = require('./miniCart.js');

@@ -98,222 +98,124 @@
         <!-- 2nd header bar end-->
     </header>
     <!-- header end -->
-    <!-- shopping_cart>cashier>delivered>confirm_receipt start -->
-    <div class="container indexMain">
-        <!-- step part start -->
-        <nav class="row step-progress">
-            <ul class="pure-g">
-                <li class="active pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Shopping cart<span class="caret caret-nav"></span></li>
-                <li class="pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Cashier</li>
-                <li class="pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Delivered</li>
-                <li class="pure-u-1-4"><i class="glyphicon glyphicon-menu-right"></i>Confirm receipt</li>
-            </ul>
-        </nav>
-        <!-- step part end -->
-        <!-- address box start -->
-        <div class="row cart-address">
-            <div class="cart-address-box">
-                <h3>Make sure the address<small class="flr">Manage the Address</small></h3>
-                <div data-toggle="buttons">
-                    <label class="btn btn-default btn-block cf active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked>
-                        <span class="fll"><em><i class="glyphicon glyphicon-map-marker"></i> Send To: </em>
-                    ShangHai songjiang qu xinzhuangonglu 518long 13haolou 401shi (Even Liu recieve it) 13454756876</span>
-                        <a href="#" class="flr">Correct the Address</a>
-                    </label>
-                    <label class="btn btn-default btn-block cf">
-                        <input type="radio" name="options" id="option2" autocomplete="off">
-                        <span class="fll"><em><i class="glyphicon glyphicon-map-marker"></i> Send To: </em>
-                    ShangHai songjiang qu xinzhuangonglu 518long 13haolou 401shi (Even Liu recieve it) 13454756876</span>
-                        <a href="#" class="flr">Correct the Address</a>
-                    </label>
+    <!-- search page start -->
+    <div class="indexMain bBranch">
+        <!-- breadcrumb & filter part start -->
+        <div class="container prod-filter-wrap">
+            <!-- breadcrumb start -->
+            <ol class="breadcrumb row">
+                <li><a href="#">All</a></li>
+                <li><a href="#">Sweater woman</a></li>
+                <li class="active">Sweet and lovely</li>
+                <li>
+                    <!-- condition area start -->
+                    <a href="#">
+                        <span class="prod-filter-remove">
+                            <i class="glyphicon glyphicon-remove"></i>Nike
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span class="prod-filter-remove">
+                            <i class="glyphicon glyphicon-remove"></i>condition2
+                        </span>
+                    </a>
+                    <!-- condition area end -->
+                </li>
+            </ol>
+            <!-- breadcrumb end -->
+            <!-- filter part start -->
+            <div class="row prod-filter">
+                <dl class="dl-horizontal">
+                    <dt>Brand</dt>
+                    <dd>
+                        <ul class="list-inline text-justify">
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Brand</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Hot</dt>
+                    <dd>
+                        <ul class="list-inline text-justify">
+                            <li><a href="#">Hot</a></li>
+                            <li><a href="#">Hot</a></li>
+                            <li><a href="#">Hot</a></li>
+                            <li><a href="#">Hot</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Classification</dt>
+                    <dd>
+                        <ul class="list-inline text-justify">
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                            <li><a href="#">Classification</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="row">
+                <div class="btn-group btn-group-sm fll" data-toggle="buttons">
+                    <div class="btn btn-theme active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Default
+                    </div>
+                    <div class="btn btn-theme">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Price <i class="glyphicon glyphicon-sort-by-attributes"></i>
+                    </div>
+                    <div class="btn btn-theme">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Price <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
+                    </div>
+                    <div class="btn btn-theme">
+                        <input type="radio" name="options" id="option4" autocomplete="off"> Sales volume <i class="glyphicon glyphicon-arrow-down"></i>
+                    </div>
+                    <div class="btn btn-theme">
+                        <input type="radio" name="options" id="option5" autocomplete="off"> Latest <i class="glyphicon glyphicon-arrow-down"></i>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-sm flr">
+                    <span>1/100</span>
+                    <a href="#" class="btn btn-theme"><i class="glyphicon glyphicon-menu-left"></i></a>
+                    <a href="#" class="btn btn-theme"><i class="glyphicon glyphicon-menu-right"></i></a>
                 </div>
             </div>
-            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#modal_acc" data-active="address" modal-single="true"><i class="glyphicon glyphicon-plus"></i> Add New Address</a>
-            <h3>Make sure the order information</h3>
+            <!-- filter part end -->
+            <!-- breadcrumb & filter part end -->
         </div>
-        <!-- address box end -->
-        <!-- cart table start -->
-        <div class="row">
-            <!-- cart table head start -->
-            <div class="pure-g cart-thead">
-                <div class="pure-u-1-2">
-                    <div class="fll">
-                        <div class="zm-checkbox">
-                            <input type="checkbox">
-                            <i class="glyphicon glyphicon-ok"></i>
-                        </div>
-                        <span>All</span>
-                    </div>
-                    Commodity information
-                    <span class="hr-line"></span>
-                </div>
-                <div class="pure-u-1-2">
-                    <div class="pure-u-1-4">Price<span class="hr-line"></span></div>
-                    <div class="pure-u-1-4">Unit<span class="hr-line"></span></div>
-                    <div class="pure-u-1-4">Sum<span class="hr-line"></span></div>
-                    <div class="pure-u-1-4">Operation</div>
-                </div>
-            </div>
-            <!-- cart table head end -->
-            <!-- cart table body start -->
-            <div class="cart-tbody">
-                <div class="td-shop">
-                    <div class="zm-checkbox">
-                        <input type="checkbox">
-                        <i class="glyphicon glyphicon-ok"></i>
-                    </div>
-                    Shop: turn&turn
-                </div>
-                <div class="pure-g td-cnt" data-toggle="buttons">
-                    <label class="btn btn-default btn-block">
-                        <div class="pure-u-1-2">
-                            <div class="pure-u-1-24">
-                                <div class="zm-checkbox">
-                                    <input type="checkbox">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </div>
-                            </div>
-                            <dl class="td-item pure-u-23-24">
-                                <dt>
-                                    <span></span>
-                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
-                                </dt>
-                                <dd>
-                                    <p>Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turn Shop: turn&turnShop: turn&turn</p>
-                                    <ul class="list-unstyled">
-                                        <li><small>Color: Deep  Gray Size: S</small></li>
-                                        <li><small>Remark: mock up</small></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="pure-u-1-2">
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">299.00</div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">
-                                    <div class="input-group detail-promo-ammount" onclick="event.stopPropagation();">
-                                        <div class="input-group-addon" onclick="return false;"><i class="glyphicon glyphicon-minus"></i></div>
-                                        <input class="form-control" onclick="return false;" value="1" maxlength="2" title="Please enter the quantity" type="text">
-                                        <div class="input-group-addon" onclick="return false;"><i class="glyphicon glyphicon-plus"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">299.00</div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <ul class="list-unstyled td-inner text-left">
-                                    <li>
-                                        <a href="javascript:void(0);"><i class="glyphicon glyphicon-star"></i> Add to Collect cart</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"><i class="glyphicon glyphicon-trash"></i> Delete</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </label>
-                    <label class="btn btn-default btn-block">
-                        <div class="pure-u-1-2">
-                            <div class="fll">
-                                <div class="zm-checkbox">
-                                    <input type="checkbox">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </div>
-                            </div>
-                            <dl class="td-item fll">
-                                <dt>
-                                    <span></span>
-                                    <img class="img-responsive" src="http://sorgalla.com/jcarousel/examples/_shared/img/img5_thumb.jpg" alt="">
-                                </dt>
-                                <dd>
-                                    <p>Shop: turn&turn</p>
-                                    <ul class="list-unstyled">
-                                        <li><small>Color: Deep  Gray Size: S</small></li>
-                                        <li><small>Remark: mock up</small></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="pure-u-1-2">
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">299.00</div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">
-                                    <div class="input-group detail-promo-ammount" onclick="event.stopPropagation();">
-                                        <div class="input-group-addon" onclick="return false;"><i class="glyphicon glyphicon-minus"></i></div>
-                                        <input class="form-control" onclick="return false;" value="1" maxlength="2" title="Please enter the quantity" type="text">
-                                        <div class="input-group-addon" onclick="return false;"><i class="glyphicon glyphicon-plus"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <div class="td-inner">299.00</div>
-                            </div>
-                            <div class="pure-u-1-4 td-wrap">
-                                <ul class="list-unstyled td-inner text-left">
-                                    <li>
-                                        <a href="javascript:void(0);"><i class="glyphicon glyphicon-star"></i> Add to Collect cart</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"><i class="glyphicon glyphicon-trash"></i> Delete</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <!-- cart table body end -->
-        </div>
-        <!-- cart table end -->
-        <!-- affix bar start -->
-        <div class="cart-bar-wrap">
-            <div class="row cart-bar" data-affix="overflow">
-                <div class="container pure-g">
-                    <div class="pure-u-1-2 td-wrap">
-                        <div class="td-inner">
-                            <ul class="list-unstyled">
-                                <li><b>Addressee: </b>Even Liu(13752151629)</li>
-                                <li><b>Send to: </b>hangHai songjiang qu xinzhuangonglu fgwp r long 13haolou 401shi</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pure-u-3-8 td-wrap">
-                        <div class="td-inner">
-                            <ul class="list-unstyled cart-bar-transport">
-                                <li>
-                                    <b>Transport mode:</b>
-                                    <select class="selectpicker" name="transport" id="transport">
-                                        <option value="transport1">EMS 1-2days</option>
-                                        <option value="transport2">dhl 2-4days</option>
-                                    </select>
-                                    <small>29.00</small>
-                                </li>
-                                <li><b>Real payment: </b><em>$1196.00</em></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="pure-u-1-8 td-wrap">
-                        <div class="td-inner">
-                            <a href="javascript:void(0);" class="btn btn-xlg">Submit orders</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- filter part end -->
+        <!-- 404 info start -->
+        <div class="container">
+            <div class="text-center modal-failed">
+                <h4 class="ft-gray">We are very sorry that didn’t find the relevant products about “<font class="ft-warning">Sweater Jacket</font>”</h4>
             </div>
         </div>
-        <!-- affix bar end -->
+        <!-- 404 info end -->
+        <!-- 500 info start -->
+        <div class="container">
+            <div class="text-center modal-failed">
+                <h4 class="ft-gray">The network is interrupted, please refresh the page.</h4>
+            </div>
+        </div>
+        <!-- 500 info end -->
     </div>
-    <!-- shopping_cart>cashier>delivered>confirm_receipt end -->
+    <!-- search page end -->
     <!-- footer start -->
     <footer></footer>
     <!-- footer end -->
     <!-- Login Modal srart-->
-    <div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myLoginLabel">
+    <div class="modal fade zm-modal" id="modal_log" tabindex="-1" role="dialog" aria-labelledby="modal_logLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -325,34 +227,34 @@
                     </button>
                 </div>
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Sign in</a></li>
-                    <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab"><h3>Sign in</h3></a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab"><h3>Register</h3></a></li>
                 </ul>
                 <form class="tab-content form-horizontal" data-toggle="validator">
                     <input type="reset" name="reset" hidden/>
                     <div role="tabpanel" class="tab-pane active" id="login">
                         <div class="modal-body">
-                            <div class="form-group">
-                                <label for="account" class="col-sm-4 control-label">Account:</label>
-                                <div class="col-sm-7">
+                            <div class="form-group form-group-lg">
+                                <label for="account" class="col-md-4 control-label">Account:</label>
+                                <div class="col-md-7">
                                     <input type="email" class="form-control" id="account" placeholder="E-mail / phone / name ">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="pwd" class="col-sm-4 control-label">Password:</label>
-                                <div class="col-sm-7">
+                            <div class="form-group form-group-lg">
+                                <label for="pwd" class="col-md-4 control-label">Password:</label>
+                                <div class="col-md-7">
                                     <input type="password" class="form-control" id="pwd" placeholder="">
                                 </div>
                             </div>
-                            <!-- <div class="form-group">
-                                <label for="reward" class="col-sm-4 control-label">Rewards code:</label>
-                                <div class="col-sm-7">
+                            <!-- <div class="form-group form-group-lg">
+                                <label for="reward" class="col-md-4 control-label">Rewards code:</label>
+                                <div class="col-md-7">
                                     <input type="text" class="form-control" id="reward" placeholder="">
                                 </div>
                             </div> -->
-                            <div class="form-group">
-                                <label for="forget" class="col-sm-4 control-label"></label>
-                                <div class="col-sm-7">
+                            <div class="form-group form-group-lg">
+                                <label for="forget" class="col-md-4 control-label"></label>
+                                <div class="col-md-7">
                                     <a class="modal-tip high-lighted" href="#">Forget the password?</a>
                                 </div>
                             </div>
@@ -363,48 +265,48 @@
                     </div>
                     <div role="tabpanel" class="tab-pane" id="register">
                         <div class="modal-body">
-                            <div class="form-group has-feedback">
-                                <label for="email" class="col-sm-4 control-label">E-mail:</label>
-                                <div class="col-sm-7">
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="email" class="col-md-4 control-label">E-mail:</label>
+                                <div class="col-md-7">
                                     <input type="text" class="form-control" id="email" placeholder="Please enter your E-mail address" data-error="Email shouldn't be blank" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" data-pattern-error="Bruh, that email address is invalid" data-minlength="6" data-minlength-error="Minimum of 6 characters" required>
                                     <!-- data-remote="/path/to/remote/validator" to make an AJAX request to determine if the field is valid or not. -->
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                            <div class="form-group has-feedback">
-                                <label for="mobile" class="col-sm-4 control-label">Mobile:</label>
-                                <div class="col-sm-7">
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="mobile" class="col-md-4 control-label">Mobile:</label>
+                                <div class="col-md-7">
                                     <input type="text" class="form-control" id="mobile" placeholder="Please enter your mobile number" data-error="Mobile number shouldn't be blank" required>
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                            <div class="form-group has-feedback">
-                                <label for="pwd-reg" class="col-sm-4 control-label">Password:</label>
-                                <div class="col-sm-7">
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="pwd-reg" class="col-md-4 control-label">Password:</label>
+                                <div class="col-md-7">
                                     <input type="password" class="form-control" id="pwd-reg" placeholder="" data-minlength="6" data-error="Minimum of 6 characters" required>
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                            <div class="form-group has-feedback">
-                                <label for="pwd-reg2" class="col-sm-4 control-label">Confirm:</label>
-                                <div class="col-sm-7">
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="pwd-reg2" class="col-md-4 control-label">Confirm:</label>
+                                <div class="col-md-7">
                                     <input type="password" class="form-control" id="pwd-reg2" data-match="#pwd-reg" data-error="Confirm your password" data-match-error="Whoops, these don't match" placeholder="" required>
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <span class="help-block with-errors"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="reward-reg" class="col-sm-4 control-label">Rewards code:</label>
-                                <div class="col-sm-7">
+                            <div class="form-group form-group-lg">
+                                <label for="reward-reg" class="col-md-4 control-label">Rewards code:</label>
+                                <div class="col-md-7">
                                     <input type="text" class="form-control" id="reward-reg" placeholder="">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="check1" class="col-sm-4 control-label"></label>
-                                <div class="col-sm-7">
+                            <div class="form-group form-group-lg">
+                                <label for="check1" class="col-md-4 control-label"></label>
+                                <div class="col-md-7">
                                     <div class="zm-checkbox">
                                         <input type="checkbox" data-error="Check to process" name="check1" required>
                                         <i class="glyphicon glyphicon-ok"></i>
@@ -471,7 +373,6 @@
                                     <p class="form-control-static">5469****@qq.com
                                         <a href="#" class="btn btn-warning btn-xs">Activate this email</a>
                                         <a class="btn btn-success btn-xs">You've actived it.</a>
-                                        </span>
                                     </p>
                                 </div>
                             </div>
@@ -520,8 +421,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-md-4"></div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-md-offset-4">
                                     <button type="button" class="btn btn-warning btn-block">Confirm</button>
                                 </div>
                                 <div class="col-md-3">
@@ -658,11 +558,7 @@
                                     </div>
                                     <div class="pure-u-3-24 td-wrap">
                                         <div class="td-inner">
-                                            <select class="selectpicker xs" data-width="100%" data-style="btn-default btn-xs">
-                                                <option value="">Please select</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                            </select>
+                                            <input type="text" placeholder="Area">
                                         </div>
                                     </div>
                                     <div class="pure-u-8-24 td-wrap">
@@ -703,12 +599,6 @@
                     </div>
                     <!-- address management end -->
                 </form>
-                <div class="modal-body">
-                    <div class="modal-success">
-                        <h3>Registered Success</h3>
-                        <a class="btn" href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

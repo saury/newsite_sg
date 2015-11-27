@@ -35,23 +35,34 @@
                 color: $btn_color;
             }
         }
-        &-success {
-            display: none;
-            height: ($modal-md - $header-h - 2*$loginMod-bw - 2*$modal-inner-padding);
-            background: image-url("reg_success.jpg") no-repeat center 100px;
-            padding-top: 280px;
-            text-align: center;
-            h3 {
-                @include fsize(40);
-                color: $btn_color;
-                font-weight: normal;
-                word-spacing: -5px;
+        @at-root {
+            .modal-success,
+            .modal-failed {
+                display: none;
+                height: ($modal-md - $header-h - 2*$loginMod-bw - 2*$modal-inner-padding);
+                background: image-url("reg_success.jpg") no-repeat center 100px;
+                padding-top: 280px;
+                text-align: center;
+                h3 {
+                    @include fsize(40);
+                    color: $btn_color;
+                    font-weight: normal;
+                    word-spacing: -5px;
+                }
+                a {
+                    @include fsize(26);
+                    color: #fff;
+                    background: $gray-lightee;
+                    padding: 10px 50px;
+                }
             }
-            a {
-                @include fsize(26);
-                color: #fff;
-                background: $gray-lightee;
-                padding: 10px 50px;
+            .modal-failed {
+                display: block;
+                background-image: image-url("zmall_failed.png");
+                @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2) {
+                    background-image: image-url("zmall_failed@2x.png");
+                    background-size: (image-width("zmall_failed.png")/2) auto;
+                }
             }
         }
     }
@@ -86,8 +97,8 @@
             font-weight: normal;
             color: $gray-light;
             //asterisk for required label
-            &.required{
-                &:before{
+            &.required {
+                &:before {
                     content: "*";
                     color: $btn_color;
                 }
@@ -95,6 +106,12 @@
         }
         .input-group {
             padding: 0 15px;
+        }
+        &-sm {
+            margin-bottom: 0;
+            &:first-child {
+                margin-top: 0;
+            }
         }
     }
     .close {
@@ -160,7 +177,7 @@
         }
     }
     //progress dots
-    div[class*="pure-u"]{
+    div[class*="pure-u"] {
         position: relative;
     }
     .progress-dot-l,
@@ -222,42 +239,99 @@
 }
 
 //upload section for modal rights
-.upload{
-    &-thumb{
+.upload {
+    &-wrap {
+        padding: 6px 0;
+    }
+    &-thumb {
         width: 60px;
         height: 60px;
         display: inline-block;
         position: relative;
         padding: 4px;
-        z-index:2;
+        z-index: 2;
         background: #fff;
-        input{
+        input {
             position: absolute;
             width: 100%;
             height: 100%;
             @include opacity(0);
             cursor: pointer;
-            z-index:3;
+            z-index: 3;
         }
-        &:hover{
-            .upload-op{
-                z-index:1;
+        &:hover {
+            .upload-op {
+                z-index: 1;
             }
         }
     }
-    &-op{
+    &-op {
         width: 100%;
         height: 100%;
         line-height: 60px;
         text-align: center;
         position: absolute;
         top: 0;
-        left:0;
+        left: 0;
         @include fsize(30);
         cursor: pointer;
         background: $gray-lighter;
-        background: rgba(0,0,0,0.1);
+        background: rgba(0, 0, 0, 0.1);
         color: #fff;
         z-index: -1;
+    }
+}
+
+//chat box
+.chatBox {
+    padding: 6px 0;
+    &-wrap{
+        padding: 0 6px;
+        margin: 6px 0;
+        border: 1px dashed $gray-lightee;
+        max-height: 320px;
+        overflow-y: scroll;
+    }
+    .label {
+        display: inline-block;
+        margin-bottom: 4px;
+    }
+    .media-left,
+    .media-right,
+    .media-body {
+        display: table-cell !important;
+        vertical-align: middle;
+        top: unset !important;
+        left: unset !important;
+        position: relative;
+    }
+    .media-left,
+    .media-right{
+        max-width: 60px;
+    }
+    .tooltip-arrow {
+        top: 50% !important;
+    }
+    .tooltip-inner {
+        max-width: unset !important;
+        display: inline-block;
+        text-align: justify;
+    }
+    .tooltip.left {
+        .tooltip-arrow{
+            border-left-color: $acc-banner-blue;
+        }
+        .tooltip-inner{
+            background: $acc-banner-blue;
+        }
+    }
+    .tooltip.right {
+        .tooltip-arrow{
+            border-right-color: $gray-lighter;
+        }
+        .tooltip-inner{
+            background: $gray-lighter;
+            color: $gray;
+        }
     }
 }

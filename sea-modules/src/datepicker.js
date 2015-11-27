@@ -18,7 +18,7 @@ define(function(require) {
                 ele.datetimepicker({
                     viewMode: 'days',
                     showToday: true,
-                    format: 'YYYY-MM-DD HH:mm A',
+                    format: 'YYYY-MM-DD HH:mm',
                 });
                 break;
         }
