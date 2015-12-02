@@ -9,6 +9,9 @@
     //table wrap
     &-admin {
         margin: $main_padding 0;
+        [class*='pure-u']{
+            @include fsize(12);
+        }
     }
     //thead part
     &-thead {

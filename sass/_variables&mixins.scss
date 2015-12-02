@@ -64,6 +64,10 @@ $input-border-radius-small: 0;
 $font-size-large: 16px;
 // font size override
 $font-size-h5: 16px;
+//tool tip style override
+$tooltip-color: $gray;
+$tooltip-bg: $gray-lighter;
+$tooltip-arrow-color: $gray-lighter;
 ///* mixins */
 //font-size px and rem
 @mixin fsize($fs) {

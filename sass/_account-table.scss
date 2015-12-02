@@ -17,6 +17,7 @@
             }
             // for row span's vertical align "in to be paid" page
             .media-left{
+                max-width: 0px;//fix the nested table cell width issue
                 padding:0;
                 border-right: 1px dashed $gray-lightee;
                 & > div{
@@ -25,6 +26,10 @@
                     &:last-child{
                         border: 0;
                     }
+                }
+                //ie hack for table cell flex width
+                p{
+                    width: 228px\9\0;
                 }
             }
         }

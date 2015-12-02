@@ -96,13 +96,13 @@ a.btn {
 }
 
 // login and register appear as deep orange
-.btn-xlg {
-    @include button-variant($btn-primary-color, $btn_color, $btn_color);
-    @include fsize(24);
-    width: 266px;
-    height: 52px;
-    line-height: 38px;
-}
+// .btn-xlg {
+//     @include button-variant($btn-primary-color, $btn_color, $btn_color);
+//     @include fsize(24);
+//     width: 266px;
+//     height: 52px;
+//     line-height: 38px;
+// }
 //custom
 .btn-theme{
     @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);

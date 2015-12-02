@@ -24,7 +24,7 @@
             text-align: center;
         }
         &-tip {
-            @include fsize(16);
+            // @include fsize(16);
             color: $gray-light;
             &.flr {
                 display: inline-block;
@@ -323,15 +323,16 @@
         }
         .tooltip-inner{
             background: $acc-banner-blue;
+            color: #fff;
         }
     }
-    .tooltip.right {
-        .tooltip-arrow{
-            border-right-color: $gray-lighter;
-        }
-        .tooltip-inner{
-            background: $gray-lighter;
-            color: $gray;
-        }
-    }
+    // .tooltip.right {
+    //     .tooltip-arrow{
+    //         border-right-color: $gray-lighter;
+    //     }
+    //     .tooltip-inner{
+    //         background: $gray-lighter;
+    //         color: $gray;
+    //     }
+    // }
 }

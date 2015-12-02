@@ -1,0 +1,32 @@
+@charset "utf-8";
+footer{
+    margin-top: 20px;
+    padding: 40px 0 10px;
+    background: $nav_dark;
+    color: #fff;
+    h5{
+        padding: 0 12px;
+    }
+    .list-inline{
+        margin-top: 20px;
+        li{
+            &:first-child{
+                &:before{
+                    content: " ";
+                }
+            }
+            &:before{
+                content:"|";
+                position: relative;
+                left: -5px;
+            }
+        }
+    }
+    .btn-link{
+        color: #fff;
+        @include transition(all .4s);
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

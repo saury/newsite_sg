@@ -71,21 +71,13 @@
                     <b>admin</b>
                 </li>
                 <hr>
-                <li class="navbar-text">采购中心</li>
-                <li><a href="#">未付款</a></li>
-                <li class="active"><a href="#">处理中</a></li>
-                <li><a href="#">已定购</a></li>
+                <li class="navbar-text">充值管理</li>
+                <li><a href="./admin_audit.html">转账审核</a></li>
+                <li><a href="#">退款申请（暂无）</a></li>
+                <li><a href="#">充值记录</a></li>
                 <hr>
-                <li class="navbar-text">配送中心</li>
-                <li><a href="#">已到货（签收）</a></li>
-                <li><a href="#">待发货</a></li>
-                <li><a href="#">已发货</a></li>
-                <li><a href="#">已签收</a></li>
-                <hr>
-                <li class="navbar-text">维权</li>
-                <li><a href="#">退款不退货</a></li>
-                <li><a href="#">退款并退货</a></li>
-                <li><a href="#">已退款</a></li>
+                <li class="navbar-text">价格管理</li>
+                <li class="active"><a href="#">调价比例</a></li>
                 <hr>
             </ul>
         </nav>
@@ -96,8 +88,8 @@
         <!-- breadcrumb and search form start -->
         <div class="adminMain-header cf">
             <ol class="breadcrumb fll">
-                <li><a href="#">采购中心</a></li>
-                <li class="active">处理中</li>
+                <li><a href="#">充值管理</a></li>
+                <li class="active">转账审核</li>
             </ol>
             <form class="flr">
                 <select class="selectpicker">
@@ -112,43 +104,132 @@
                     <label for="search1"><i class="glyphicon glyphicon-search"></i></label>
                     <input type="text" id="search1">
                     <a href="#" class="btn btn-primary">搜索</a>
-                </div>  
+                </div>
             </form>
         </div>
         <!-- breadcrumb and search form end -->
-        <!-- taobao editing start -->
-        <div class="edit-floor">
-            <div class="table-admin">
-                <div class="table-thead cf">
-                    <div class="col-md-4 pure-g">
-                        <div class="pure-u-1-2">分类ID</div>
-                        <div class="pure-u-1-2">分类名称</div>
+        <!-- price adjust start -->
+        <div class="row">
+            <!-- primary adjust start -->
+            <div class="col-md-5">
+                <h5>优先调价</h5>
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="#" class="btn btn-primary btn-sm btn-block">新增</a>
                     </div>
-                    <div class="col-md-4">
-                        分类链接
-                    </div>
-                    <div class="col-md-4">
-                        操作
+                    <div class="col-md-2">
+                        <a href="#" class="btn btn-primary btn-sm btn-block">保存</a>
                     </div>
                 </div>
-                <div class="table-row cf has-border">
-                    <div class="col-md-4 pure-g">
-                        <div class="pure-u-1-2">50012341</div>
-                        <div class="pure-u-1-2">针织衫</div>
+                <div class="table-admin">
+                    <div class="table-thead small cf">
+                        <div class="col-md-5">
+                            价格区间
+                        </div>
+                        <div class="col-md-5 col-md-offset-2">
+                            调价比例
+                        </div>
                     </div>
-                    <div class="col-md-4 td-ellipsis">
-                        <a href="#" target="_blank">
-                            https://www.zmall.sg/dfghdfdf*^$3jHJHKFH?id=42341123#sdfhkshg
-                        </a>
+                    <div class="table-row cf pure-g has-border">
+                        <div class="col-md-5 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" class="text-center" value="">
+                            </div>
+                            <div class="pure-u-1-6">~</div>
+                            <div class="pure-u-5-12">
+                                <input type="text" class="text-center" value="">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-2 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" class="text-center" value="">
+                            </div>
+                            <div class="pure-u-1-6">%</div>
+                            <div class="pure-u-5-12 text-right">
+                                <a href="#" class="btn btn-danger btn-sm">删除</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-link">修改</button>
-                        <button type="button" class="btn btn-danger">删除</button>
+                    <div class="table-row cf pure-g has-border">
+                        <div class="col-md-5 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" class="text-center" value="10">
+                            </div>
+                            <div class="pure-u-1-6">~</div>
+                            <div class="pure-u-5-12">
+                                <input type="text" class="text-center" value="49">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-2 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" class="text-center" value="50">
+                            </div>
+                            <div class="pure-u-1-6">%</div>
+                            <div class="pure-u-5-12 text-right">
+                                <a href="#" class="btn btn-danger btn-sm">删除</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- primary adjust end -->
+            <!-- secondary adjust start -->
+            <div class="col-md-5 col-md-offset-2">
+                <h5>次级调价</h5>
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="#" class="btn btn-primary btn-sm btn-block">新增</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="btn btn-primary btn-sm btn-block">保存</a>
+                    </div>
+                </div>
+                <div class="table-admin">
+                    <div class="table-thead small cf">
+                        <div class="col-md-5">
+                            分类ID
+                        </div>
+                        <div class="col-md-5 col-md-offset-2">
+                            调价比例
+                        </div>
+                    </div>
+                    <div class="table-row cf pure-g has-border">
+                        <div class="col-md-5">
+                            <div class="pure-u-1">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-2 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" class="text-center" value="">
+                            </div>
+                            <div class="pure-u-1-6">%</div>
+                            <div class="pure-u-5-12 text-right">
+                                <a href="#" class="btn btn-danger btn-sm">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row cf pure-g has-border">
+                        <div class="col-md-5">
+                            <div class="pure-u-1">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-2 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" class="text-center" value="50">
+                            </div>
+                            <div class="pure-u-1-6">%</div>
+                            <div class="pure-u-5-12 text-right">
+                                <a href="#" class="btn btn-danger btn-sm">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- secondary adjust end -->
         </div>
-        <!-- floors editing end -->
+        <!-- price adjust end -->
     </div>
     <!-- main body end -->
     <!-- footer start -->
