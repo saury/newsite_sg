@@ -2,7 +2,7 @@ define(function(require) {
     var $ = jQuery = require('$');
     var consAndFunc = require('./consAndFunc.js');
     // var stickyCheck = require('./stickyCheck.js');
-    var affixJs = require('./depends/bootstrap/affix.js');
+    var affixJs = require('../depends/bootstrap/affix.js');
 
     //TODO: the affix should be called everytime dom changes
     $('[data-affix="overflow"]').each(function() {
@@ -21,13 +21,16 @@ define(function(require) {
     });
 
     //left menu affix in account page
-    $('.left-menu').affix({
-        offset: {
-            top: $('.left-menu').offset().top - consAndFunc.navOffset - 18, //no accuracy
-            bottom: function() {
-                return (this.bottom = $('footer').outerHeight(!0) + 24) //no accuracy
+    $('.left-menu').each(function() {
+        var ele = $(this);
+        ele.affix({
+            offset: {
+                top: ele.offset().top - consAndFunc.navOffset - 18, //no accuracy
+                bottom: function() {
+                    return (this.bottom = $('footer').outerHeight(!0) + 24) //no accuracy
+                }
             }
-        }
+        });
     });
 
 });

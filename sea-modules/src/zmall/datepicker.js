@@ -1,6 +1,6 @@
 define(function(require) {
     var $ = jQuery = require('$');
-    var datePicker = require('./depends/bootstrap/bootstrap-datetimepicker.min.js');
+    var datePicker = require('../depends/bootstrap/bootstrap-datetimepicker.min.js');
     // date picker
     $('[data-active*="date_picker"]').each(function() {
         var ele = $(this);

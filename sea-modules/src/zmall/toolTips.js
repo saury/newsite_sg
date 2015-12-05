@@ -1,7 +1,7 @@
 define(function(require) {
     var $ = jQuery = require('$');
-    var tooltips = require('./depends/bootstrap/tooltip.js');
-    var tooltips = require('./depends/bootstrap/modal.js');
+    var tooltips = require('../depends/bootstrap/tooltip.js');
+    var tooltips = require('../depends/bootstrap/modal.js');
 
     //call normal tooltips
     $('[data-toggle="tooltip"]').tooltip();

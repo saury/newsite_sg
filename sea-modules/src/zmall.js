@@ -22,43 +22,46 @@ define(function(require, exports, module) {
     var indexCarousel = require('./depends/bootstrap/validator.js');
 
     //import the general constants and functions
-    var consAndFunc = require('./consAndFunc.js');
+    var consAndFunc = require('./zmall/consAndFunc.js');
     consAndFunc.zmallFunc(); //general function call
 
     //data href config
-    var dataHref = require('./dataHref.js');
+    var dataHref = require('./zmall/dataHref.js');
 
     //get check box toggle
-    var cboxTgl = require('./checkbox_toggle.js');
+    var cboxTgl = require('./zmall/checkbox_toggle.js');
 
     //floor anchor jumping
-    var floorJump = require('./floorJump.js');
+    var floorJump = require('./zmall/floorJump.js');
 
     //scrollspy for brands page
-    var bNav_scrollspy = require('./bNav_scrollspy.js');
+    var bNav_scrollspy = require('./zmall/bNav_scrollspy.js');
 
     // date picker config
-    var datePicker = require('./datepicker.js');
+    var datePicker = require('./zmall/datepicker.js');
 
     // modal and tab config
-    var modalTab = require('./activeModalTab.js');
+    var modalTab = require('./zmall/activeModalTab.js');
 
     // affix call when it's overflow from the window
-    var affixOflow = require('./affixOverflow.js');
+    var affixOflow = require('./zmall/affixOverflow.js');
 
     // delegate calls to light box 
-    var litebox = require('./lightBox.js');
+    var litebox = require('./zmall/lightBox.js');
 
     // left menu accordion for account page
-    var leftMenu = require('./menuAccordion.js');
+    var leftMenu = require('./zmall/menuAccordion.js');
 
     //item detail gallary config and lazy load
-    var itemGallery = require('./itemGallery.js');
+    var itemGallery = require('./zmall/itemGallery.js');
 
     //tool tips
-    var toolTip = require('./toolTips.js');
+    var toolTip = require('./zmall/toolTips.js');
+
+    //fly to cart
+    var toolTip = require('./zmall/cartFly.js');
 
     //mini cart
-    var miniCart = require('./miniCart.js');
+    var miniCart = require('./zmall/miniCart.js');
 
 });

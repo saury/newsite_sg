@@ -82,6 +82,9 @@
     }
     //detail promo part
     &-promo {
+        .glyphicon-shopping-cart{
+            margin-right: 8px;
+        }
         @include fsize(16);
         h5 {
             margin-top: 0;

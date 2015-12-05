@@ -1,10 +1,10 @@
 @charset "utf-8";
 .left {
     &-menu {
-        &-wrap {
-            position: sticky;
-            top: 100px;
-        }
+        // &-wrap {
+        //     position: sticky;
+        //     top: 100px;
+        // }
         background: $gray-dark;
         color: #fff;
         overflow: hidden;

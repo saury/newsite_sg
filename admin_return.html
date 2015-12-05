@@ -161,7 +161,7 @@
                                             <li>
                                                 <ul class="list-inline">
                                                     <li>卖家: <a href="#">531424慧兰</a></li>
-                                                    <li><a href="#">查看备注</a></li>
+                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="remark">查看备注</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -596,6 +596,9 @@
             $(this).ekkoLightbox();
         });
         //call of tooltips
+        $('[data-toggle="tooltip"]').tooltip({
+            html: 'true'
+        });
         $('.panel-collapse').on('shown.bs.collapse', function() {
             $('[data-toggle="paneltip"]').tooltip({
                 trigger: 'manual', //won't hide

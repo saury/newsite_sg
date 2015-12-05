@@ -73,6 +73,22 @@ a {
     }
 }
 
+//modals
+$border-radius-large: 0;
+$modal-header-border-color: transparent;
+$modal-footer-border-color: transparent;
+
+// hr line style
+// $line-height-computed: 10px;
+hr{
+    &.dashed{
+        border-top-style: dashed;
+    }
+    &.nomar{
+        margin: 0;
+    }
+}
+
 // pure extend for col-15 and col-20
 .pure-u-1-15,
 .pure-u-2-15,

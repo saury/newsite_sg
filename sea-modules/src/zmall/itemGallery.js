@@ -1,7 +1,7 @@
 define(function(require) {
     var $ = jQuery = require('$');
-    var jcarsl = require('./depends/jquery.jcarousel.min.js');
-    var gallary = require('./depends/gallary-carousels.js');
+    var jcarsl = require('../depends/jquery.jcarousel.min.js');
+    var gallary = require('../depends/gallary-carousels.js');
 
     //item detail gallary config and lazy load
     $('.carousel-stage').jcarousel({

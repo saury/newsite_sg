@@ -9,7 +9,7 @@
     //table wrap
     &-admin {
         margin: $main_padding 0;
-        [class*='pure-u']{
+        [class*='pure-u'] {
             @include fsize(12);
         }
     }
@@ -25,10 +25,10 @@
         .btn {
             vertical-align: unset;
         }
-        select{
+        select {
             width: 100%;
         }
-        input {
+        input[type="text"] {
             width: 100%;
             height: 34px;
             line-height: 32px;
@@ -38,8 +38,11 @@
         &.with-photo {
             line-height: 60px;
         }
-        [class*="pure-u"]{
-        	padding: 0 ($grid-gutter-width / 2);
+        [class*="pure-u"] {
+            padding: 0 ($grid-gutter-width / 2);
+        }
+        label {
+            font-weight: normal;
         }
     }
     &-label {
@@ -62,9 +65,9 @@
 .has-border {
     border: 1px solid $gray;
     border-top: 0;
-    &-top{
-    	border-top: 1px solid $gray;
-    	border-bottom: 0;
+    &-top {
+        border-top: 1px solid $gray;
+        border-bottom: 0;
     }
 }
 

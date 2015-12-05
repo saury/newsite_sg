@@ -1,6 +1,6 @@
 define(function(require) {
     var $ = jQuery = require('$');
-    var lightbox = require('./depends/bootstrap/popover.js');
+    var lightbox = require('../depends/bootstrap/popover.js');
     // function for setting the html template of the cart details
     function setCartContent(item, overflow) {
         //hide the "You have xx more items" when the num is 0

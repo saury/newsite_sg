@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
 var $ = jQuery = require('$');
-    var modal = require('./depends/bootstrap/modal.js');
-    var tab = require('./depends/bootstrap/tab.js');
+    var modal = require('../depends/bootstrap/modal.js');
+    var tab = require('../depends/bootstrap/tab.js');
 
     //active the tab inside the modal
     $('[data-target^="#modal_"]').each(function() {

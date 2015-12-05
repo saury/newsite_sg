@@ -46,12 +46,14 @@
                 padding: 0;
                 line-height: unset;
             }
+            p {
+                @include fsize(16);
+            }
             span {
-                margin-top: 6px;
-                height: 40px;
-                overflow: hidden;
-                position: unset;
                 display: inline-block;
+                margin-top: 6px;
+                position: unset;
+                line-height: 16px;
             }
         }
     }

@@ -1,6 +1,6 @@
 define(function(require) {
 	var $ = jQuery = require('$');
-    var collapseJs = require('./depends/bootstrap/collapse.js');
+    var collapseJs = require('../depends/bootstrap/collapse.js');
 
     //left menu accordion
     $('.left-menu .collapse').on('show.bs.collapse', function() {

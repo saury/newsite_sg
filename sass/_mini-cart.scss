@@ -1,40 +1,40 @@
 @charset "utf-8";
-.mini-cart{
+.mini-cart {
     margin-bottom: 10px;
     &-thumb,
     &-detail,
-    &-price{
+    &-price {
         display: inline-block;
     }
-    &-item{
+    &-item {
         width: 240px;
         padding: 5px 0;
         border-bottom: 1px dotted $gray-light;
         .pure-u-7-12,
-        .pure-u-1-4{
+        .pure-u-1-4 {
             @include fsize(12);
             line-height: 20px;
         }
-        .pure-u-7-12{
+        .pure-u-7-12 {
             padding: 0 5px;
         }
-        p{
+        p {
             margin: 0;
             @include text-overflow();
         }
-        span{
+        span {
             display: block;
             color: $gray-light;
             @include text-overflow();
         }
-        em{
+        em {
             color: $btn_color;
             font-style: normal;
         }
     }
-    &-hint{
+    &-hint {
         @include fsize(12);
-        em{
+        em {
             color: $btn_color;
             font-style: normal;
         }
