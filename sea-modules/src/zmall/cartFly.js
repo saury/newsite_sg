@@ -1,13 +1,13 @@
 define(function(require) {
     var $ = jQuery = require('$');
     var flyJs = require('../depends/fly.js');
-    
+
     $('.detail-promo-para .btn-lg').click(function() {
         //avoid combo
         if ($(this).attr("disabled")) return false;
 
-        var cart_icon = $(this).children(".glyphicon-shopping-cart"),
-            cart_nav = $('.navbar-search .glyphicon-shopping-cart');
+        var cart_icon = $(this).children(".glyphicon-shopping-cart"), //add to cart button
+            cart_nav = $('.navbar-search .glyphicon-shopping-cart'); //cart button on top nav
 
         //create the mini cart token to fly
         $("body").append('<button class="btn btn-warning btn-lg mini-cart-fly img-circle text-center"><i class="glyphicon glyphicon-shopping-cart"></i></button>');
@@ -40,9 +40,14 @@ define(function(require) {
 
         //disable the button
         $(this).attr("disabled", true);
-        //recover the button
+        //run the animation and recover the button
         setTimeout(function() {
+            var mini_cart_num = $(".navbar-search .badge").html();
+            $(".navbar-search .badge").addClass("shine").html(++mini_cart_num);
+            setTimeout(function() {
+                $(".navbar-search .badge").removeClass("shine");
+            }, 200);
             $('.detail-promo-para .btn-lg').removeAttr("disabled");
-        }, 500);
+        }, 700);
     });
 });

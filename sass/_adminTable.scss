@@ -69,6 +69,14 @@
         border-top: 1px solid $gray;
         border-bottom: 0;
     }
+    //cell inside width border
+    &-cell{
+        border-left: 1px solid $gray;
+        > div{
+            border-right: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+        }
+    }
 }
 
 //single line ellipsis

@@ -307,3 +307,11 @@ hr{
 .pure-u-20-20 {
     width: 100%;
 }
+
+//caret extend
+.caret-up {
+  border-bottom:   $caret-width-base dashed;
+  border-bottom:   $caret-width-base solid \9; // IE8
+  border-top: $caret-width-base solid transparent !important;
+  margin-bottom: 4px;
+}
