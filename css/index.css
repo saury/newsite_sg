@@ -114,6 +114,7 @@ input, select, textarea, button, a:focus, a:active { outline: 0; }
 .ft-warning { color: #ff6801; }
 .ft-orange { color: #f0ad4e; }
 .ft-danger { color: #d9534f; }
+.ft-dark { color: #555555; }
 .ft-gray { color: #777777; }
 .ft-lite { color: #999999; }
 .ft-white { color: #fff; }
@@ -2662,6 +2663,7 @@ select.mobile-device { position: absolute !important; top: 0; left: 0; display: 
 .left-menu-sel { background: #ff6801; }
 .left-menu.affix { position: fixed !important; width: 238px; top: 100px; }
 
+.acc-table { min-height: 585px; }
 .acc-table [class*="pure-u"] { font-size: 12px; font-size: 0.85714rem; }
 .acc-table .bb-dashed { padding: 0 10px; border-bottom: 1px dashed #ccc; }
 .acc-table .bb-dashed .td-wrap { height: 50px; }

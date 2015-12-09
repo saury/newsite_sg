@@ -1,30 +1,30 @@
 define(function(require, exports, module) {
 var $ = jQuery = require('$');
 /*!
- * Bootstrap-select v1.7.4 (http://silviomoreto.github.io/bootstrap-select)
+ * Bootstrap-select v1.8.1 (http://silviomoreto.github.io/bootstrap-select)
  *
  * Copyright 2013-2015 bootstrap-select
  * Licensed under MIT (https://github.com/silviomoreto/bootstrap-select/blob/master/LICENSE)
  */
 
-(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module unless amdModuleId is set
-    define(["jquery"], function (a0) {
-      return (factory(a0));
-    });
-  } else if (typeof exports === 'object') {
-    // Node. Does not work with strict CommonJS, but
-    // only CommonJS-like environments that support module.exports,
-    // like Node.
-    module.exports = factory(require("jquery"));
-  } else {
-    factory(jQuery);
-  }
-}(this, function (jQuery) {
+// (function (root, factory) {
+//   if (typeof define === 'function' && define.amd) {
+//     // AMD. Register as an anonymous module unless amdModuleId is set
+//     define(["jquery"], function (a0) {
+//       return (factory(a0));
+//     });
+//   } else if (typeof exports === 'object') {
+//     // Node. Does not work with strict CommonJS, but
+//     // only CommonJS-like environments that support module.exports,
+//     // like Node.
+//     module.exports = factory(require("jquery"));
+//   } else {
+//     factory(jQuery);
+//   }
+// }(this, function (jQuery) {
 
-(function ($) {
-  'use strict';
+// (function ($) {
+//   'use strict';
 
   //<editor-fold desc="Shims">
   if (!String.prototype.includes) {
@@ -143,11 +143,11 @@ var $ = jQuery = require('$');
       // initialize object and result
       r=[];
       // iterate over object keys
-      for (k in o) 
+      for (k in o)
           // fill result array with non-prototypical keys
         r.hasOwnProperty.call(o, k) && r.push(k);
       // return result
-      return r
+      return r;
     };
   }
 
@@ -281,7 +281,7 @@ var $ = jQuery = require('$');
     this.setStyle = Selectpicker.prototype.setStyle;
     this.selectAll = Selectpicker.prototype.selectAll;
     this.deselectAll = Selectpicker.prototype.deselectAll;
-    this.destroy = Selectpicker.prototype.remove;
+    this.destroy = Selectpicker.prototype.destroy;
     this.remove = Selectpicker.prototype.remove;
     this.show = Selectpicker.prototype.show;
     this.hide = Selectpicker.prototype.hide;
@@ -289,7 +289,7 @@ var $ = jQuery = require('$');
     this.init();
   };
 
-  Selectpicker.VERSION = '1.7.4';
+  Selectpicker.VERSION = '1.8.1';
 
   // part of this is duplicated in i18n/defaults-en_US.js. Make sure to update both.
   Selectpicker.DEFAULTS = {
@@ -346,14 +346,15 @@ var $ = jQuery = require('$');
       var that = this,
           id = this.$element.attr('id');
 
-      this.$element.addClass('bs-select-hidden');
       // store originalIndex (key) and newIndex (value) in this.liObj for fast accessibility
       // allows us to do this.$lis.eq(that.liObj[index]) instead of this.$lis.filter('[data-original-index="' + index + '"]')
       this.liObj = {};
       this.multiple = this.$element.prop('multiple');
       this.autofocus = this.$element.prop('autofocus');
       this.$newElement = this.createView();
-      this.$element.after(this.$newElement);
+      this.$element
+        .after(this.$newElement)
+        .appendTo(this.$newElement);
       this.$button = this.$newElement.children('button');
       this.$menu = this.$newElement.children('.dropdown-menu');
       this.$menuInner = this.$menu.children('.inner');
@@ -395,6 +396,32 @@ var $ = jQuery = require('$');
           that.$element.trigger('shown.bs.select', e);
         }
       });
+
+      if (that.$element[0].hasAttribute('required')) {
+        this.$element.on('invalid', function () {
+          that.$button
+            .addClass('bs-invalid')
+            .focus();
+          
+          that.$element.on({
+            'focus.bs.select': function () {
+              that.$button.focus();
+              that.$element.off('focus.bs.select');
+            },
+            'shown.bs.select': function () {
+              that.$element
+                .val(that.$element.val()) // set the value to hide the validation message in Chrome when menu is opened
+                .off('shown.bs.select');
+            },
+            'rendered.bs.select': function () {
+              // if select is no longer invalid, remove the bs-invalid class
+              if (this.validity.valid) that.$button.removeClass('bs-invalid');
+              that.$element.off('rendered.bs.select');
+            }
+          });
+          
+        });
+      }
 
       setTimeout(function () {
         that.$element.trigger('loaded.bs.select');
@@ -722,10 +749,10 @@ var $ = jQuery = require('$');
           li = document.createElement('li'),
           a = document.createElement('a'),
           text = document.createElement('span'),
-          header = this.options.header ? this.$menu.find('.popover-title')[0].cloneNode(true) : null,
+          header = this.options.header && this.$menu.find('.popover-title').length > 0 ? this.$menu.find('.popover-title')[0].cloneNode(true) : null,
           search = this.options.liveSearch ? document.createElement('div') : null,
-          actions = this.options.actionsBox && this.multiple ? this.$menu.find('.bs-actionsbox')[0].cloneNode(true) : null,
-          doneButton = this.options.doneButton && this.multiple ? this.$menu.find('.bs-donebutton')[0].cloneNode(true) : null;
+          actions = this.options.actionsBox && this.multiple && this.$menu.find('.bs-actionsbox').length > 0 ? this.$menu.find('.bs-actionsbox')[0].cloneNode(true) : null,
+          doneButton = this.options.doneButton && this.multiple && this.$menu.find('.bs-donebutton').length > 0 ? this.$menu.find('.bs-donebutton')[0].cloneNode(true) : null;
 
       text.className = 'text';
       newElement.className = this.$menu[0].parentNode.className + ' open';
@@ -767,8 +794,8 @@ var $ = jQuery = require('$');
                         parseInt(menuStyle ? menuStyle.paddingBottom : $menu.css('paddingBottom')) +
                         parseInt(menuStyle ? menuStyle.borderTopWidth : $menu.css('borderTopWidth')) +
                         parseInt(menuStyle ? menuStyle.borderBottomWidth : $menu.css('borderBottomWidth')),
-          menuExtras =  menuPadding + 
-                        parseInt(menuStyle ? menuStyle.marginTop : $menu.css('marginTop')) + 
+          menuExtras =  menuPadding +
+                        parseInt(menuStyle ? menuStyle.marginTop : $menu.css('marginTop')) +
                         parseInt(menuStyle ? menuStyle.marginBottom : $menu.css('marginBottom')) + 2;
 
       document.body.removeChild(newElement);
@@ -934,29 +961,35 @@ var $ = jQuery = require('$');
     },
 
     selectPosition: function () {
+      this.$bsContainer = $('<div class="bs-container" />');
+
       var that = this,
-          $drop = $('<div class="bs-container" />'),
           pos,
           actualHeight,
           getPlacement = function ($element) {
-            $drop.addClass($element.attr('class').replace(/form-control|fit-width/gi, '')).toggleClass('dropup', $element.hasClass('dropup'));
+            that.$bsContainer.addClass($element.attr('class').replace(/form-control|fit-width/gi, '')).toggleClass('dropup', $element.hasClass('dropup'));
             pos = $element.offset();
             actualHeight = $element.hasClass('dropup') ? 0 : $element[0].offsetHeight;
-            $drop.css({
+            that.$bsContainer.css({
               'top': pos.top + actualHeight,
               'left': pos.left,
               'width': $element[0].offsetWidth
             });
           };
 
-      this.$newElement.on('click', function () {
+      this.$button.on('click', function () {
+        var $this = $(this);
+
         if (that.isDisabled()) {
           return;
         }
-        getPlacement($(this));
-        $drop.appendTo(that.options.container);
-        $drop.toggleClass('open', !$(this).hasClass('open'));
-        $drop.append(that.$menu);
+
+        getPlacement(that.$newElement);
+
+        that.$bsContainer
+          .appendTo(that.options.container)
+          .toggleClass('open', !$this.hasClass('open'))
+          .append(that.$menu);
       });
 
       $(window).on('resize scroll', function () {
@@ -965,13 +998,13 @@ var $ = jQuery = require('$');
 
       this.$element.on('hide.bs.select', function () {
         that.$menu.data('height', that.$menu.height());
-        $drop.detach();
+        that.$bsContainer.detach();
       });
     },
 
     setSelected: function (index, selected, $lis) {
       if (!$lis) {
-        var $lis = this.findLis().eq(this.liObj[index]);
+        $lis = this.findLis().eq(this.liObj[index]);
       }
 
       $lis.toggleClass('selected', selected);
@@ -979,7 +1012,7 @@ var $ = jQuery = require('$');
 
     setDisabled: function (index, disabled, $lis) {
       if (!$lis) {
-        var $lis = this.findLis().eq(this.liObj[index]);
+        $lis = this.findLis().eq(this.liObj[index]);
       }
 
       if (disabled) {
@@ -1016,10 +1049,13 @@ var $ = jQuery = require('$');
     },
 
     tabIndex: function () {
-      if (this.$element.is('[tabindex]')) {
+      if (this.$element.data('tabindex') !== this.$element.attr('tabindex') && 
+        (this.$element.attr('tabindex') !== -98 && this.$element.attr('tabindex') !== '-98')) {
         this.$element.data('tabindex', this.$element.attr('tabindex'));
         this.$button.attr('tabindex', this.$element.data('tabindex'));
       }
+      
+      this.$element.attr('tabindex', -98);
     },
 
     clickListener: function () {
@@ -1039,7 +1075,7 @@ var $ = jQuery = require('$');
         }
       });
 
-      this.$newElement.on('click', function () {
+      this.$button.on('click', function () {
         that.setSize();
         that.$element.on('shown.bs.select', function () {
           if (!that.options.liveSearch && !that.multiple) {
@@ -1216,7 +1252,7 @@ var $ = jQuery = require('$');
       var that = this,
           $no_results = $('<li class="no-results"></li>');
 
-      this.$newElement.on('click.dropdown.data-api touchstart.dropdown.data-api', function () {
+      this.$button.on('click.dropdown.data-api touchstart.dropdown.data-api', function () {
         that.$menuInner.find('.active').removeClass('active');
         if (!!that.$searchbox.val()) {
           that.$searchbox.val('');
@@ -1290,18 +1326,12 @@ var $ = jQuery = require('$');
     },
 
     _searchStyle: function () {
-      var style = 'icontains';
-      switch (this.options.liveSearchStyle) {
-        case 'begins':
-        case 'startsWith':
-          style = 'ibegins';
-          break;
-        case 'contains':
-        default:
-          break; //no need to change the default
-      }
+      var styles = {
+        begins: 'ibegins',
+        startsWith: 'ibegins'
+      };
 
-      return style;
+      return styles[this.options.liveSearchStyle] || 'icontains';
     },
 
     val: function (value) {
@@ -1315,18 +1345,32 @@ var $ = jQuery = require('$');
       }
     },
 
-    selectAll: function () {
+    changeAll: function (status) {
+      if (typeof status === 'undefined') status = true;
+
       this.findLis();
-      this.$element.find('option:enabled').not('[data-divider], [data-hidden]').prop('selected', true);
-      this.$lis.not('.divider, .dropdown-header, .disabled, .hidden').addClass('selected');
+
+      var $options = this.$element.find('option'),
+          $lisVisible = this.$lis.not('.divider, .dropdown-header, .disabled, .hidden').toggleClass('selected', status),
+          lisVisLen = $lisVisible.length,
+          selectedOptions = [];
+
+      for (var i = 0; i < lisVisLen; i++) {
+        var origIndex = $lisVisible[i].getAttribute('data-original-index');
+        selectedOptions[selectedOptions.length] = $options.eq(origIndex)[0];
+      }
+
+      $(selectedOptions).prop('selected', status);
+
       this.render(false);
     },
 
+    selectAll: function () {
+      return this.changeAll(true);
+    },
+
     deselectAll: function () {
-      this.findLis();
-      this.$element.find('option:enabled').not('[data-divider], [data-hidden]').prop('selected', false);
-      this.$lis.not('.divider, .dropdown-header, .disabled, .hidden').removeClass('selected');
-      this.render(false);
+      return this.changeAll(false);
     },
 
     keydown: function (e) {
@@ -1400,15 +1444,15 @@ var $ = jQuery = require('$');
 
       $items = $('[role=menu] li', $parent);
 
-      isActive = that.$menu.parent().hasClass('open');
+      isActive = that.$newElement.hasClass('open');
 
-      if (!isActive && (e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 65 && e.keyCode <= 90)) {
+      if (!isActive && (e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 96 && e.keyCode <= 105 || e.keyCode >= 65 && e.keyCode <= 90)) {
         if (!that.options.container) {
           that.setSize();
           that.$menu.parent().addClass('open');
           isActive = true;
         } else {
-          that.$newElement.trigger('click');
+          that.$button.trigger('click');
         }
         that.$searchbox.focus();
       }
@@ -1442,7 +1486,7 @@ var $ = jQuery = require('$');
         last = $items.filter(selector).last().index();
         next = $items.eq(index).nextAll(selector).eq(0).index();
         prev = $items.eq(index).prevAll(selector).eq(0).index();
-        nextPrev = $items.eq(next).prevAll(selector).eq(0).index(); 
+        nextPrev = $items.eq(next).prevAll(selector).eq(0).index();
 
         if (that.options.liveSearch) {
           $items.each(function (i) {
@@ -1542,8 +1586,7 @@ var $ = jQuery = require('$');
     },
 
     mobile: function () {
-      this.$element.addClass('mobile-device').appendTo(this.$newElement);
-      if (this.options.container) this.$menu.hide();
+      this.$element.addClass('mobile-device');
     },
 
     refresh: function () {
@@ -1571,6 +1614,21 @@ var $ = jQuery = require('$');
     remove: function () {
       this.$newElement.remove();
       this.$element.remove();
+    },
+
+    destroy: function () {
+        this.$newElement.remove();
+
+        if (this.$bsContainer) {
+            this.$bsContainer.remove();
+        } else {
+            this.$menu.remove();
+        }
+
+        this.$element
+          .off('.bs.select')
+          .removeData('selectpicker')
+          .removeClass('bs-select-hidden selectpicker');
     }
   };
 
@@ -1635,7 +1693,7 @@ var $ = jQuery = require('$');
 
   $(document)
       .data('keycount', 0)
-      .on('keydown', '.bootstrap-select [data-toggle=dropdown], .bootstrap-select [role="menu"], .bs-searchbox input', Selectpicker.prototype.keydown)
+      .on('keydown.bs.select', '.bootstrap-select [data-toggle=dropdown], .bootstrap-select [role="menu"], .bs-searchbox input', Selectpicker.prototype.keydown)
       .on('focusin.modal', '.bootstrap-select [data-toggle=dropdown], .bootstrap-select [role="menu"], .bs-searchbox input', function (e) {
         e.stopPropagation();
       });
@@ -1648,8 +1706,8 @@ var $ = jQuery = require('$');
       Plugin.call($selectpicker, $selectpicker.data());
     })
   });
-})(jQuery);
+// })(jQuery);
 
 
-}));
+// }));
 });

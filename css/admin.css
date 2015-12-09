@@ -114,6 +114,7 @@ input, select, textarea, button, a:focus, a:active { outline: 0; }
 .ft-warning { color: #ff6801; }
 .ft-orange { color: #f0ad4e; }
 .ft-danger { color: #d9534f; }
+.ft-dark { color: #555555; }
 .ft-gray { color: #777777; }
 .ft-lite { color: #999999; }
 .ft-white { color: #fff; }

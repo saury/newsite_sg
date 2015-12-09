@@ -119,10 +119,10 @@
                         <h5>区间调价</h5>
                     </div>
                     <div class="col-md-2">
-                        <a href="#" class="btn btn-primary btn-sm btn-block">新增</a>
+                        <a href="#" class="btn btn-primary btn-sm btn-block btn-create">新增</a>
                     </div>
                     <div class="col-md-2">
-                        <a href="#" class="btn btn-primary btn-sm btn-block">保存</a>
+                        <a href="#" class="btn btn-primary btn-sm btn-block btn-save">保存</a>
                     </div>
                 </div>
                 <div class="table-admin">
@@ -134,19 +134,20 @@
                             调价比例
                         </div>
                     </div>
-                    <div class="table-row cf pure-g has-border">
+                    <div class="table-row cf has-border">
                         <div class="col-md-5 pure-g-wrap">
                             <div class="pure-u-5-12">
-                                <input type="text" class="text-center" value="">
+                                <input type="text" role="scope" class="text-center" value="">
                             </div>
                             <div class="pure-u-1-6">~</div>
                             <div class="pure-u-5-12">
-                                <input type="text" class="text-center" value="">
+                                <input type="text" role="scope" class="text-center" value="">
                             </div>
                         </div>
-                        <div class="col-md-5 col-md-offset-2 pure-g-wrap">
+                        <div class="col-md-2"><small class="ft-danger"></small></div>
+                        <div class="col-md-5 pure-g-wrap">
                             <div class="pure-u-5-12">
-                                <input type="text" class="text-center" value="">
+                                <input type="text" role="scale" class="text-center" value="">
                             </div>
                             <div class="pure-u-1-6">%</div>
                             <div class="pure-u-5-12 text-right">
@@ -154,19 +155,62 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table-row cf pure-g has-border">
+                    <div class="table-row cf has-border">
                         <div class="col-md-5 pure-g-wrap">
                             <div class="pure-u-5-12">
-                                <input type="text" class="text-center" value="10">
+                                <input type="text" role="scope" class="text-center" value="10">
                             </div>
                             <div class="pure-u-1-6">~</div>
                             <div class="pure-u-5-12">
-                                <input type="text" class="text-center" value="49">
+                                <input type="text" role="scope" class="text-center" value="49">
                             </div>
                         </div>
-                        <div class="col-md-5 col-md-offset-2 pure-g-wrap">
+                        <div class="col-md-2"><small class="ft-danger"></small></div>
+                        <div class="col-md-5 pure-g-wrap">
                             <div class="pure-u-5-12">
-                                <input type="text" class="text-center" value="50">
+                                <input type="text" role="scale" class="text-center" value="50">
+                            </div>
+                            <div class="pure-u-1-6">%</div>
+                            <div class="pure-u-5-12 text-right">
+                                <a href="#" class="btn btn-danger btn-sm">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row cf has-border">
+                        <div class="col-md-5 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" role="scope" class="text-center" value="50">
+                            </div>
+                            <div class="pure-u-1-6">~</div>
+                            <div class="pure-u-5-12">
+                                <input type="text" role="scope" class="text-center" value="99">
+                            </div>
+                        </div>
+                        <div class="col-md-2"><small class="ft-danger"></small></div>
+                        <div class="col-md-5 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" role="scale" class="text-center" value="50">
+                            </div>
+                            <div class="pure-u-1-6">%</div>
+                            <div class="pure-u-5-12 text-right">
+                                <a href="#" class="btn btn-danger btn-sm">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row cf has-border">
+                        <div class="col-md-5 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" role="scope" class="text-center" value="100">
+                            </div>
+                            <div class="pure-u-1-6">~</div>
+                            <div class="pure-u-5-12">
+                                <input type="text" role="scope" class="text-center" value="199">
+                            </div>
+                        </div>
+                        <div class="col-md-2"><small class="ft-danger"></small></div>
+                        <div class="col-md-5 pure-g-wrap">
+                            <div class="pure-u-5-12">
+                                <input type="text" role="scale" class="text-center" value="50">
                             </div>
                             <div class="pure-u-1-6">%</div>
                             <div class="pure-u-5-12 text-right">
@@ -279,31 +323,6 @@
         })();
         // bootstrap dropdown
         $('.dropdown-toggle').dropdown();
-        // bootstrap popover
-        $('[data-toggle="popover"]').each(function() {
-            var element = $(this);
-            var tiktak = function() {};
-            var item = "aaa"; //商品内容
-            var overflow = 3; //超出商品显示限制条数
-            element.popover({
-                trigger: 'manual',
-                placement: 'bottom',
-                html: 'true',
-                content: zmModual.setCartCnt(item, overflow),
-            }).on("mouseenter", function() {
-                clearTimeout(tiktak);
-                element.popover("show");
-                element.siblings(".popover").on("mouseleave", function() {
-                    element.popover('hide');
-                });
-            }).on("mouseleave", function() {
-                tiktak = setTimeout(function() {
-                    if (!$(".popover:hover").length) {
-                        element.popover("hide")
-                    }
-                }, 2000);
-            });
-        });
         //reset all the form value
         $("input[type=reset]").trigger("click");
         // init the href
@@ -322,6 +341,104 @@
             event.preventDefault();
             $(this).ekkoLightbox();
         });
+
+
+        // button to creat a new row
+        $('.btn-create').click(function() {
+            //clone the table row and empty it
+            var new_row = $('.table-row').eq(0).clone();
+            new_row.find("input").val("");
+            //insert after the table head
+            $(".table-thead").after(new_row);
+        });
+
+        // button to save
+        $('.btn-save').click(function() {
+            // keep the value 0 unless there's an error 
+            var error_count = 0;
+
+            // recover all the error message
+            $('.table-row').each(function() {
+                //background color
+                $(this).removeClass('bg-danger');
+                //error message
+                $(this).find('.ft-danger').empty();
+                //the row's order
+                var order = $('.table-row').index($(this));
+
+                // check if the scales are correct
+                var adjust_scale = $(this).find('input[role="scale"]').val();
+
+                if (isNaN(adjust_scale) || adjust_scale == "" || adjust_scale < 0) {
+                    showError(order, "比例无效");
+                    error_count++;
+                    return false;
+                }
+            });
+
+            // get the scope group
+            var result = getScopeGroup($('input[role="scope"]'));
+
+            // loop for the group
+            for (var i = 0; i < result.length; i++) {
+                var num_start = parseInt(result[i][0]),
+                    num_end = parseInt(result[i][1]);
+                //check if the num is null
+                if (isNaN(num_start) || isNaN(num_end) || num_start == "" || num_end == "") {
+                    showError(i, "数值无效");
+                    return false;
+                }
+                //start number should be larger than the end number
+                if (num_start > num_end) {
+                    showError(i, "区间有误");
+                    return false;
+                }
+                //intersection check
+                for (var j = i + 1; j < result.length; j++) {
+                    // console.log(num_start, num_end, result[j][0], result[j][1])
+                    if (intersection(num_start, num_end, parseInt(result[j][0]), parseInt(result[j][1]))) {
+                        showError(i, "区间冲突");
+                        showError(j, "区间冲突");
+                        error_count++;
+                    }
+                }
+            };
+
+            // stop when any error exists
+            if (error_count != 0) return false;
+            console.log("Well done! You can use ajax to transfer the data now!");
+        });
+
+        function showError(row, keywords) {
+            // show the messages among the assigned rows
+            var target = $('.table-row').eq(row);
+            var error = target.find(".ft-danger");
+            target.addClass('bg-danger');
+            error.html(keywords);
+        }
+
+        function getScopeGroup(scope) {
+            //get the array and group them into the format of [[a,b],[c,d]...]
+            var scopeArr = [],
+                result = [];
+            //loop to get all the array
+            for (var i in scope) {
+                if (scope.eq(i).val() !== undefined) //avoid undefined case
+                    scopeArr.push(scope.eq(i).val());
+            }
+            //loop to group them as the format
+            for (var j = 0, len = scopeArr.length; j < len; j += 2) {
+                result.push(scopeArr.slice(j, j + 2));
+            }
+            //return the array
+            return result;
+        }
+
+        function intersection(a, b, c, d) {
+            // check if intersection between [a,b] and [c,d]
+            if ((parseInt(a) >= parseInt(c) && parseInt(a) <= parseInt(d)) || (parseInt(b) >= parseInt(c) && parseInt(b) <= parseInt(d)) || (parseInt(c) >= parseInt(a) && parseInt(c) <= parseInt(b)) || (parseInt(d) >= parseInt(a) && parseInt(d) <= parseInt(b))) return !0; //boolean to return
+            else return !1;
+        }
     });
     </script>
     <!--[if lt IE 9]> 

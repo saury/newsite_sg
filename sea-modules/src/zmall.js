@@ -12,14 +12,30 @@ define(function(require, exports, module) {
     var indexCarousel = require('./depends/bootstrap/carousel.js');
 
     // bootstrap button 
-    var indexCarousel = require('./depends/bootstrap/button.js');
+    var button = require('./depends/bootstrap/button.js');
     $('[data-toggle="buttons"]').button();
 
-    // bootstrap select 
-    var indexCarousel = require('./depends/bootstrap/bootstrap-select.js');
+    // bootstrap select and cascading
+    var bselectCascade = require('./zmall/selectCascade.js');
+    // mock up data
+    var select_cnt = {
+        "Return": ["Size does not comply with", "Damaged", "Poor quality"],
+        "Missing": ["Did not receive merchandise（More than 10 days）"]
+    };
+    // call cascading function
+    bselectCascade.selectCascade("cascade1",select_cnt);//(target:"cascade1", data:select_cnt)
+    //hide the img upload dom when the "Missing" is choosen
+    $('[select-cascade="cascade1"]').eq(0).on("change",function(){
+        if($(this).val()=="Missing"){
+            $("." + $(this).attr("select-hide")).addClass("sr-only");
+        }
+        else{
+            $("." + $(this).attr("select-hide")).removeClass("sr-only");
+        }
+    });
 
     // validator for bootstrap
-    var indexCarousel = require('./depends/bootstrap/validator.js');
+    var validator = require('./depends/bootstrap/validator.js');
 
     //import the general constants and functions
     var consAndFunc = require('./zmall/consAndFunc.js');

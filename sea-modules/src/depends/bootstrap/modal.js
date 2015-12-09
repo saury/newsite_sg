@@ -170,7 +170,10 @@ var $ = jQuery = require('$');
     var that = this
     this.$element.hide()
     this.backdrop(function () {
-      that.$body.removeClass('modal-open')
+      if($('.modal.in').length==0){
+        // overflow hidden removed from body only when there's no modal shown in page 
+        that.$body.removeClass('modal-open')
+      }
       that.resetAdjustments()
       that.resetScrollbar()
       that.$element.trigger('hidden.bs.modal')
