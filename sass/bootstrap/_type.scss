@@ -173,6 +173,7 @@ mark,
 @include bg-variant('.bg-info', $state-info-bg);
 @include bg-variant('.bg-warning', $state-warning-bg);
 @include bg-variant('.bg-danger', $state-danger-bg);
+@include bg-variant('.bg-gray', $gray-lighter);
 // Page header
 // -------------------------
 .page-header {

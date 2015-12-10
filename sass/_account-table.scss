@@ -1,7 +1,9 @@
 @charset "utf-8";
 .acc {
     &-table {
-        min-height: 585px;
+        &.pure-u-4-5 {
+            min-height: 585px;
+        }
         [class*="pure-u"] {
             @include fsize(12);
         }
@@ -12,24 +14,35 @@
                 height: 50px;
             }
         }
-        label{
-            &:active{
+        label.btn {
+            // &:active {
+            //     @include box-shadow(none);
+            // }
+            border-top: 0;
+            //hover style override
+            &:hover,
+            &:focus,
+            &.focus,
+            &.active,
+            &:active {
+                background: transparent;
+                border-color: $gray-lighter;
                 @include box-shadow(none);
             }
-            // for row span's vertical align "in to be paid" page
-            .media-left{
-                max-width: 0px;//fix the nested table cell width issue
-                padding:0;
+            // for row span's vertical align in "to be paid" page
+            .media-left {
+                max-width: 0px; //fix the nested table cell width issue
+                padding: 0;
                 border-right: 1px dashed $gray-lightee;
-                & > div{
+                & > div {
                     padding: 5px 0;
                     border-bottom: 1px dashed $gray-lightee;
-                    &:last-child{
+                    &:last-child {
                         border: 0;
                     }
                 }
                 //ie hack for table cell flex width
-                p{
+                p {
                     width: 228px\9\0;
                 }
             }
@@ -84,18 +97,18 @@
                 vertical-align: top;
             }
             &-op {
-            	margin-top: 4px;
+                margin-top: 4px;
                 a {
-                	display: inline-block;
+                    display: inline-block;
                     color: $gray-lighte;
-                    &:hover{
-                    	color: $btn_color;
-                    	text-decoration: none;
+                    &:hover {
+                        color: $btn_color;
+                        text-decoration: none;
                     }
                 }
-                small{
-                	display: block;
-                	@include fsize(8);
+                small {
+                    display: block;
+                    @include fsize(8);
                 }
             }
         }
