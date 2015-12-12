@@ -43,6 +43,8 @@ $zindex-tooltip: 1;
 $tooltip-color: #fff;
 $tooltip-bg: $gray-darker;
 $tooltip-arrow-color: $gray-darker;
+//background override
+$brand-primary: $btn-primary-border;
 // Links
 a {
     color: $link-color;

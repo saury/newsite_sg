@@ -54,7 +54,7 @@
         vertical-align: middle;
         white-space: normal;
         word-break: break-all;
-        input,
+        input[type="text"],
         textarea {
             width: 100%;
             &[readonly] {

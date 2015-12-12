@@ -636,7 +636,7 @@
                                         Delivered
                                     </li>
                                     <li>
-                                        <a data-toggle="modal" data-active="rightsReview" data-target="#modal_right" class="btn btn-link btn-xs"><em>View Logistics</em></a>
+                                        <a data-toggle="modal" data-target="#modal_logistics" data-active="logistics" class="btn btn-link btn-xs"><em>View Logistics</em></a>
                                     </li>
                                 </ul>
                             </div>
@@ -2297,7 +2297,6 @@
                                 <p class="help-block text-left"><span class="ft-warning">Address：</span>Singapore victory No. 999 main street, Room 9</p>
                             </div>
                             <!-- case refunding end -->
-
                             <!-- <div class="form-group cf">
                                 <label for="logCom" class="col-md-4 control-label">Logistics information:</label>
                                 <div class="col-md-8">
@@ -2326,6 +2325,266 @@
         </div>
     </div>
     <!-- Rights Modal end -->
+    <!-- logistics info Modal srart-->
+    <div class="modal fade zm-modal" id="modal_logistics" tabindex="-1" role="dialog" aria-labelledby="modal_logisticsLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="pure-u-1-1" role="presentation"><a href="#logistics" aria-controls="modal_acc_logistics" role="tab" data-toggle="tab" modal-size="lg"><h4>logistics Information</h4></a></li>
+                </ul>
+                <form class="tab-content form-horizontal">
+                    <!-- logistics start -->
+                    <div role="tabpanel" class="tab-pane" id="logistics">
+                        <!-- iframe hidden start -->
+                        <!-- <div class="modal-body">
+                            <div class="ffdx-iframe-wrap text-center">
+                                <iframe class="ffdx-iframe" src="https://ws01.ffdx.net/v4/etrack_blank.aspx?stid=dpex&cn=500010380240&version=dpex&txtinput=hide&reqpod=hide" frameborder="0"></iframe>
+                            </div>
+                        </div> -->
+                        <!-- iframe hidden end -->
+                        <!-- clone from the iframe start -->
+                        <div class="modal-body">
+                            <div class="logistics">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div id="div_styperemail" style="display:none">False</div>
+                                                <table cellpadding="3px">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="Size9Bold2">Connote # </td>
+                                                            <td>:</td>
+                                                            <td class="Size9 track-connote">500010380240</td>
+                                                        </tr>
+                                                        <tr id="tr-stype">
+                                                            <td class="Size9Bold2">Service Type</td>
+                                                            <td>:</td>
+                                                            <td class="Size9">Export Non Documents - Retail</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="Size9Bold2" valign="top">Shipped on </td>
+                                                            <td valign="top">:</td>
+                                                            <td class="Size9"> 22 Jan 13 19:35
+                                                                <br>Shanghai (Shanghai) - CHINA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="Size9Bold2">Destination </td>
+                                                            <td valign="top">:</td>
+                                                            <td class="Size9">Maidstone - AUSTRALIA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="Size9Bold2" valign="top">Status </td>
+                                                            <td valign="top">:</td>
+                                                            <td class="Size9">Delivered</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td id="tracking_status_bar" style="padding-top:30px;padding-left:15px;" align="left" valign="top">
+                                                <input id="hiddenOFD" type="hidden">
+                                                <div style="padding-top:15px;padding-left:0px;" align="left">
+                                                    <table style="padding-top:10px;" cellpadding="3">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="" style="color:green;text-align:left;padding-left:5px;">Delivered On : <strong>Friday, January 25, 2013 08:14</strong>
+                                                                    <br>Signed By : <strong>JING</strong></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="sortable">
+                                    <tbody>
+                                        <tr class=" even" id="_0">
+                                            <th style="width:50px;">Date</th>
+                                            <th style="width:40px;">Time</th>
+                                            <th style="width:240px;">Location/Supplied via</th>
+                                            <th>Activity</th>
+                                        </tr>
+                                        <tr class=" odd" id="_1">
+                                            <td>
+                                                <div>25 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>08:14</div>
+                                            </td>
+                                            <td class="trackeventid" value="1">
+                                                <div>Maidstone - AUSTRALIA</div>
+                                            </td>
+                                            <td>
+                                                <div>Delivered</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_2">
+                                            <td>
+                                                <div>25 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>07:13</div>
+                                            </td>
+                                            <td class="trackeventid" value="15">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-15">
+                                                <div>Out for Delivery</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_3">
+                                            <td>
+                                                <div>24 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>19:35</div>
+                                            </td>
+                                            <td class="trackeventid" value="3">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-3">
+                                                <div>In Transit to Destination</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_4">
+                                            <td>
+                                                <div>24 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>17:11</div>
+                                            </td>
+                                            <td class="trackeventid" value="3">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-3">
+                                                <div>In Transit to Destination</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_5">
+                                            <td>
+                                                <div>24 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>08:59</div>
+                                            </td>
+                                            <td class="trackeventid" value="18">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-18">
+                                                <div>Attempted Delivery - Consignee Not Home</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_6">
+                                            <td>
+                                                <div>24 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>07:43</div>
+                                            </td>
+                                            <td class="trackeventid" value="15">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-15">
+                                                <div>Out for Delivery</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_7">
+                                            <td>
+                                                <div>23 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>11:33</div>
+                                            </td>
+                                            <td class="trackeventid" value="3">
+                                                <div>Erskineville - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-3">
+                                                <div>In Transit to Destination</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_8">
+                                            <td>
+                                                <div>23 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>10:58</div>
+                                            </td>
+                                            <td class="trackeventid" value="4">
+                                                <div>Erskineville - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-4">
+                                                <div>Arrived Hub</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_9">
+                                            <td>
+                                                <div>22 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>19:35</div>
+                                            </td>
+                                            <td class="trackeventid" value="3">
+                                                <div>Shanghai (shanghai) - CHINA</div>
+                                            </td>
+                                            <td class="eventname-3">
+                                                <div>In Transit to Destination</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_10">
+                                            <td>
+                                                <div>21 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>18:16</div>
+                                            </td>
+                                            <td class="trackeventid" value="4">
+                                                <div>Shanghai (shanghai) - CHINA</div>
+                                            </td>
+                                            <td class="eventname-4">
+                                                <div>Arrived Hub</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_11">
+                                            <td>
+                                                <div>21 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>16:00</div>
+                                            </td>
+                                            <td class="trackeventid" value="2">
+                                                <div>Shanghai (shanghai) - CHINA</div>
+                                            </td>
+                                            <td class="eventname-2">
+                                                <div>Collection</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br />
+                                <div id="track-footer" style="position:relative;height:30px;">
+                                    <div style="text-align:right;float:right;line-height:17px;" class="Size9">Tracking results provided by GETOnline : 11/12/2015 08:57:12 (GMT)
+                                        <div>frontierforce.com</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- clone from the iframe end -->
+                    </div>
+                    <!-- logistics end -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- logistics info Modal end-->
     <!-- sea.js -->
     <script src="sea-modules/sea.js"></script>
     <!-- sea modules import -->

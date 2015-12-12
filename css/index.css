@@ -2624,6 +2624,7 @@ select.mobile-device { position: absolute !important; top: 0; left: 0; display: 
 .prod-filter dd { background: #fff; line-height: 30px; }
 .prod-filter dd:after { content: none; }
 .prod-filter ul { margin-bottom: 0; }
+.prod-filter ul li { padding-left: 15px; }
 .prod-filter-wrap { padding: 20px 35px; background: #fff; -webkit-box-shadow: 0 4px 8px #ccc; box-shadow: 0 4px 8px #ccc; }
 .prod-filter-wrap a { color: #555555; }
 .prod-filter-wrap a:hover { color: #ff6801; }
@@ -2702,6 +2703,24 @@ select.mobile-device { position: absolute !important; top: 0; left: 0; display: 
 .noav-round { width: 100px; height: 100px; margin-top: -50px; margin-left: -50px; background: #ccc; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
 .noav-prod { margin-top: -55px; }
 .noav .text-center { display: inline-block; color: #fff; width: 80px; height: 80px; border: 2px solid; margin-top: -40px; margin-left: -40px; border-radius: 50%; line-height: 80px !important; font-size: 30px; font-size: 2.14286rem; }
+
+.ffdx-iframe { width: 730px; height: 600px; margin-top: -90px; }
+.ffdx-iframe-wrap { width: 800px; height: 540px; margin: 0 auto; overflow: hidden; }
+
+.logistics { width: 730px; margin: 0 auto 20px; font-size: 11px; font-size: 0.78571rem; }
+.logistics > table { width: 100%; margin-bottom: 20px; }
+
+table.sortable tr td div { overflow: hidden; height: 17px; }
+
+table.sortable tr th:first-child { width: 90px !important; }
+
+table.sortable { border-spacing: 0; border-collapse: collapse; }
+
+table.sortable th, table.sortable td { text-align: left; padding: 4px 5px 4px 5px; background-color: #FFFFFF; color: #424242; height: 17px; vertical-align: top; border: 1px solid #CCC; }
+
+table.sortable th.numeric, table.sortable td.numeric { text-align: right; }
+
+table.sortable th { background-color: #F4F4F4; padding-top: 8px; }
 
 /*!
  * Datetimepicker for Bootstrap v3

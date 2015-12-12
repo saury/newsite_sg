@@ -285,7 +285,7 @@
 //chat box
 .chatBox {
     padding: 6px 0;
-    &-wrap{
+    &-wrap {
         padding: 0 6px;
         margin: 6px 0;
         border: 1px dashed $gray-lightee;
@@ -306,7 +306,7 @@
         position: relative;
     }
     .media-left,
-    .media-right{
+    .media-right {
         max-width: 60px;
     }
     .tooltip-arrow {
@@ -318,10 +318,10 @@
         text-align: justify;
     }
     .tooltip.left {
-        .tooltip-arrow{
+        .tooltip-arrow {
             border-left-color: $acc-banner-blue;
         }
-        .tooltip-inner{
+        .tooltip-inner {
             background: $acc-banner-blue;
             color: #fff;
         }

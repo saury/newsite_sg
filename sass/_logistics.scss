@@ -1,0 +1,59 @@
+// iframe
+.ffdx-iframe {
+    &-wrap {
+        width: 800px;
+        height: 540px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    width: 730px;
+    height: 600px;
+    margin-top: -90px;
+}
+
+.logistics {
+    width: 730px;
+    margin: 0 auto 20px;
+    @include fsize(11);
+    > table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+//logistics table
+
+table.sortable tr td div {
+    overflow: hidden;
+    height: 17px;
+}
+
+table.sortable tr th:first-child {
+    width: 90px !important;
+}
+
+table.sortable {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.sortable th,
+table.sortable td {
+    text-align: left;
+    padding: 4px 5px 4px 5px;
+    background-color: #FFFFFF;
+    color: #424242;
+    height: 17px;
+    vertical-align: top;
+    border: 1px solid #CCC;
+}
+
+table.sortable th.numeric,
+table.sortable td.numeric {
+    text-align: right;
+}
+
+table.sortable th {
+    background-color: #F4F4F4;
+    padding-top: 8px;
+}

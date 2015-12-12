@@ -19,14 +19,14 @@ define(function(require, exports, module) {
     var bselectCascade = require('./zmall/selectCascade.js');
     // mock up data
     var select_cnt = {
-        "Return": ["Size does not comply with", "Damaged", "Poor quality"],
+        "Return": ["Merchandise does not match description", "Broken", "Poor Quality"],
         "Missing": ["Did not receive merchandise（More than 10 days）"]
     };
     // call cascading function
     bselectCascade.selectCascade("cascade1",select_cnt);//(target:"cascade1", data:select_cnt)
     //hide the img upload dom when the "Missing" is choosen
     $('[select-cascade="cascade1"]').eq(0).on("change",function(){
-        if($(this).val()=="Missing"){
+        if($(this).val()=="2"){
             $("." + $(this).attr("select-hide")).addClass("sr-only");
         }
         else{
