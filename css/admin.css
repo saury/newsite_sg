@@ -123,11 +123,21 @@ input, select, textarea, button, a:focus, a:active { outline: 0; }
 .zm-checkbox i { display: none; line-height: 1; }
 .zm-checkbox input { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; filter: alpha(opacity=0); margin: 0 !important; border: 0 !important; cursor: pointer; z-index: 99; }
 .zm-checkbox-sm { width: 16px; height: 16px; font-size: 12px; font-size: 0.85714rem; }
-
+.zm-load { font-size: 60px; font-size: 4.28571rem; padding: 20px; -webkit-animation: zmload 1.8s cubic-bezier(0.5, 1.6, 0.5, -0.4) infinite; -o-animation: zmload 1.8s cubic-bezier(0.5, 1.6, 0.5, -0.4) infinite; animation: zmload 1.8s cubic-bezier(0.5, 1.6, 0.5, -0.4) infinite; }
+.zm-load.sm { font-size: 30px; font-size: 2.14286rem; padding: 8px; }
+@-moz-keyframes zmload { 0% { -moz-transform: rotateZ(0deg); transform: rotateZ(0deg); }
+  100% { -moz-transform: rotateZ(360deg); transform: rotateZ(360deg); } }
+@-webkit-keyframes zmload { 0% { -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg); }
+  100% { -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); } }
+@keyframes zmload { 0% { -moz-transform: rotateZ(0deg); -ms-transform: rotateZ(0deg); -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg); }
+  100% { -moz-transform: rotateZ(360deg); -ms-transform: rotateZ(360deg); -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); } }
 .btn.btn-dashed { border-style: dashed; }
 .btn.btn-bold { border: 2px solid #555555; }
 
 .line-through { text-decoration: line-through; }
+
+hr.dashed { border-top-style: dashed; }
+hr.nomar { margin: 0; }
 
 a { color: #34485E; text-decoration: none; }
 a:hover, a:focus { color: #19222d; text-decoration: underline; }
@@ -137,9 +147,6 @@ a:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outl
 .pagination-info { display: inline-block; color: #555555; }
 .pagination-direct { margin: 0px 20px; }
 .pagination-direct input { width: 34px; height: 34px; }
-
-hr.dashed { border-top-style: dashed; }
-hr.nomar { margin: 0; }
 
 .pure-u-1-15, .pure-u-2-15, .pure-u-3-15, .pure-u-4-15, .pure-u-5-15, .pure-u-6-15, .pure-u-7-15, .pure-u-8-15, .pure-u-9-15, .pure-u-10-15, .pure-u-11-15, .pure-u-12-15, .pure-u-13-15, .pure-u-14-15, .pure-u-15-15, .pure-u-1-20, .pure-u-2-20, .pure-u-3-20, .pure-u-4-20, .pure-u-5-20, .pure-u-6-20, .pure-u-7-20, .pure-u-8-20, .pure-u-9-20, .pure-u-10-20, .pure-u-11-20, .pure-u-12-20, .pure-u-13-20, .pure-u-14-20, .pure-u-15-20, .pure-u-16-20, .pure-u-17-20, .pure-u-18-20, .pure-u-19-20, .pure-u-20-20 { display: inline-block; *display: inline; zoom: 1; letter-spacing: normal; word-spacing: normal; vertical-align: top; text-rendering: auto; font-size: 14px; font-size: 1rem; }
 

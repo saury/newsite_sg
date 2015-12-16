@@ -12,7 +12,7 @@ $use-mozilla-ellipsis-binding: true;
 @import "compass/typography/text/ellipsis";
 ///*variables*/
 $max_w:1190px;
-$min_w:1120px;
+$min_w:1190px;
 //nav
 $nav_dark: #333;
 $nav_dark_hover: #424242;
@@ -297,6 +297,24 @@ $caret-nav-width: 6px;
             @include fsize(12);
         }
     }
+    // load icon
+    &-load {
+        @include fsize(60);
+        padding: 20px;
+        &.sm{
+            @include fsize(30);
+            padding: 8px;
+        }
+        @include animation(zmload 1.8s cubic-bezier(.5,1.6,.5,-0.4) infinite);
+        @include keyframes(zmload) {
+            0% {
+                @include transform(rotateZ(0deg));
+            }
+            100% {
+                @include transform(rotateZ(360deg));
+            }
+        }
+    }
 }
 
 //expand the btn style
@@ -315,4 +333,14 @@ $caret-nav-width: 6px;
 //text decoration line-through
 .line-through {
     text-decoration: line-through;
+}
+
+// hr line style
+hr {
+    &.dashed {
+        border-top-style: dashed;
+    }
+    &.nomar {
+        margin: 0;
+    }
 }

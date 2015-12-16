@@ -1,5 +1,7 @@
 /* ========================================================================
- * Bootstrap: modal.js v3.3.5
+ * + add option to ignore the bg click event
+ * + set header scrollbar's padding right para
+ * based on Bootstrap: modal.js v3.3.5
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -16,6 +18,7 @@
   var Modal = function (element, options) {
     this.options             = options
     this.$body               = $(document.body)
+    this.$header             = $('body > header')
     this.$element            = $(element)
     this.$dialog             = this.$element.find('.modal-dialog')
     this.$backdrop           = null
@@ -23,7 +26,9 @@
     this.originalBodyPad     = null
     this.scrollbarWidth      = 0
     this.ignoreBackdropClick = false
+    this.ignoreBgclick       = this.$element.attr('bgclick') // option to ignore the bg click event
 
+    // console.log(options)
     if (this.options.remote) {
       this.$element
         .find('.modal-content')
@@ -40,8 +45,8 @@
 
   Modal.DEFAULTS = {
     backdrop: true,
-    keyboard: true,
-    show: true
+    keyboard: false,
+    show: true,
   }
 
   Modal.prototype.toggle = function (_relatedTarget) {
@@ -168,7 +173,10 @@
     var that = this
     this.$element.hide()
     this.backdrop(function () {
-      that.$body.removeClass('modal-open')
+      if($('.modal.in').length==0){
+        // overflow hidden removed from body only when there's no modal shown in page 
+        that.$body.removeClass('modal-open')
+      }
       that.resetAdjustments()
       that.resetScrollbar()
       that.$element.trigger('hidden.bs.modal')
@@ -197,7 +205,7 @@
           return
         }
         if (e.target !== e.currentTarget) return
-        this.options.backdrop == 'static'
+        this.options.backdrop == 'static'||this.ignoreBgclick=='ignore'
           ? this.$element[0].focus()
           : this.hide()
       }, this))
@@ -267,11 +275,15 @@
   Modal.prototype.setScrollbar = function () {
     var bodyPad = parseInt((this.$body.css('padding-right') || 0), 10)
     this.originalBodyPad = document.body.style.paddingRight || ''
-    if (this.bodyIsOverflowing) this.$body.css('padding-right', bodyPad + this.scrollbarWidth)
+    if (this.bodyIsOverflowing) {
+      this.$body.css('padding-right', bodyPad + this.scrollbarWidth);
+      this.$header.css('padding-right', bodyPad + this.scrollbarWidth);//header scrollbar padding right init
+    }
   }
 
   Modal.prototype.resetScrollbar = function () {
     this.$body.css('padding-right', this.originalBodyPad)
+    this.$header.css('padding-right', this.originalBodyPad)//header scrollbar padding right reset
   }
 
   Modal.prototype.measureScrollbar = function () { // thx walsh
@@ -321,6 +333,7 @@
     var $this   = $(this)
     var href    = $this.attr('href')
     var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
+    
     var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     if ($this.is('a')) e.preventDefault()
@@ -331,6 +344,7 @@
         $this.is(':visible') && $this.trigger('focus')
       })
     })
+  
     Plugin.call($target, option, this)
   })
 

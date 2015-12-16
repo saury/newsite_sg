@@ -18,13 +18,16 @@ header {
     width: 100%;
     z-index: 999;
     background: #fff;
-    @include transition(all .2s linear);
+    @include transition(margin-top .2s linear);
     //nav partly hidden
     &.hide {
         margin-top: -50px;
         .navbar-default {
             background: $nav_dark;
         }
+    }
+    .container{
+        width: $min_w;
     }
 }
 

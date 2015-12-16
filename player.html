@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>Video Player</title>
+<style>
+* { margin: 0; padding: 0; }
+html, body { height:100%; overflow: hidden; _zoom: 1; }
+</style>
+</head>
+<body>
+<div id="youkuplayer"></div>
+<script src="http://player.youku.com/jsapi"></script>
+<script>
+var config, domPlayer;
+
+function query2Hash(queryStr) {
+  var h = {};
+  var qArr = (queryStr || window.location.search.replace(/\?/, '')).split("&");
+
+  for (var i = 0, len = qArr.length; i < len; i += 1) {
+    var kvArr = qArr[i].split('=');
+    h[kvArr[0]] = kvArr[1];
+  }
+
+  return h;
+}
+
+config = query2Hash();
+
+if (config.vid) {
+  domPlayer = document.getElementById('youkuplayer');
+  domPlayer.style.width = (config.width || '898') + 'px';
+  domPlayer.style.height = (config.height || '547') + 'px';
+  new YKU.Player('youkuplayer',{
+    styleid: '0',
+    client_id: '91a0d45b32079123',
+    vid: config.vid
+  });
+}
+</script>
+</body>
+</html>

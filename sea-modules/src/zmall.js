@@ -36,6 +36,7 @@ define(function(require, exports, module) {
 
     // validator for bootstrap
     var validator = require('./depends/bootstrap/validator.js');
+    $('form[data-toggle="validator"]').validator();
 
     //import the general constants and functions
     var consAndFunc = require('./zmall/consAndFunc.js');
@@ -54,7 +55,7 @@ define(function(require, exports, module) {
     var bNav_scrollspy = require('./zmall/bNav_scrollspy.js');
 
     // date picker config
-    var datePicker = require('./zmall/datepicker.js');
+    // var datePicker = require('./zmall/datepicker.js');
 
     // modal and tab config
     var modalTab = require('./zmall/activeModalTab.js');

@@ -18,12 +18,10 @@
 .indexMain {
     $brandFloor_gray: $gray-lighter;
     margin-top: 150px;
-    min-width: $min_w;
     position: relative;
-    // position: absolute;
-    // left: 50%;
-    // margin-left: -595px;
-    //top: 0;
+    &.container{
+        width: $min_w;
+    }
     //category on the left side of the carousel
     &-category {
         width: 234px;
@@ -36,20 +34,10 @@
         background: rgba(0, 0, 0, .6);
         z-index: 6;
         @include box-sizing(border-box);
-        ul {
-            margin: 0;
-            padding: 0;
-            height: 100%
-        }
-        li {
-            list-style: none;
-            height: 9.09%;
+        .list-unstyled > li {
             line-height: 38px;
             padding: 0 16px;
-            color: #fff;
             cursor: pointer;
-            word-break: break-all;
-            overflow: hidden;
             &:hover {
                 background: $btn_color;
             }
@@ -57,30 +45,35 @@
     }
     //detail for the category on the left side
     &-catDtl {
-        width: 360px;
+        width: 680px;
         height: 460px;
         position: absolute;
         left: 234px;
         top: 0;
         background: #fff;
         color: $gray;
-        //display: none;
         cursor: default;
         @include box-shadow(0px 6px 16px rgba(0, 0, 0, 0.8));
-        max-width: 0;
+        max-width: 0; //hide to adjust
         overflow: hidden;
         @include transition(max-width .5s);
         &.active {
-            max-width: 360px;
+            max-width: 680px;
+            .indexMain-catDtl-wrap{
+                opacity: 1;
+            }
         }
         &-wrap {
-            width: 360px;
-            margin: 10px 0;
+            width: 680px;
+            opacity: 0;//fix safari bug //hide to adjust
+            // margin: 10px 0;
+            @include transition(opacity .3s);
         }
         &-title {
-            position: relative;
-            padding: 0px 12px;
-            border-bottom: 1px solid;
+            // position: relative;
+            // padding: 0px 12px;
+            line-height: 1;
+            border-bottom: 2px solid $btn_color;
             h3 {
                 display: inline-block;
                 margin: 0;
@@ -99,41 +92,25 @@
                 bottom: 0px;
             }
         }
-        &-thumb {
-            width: 30px;
-            height: 45px;
-            display: inline-block;
-            vertical-align: bottom;
-            // TODO: this bg-image is just an example,bg sprite need to be done later after get all the thumbs...
-            background-image: image-url("underwear.png");
-            background-repeat: no-repeat;
-            background-position: center bottom;
-        }
+        // &-thumb {
+        //     width: 30px;
+        //     height: 45px;
+        //     display: inline-block;
+        //     vertical-align: bottom;
+        //     // TODO: this bg-image is just an example,bg sprite need to be done later after get all the thumbs...
+        //     background-image: image-url("underwear.png");
+        //     background-repeat: no-repeat;
+        //     background-position: center bottom;
+        // }
         //detail list style
-        ul {
-            line-height: 0;
-            padding: 8px;
-        }
-        li {
-            display: inline-block;
-            color: $gray;
-            height: 20px;
-            line-height: 20px;
-            padding: 0 4px;
-            margin: 4px 0;
-            width: (360px - 2*8px - 2*8px - 50px)/3;
-            border-right: 1px solid $gray;
-            @include ellipsis(true);
-            &:nth-child(4n) {
-                border: 0;
-                width: 50px;
-            }
-            &:nth-child(4n+1) {
-                color: $btn_color;
-            }
-            &:hover {
-                background: transparent;
-                text-decoration: underline;
+        .list-inline{
+            .col-md-4{
+                height: 38px;
+                @include ellipsis(true);
+                &:nth-child(3n+1){
+                    list-style: disc inside;
+                    display: list-item;
+                }
             }
         }
     }
@@ -220,20 +197,12 @@
                 padding: 0;
                 height: 100%;
             }
-            ul,
             li {
-                margin: 0px;
-                padding: 0px;
-            }
-            ul {
-                height: 100%;
-            }
-            li {
-                list-style: none;
                 height: 25%;
-                position: relative;
-                z-index: 1;
                 @include hoverGray;
+            }
+            .img-responsive{
+                height: 81px;
             }
         }
     }

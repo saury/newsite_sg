@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>New site</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mi/overall.min.css">
+    <!--[if lt IE 9]> 
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <script src="js/bootstrap/H5F.js"></script>
+    <script src="js/selectivizr.js"></script>
+    <![endif]-->
+    <!-- 
+        Notes:
+        h5f: html5 form validator
+        selectivizr: css3 psuedo selector
+     -->
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <!-- header top bar start-->
+        <nav class="navbar navbar-narrow">
+            <div class="container">
+                <div class="row">
+                    <div class="collapse navbar-collapse">
+                        <!-- navs float right -->
+                        <ul class="nav navbar-nav">
+                            <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-map-marker"></i>Receiving countries:<i class="litb-icon-flag us"></i>United States<span class="caret"></span></a>
+                                <ul class="dropdown-menu country-list">
+                                    <li class="country-list-search">
+                                        <div>
+                                            <i class="glyphicon glyphicon-search"></i>
+                                            <input type="text" name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);">
+                                        </div>
+                                    </li>
+                                    <li><a ctr="{'change_to_country':'us'}" href="javascript:void(0);"><i class="litb-icon-flag us"></i><span class="english" data-abbr="us">United States</span></a></li>
+                                    <li><a ctr="{'change_to_country':'au'}" href="javascript:void(0);"><i class="litb-icon-flag au"></i><span class="english" data-abbr="au">Australia</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="glyphicon glyphicon-user"></i>My account</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="login"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="register"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- header top bar end-->
+        <!-- 2nd header bar start-->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="row">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#top">
+                            <img alt="logo" src="img/logo.png">
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                        <!-- navs float right -->
+                        <ul class="nav navbar-nav navbar-right navbar-search">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Costumes</a></li>
+                            <li><a href="#">Cosmetics</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <form class="navbar-form navbar-left navbar-search-form" role="search">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Search for products or links">
+                                </div>
+                                <button type="submit" class="btn navbar-search-btn"><i class="glyphicon glyphicon-search"></i></button>
+                            </form>
+                            <li>
+                                <button class="btn btn-warning btn-lg" data-href="#" data-toggle="popover">
+                                    <span class="badge">4</span><i class="glyphicon glyphicon-shopping-cart"></i><span>shopping cart</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse -->
+                <!-- recommend area -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- 2nd header bar end-->
+    </header>
+    <!-- header end -->
+    <!-- xiaomi ninebot page start -->
+    <div class="indexMain container-fluid">
+        <div id="overall" class="scooter-overall J_visibleSectionContainer row">
+            <div class="section section-intro J_sectionIntro">
+                <div class="container">
+                    <div class="content J_introContent">
+                        <h1 class="title">Ninebot Mini </h1>
+                        <h2 class="subtitle">Cool!  cycling and remote control</h2>
+                        <p class="text">Mini portable design,easy to play
+                            <br />22Km in a single charge,15 items of security technology</p>
+                        <p class="price"><span class="num">679</span>S$</p>
+                        <a data-stat-id="5b18341ff286345d" class="link J_videoTrigger" href="#video" data-video="XMTM2Mzg0MDM4MA==">Watch the video <i class="icon icon-play"></i></a> </div>
+                </div>
+                <div class="stage">
+                    <video class="video" poster="img/mi/pic/overall-intro-video-poster.jpg" preload>
+                        <source type="video/webm" src="img/mi/video/overall-intro-video.webm" />
+                        <source type="video/mp4" src="img/mi/video/overall-intro-video.mp4" />
+                        <img src="img/mi/pic/overall-intro-video.jpg" alt="" />
+                    </video>
+                    <video class="video video-ie hide" poster="img/mi/pic/overall-intro-video-poster.jpg" preload>
+                        <source type="video/mp4" src="img/mi/video/overall-intro-video-ie.mp4" />
+                        <img src="img/mi/pic/overall-intro-video.jpg" alt="" />
+                    </video>
+                </div>
+            </div>
+            <div class="section section-summary">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Start a new journey</h2>
+                        <p class="text">Life is an amusement park,we should enjoy it in every minute.This balance scooter will be your wings,makes you feel like flying.Self balanceing,flexible,easy to drive.Enjoy this,enjoy the feel on the way,enjoy life!</p>
+                        <ul class="feature-list cf">
+                            <li>
+                                <div class="data"><span class="num">3</span>Mins</div>To learn</li>
+                            <li>
+                                <div class="data"><span class="num">4</span>Times</div>Walking speed</li>
+                            <li>
+                                <div class="data"><span class="num">15</span>Degrees</div>Abrupt slope</li>
+                            <li>
+                                <div class="data"><span class="num">22</span>Km</div>Driving distance</li>
+                            <li>
+                                <div class="data"><span class="num num-s">Auto</span></div>Colorful LED</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-guide-intro">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">3 Mins,acquire a new skill</h2>
+                        <p class="text">When you receive ninebot mini, your must be very exciting,it fit you very easily
+                            <br />We designed simple and easy,no need long-term practice.It's easy to control, little bit adaptation can be easily manipulated. The reason it can flexibly according to your intentions to walk, thanks to its equipped with many sensors, constantly to catch the small movements of your body, and dynamically adjust the scooter at a speed of 200 per second posture to keep balance. Innovative Leansteer ® leg direction of control rod is different from general balanced scooter need hands control direction, it can analyze the direction of leg motion control, make driving more relaxed stability. A few minutes to fit in with a little practice, quickly rode on ninebot,share friends with your new skill.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-guide">
+                <ul class="video-list cf J_videoList">
+                    <li>
+                        <div class="mask mask-1"><i class="icon icon-1"></i><span>Forward</span></div>
+                        <video class="video">
+                            <source type="video/webm" src="img/mi/video/overall-guide-video-1.webm" />
+                            <source type="video/mp4" src="img/mi/video/overall-guide-video-1.mp4" />
+                            <img src="img/mi/pic/overall-guide-video-1.jpg" alt="" />
+                        </video>
+                    </li>
+                    <li>
+                        <div class="mask mask-2"><i class="icon icon-2"></i><span>Reverse</span></div>
+                        <video class="video">
+                            <source type="video/webm" src="img/mi/video/scooter/overall-guide-video-2.webm" />
+                            <source type="video/mp4" src="img/mi/video/overall-guide-video-2.mp4" />
+                            <img src="img/mi/pic/overall-guide-video-2.jpg" alt="" />
+                        </video>
+                    </li>
+                    <li>
+                        <div class="mask mask-3"><i class="icon icon-3"></i><span>Slope</span></div>
+                        <video class="video">
+                            <source type="video/webm" src="img/mi/video/overall-guide-video-3.webm" />
+                            <source type="video/mp4" src="img/mi/video/overall-guide-video-3.mp4" />
+                            <img src="img/mi/pic/overall-guide-video-3.jpg" alt="" />
+                        </video>
+                    </li>
+                    <li>
+                        <div class="mask mask-4"><i class="icon icon-4"></i><span>Obstacle</span></div>
+                        <video class="video">
+                            <source type="video/webm" src="img/mi/video/overall-guide-video-4.webm" />
+                            <source type="video/mp4" src="img/mi/video/overall-guide-video-4.mp4" />
+                            <img src="img/mi/pic/overall-guide-video-4.jpg" alt="" />
+                        </video>
+                    </li>
+                </ul>
+            </div>
+            <div class="section section-engine-intro"></div>
+            <div class="section section-engine">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">4 times than walking speed<sup>[2]</sup></h2>
+                        <h3 class="subtitle">Dual engines,700W</h3>
+                        <p class="text">This 12.8Kg scooter's speed can arrive 16km/h.Its high stationarity and balancing quality makes it easy to go through 15 degrees abrupt slope.</p>
+                        <p class="text">Dual engines owns 700W output power rate,instantaneous power is yp to 2000W.Low noise, no need to keep maintenance.</p>
+                        <ul class="feature-list cf">
+                            <li>
+                                <div class="data"><span class="num">700</span>w</div>Rated power,dual engines</li>
+                            <li>
+                                <div class="data"><span class="num">16</span>km/h</div>Speed</li>
+                            <li>
+                                <div class="data"><span class="num">70</span>Nm</div>Maximum torque</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage">
+                    <ol class="bg-list J_bgList">
+                        <li class="bg bg-1">
+                            <div class="figure"></div>
+                        </li>
+                        <li class="bg bg-2">
+                            <div class="figure"></div>
+                        </li>
+                        <li class="bg bg-3">
+                            <div class="figure"></div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="section section-adapt">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Can Drive on Roads that are not Good</h2>
+                        <p class="text">The Ninebot mini has a range of 22km on a single charge and a 16km/h top speed. It can handle slopes of up to 15 degrees and support weights of up to 85kg.</p>
+                        <p class="text">In addition,it has an IP54 rating， which means it has some form of dust protection and can withstand light drizzles.</p>
+                        <ul class="feature-list cf J_tabSwitch" data-tab-target="adapt-tab-container">
+                            <li class="tab-active"><i class="icon icon-1"></i>Rainy days/Wet roads</li>
+                            <li><i class="icon icon-2"></i>Road with sand</li>
+                            <li><i class="icon icon-3"></i>Abrupt slope</li>
+                            <li><i class="icon icon-4"></i>Small obstacle</li>
+                            <li><i class="icon icon-5"></i>Ceramic tile</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage">
+                    <div id="adapt-tab-container" class="tab-container">
+                        <div class="tab-content">
+                            <div class="figure figure-1"></div>
+                        </div>
+                        <div class="tab-content hide">
+                            <div class="figure figure-2"></div>
+                        </div>
+                        <div class="tab-content hide">
+                            <div class="figure figure-3"></div>
+                        </div>
+                        <div class="tab-content hide">
+                            <div class="figure figure-4"></div>
+                        </div>
+                        <div class="tab-content hide">
+                            <div class="figure figure-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-led">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Beautiful comes from the security</h2>
+                        <h3 class="subtitle">Auto sence LED Colorful light</h3>
+                        <p class="text">Consider dark environment driving safety,the beautiful is also unexpected.when you step on the ninebot, lamp system make you cool, bright, light set off to the ground naturally, just like through the spotlight on the stage.What's more, you can decide your tail light color, 16 million kinds of colour just up to you!</p>
+                        <ul class="feature-list cf J_tabSwitch" data-tab-target="led-tab-container">
+                            <li class="tab-active"><i class="icon icon-1"></i>Driving Lamp</li>
+                            <li><i class="icon icon-2"></i>Tail light</li>
+                            <li><i class="icon icon-3"></i>Turning light</li>
+                            <li><i class="icon icon-4"></i>Braking light</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stage">
+                    <div id="led-tab-container" class="tab-container">
+                        <div class="tab-content active">
+                            <div class="figure figure-1"></div>
+                        </div>
+                        <div class="tab-content hide">
+                            <div class="figure figure-2"></div>
+                        </div>
+                        <div class="tab-content hide">
+                            <div class="figure figure-3"></div>
+                        </div>
+                        <div class="tab-content hide">
+                            <div class="figure figure-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-remote-header">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Controlled by Mobile phone <br />Connected with your smart phone through Bluetooth</h2>
+                        <p class="text">The Ninebot Mini also comes with a smartphone app that helps you control the direction of the scooter,though you’ll be reassured to know that it can only do so if nobody is on the scooter.In effect，it lets you use the scooter like a drone to deliver things.Additionally， the app lets you “lock” the scooter， after which an alarm will sound if the scooter is moved.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-remote"></div>
+            <div class="section section-battery">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">22Km Driving Distance </h2>
+                        <p class="text">You may want to know how could this scooter can arrive 22km mileage.Well,it equipped with imported 18650 lithium battery pack,and advanced intelligent BMS(Battery Management System).</p>
+                        <p class="text">BMS will let you know the situation of the battery pack,ensure your safe.</p>
+                    </div>
+                    <div class="stage">
+                        <video class="video" data-autoplay="true" poster="img/mi/pic/overall-battery-video-poster.jpg">
+                            <source type="video/webm" src="img/mi/video/overall-battery-video.webm" />
+                            <source type="video/mp4" src="img/mi/video/overall-battery-video.mp4" />
+                            <img src="img/mi/pic/overall-battery-video.jpg" alt="" />
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-ai">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Intelligent self learning, the more driving,the more enjoyment</h2>
+                        <p class="text">When you constantly improve driving skills,the ninebot mini is also trying to improve.
+                            <br />Based on Ninebot & Segway ten years of experience,the intelligent self learning algorithm,the built-in weight sensor, position sensor, speed sensor, temperature sensor, current sensor tracking your driving data, automatic analysis to adjust control parameters, improve handling and safety for you.
+                            <br />Play fun with New technology.</p>
+                        <ul class="feature-list cf J_tabSwitch" data-tab-target="ai-tab-container">
+                            <li class="tab-active"><i class="icon icon-m"></i>Male</li>
+                            <li><i class="icon icon-f"></i>Female</li>
+                        </ul>
+                        <div class="stage">
+                            <div id="ai-tab-container" class="tab-container">
+                                <div class="tab-content tab-content-male">
+                                    <div class="figure figure-table"></div>
+                                </div>
+                                <div class="tab-content tab-content-female hide">
+                                    <div class="figure figure-table"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-app">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Your keys also your ninebot<br />Mobile intelligent management</h2>
+                        <p class="text">Through a bluetooth connection to your mobile phone<sup>[4]</sup>.A companion smartphone app also lets you control the scooter remotely (what fun!) and alerts you if it is moved while in "locked" mode. In the meantime， the scooter will squeal an alarm while it waits for you to rescue it.</p>
+                        <ul class="feature-list cf J_tabSwitch" data-tab-target="app-tab-container">
+                            <li class="tab-active"><i class="icon icon-1"></i>Burglar alarm
+                            </li>
+                            <li><i class="icon icon-2"></i>Instrument panel
+                            </li>
+                            <li><i class="icon icon-3"></i>Analyze
+                            </li>
+                            <li><i class="icon icon-4"></i>Setting</li>
+                            <li><i class="icon icon-5"></i>Upgrade</li>
+                            <li><i class="icon icon-6"></i>Instruction</li>
+                        </ul>
+                    </div>
+                    <div class="stage">
+                        <div id="app-tab-container" class="tab-container">
+                            <div class="tab-content">
+                                <div class="figure figure-1"></div>
+                            </div>
+                            <div class="tab-content hide">
+                                <div class="figure figure-2"></div>
+                            </div>
+                            <div class="tab-content hide">
+                                <div class="figure figure-3"></div>
+                            </div>
+                            <div class="tab-content hide">
+                                <div class="figure figure-4"></div>
+                            </div>
+                            <div class="tab-content hide">
+                                <div class="figure figure-5"></div>
+                            </div>
+                            <div class="tab-content hide">
+                                <div class="figure figure-6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-weight">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Lightweight, Small, Portable</h2>
+                        <h3 class="subtitle">Light as 12.8 kg, small and easily put into the trunk</h3>
+                        <p class="text">Fits easily in the trunk of your car.</p>
+                        <p class="text">Don't forget to bring it while weekend outing!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-gallery">
+                <ul class="gallery-list cf J_galleryList">
+                    <li class="col-l">
+                        <div class="cell-l">
+                            <div class="figure figure-1"></div>
+                        </div>
+                    </li>
+                    <li class="col-m">
+                        <div class="cell-m cell-m-1">
+                            <div class="figure figure-2"></div>
+                        </div>
+                        <div class="cell-m cell-m-2">
+                            <div class="figure figure-3"></div>
+                        </div>
+                    </li>
+                    <li class="col-r">
+                        <div class="cell-l">
+                            <div class="figure figure-4"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section section-wheel">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Non-slip vacuum tire，Magnesium alloy wheel<br />All in Ninebot Mini</h2>
+                        <p class="text">Super magnesium alloy wheel,10.5 inch vacuum antiskid tyre，incomparable!</p>
+                        <ul class="feature-list cf">
+                            <li><i class="icon icon-1"></i></li>
+                            <li><i class="icon icon-2"></i></li>
+                            <li><i class="icon icon-3"></i></li>
+                            <li><i class="icon icon-4"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-skeleton">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Aerospace-grade magnesium alloy infrastructure</h2>
+                        <p class="text">Small and light and sturdy, with high technology. Using super light quality, robustness and better magnesium alloy as a body skeleton, and according to standard aircraft fuselage for strength design,final with only weighs 0.6 kg of magnesium alloy frame can withstand higher static compressive load.</p>
+                    </div>
+                    <div class="stage">
+                        <div class="figure figure-w-l"></div>
+                        <div class="figure figure-w-r"></div>
+                        <div class="figure figure-b"></div>
+                        <div class="figure figure-m"></div>
+                        <div class="figure figure-t"></div>
+                        <div class="figure figure-s-l"></div>
+                        <div class="figure figure-s-r"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-safe">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">15 items of safeguard</h2>
+                        <p class="text">Since the first day we invented ninebot, safety is our most important task. Ninebot & Segway,with 16 years experience in the field of security technology and data accumulation, up to more than 400 patents, let the ninebot always on safety.</p>
+                        <p class="text">Through seismic reliability test, suspension performance has reached the military level standard, make it can still run smoothly on the rugged bumpy road.<sup>[5]</sup>.</p>
+                        <ul class="feature-list cf">
+                            <li class="top left"><i class="icon icon-1"></i>“Pick up and stop”Protection</li>
+                            <li class="top"><i class="icon icon-2"></i>“Down and stop”Protection</li>
+                            <li class="top"><i class="icon icon-3"></i>Speed alarm and speed down</li>
+                            <li class="top"><i class="icon icon-4"></i>Non-slip vacuum tire</li>
+                            <li class="left"><i class="icon icon-5"></i>Disaster recovery</li>
+                            <li><i class="icon icon-6"></i>Fault alarm and black box</li>
+                            <li><i class="icon icon-7"></i>Boot security self-check</li>
+                            <li><i class="icon icon-8"></i>Intelligent battery monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-scene-gallery">
+                <div class="container">
+                    <div class="content">
+                        <h2 class="title">Everyone's favorite cool toys, you must have one</h2>
+                        <a href="#" class="link">See more pictures &gt;</a>
+                        <!-- http://www.mi.com/scooter/gallery/ -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- xiaomi ninebot page end -->
+    <!-- footer start -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5>Shopping Directory</h5></li>
+                        <li><a class="btn btn-link" href="#">User registration</a></li>
+                        <li><a class="btn btn-link" href="#">Shopping process</a></li>
+                        <li><a class="btn btn-link" href="#">Preferential activities</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5>Payment method</h5></li>
+                        <li><a class="btn btn-link" href="#">Online payment</a></li>
+                        <li><a class="btn btn-link" href="#">Online banking transfer</a></li>
+                        <li><a class="btn btn-link" href="#">Bank transfer</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5>Distribution mode</h5></li>
+                        <li><a class="btn btn-link" href="#">Distribution home</a></li>
+                        <li><a class="btn btn-link" href="#">Point self stripping</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5>Rights</h5></li>
+                        <li><a class="btn btn-link" href="#">Rights policy</a></li>
+                        <li><a class="btn btn-link" href="#">Refund mode</a></li>
+                        <li><a class="btn btn-link" href="#">Rights progress</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <ul class="list-inline">
+                    <li><a class="btn btn-link" href="#">About us</a></li>
+                    <li><a class="btn btn-link" href="#">Corporate culture</a></li>
+                    <li><a class="btn btn-link" href="#">Service purpose</a></li>
+                    <li><a class="btn btn-link" href="#">Join us</a></li>
+                    <li><a class="btn btn-link" href="#">Help center</a></li>
+                    <li><a class="btn btn-link" href="#">Zmallexpress</a></li>
+                </ul>
+            </div>
+            <p class="row text-center">Copyright © 2015 Zmall Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- Login Modal srart-->
+    <div class="modal fade zm-modal" id="modal_log" tabindex="-1" bgclick="ignore" role="dialog" aria-labelledby="modal_logLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="pure-u-1-2" role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab"><h3>Sign in</h3></a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab"><h3>Register</h3></a></li>
+                </ul>
+                <form class="tab-content form-horizontal" data-toggle="validator">
+                    <input type="reset" name="reset" hidden/>
+                    <div role="tabpanel" class="tab-pane active" id="login">
+                        <div class="modal-body">
+                            <div class="form-group form-group-lg">
+                                <label for="account" class="col-md-4 control-label">Account:</label>
+                                <div class="col-md-7">
+                                    <input type="email" class="form-control" id="account" placeholder="E-mail / phone / name ">
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg">
+                                <label for="pwd" class="col-md-4 control-label">Password:</label>
+                                <div class="col-md-7">
+                                    <input type="password" class="form-control" id="pwd" placeholder="">
+                                </div>
+                            </div>
+                            <!-- <div class="form-group form-group-lg">
+                                <label for="reward" class="col-md-4 control-label">Rewards code:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="reward" placeholder="">
+                                </div>
+                            </div> -->
+                            <div class="form-group form-group-lg">
+                                <label for="forget" class="col-md-4 control-label"></label>
+                                <div class="col-md-7">
+                                    <a class="modal-tip high-lighted" href="#">Forget the password?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-xlg">Sign in</button>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="register">
+                        <div class="modal-body">
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="email" class="col-md-4 control-label">E-mail:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="email" placeholder="Please enter your E-mail address" data-error="Email shouldn't be blank" pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" data-pattern-error="Bruh, that email address is invalid" data-minlength="6" data-minlength-error="Minimum of 6 characters" required>
+                                    <!-- data-remote="/path/to/remote/validator" to make an AJAX request to determine if the field is valid or not. -->
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="mobile" class="col-md-4 control-label">Mobile:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="mobile" placeholder="Please enter your mobile number" data-error="Mobile number shouldn't be blank" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="pwd-reg" class="col-md-4 control-label">Password:</label>
+                                <div class="col-md-7">
+                                    <input type="password" class="form-control" id="pwd-reg" placeholder="" data-minlength="6" data-error="Minimum of 6 characters" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg has-feedback">
+                                <label for="pwd-reg2" class="col-md-4 control-label">Confirm:</label>
+                                <div class="col-md-7">
+                                    <input type="password" class="form-control" id="pwd-reg2" data-match="#pwd-reg" data-error="Confirm your password" data-match-error="Whoops, these don't match" placeholder="" required>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                    <span class="help-block with-errors"></span>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg">
+                                <label for="reward-reg" class="col-md-4 control-label">Rewards code:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="reward-reg" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group form-group-lg">
+                                <label for="check1" class="col-md-4 control-label"></label>
+                                <div class="col-md-7">
+                                    <div class="zm-checkbox">
+                                        <input type="checkbox" data-error="Check to process" name="check1" required>
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                    </div>
+                                    <div class="modal-tip flr">I have read and accepted the <a href="#" target="_blank" class="high-lighted">&lt;User Registration Agreement&gt;</a></div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-xlg">Regist Now</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-body">
+                    <div class="modal-success">
+                        <h3>Registered Success</h3>
+                        <a class="btn" href="javascript:void(0);">Hi! Welcome to ZMALL!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal end-->
+    <!-- Account Modal srart-->
+    <div class="modal fade zm-modal" id="modal_acc" tabindex="-1" role="dialog" aria-labelledby="modal_accLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <!-- <li class="pure-u-1-3" role="presentation"><a href="#avatar" aria-controls="modal_acc_avatar" role="tab" data-toggle="tab"><h4>Avatar</h4></a></li> -->
+                    <li class="pure-u-1-2" role="presentation"><a href="#basic" aria-controls="modal_acc_basic" role="tab" data-toggle="tab"><h4>Basic Information</h4></a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#address" aria-controls="modal_acc_address" role="tab" data-toggle="tab" modal-size="lg"><h4>Address Management</h4></a></li>
+                </ul>
+                <form class="tab-content form-horizontal">
+                    <!-- <div role="tabpanel" class="tab-pane active" id="avatar">
+                        <div class="modal-body">
+                            123
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-xlg">Confirm</button>
+                        </div>
+                    </div> -->
+                    <!-- basic information start -->
+                    <div role="tabpanel" class="tab-pane" id="basic">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="account" class="col-md-4 control-label">User name:</label>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" id="user" placeholder="E-mail / phone / name ">
+                                    <span class="help-block"><small>Hey look, this one is a hint!</small></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="account" class="col-md-4 control-label">Email:</label>
+                                <div class="col-md-8">
+                                    <p class="form-control-static">5469****@qq.com
+                                        <a href="#" class="btn btn-warning btn-xs">Activate this email</a>
+                                        <a class="btn btn-success btn-xs">You've actived it.</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-md-4 control-label">Real name:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-md-4 control-label">Gender</label>
+                                <div class="col-md-6">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="gender1" name="gender" value="male">Male
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" id="gender2" name="gender" value="female">Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="birth" class="col-md-4 control-label">Birthday:</label>
+                                <div class="col-md-6 input-group date" data-active="date_picker_birth">
+                                    <input type="text" class="form-control" id="birth">
+                                    <span class="input-group-addon">
+                                         <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="col-md-4 control-label">Phone number:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country" class="col-md-4 control-label">Country:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city" class="col-md-4 control-label">City:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="city">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-3 col-md-offset-4">
+                                    <button type="button" class="btn btn-warning btn-block">Confirm</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" data-dismiss="modal" class="btn btn-warning hollow btn-block">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- basic information end -->
+                    <!-- address management start -->
+                    <div role="tabpanel" class="tab-pane" id="address">
+                        <div class="modal-body acc-table">
+                            <div class="address-strip">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="text-center pure-g cart-thead">
+                                <div class="pure-u-3-24">
+                                    <h5>Consignee</h5></div>
+                                <div class="pure-u-3-24">
+                                    <h5>area</h5></div>
+                                <div class="pure-u-8-24">
+                                    <h5>Detailed address</h5></div>
+                                <div class="pure-u-3-24">
+                                    <h5>Zip code</h5></div>
+                                <div class="pure-u-3-24">
+                                    <h5>Phone number</h5></div>
+                                <div class="pure-u-4-24">
+                                    <h5>Operation</h5></div>
+                            </div>
+                            <div class="td-cnt bordered">
+                                <label class="pure-g btn btn-block no-gutter">
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            Chinese
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            Shanghai
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-8-24 td-wrap">
+                                        <div class="td-inner text-justify">
+                                            ShangHai songjiang qu xinzhuangonglu fgwp r long 13haolou 401shi
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            300387
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            12311111111
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-4-24 td-wrap">
+                                        <ul class="list-unstyled td-inner">
+                                            <li>
+                                                <a href="#" class="btn btn-link btn-xs">Revise</a>|
+                                                <a href="#" class="btn btn-link btn-xs">Delete</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="btn btn-warning btn-xs">Set as default address</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                                <label class="pure-g btn btn-block no-gutter">
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            Chinese
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            Shanghai
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-8-24 td-wrap">
+                                        <div class="td-inner text-justify">
+                                            ShangHai songjiang qu xinzhuangonglu fgwp r long 13haolou 401shi
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            300387
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            12311111111
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-4-24 td-wrap">
+                                        <ul class="list-unstyled td-inner">
+                                            <li>
+                                                <a href="#" class="btn btn-link btn-xs">Revise</a>|
+                                                <a href="#" class="btn btn-link btn-xs">Delete</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="btn btn-success btn-xs">default address</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span class="address-chosen">
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                    </span>
+                                </label>
+                                <label class="pure-g btn btn-block no-gutter" for="">
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            <input type="text" placeholder="Consignee">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            <input type="text" placeholder="Area">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-8-24 td-wrap">
+                                        <div class="td-inner text-justify">
+                                            <input type="text" placeholder="Detailed address">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            <input type="text" placeholder="Zip code">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-3-24 td-wrap">
+                                        <div class="td-inner">
+                                            <input type="text" placeholder="Phone number">
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-4-24 td-wrap">
+                                        <ul class="list-unstyled td-inner">
+                                            <li>
+                                                <a href="#" class="btn btn-info btn-xs">Confirm</a>
+                                                <a href="#" class="btn btn-danger btn-xs">Cancel</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="modal-footer row">
+                                <div class="col-md-8"></div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-warning btn-block">Add New</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" data-dismiss="modal" class="btn btn-warning btn-block">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- address management end -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Account Modal end-->
+    <!-- Recharge Modal start -->
+    <div class="modal fade zm-modal" id="modal_krypton" tabindex="-1" role="dialog" aria-labelledby="modal_krLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <!-- <li class="pure-u-1-3" role="presentation"><a href="#avatar" aria-controls="modal_acc_avatar" role="tab" data-toggle="tab"><h4>Avatar</h4></a></li> -->
+                    <li class="pure-u-1-2" role="presentation"><a href="#netBank" aria-controls="modal_kr_netBank" role="tab" data-toggle="tab"><h4>Internet Banking</h4></a></li>
+                    <li class="pure-u-1-2" role="presentation"><a href="#atmTrans" aria-controls="modal_kr_atmTrans" role="tab" data-toggle="tab"><h4>ATM Transfer</h4></a></li>
+                </ul>
+                <form class="tab-content form-horizontal">
+                    <!-- netBank information start -->
+                    <div role="tabpanel" class="tab-pane modal-body cf" id="netBank">
+                        <!-- progress icons start -->
+                        <div class="modal-body pure-g">
+                            <div class="pure-u-1-3 text-center active">
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-usd"></i>
+                                </div>
+                                1. Complete Transfer
+                                <div class="progress-dot-r">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-3 text-center active">
+                                <div class="progress-dot-l">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-copy"></i>
+                                </div>
+                                2. Submit Form
+                                <div class="progress-dot-r">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-3 text-center active">
+                                <div class="progress-dot-l">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-time"></i>
+                                </div>
+                                3. Waiting For Verification
+                            </div>
+                        </div>
+                        <!-- progress icons end -->
+                        <!-- recharge steps start -->
+                        <div class="panel panel-default">
+                            <!-- 1st step -->
+                            <div class="cf" style="display: ;">
+                                <div class="panel-body pure-g">
+                                    <!-- <p>Minimun Payable Amount: <span class="ft-danger">S$0.00</span></p> -->
+                                    <div class="pure-u-1-24 ft-info"><i class="glyphicon glyphicon-info-sign"></i></div>
+                                    <div class="pure-u-21-24 text-justify ft-lite">You can top up more for future payments, avoid S$100 or S$50,transfer amount like S$100.03 or S$49 instead for faster verification. </div>
+                                </div>
+                                <div class="panel-body">
+                                    <p>Choose a bank to transfer</p>
+                                    <ul class="list-unstyled ft-gray pure-g-wrap pure-u-11-12">
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall DBS Account:</p>
+                                            <p class="pure-u-7-24">054-903335-9</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to DBS website</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall OCBC Account:</p>
+                                            <p class="pure-u-7-24">514-772680-001</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to OCBC website</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall UOB Account:</p>
+                                            <p class="pure-u-7-24">388-302-811-0</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to UOB website</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="panel-body col-md-6 col-md-offset-3">
+                                    <button class="btn btn-acc btn-block">I’ve completed transfer</button>
+                                </p>
+                            </div>
+                            <!-- 2nd step -->
+                            <div class="panel-body" style="display: none;">
+                                <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
+                                <div class="form-group cf">
+                                    <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
+                                    <div class="col-md-6">
+                                        <select class="selectpicker" name="transfer" id="transfer" data-width="100%">
+                                            <option value="">Please select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="gender" class="col-md-4 control-label">Transfer Amount:</label>
+                                    <div class="col-md-8">
+                                        <div class="radio">
+                                            <label class="text-overflow">
+                                                <input type="radio" name="transAmount" value="option1"> Minimum Payable Amount: <span class="ft-danger">S$1000.00</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <div class="radio pure-g">
+                                            <label class="pure-u-7-12">
+                                                <input type="radio" name="transAmount" value="option2"> Other Amount: S$
+                                            </label>
+                                            <span class="pure-u-5-12"><input type="text" class="btn-block" id="transAmountNum"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transNum" class="col-md-4 control-label">Transaction No:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="transNum">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transTime" class="col-md-4 control-label">Transferred Time:</label>
+                                    <div class="col-md-6 input-group date" data-active="date_picker">
+                                        <input type="text" class="form-control" id="transTime" readonly>
+                                        <span class="input-group-addon">
+                                             <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transMob" class="col-md-4 control-label">Mobile No:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="transMob">
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <div class="col-md-3 col-md-offset-7">
+                                        <button type="button" class="btn btn-acc btn-block">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3rd step -->
+                            <div class="panel-body">
+                                <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
+                                <div class="form-group cf">
+                                    <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">Your choise</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="gender" class="col-md-4 control-label">Transfer Amount:</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control-static">Amount: <span class="ft-danger">S$1000.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transNum" class="col-md-4 control-label">Transaction No:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">7164341243123</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transTime" class="col-md-4 control-label">Transferred Time:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">2015-11-11 11:11</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transMob" class="col-md-4 control-label">Mobile No:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">+65-81306643</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <button type="button" class="btn btn-acc btn-block">We'll help you with it ASAP.Thank you!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- recharge steps end -->
+                    </div>
+                    <!-- netBank information end -->
+                    <!-- ATM Transfer information start -->
+                    <div role="tabpanel" class="tab-pane modal-body cf" id="atmTrans">
+                        <!-- progress icons start -->
+                        <div class="modal-body pure-g">
+                            <div class="pure-u-1-3 text-center active">
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-usd"></i>
+                                </div>
+                                1. Complete Transfer
+                                <div class="progress-dot-r">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-3 text-center">
+                                <div class="progress-dot-l">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-copy"></i>
+                                </div>
+                                2. Submit Form
+                                <div class="progress-dot-r">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-3 text-center">
+                                <div class="progress-dot-l">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="acc-banner-icon">
+                                    <span class="icon-half-l"></span>
+                                    <span class="icon-half-r"></span>
+                                    <i class="glyphicon glyphicon-time"></i>
+                                </div>
+                                3. Waiting For Verification
+                            </div>
+                        </div>
+                        <!-- progress icons end -->
+                        <!-- recharge steps start -->
+                        <div class="panel panel-default">
+                            <!-- 1st step -->
+                            <div class="cf" style="display: none;">
+                                <div class="panel-body pure-g">
+                                    <!-- <p>Minimun Payable Amount: <span class="ft-danger">S$0.00</span></p> -->
+                                    <div class="pure-u-1-24 ft-info"><i class="glyphicon glyphicon-info-sign"></i></div>
+                                    <div class="pure-u-21-24 text-justify ft-lite">You can top up more for future payments, avoid S$100 or S$50,transfer amount like S$100.03 or S$49 instead for faster verification. </div>
+                                </div>
+                                <div class="panel-body">
+                                    <p>Choose a bank to transfer</p>
+                                    <ul class="list-unstyled ft-gray pure-g-wrap pure-u-11-12">
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall DBS Account:</p>
+                                            <p class="pure-u-7-24">054-903335-9</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to DBS website</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall OCBC Account:</p>
+                                            <p class="pure-u-7-24">514-772680-001</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to OCBC website</a></p>
+                                        </li>
+                                        <li>
+                                            <p class="pure-u-10-24">Zmall UOB Account:</p>
+                                            <p class="pure-u-7-24">388-302-811-0</p>
+                                            <p class="pure-u-7-24 text-right"><a class="ft-warning" href="#">Go to UOB website</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="panel-body col-md-6 col-md-offset-3">
+                                    <button class="btn btn-acc btn-block">I’ve completed transfer</button>
+                                </p>
+                            </div>
+                            <!-- 2nd step -->
+                            <div class="panel-body" style="display: none;">
+                                <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
+                                <div class="form-group cf">
+                                    <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
+                                    <div class="col-md-6">
+                                        <select class="selectpicker" name="transfer" id="transfer" data-width="100%">
+                                            <option value="">Please select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="gender" class="col-md-4 control-label">Transfer Amount:</label>
+                                    <div class="col-md-8">
+                                        <div class="radio">
+                                            <label class="text-overflow">
+                                                <input type="radio" name="transAmount" value="option1"> Minimum Payable Amount: <span class="ft-danger">S$1000.00</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <div class="radio pure-g">
+                                            <label class="pure-u-7-12">
+                                                <input type="radio" name="transAmount" value="option2"> Other Amount: S$
+                                            </label>
+                                            <span class="pure-u-5-12"><input type="text" class="btn-block" id="transAmountNum"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transNum" class="col-md-4 control-label">Transaction No:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="transNum">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transTime" class="col-md-4 control-label">Transferred Time:</label>
+                                    <div class="col-md-6 input-group date" data-active="date_picker">
+                                        <input type="text" class="form-control" id="transTime" readonly>
+                                        <span class="input-group-addon">
+                                             <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transMob" class="col-md-4 control-label">Mobile No:</label>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="transMob">
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <div class="col-md-3 col-md-offset-7">
+                                        <button type="button" class="btn btn-acc btn-block">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3rd step -->
+                            <div class="panel-body">
+                                <p class="panel-body">Please fill in the transfer information for our finance department to verify: </p>
+                                <div class="form-group cf">
+                                    <label for="transfer" class="col-md-4 control-label">Transfer to:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">Your choise</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="gender" class="col-md-4 control-label">Transfer Amount:</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control-static">Amount: <span class="ft-danger">S$1000.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transNum" class="col-md-4 control-label">Transaction No:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">7164341243123</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transTime" class="col-md-4 control-label">Transferred Time:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">2015-11-11 11:11</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <label for="transMob" class="col-md-4 control-label">Mobile No:</label>
+                                    <div class="col-md-6">
+                                        <p class="form-control-static">+65-81306643</p>
+                                    </div>
+                                </div>
+                                <div class="form-group cf">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <button type="button" class="btn btn-acc btn-block">We'll help you with it ASAP.Thank you!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- recharge steps end -->
+                    </div>
+                    <!-- ATM Transfer information end -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Recharge Modal end -->
+    <!-- Rights Modal start -->
+    <div class="modal fade zm-modal" id="modal_right" tabindex="-1" role="dialog" aria-labelledby="modal_rightLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li class="pure-u-1-1 active" role="presentation"><a href="javascript:void(0);"><h4>Rights Service</h4></a></li>
+                </ul>
+                <ul class="nav nav-tabs sr-only" role="tablist">
+                    <li>
+                        <a href="#rightsForm" role="tab" data-toggle="tab"></a>
+                    </li>
+                    <li>
+                        <a href="#rightsReview" role="tab" data-toggle="tab"></a>
+                    </li>
+                </ul>
+                <form class="tab-content form-horizontal">
+                    <!-- Rights Service start -->
+                    <div role="tabpanel" class="tab-pane modal-body cf active" id="rightsForm">
+                        <!-- form start -->
+                        <div class="modal-body">
+                            <div class="form-group cf">
+                                <label for="prod_id" class="col-md-4 control-label">Product ID:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" name="prod_id" id="prod_id" value="1568237532" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="seller" class="col-md-4 control-label">Seller:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" name="seller" id="seller" value="小米官方旗舰店" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="rightType" class="col-md-4 control-label required">Activist:</label>
+                                <div class="col-md-7">
+                                    <select class="selectpicker" select-hide="form-upload-img" select-cascade="cascade1" name="rightType" id="rightType" data-width="100%">
+                                    </select>
+                                </div>
+                                <div class="col-md-8 col-md-offset-4">
+                                    <p class="help-block"><small>Goods exchanging is currently not available,<br />
+                                    you can ask for goods returning then repurchasing.</small></p>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="reasons" class="col-md-4 control-label required">Reasons:</label>
+                                <div class="col-md-7">
+                                    <select class="selectpicker" select-cascade="cascade1" name="reasons" id="reasons" data-width="100%" disabled>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="explain" class="col-md-4 control-label required">
+                                    Explain:<span class="help-block"><small>(max 200 words)</small></span>
+                                </label>
+                                <div class="col-md-7">
+                                    <textarea class="form-control" id="explain" max-length="200" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group cf form-upload-img">
+                                <label for="upload-img" class="col-md-4 control-label required">Upload documents:</label>
+                                <div class="col-md-7">
+                                    <div class="form-control-static upload-wrap">
+                                        <!-- thumbnail with the delete icon -->
+                                        <div class="upload-thumb">
+                                            <img src="img/brands-thumb.jpg" class="img-responsive">
+                                            <div class="upload-op">
+                                                <i class="glyphicon glyphicon-remove"></i>
+                                            </div>
+                                        </div>
+                                        <!-- icon for uploading photos -->
+                                        <div class="upload-thumb">
+                                            <div class="upload-op">
+                                                <i class="glyphicon glyphicon-plus"></i>
+                                            </div>
+                                            <input id="upload-img" type="file">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-7 col-md-offset-4">
+                                    <p class="form-control-static ft-gray"><span class="ft-warning">*</span> Is required</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-3 col-md-offset-4">
+                                    <button type="button" class="btn btn-warning btn-block">Submit</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" data-dismiss="modal" class="btn btn-warning hollow btn-block">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- form end -->
+                    </div>
+                    <div role="tabpanel" class="tab-pane modal-body cf" id="rightsReview">
+                        <!-- form info start -->
+                        <div class="modal-body">
+                            <div class="form-group cf">
+                                <label for="prod_id" class="col-md-4 control-label">Product ID:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" name="prod_id" id="prod_id" value="1568237532" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="seller" class="col-md-4 control-label">Seller:</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" name="seller" id="seller" value="小米官方旗舰店" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="rightType" class="col-md-4 control-label required">Activist:</label>
+                                <div class="col-md-5">
+                                    <div class="form-control-static">Return</div>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="reasons" class="col-md-4 control-label required">Reasons:</label>
+                                <div class="col-md-8">
+                                    <div class="form-control-static">Size does not comply with</div>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="refund_amount" class="col-md-4 control-label required">Refund amount:</label>
+                                <div class="col-md-4">
+                                    <div class="form-control-static"><span class="ft-warning">180.98</span> S$</div>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="explain" class="col-md-4 control-label">
+                                    Explain:</span>
+                                </label>
+                                <div class="col-md-8">
+                                    <textarea class="form-control" id="explain" max-length="200" rows="3" readonly>demo</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group cf">
+                                <label for="explain" class="col-md-4 control-label">Upload documents:</label>
+                                <div class="col-md-8">
+                                    <div class="upload-wrap">
+                                        <!-- thumbnail with the delete icon -->
+                                        <div class="upload-thumb" href="img/brands-thumb.jpg" data-toggle="lightbox">
+                                            <img src="img/brands-thumb.jpg" class="img-responsive">
+                                            <div class="upload-op">
+                                                <i class="glyphicon glyphicon-zoom-in"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- case processing start -->
+                            <div class="form-group cf">
+                                <label for="refund_amount" class="col-md-4 control-label required">Processing results:</label>
+                                <div class="col-md-8">
+                                    <div class="form-control-static"><span class="ft-success">Processing</span></div>
+                                </div>
+                            </div>
+                            <!-- case processing end -->
+                            <!-- case refunding start -->
+                            <div class="form-group cf">
+                                <label for="refund_amount" class="col-md-4 control-label required">Processing results:</label>
+                                <div class="col-md-8">
+                                    <div class="form-control-static"><span class="ft-warning">Refunding by zmall in advance</span></div>
+                                </div>
+                                <div class="col-md-8 col-md-offset-4">
+                                    <p class="help-block"><small>(View refunds on the account balance)</small></p>
+                                </div>
+                            </div>
+                            <div class="modal-footer cf">
+                                <p class="help-block text-left"><span class="ft-warning">Please send the product to zmall Service Center for subsequent processing</span></p>
+                                <p class="help-block text-left"><span class="ft-warning">Recipient：</span>Zmall Service Center</p>
+                                <p class="help-block text-left"><span class="ft-warning">Address：</span>Singapore victory No. 999 main street, Room 9</p>
+                            </div>
+                            <!-- case refunding end -->
+                            <!-- <div class="form-group cf">
+                                <label for="logCom" class="col-md-4 control-label">Logistics information:</label>
+                                <div class="col-md-8">
+                                    <div class="chatBox-wrap">
+                                        <div class="chatBox text-center cf">
+                                            <span class="label label-default">2015.8.31 15:44</span>
+                                            <div class="media-left" data-toggle="chatTip" data-placement="right" title="Tooltip on right demo demo demo demo Tooltip on right demo demo demo demo">
+                                                <img src="img/brands-thumb.jpg" class="img-responsive img-circle">
+                                            </div>
+                                        </div>
+                                        <div class="chatBox text-center cf">
+                                            <span class="label label-default">2015.8.31 15:44</span>
+                                            <div class="media-right" data-toggle="chatTip" data-placement="left" title="Tooltip on left demo demo demo demo Tooltip on left demo demo demo demo">
+                                                <img src="img/brands-thumb.jpg" class="img-responsive img-circle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- form info end -->
+                    </div>
+                    <!-- Rights Service end -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Rights Modal end -->
+    <!-- logistics info Modal srart-->
+    <div class="modal fade zm-modal" id="modal_logistics" tabindex="-1" role="dialog" aria-labelledby="modal_logisticsLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-brand">
+                        <img alt="logo" src="img/logo.png">
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="pure-u-1-1" role="presentation"><a href="#logistics" aria-controls="modal_acc_logistics" role="tab" data-toggle="tab" modal-size="lg"><h4>logistics Information</h4></a></li>
+                </ul>
+                <form class="tab-content form-horizontal">
+                    <!-- logistics start -->
+                    <div role="tabpanel" class="tab-pane" id="logistics">
+                        <!-- iframe hidden start -->
+                        <!-- <div class="modal-body">
+                            <div class="ffdx-iframe-wrap text-center">
+                                <iframe class="ffdx-iframe" src="https://ws01.ffdx.net/v4/etrack_blank.aspx?stid=dpex&cn=500010380240&version=dpex&txtinput=hide&reqpod=hide" frameborder="0"></iframe>
+                            </div>
+                        </div> -->
+                        <!-- iframe hidden end -->
+                        <!-- clone from the iframe start -->
+                        <div class="modal-body">
+                            <div class="logistics">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div id="div_styperemail" style="display:none">False</div>
+                                                <table cellpadding="3px">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="Size9Bold2">Connote # </td>
+                                                            <td>:</td>
+                                                            <td class="Size9 track-connote">500010380240</td>
+                                                        </tr>
+                                                        <tr id="tr-stype">
+                                                            <td class="Size9Bold2">Service Type</td>
+                                                            <td>:</td>
+                                                            <td class="Size9">Export Non Documents - Retail</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="Size9Bold2" valign="top">Shipped on </td>
+                                                            <td valign="top">:</td>
+                                                            <td class="Size9"> 22 Jan 13 19:35
+                                                                <br>Shanghai (Shanghai) - CHINA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="Size9Bold2">Destination </td>
+                                                            <td valign="top">:</td>
+                                                            <td class="Size9">Maidstone - AUSTRALIA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="Size9Bold2" valign="top">Status </td>
+                                                            <td valign="top">:</td>
+                                                            <td class="Size9">Delivered</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td id="tracking_status_bar" style="padding-top:30px;padding-left:15px;" align="left" valign="top">
+                                                <input id="hiddenOFD" type="hidden">
+                                                <div style="padding-top:15px;padding-left:0px;" align="left">
+                                                    <table style="padding-top:10px;" cellpadding="3">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="" style="color:green;text-align:left;padding-left:5px;">Delivered On : <strong>Friday, January 25, 2013 08:14</strong>
+                                                                    <br>Signed By : <strong>JING</strong></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="sortable">
+                                    <tbody>
+                                        <tr class=" even" id="_0">
+                                            <th style="width:50px;">Date</th>
+                                            <th style="width:40px;">Time</th>
+                                            <th style="width:240px;">Location/Supplied via</th>
+                                            <th>Activity</th>
+                                        </tr>
+                                        <tr class=" odd" id="_1">
+                                            <td>
+                                                <div>25 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>08:14</div>
+                                            </td>
+                                            <td class="trackeventid" value="1">
+                                                <div>Maidstone - AUSTRALIA</div>
+                                            </td>
+                                            <td>
+                                                <div>Delivered</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_2">
+                                            <td>
+                                                <div>25 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>07:13</div>
+                                            </td>
+                                            <td class="trackeventid" value="15">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-15">
+                                                <div>Out for Delivery</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_3">
+                                            <td>
+                                                <div>24 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>19:35</div>
+                                            </td>
+                                            <td class="trackeventid" value="3">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-3">
+                                                <div>In Transit to Destination</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_4">
+                                            <td>
+                                                <div>24 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>17:11</div>
+                                            </td>
+                                            <td class="trackeventid" value="3">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-3">
+                                                <div>In Transit to Destination</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_5">
+                                            <td>
+                                                <div>24 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>08:59</div>
+                                            </td>
+                                            <td class="trackeventid" value="18">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-18">
+                                                <div>Attempted Delivery - Consignee Not Home</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_6">
+                                            <td>
+                                                <div>24 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>07:43</div>
+                                            </td>
+                                            <td class="trackeventid" value="15">
+                                                <div>Port Melbourne (MEL) - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-15">
+                                                <div>Out for Delivery</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_7">
+                                            <td>
+                                                <div>23 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>11:33</div>
+                                            </td>
+                                            <td class="trackeventid" value="3">
+                                                <div>Erskineville - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-3">
+                                                <div>In Transit to Destination</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_8">
+                                            <td>
+                                                <div>23 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>10:58</div>
+                                            </td>
+                                            <td class="trackeventid" value="4">
+                                                <div>Erskineville - AUSTRALIA</div>
+                                            </td>
+                                            <td class="eventname-4">
+                                                <div>Arrived Hub</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_9">
+                                            <td>
+                                                <div>22 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>19:35</div>
+                                            </td>
+                                            <td class="trackeventid" value="3">
+                                                <div>Shanghai (shanghai) - CHINA</div>
+                                            </td>
+                                            <td class="eventname-3">
+                                                <div>In Transit to Destination</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" even" id="_10">
+                                            <td>
+                                                <div>21 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>18:16</div>
+                                            </td>
+                                            <td class="trackeventid" value="4">
+                                                <div>Shanghai (shanghai) - CHINA</div>
+                                            </td>
+                                            <td class="eventname-4">
+                                                <div>Arrived Hub</div>
+                                            </td>
+                                        </tr>
+                                        <tr class=" odd" id="_11">
+                                            <td>
+                                                <div>21 Jan 13</div>
+                                            </td>
+                                            <td>
+                                                <div>16:00</div>
+                                            </td>
+                                            <td class="trackeventid" value="2">
+                                                <div>Shanghai (shanghai) - CHINA</div>
+                                            </td>
+                                            <td class="eventname-2">
+                                                <div>Collection</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br />
+                                <div id="track-footer" style="position:relative;height:30px;">
+                                    <div style="text-align:right;float:right;line-height:17px;" class="Size9">Tracking results provided by GETOnline : 11/12/2015 08:57:12 (GMT)
+                                        <div>frontierforce.com</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- clone from the iframe end -->
+                    </div>
+                    <!-- logistics end -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- logistics info Modal end-->
+    <!-- video modal start -->
+    <div aria-hidden="false" id="video" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="close" data-dismiss="modal" href="javascript: void(0);"><i class="glyphicon glyphicon-remove"></i></a>
+                    <div class="modal-title">&nbsp;</div>
+                </div>
+                <div class="modal-bd"></div>
+            </div>
+        </div>
+    </div>
+    <!-- video modal end -->
+    <!-- sea.js -->
+    <script src="sea-modules/sea.js"></script>
+    <!-- sea modules import -->
+    <script>
+    // seajs config
+    seajs.config({
+        base: "./sea-modules/",
+        // paths: {
+        //     'bs-root': './depends/bootstrap', //bootstrap and general dependency for cmd at base root
+        //     'bs': '../depends/bootstrap', //bootstrap and general dependency for zmall and admin part
+        //     'zm': './zmall',
+        //     'ad': './admin'
+        // },
+        alias: {
+            "$": "jquery.js"
+        },
+    });
+    // zmall main modules import
+    // For development
+    if (location.href.indexOf("?dev") > 0) {
+        seajs.use(['src/zmall']);
+    }
+    // For production
+    else {
+        seajs.use(['dist/js/1.0.0/zmall']);
+    }
+    </script>
+    <!--[if lt IE 9]> 
+    <script>
+        //html5 form validator for browser lower than ie9
+        H5F.setup($('form[data-toggle="validator"]'));
+    </script>
+    <![endif]-->
+    <script src="js/adv/mi/base.min.js"></script>
+    <script src="js/adv/mi/overall.min.js"></script>
+</body>
+
+</html>
