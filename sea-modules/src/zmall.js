@@ -52,10 +52,11 @@ define(function(require, exports, module) {
     var floorJump = require('./zmall/floorJump.js');
 
     //scrollspy for brands page
+    $('#brandNav').parents("body").addClass('zmBrandsPage');//add class name to the body to active the scrollspy
     var bNav_scrollspy = require('./zmall/bNav_scrollspy.js');
 
     // date picker config
-    // var datePicker = require('./zmall/datepicker.js');
+    var datePicker = require('./zmall/datepicker.js');
 
     // modal and tab config
     var modalTab = require('./zmall/activeModalTab.js');

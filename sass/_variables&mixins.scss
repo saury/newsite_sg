@@ -10,6 +10,8 @@
 //import the compass ellipsis component
 $use-mozilla-ellipsis-binding: true;
 @import "compass/typography/text/ellipsis";
+//inconfonts path
+$ifont-path: "../fonts/iconfont/" !default;
 ///*variables*/
 $max_w:1190px;
 $min_w:1190px;
@@ -301,11 +303,11 @@ $caret-nav-width: 6px;
     &-load {
         @include fsize(60);
         padding: 20px;
-        &.sm{
+        &.sm {
             @include fsize(30);
             padding: 8px;
         }
-        @include animation(zmload 1.8s cubic-bezier(.5,1.6,.5,-0.4) infinite);
+        @include animation(zmload 1.8s cubic-bezier(.5, 1.6, .5, -0.4) infinite);
         @include keyframes(zmload) {
             0% {
                 @include transform(rotateZ(0deg));
@@ -313,6 +315,16 @@ $caret-nav-width: 6px;
             100% {
                 @include transform(rotateZ(360deg));
             }
+        }
+    }
+    //feature
+    &-feature {
+        p,li{
+            line-height: 28px;
+            word-spacing: 2px;
+        }
+        p{
+            margin: 20px 0;
         }
     }
 }

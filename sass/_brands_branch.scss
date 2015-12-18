@@ -1,6 +1,7 @@
 @charset "utf-8";
 .bBranch {
     background: $gray-lighter;
+    margin-bottom: -20px;
     //affix style
     &.affix {
         padding-top: 80px;
@@ -83,5 +84,13 @@
                 height: 34px;
             }
         }
+    }
+    // catogory detail list override
+    .indexMain-catDtl{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        @include box-shadow(none);
+        position: unset;
     }
 }

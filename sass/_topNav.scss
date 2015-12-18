@@ -1,7 +1,7 @@
 @charset "utf-8";
 // bootstrap scss for nav
-@import "bootstrap/_glyphicons.scss",
-"bootstrap/_badges.scss",
+@import "bootstrap/_badges.scss",
+//"bootstrap/_glyphicons.scss",
 "bootstrap/_navs.scss",
 "bootstrap/_dropdowns.scss",
 "bootstrap/_forms.scss",
@@ -24,6 +24,7 @@ header {
         margin-top: -50px;
         .navbar-default {
             background: $nav_dark;
+            @include box-shadow(0 0 4px darken($nav_dark, 6.5%));
         }
     }
     .container{
@@ -44,6 +45,7 @@ header {
     max-height: 40px;
     margin-bottom: 10px;
     background: $nav_dark;
+    @include box-shadow(0 0 4px darken($nav_dark, 6.5%));
     .navbar-nav {
         margin-left: -($grid-gutter-width / 2);
     }

@@ -9,7 +9,7 @@ define(function(require) {
             case "birth": //birthday date picker: only date and start from years
                 ele.datetimepicker({
                     viewMode: 'years', //show the year 1st
-                    defaultDate: "1988-01-01",
+                    // defaultDate: "1988-01-01",
                     format: 'YYYY-MM-DD',
                     pickTime: false
                 });

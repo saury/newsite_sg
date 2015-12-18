@@ -131,6 +131,9 @@ input, select, textarea, button, a:focus, a:active { outline: 0; }
   100% { -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); } }
 @keyframes zmload { 0% { -moz-transform: rotateZ(0deg); -ms-transform: rotateZ(0deg); -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg); }
   100% { -moz-transform: rotateZ(360deg); -ms-transform: rotateZ(360deg); -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); } }
+.zm-feature p, .zm-feature li { line-height: 28px; word-spacing: 2px; }
+.zm-feature p { margin: 20px 0; }
+
 .btn.btn-dashed { border-style: dashed; }
 .btn.btn-bold { border: 2px solid #555555; }
 

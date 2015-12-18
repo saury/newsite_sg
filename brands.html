@@ -20,36 +20,38 @@
      -->
 </head>
 
-<body class="zmBrandsPage">
+<body>
     <!-- header start -->
     <header>
         <!-- header top bar start-->
         <nav class="navbar navbar-narrow">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse">
-                    <!-- navs float right -->
-                    <ul class="nav navbar-nav">
-                        <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-map-marker"></i>Receiving countries:<i class="litb-icon-flag us"></i>United States<span class="caret"></span></a>
-                            <ul class="dropdown-menu country-list">
-                                <li class="country-list-search">
-                                    <div>
-                                        <i class="glyphicon glyphicon-search"></i>
-                                        <input type="text" name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);">
-                                    </div>
-                                </li>
-                                <li><a ctr="{'change_to_country':'us'}" href="javascript:void(0);"><i class="litb-icon-flag us"></i><span class="english" data-abbr="us">United States</span></a></li>
-                                <li><a ctr="{'change_to_country':'au'}" href="javascript:void(0);"><i class="litb-icon-flag au"></i><span class="english" data-abbr="au">Australia</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="glyphicon glyphicon-user"></i>My account</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="login"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="register"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
-                    </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="collapse navbar-collapse">
+                        <!-- navs float right -->
+                        <ul class="nav navbar-nav">
+                            <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-map-marker"></i>Receiving countries:<i class="litb-icon-flag us"></i>United States<span class="caret"></span></a>
+                                <ul class="dropdown-menu country-list">
+                                    <li class="country-list-search">
+                                        <div>
+                                            <i class="glyphicon glyphicon-search"></i>
+                                            <input type="text" name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);">
+                                        </div>
+                                    </li>
+                                    <li><a ctr="{'change_to_country':'us'}" href="javascript:void(0);"><i class="litb-icon-flag us"></i><span class="english" data-abbr="us">United States</span></a></li>
+                                    <li><a ctr="{'change_to_country':'au'}" href="javascript:void(0);"><i class="litb-icon-flag au"></i><span class="english" data-abbr="au">Australia</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="glyphicon glyphicon-user"></i>My account</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="login"><i class="glyphicon glyphicon-log-in"></i>Login</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#modal_log" data-active="register"><i class="glyphicon glyphicon-plus-sign"></i>Register</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -58,33 +60,35 @@
         <!-- header top bar end-->
         <!-- 2nd header bar start-->
         <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#top">
-                        <img alt="logo" src="img/logo.png">
-                    </a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                    <!-- navs float right -->
-                    <ul class="nav navbar-nav navbar-right navbar-search">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Costumes</a></li>
-                        <li><a href="#">Cosmetics</a></li>
-                        <li><a href="#">Electronics</a></li>
-                        <form class="navbar-form navbar-left navbar-search-form" role="search">
-                            <div class="form-group">
-                                <input type="text" placeholder="Search for products or links">
-                            </div>
-                            <button type="submit" class="btn navbar-search-btn"><i class="glyphicon glyphicon-search"></i></button>
-                        </form>
-                        <li>
-                            <button class="btn btn-warning btn-lg" data-href="#" data-toggle="popover">
-                                <span class="badge">4</span><i class="glyphicon glyphicon-shopping-cart"></i><span>shopping cart</span>
-                            </button>
-                        </li>
-                    </ul>
+            <div class="container">
+                <div class="row">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#top">
+                            <img alt="logo" src="img/logo.png">
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                        <!-- navs float right -->
+                        <ul class="nav navbar-nav navbar-right navbar-search">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Costumes</a></li>
+                            <li><a href="#">Cosmetics</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <form class="navbar-form navbar-left navbar-search-form" role="search">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Search for products or links">
+                                </div>
+                                <button type="submit" class="btn navbar-search-btn"><i class="glyphicon glyphicon-search"></i></button>
+                            </form>
+                            <li>
+                                <button class="btn btn-warning btn-lg" data-href="#" data-toggle="popover">
+                                    <span class="badge">4</span><i class="glyphicon glyphicon-shopping-cart"></i><span>shopping cart</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
                 <!-- recommend area -->
@@ -101,7 +105,7 @@
             <!-- left nav start -->
             <nav id="brandNav">
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active">
+                    <li>
                         <a href="#floor_1"><i class="icon-category icon-category-1"></i>Ladies Clothing</a>
                     </li>
                     <li>
@@ -1777,7 +1781,58 @@
     </div>
     <!-- brands main end -->
     <!-- footer start -->
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5>Shopping Directory</h5></li>
+                        <li><a class="btn btn-link" href="#">User registration</a></li>
+                        <li><a class="btn btn-link" href="#">Shopping process</a></li>
+                        <li><a class="btn btn-link" href="#">Preferential activities</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5>Payment method</h5></li>
+                        <li><a class="btn btn-link" href="#">Online payment</a></li>
+                        <li><a class="btn btn-link" href="#">Online banking transfer</a></li>
+                        <li><a class="btn btn-link" href="#">Bank transfer</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5>Distribution mode</h5></li>
+                        <li><a class="btn btn-link" href="#">Distribution home</a></li>
+                        <li><a class="btn btn-link" href="#">Point self stripping</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5>Rights</h5></li>
+                        <li><a class="btn btn-link" href="#">Rights policy</a></li>
+                        <li><a class="btn btn-link" href="#">Refund mode</a></li>
+                        <li><a class="btn btn-link" href="#">Rights progress</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <ul class="list-inline">
+                    <li><a class="btn btn-link" href="#">About us</a></li>
+                    <li><a class="btn btn-link" href="#">Corporate culture</a></li>
+                    <li><a class="btn btn-link" href="#">Service purpose</a></li>
+                    <li><a class="btn btn-link" href="#">Join us</a></li>
+                    <li><a class="btn btn-link" href="#">Help center</a></li>
+                    <li><a class="btn btn-link" href="#">Zmallexpress</a></li>
+                </ul>
+            </div>
+            <p class="row text-center">Copyright © 2015 Zmall Inc. All rights reserved.</p>
+        </div>
+    </footer>
     <!-- footer end -->
     <!-- Login Modal srart-->
     <div class="modal fade zm-modal" id="modal_log" tabindex="-1" role="dialog" aria-labelledby="modal_logLabel">
