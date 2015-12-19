@@ -14,106 +14,124 @@
   font-family:"iconfont" !important;
   font-style:normal;
   font-weight:normal;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
   vertical-align: top;
 }
-.i-zuanshisolid                     { &:before{ content: "\e71d"; } }
-.i-crown                            { &:before{ content: "\e62e"; } }
-.i-huangguan                        { &:before{ content: "\e601"; } }
-.i-dianti                           { &:before{ content: "\e66e"; } }
-.i-phone                            { &:before{ content: "\e611"; } }
-.i-youjian                          { &:before{ content: "\e60f"; } }
-.i-houtuiyibu                       { &:before{ content: "\e622"; } }
-.i-nvzhuangneiyi                    { &:before{ content: "\3459"; } }
-.i-iconfonticonnanzhuang1           { &:before{ content: "\f02aa"; } }
-.i-muying                           { &:before{ content: "\e621"; } }
-.i-shouji                           { &:before{ content: "\e6ec"; } }
-.i-icon010                          { &:before{ content: "\e60b"; } }
-.i-jiankangxiezi                    { &:before{ content: "\e7c9"; } }
-.i-nvzhuang                         { &:before{ content: "\e62b"; } }
-.i-baobao                           { &:before{ content: "\e612"; } }
-.i-iconbaobao                       { &:before{ content: "\e653"; } }
-.i-dfdf05                           { &:before{ content: "\e643"; } }
-.i-nvxie                            { &:before{ content: "\f0043"; } }
-.i-icon007                          { &:before{ content: "\e608"; } }
-.i-icon008                          { &:before{ content: "\e609"; } }
-.i-qiche                            { &:before{ content: "\e648"; } }
-.i-jiajujiafang                     { &:before{ content: "\e60a"; } }
-.i-chuju1                           { &:before{ content: "\e660"; } }
-.i-chongwu                          { &:before{ content: "\e678"; } }
-.i-tushu                            { &:before{ content: "\e610"; } }
-.i-neiyi                            { &:before{ content: "\e626"; } }
-.i-icons11                          { &:before{ content: "\e606"; } }
-.i-wenjian                          { &:before{ content: "\e60d"; } }
-.i-shangyiumoveup                   { &:before{ content: "\e64f"; } }
-.i-needfix_write                    { &:before{ content: "\e604"; } }
-.i-zhankaiwenjianjia                { &:before{ content: "\e640"; } }
-.i-wenjianjia                       { &:before{ content: "\e667"; } }
-.i-tuichudenglu                     { &:before{ content: "\e845"; } }
+
+.glyphicon-shopping-cart,
+.i-gouwuche                { &:before { content: "\e600"; } }            
+.i-youhui                  { &:before { content: "\e601"; } }          
+.i-houtui                  { &:before { content: "\e602"; } }          
+.i-wenjiandengdai          { &:before { content: "\e603"; } }                  
+.i-wenjian                 { &:before { content: "\e604"; } }          
+.i-wodedingdan             { &:before { content: "\e605"; } }              
+.i-xieziNF                 { &:before { content: "\e606"; } }          
+.glyphicon-ok-sign,
+.i-zhengque                { &:before { content: "\e607"; } }            
+.i-truck                   { &:before { content: "\e608"; } }        
+.i-nvxie                   { &:before { content: "\e609"; } }        
+.i-zhifuanquan             { &:before { content: "\e60a"; } }              
+.icon-category-3,
+.i-nanzhuang               { &:before { content: "\e60b"; } }            
+.i-jiaoyijilu              { &:before { content: "\e60c"; } }              
+.i-huangguan               { &:before { content: "\e60d"; } }            
+.glyphicon-trash,
+.i-lajitong                { &:before { content: "\e60e"; } }            
+.i-shangyiup               { &:before { content: "\e60f"; } }            
+.glyphicon-chevron-down,
+.i-arrowdown               { &:before { content: "\e610"; } }            
+.glyphicon-menu-left,
+.i-arrowleft               { &:before { content: "\e611"; } }            
+.glyphicon-chevron-up,
+.i-arrowup                 { &:before { content: "\e612"; } }          
+.i-yinxingqia              { &:before { content: "\e613"; } }              
+.glyphicon-menu-right,
+.i-xiangyou                { &:before { content: "\e614"; } }            
+.i-xunzhanghover           { &:before { content: "\e615"; } }                
+.icon-category-8,
+.i-shouji                  { &:before { content: "\e616"; } }          
+.i-textiles                { &:before { content: "\e617"; } }            
+.i-qiandai                 { &:before { content: "\e618"; } }          
+.i-wallet                  { &:before { content: "\e619"; } }          
+.i-iconmoban               { &:before { content: "\e61a"; } }            
+.glyphicon-log-out,
+.i-log-out                 { &:before { content: "\e61b"; } }          
+.icon-category-9,
+.i-bangongyongpin          { &:before { content: "\e61c"; } }                  
+.i-needfix_write           { &:before { content: "\e61d"; } }                
+.i-gouwuche1               { &:before { content: "\e61e"; } }            
+.i-wenjianjia              { &:before { content: "\e61f"; } }              
+.icon-category-6,
+.i-iconbaobao              { &:before { content: "\e620"; } }              
+.i-jiaoyijilu1             { &:before { content: "\e621"; } }              
+.i-zuanshi                 { &:before { content: "\e622"; } }          
+.i-lihe                    { &:before { content: "\e623"; } }        
+.i-iconyuanguzhangdengji   { &:before { content: "\e624"; } }                        
+.icon-category-11,
+.i-muying                  { &:before { content: "\e625"; } }          
+.icon-category-10,
+.i-icon007                 { &:before { content: "\e626"; } }          
+.icon-category-7,
+.i-icon010                 { &:before { content: "\e627"; } }          
+.glyphicon-star,
+.i-shoucang                { &:before { content: "\e628"; } }            
 .glyphicon-question-sign,
-.i-bangzhu                          { &:before{ content: "\e620"; } }
+.i-bangzhu                 { &:before { content: "\e629"; } }          
+.icon-category-5,
+.i-jiankangxiezi           { &:before { content: "\e62a"; } }                
+.i-zhidingicon             { &:before { content: "\e62b"; } }              
+.i-crown                   { &:before { content: "\e62c"; } }        
+.icon-category-2,
+.i-icons04                 { &:before { content: "\e62d"; } }          
+.icon-category-12,
+.i-icons11                 { &:before { content: "\e62e"; } }          
+.i-extoll                  { &:before { content: "\e62f"; } }          
+.i-tuichudenglu            { &:before { content: "\e630"; } }                
 .glyphicon-log-in,
-.i-denglu                           { &:before{ content: "\e622"; } }
+.i-login                   { &:before { content: "\e631"; } }        
+.i-wode                    { &:before { content: "\e632"; } }        
+.i-anquan                  { &:before { content: "\e633"; } }          
 .glyphicon-plus-sign,
-.i-zhuce                            { &:before{ content: "\e657"; } }
-.i-iconwenjian                      { &:before{ content: "\e624"; } }
-.i-wenjiandengdai                   { &:before{ content: "\f002a"; } }
-.i-wenjian1                         { &:before{ content: "\f002f"; } }
-.i-qiandai                          { &:before{ content: "\e605"; } }
-.i-44wodezichanchongzhitubiao1      { &:before{ content: "\e62d"; } }
-.i-jiaoyijilu                       { &:before{ content: "\e60d"; } }
-.i-jiaoyijilu1                      { &:before{ content: "\e60e"; } }
-.i-wodedingdan                      { &:before{ content: "\f000f"; } }
-.i-dingdan                          { &:before{ content: "\e661"; } }
-.i-gouwuche                         { &:before{ content: "\e63d"; } }
-.i-wallet                           { &:before{ content: "\e600"; } }
-.i-lihe                             { &:before{ content: "\e635"; } }
-.i-zuanshi                          { &:before{ content: "\e697"; } }
-.i-arrowup                          { &:before{ content: "\e612"; } }
-.i-arrowdown                        { &:before{ content: "\e60f"; } }
-.i-arrowleft                        { &:before{ content: "\e610"; } }
-.i-xiangyou                         { &:before{ content: "\e631"; } }
-.i-shoucang                         { &:before{ content: "\e6e3"; } }
-.i-fangdajing                       { &:before{ content: "\e605"; } }
-.i-dingwei,
-.glyphicon-map-marker               { &:before{ content: "\e6d7"; } }
-.i-zengjia                          { &:before{ content: "\e60b"; } }
-.i-anquan                           { &:before{ content: "\e63c"; } }
-.i-anquan1                          { &:before{ content: "\e67b"; } }
-.i-tishi                            { &:before{ content: "\e648"; } }
-.i-lajitong                         { &:before{ content: "\e62d"; } }
-.i-wode                             { &:before{ content: "\e605"; } }
-.i-denglu1                          { &:before{ content: "\e60b"; } }
-.i-baojifuben2                      { &:before{ content: "\e639"; } }
-.i-iconshipinqu                     { &:before{ content: "\e6d3"; } }
-.i-zhubaopeishi                     { &:before{ content: "\e613"; } }
-.i-xiemaoxiangbao                   { &:before{ content: "\e611"; } }
-.i-iconfontdtxiezi                  { &:before{ content: "\e619"; } }
-.i-nanzhuang                        { &:before{ content: "\e63c"; } }
-.i-neiyi1                           { &:before{ content: "\f0083"; } }
-.i-nvzhuang1                        { &:before{ content: "\e621"; } }
-.i-dingjiatianxiefujiabiaozhun      { &:before{ content: "\e603"; } }
-.i-xiaojiadian                      { &:before{ content: "\e618"; } }
-.i-muying1                          { &:before{ content: "\e63b"; } }
-.i-jiudianbaihuo                    { &:before{ content: "\e7a3"; } }
-.i-baihuo                           { &:before{ content: "\e61a"; } }
-.i-muying2                          { &:before{ content: "\e612"; } }
-.i-jiadian                          { &:before{ content: "\e6ba"; } }
-.i-shuma                            { &:before{ content: "\e6cf"; } }
-.i-peishi                           { &:before{ content: "\e6c2"; } }
-.i-gaogenxie01                      { &:before{ content: "\e603"; } }
-.i-truck                            { &:before{ content: "\e642"; } }
-.i-gouwuche1                        { &:before{ content: "\3434"; } }
-.i-youhui                           { &:before{ content: "\f0010"; } }
-.i-fangdajing1                      { &:before{ content: "\e627"; } }
-.i-chongwubaihuo                    { &:before{ content: "\e601"; } }
-.i-neiyi2                           { &:before{ content: "\e628"; } }
-.i-nanzhuang1                       { &:before{ content: "\e61b"; } }
-.i-huwaiyundong                     { &:before{ content: "\e609"; } }
-.i-yundongxie                       { &:before{ content: "\f0086"; } }
-.i-zhifuanquan                      { &:before{ content: "\e643"; } }
-.i-guojiyunshu                      { &:before{ content: "\e64e"; } }
-.i-92                               { &:before{ content: "\e676"; } }
-.i-yinxingqia                       { &:before{ content: "\e621"; } }
+.i-iconregister            { &:before { content: "\e634"; } }                
+.i-bianji                  { &:before { content: "\e635"; } }          
+.i-zengjia                 { &:before { content: "\e636"; } }          
+.i-iconwenjian             { &:before { content: "\e637"; } }              
+.icon-category-4,
+.i-huwai                   { &:before { content: "\e638"; } }        
+.icon-category-1,
+.i-nvzhuang                { &:before { content: "\e639"; } }            
+.i-wodeshoucang            { &:before { content: "\e63a"; } }                
+.i-gongwenbao              { &:before { content: "\e63b"; } }              
+.i-tishi                   { &:before { content: "\e63c"; } }        
+.glyphicon-user,
+.i-denglu                  { &:before { content: "\e63d"; } }          
+.i-92                      { &:before { content: "\e63e"; } }      
+.glyphicon-search,
+.i-fangdajing              { &:before { content: "\e63f"; } }              
+.i-lajitong1               { &:before { content: "\e640"; } }            
+.i-kuaisudaozhang          { &:before { content: "\e641"; } }                  
+.glyphicon-map-marker,
+.i-dingwei                 { &:before { content: "\e642"; } }          
+.i-guojiyunshu             { &:before { content: "\e643"; } }              
+.i-huangguantubiao         { &:before { content: "\e644"; } }                  
+.glyphicon-flash,
+.i-133                     { &:before { content: "\e645"; } }      
+.glyphicon-remove,
+.i-remove                  { &:before { content: "\e646"; } }
+.glyphicon-ok,
+.i-ok                      { &:before { content: "\e647"; } }
+.glyphicon-refresh,
+.i-jiazai                  { &:before { content: "\e648"; } }
+.glyphicon-plus,
+.i-plus                    { &:before { content: "\e649"; } }
+.glyphicon-minus,
+.i-minus                   { &:before { content: "\e64a"; } }
+.glyphicon-calendar,
+.i-calendar                { &:before { content: "\e64d"; } }
+.glyphicon-time,
+.i-time                    { &:before { content: "\e64b"; } }
+.glyphicon-pencil,
+.i-pencil                  { &:before { content: "\e64c"; } }

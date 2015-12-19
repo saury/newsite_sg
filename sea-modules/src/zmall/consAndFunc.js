@@ -39,16 +39,16 @@ define(function(require, exports, module) {
                         });
                     });
                     // // active toggle: /* will be included in other script in production */
-                    // $('[active-toggle="true"]').each(function() {
-                    //     var ul_ele = $(this);
-                    //     ul_ele.children("li").each(function() {
-                    //         var li_ele = $(this);
-                    //         li_ele.on("click", function() {
-                    //             li_ele.toggleClass("active");
-                    //             li_ele.find("i").toggleClass("glyphicon-ok");
-                    //         });
-                    //     });
-                    // });
+                    $('[active-toggle="true"]').each(function() {
+                        var ul_ele = $(this);
+                        ul_ele.children("li").each(function() {
+                            var li_ele = $(this);
+                            li_ele.on("click", function() {
+                                li_ele.toggleClass("active");
+                                li_ele.find("i").toggleClass("glyphicon-ok");
+                            });
+                        });
+                    });
 
                     /* // for item detail page // */
                     // gallary photo override

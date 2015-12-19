@@ -6,10 +6,11 @@
         margin-bottom: -20px; //remove the gap to the footer
         label.btn {
             //plane icon
-            .glyphicon-plane {
-                @include fsize(40);
+            .ifont {
+                @include fsize(60);
                 vertical-align: middle;
                 margin: 0 24px;
+                top:-8px;
             }
         }
         .list-unstyled {
@@ -26,8 +27,11 @@
             height: 100px;
             line-height: 98px;
             border: 0;
-            @include fsize(60);
+            font-size: 70px !important;
             margin-bottom: 32px;
+            .ifont{
+                line-height: 90px;
+            }
         }
         .text-center.active {
             color: $gray;

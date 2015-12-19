@@ -69,18 +69,20 @@
         @include transition(all 0.2s linear);
         // loop all the brands color for nav title
         @for $i from 1 through length($brands-color) {
-            &.active a[href="#floor_#{$i}"] {
-                background: nth($brands-color, $i);
-            }
+            &.active a[href="#floor_#{$i}"],
             &:hover a[href="#floor_#{$i}"] {
                 background: nth($brands-color, $i);
             }
         }
         a {
-            @include border-radius(0);
+            // @include border-radius(0);
             padding: 5px 10px;
             color: #fff;
         }
+    }
+    .ifont{
+        @include fsize(16);
+        margin-right: 4px;
     }
 }
 

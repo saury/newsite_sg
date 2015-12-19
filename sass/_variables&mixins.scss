@@ -307,7 +307,11 @@ $caret-nav-width: 6px;
             @include fsize(30);
             padding: 8px;
         }
-        @include animation(zmload 1.8s cubic-bezier(.5, 1.6, .5, -0.4) infinite);
+        // @include animation(zmload 1.8s cubic-bezier(.5, 1.6, .5, -0.4) infinite);
+        @include animation(1s steps(8, end) 0s normal none infinite running zmload);
+        // @include transform-origin(50% 55%);//circle center offset
+        transform-origin: 50% 51.5%;
+        -moz-transform-origin: 50% 55%;
         @include keyframes(zmload) {
             0% {
                 @include transform(rotateZ(0deg));

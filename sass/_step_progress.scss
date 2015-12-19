@@ -15,6 +15,7 @@
                 left: 5px;
                 @include fsize(20);
                 color: $gray-lightee;
+                line-height: 34px;
             }
             .caret {
                 border-top-color: $btn_color;

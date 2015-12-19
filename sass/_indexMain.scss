@@ -7,7 +7,7 @@
 "bootstrap/_type.scss",
 "bootstrap/_grid.scss";
 //import category icons
-@import "iCategory";
+// @import "iCategory";
 //custom style 
 .carousel {
     margin-left: -($grid-gutter-width / 2);
@@ -42,6 +42,11 @@
                 background: $btn_color;
             }
         }
+        .ifont{
+            line-height: 32px;
+            @include fsize(20);
+            margin-right: 4px;
+        }
     }
     //detail for the category on the left side
     &-catDtl {
@@ -74,23 +79,26 @@
             // padding: 0px 12px;
             line-height: 1;
             border-bottom: 2px solid $btn_color;
-            h3 {
-                display: inline-block;
-                margin: 0;
-                font-weight: normal;
-                @include fsize(18);
-                color: $gray;
-                line-height: 20px;
-                vertical-align: bottom;
+            .ifont{
+                line-height: 14px;
             }
-            a {
-                color: $gray-lighte;
-                height: 20px;
-                line-height: 20px;
-                position: absolute;
-                right: 12px;
-                bottom: 0px;
-            }
+            // h3 {
+            //     display: inline-block;
+            //     margin: 0;
+            //     font-weight: normal;
+            //     @include fsize(18);
+            //     color: $gray;
+            //     line-height: 20px;
+            //     vertical-align: bottom;
+            // }
+            // a {
+            //     color: $gray-lighte;
+            //     height: 20px;
+            //     line-height: 20px;
+            //     position: absolute;
+            //     right: 12px;
+            //     bottom: 0px;
+            // }
         }
         // &-thumb {
         //     width: 30px;
@@ -247,6 +255,8 @@
             float: right;
             padding: 0 15px;
             @include fsize(17);
+            .glyphicon-chevron-down,
+            .glyphicon-chevron-up,
             .glyphicon-flash {
                 width: 26px;
                 height: 26px;
@@ -258,6 +268,8 @@
             }
             .glyphicon-chevron-down,
             .glyphicon-chevron-up {
+                border: 0;
+                width: auto;
                 cursor: pointer;
                 @include transition(all .2s linear);
                 &:hover {

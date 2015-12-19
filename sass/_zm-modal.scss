@@ -119,18 +119,13 @@
         float: right;
         height: $close-w;
         width: $close-w;
-        line-height: $close-w;
         margin: ($header-h - $close-w)/2 0;
-        @include fsize(22);
+        line-height: 28px;
         border: 0;
         color: #fff;
         background: $gray-light;
         @include opacity(100);
         @include border-radius(50%);
-        i {
-            top: unset;
-            line-height: inherit;
-        }
     }
     .list-unstyled {
         margin: 0;
