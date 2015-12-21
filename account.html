@@ -31,19 +31,6 @@
                         <!-- navs float right -->
                         <ul class="nav navbar-nav">
                             <!-- <li><a href="#"><i class="glyphicon glyphicon-home"></i>HOME</a></li> -->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-map-marker"></i>Receiving countries:<i class="litb-icon-flag us"></i>United States<span class="caret"></span></a>
-                                <ul class="dropdown-menu country-list">
-                                    <li class="country-list-search">
-                                        <div>
-                                            <i class="glyphicon glyphicon-search"></i>
-                                            <input type="text" name="c_name" id="c_name" onkeydown="show_countries(this.value);" onkeyup="show_countries(this.value);">
-                                        </div>
-                                    </li>
-                                    <li><a ctr="{'change_to_country':'us'}" href="javascript:void(0);"><i class="litb-icon-flag us"></i><span class="english" data-abbr="us">United States</span></a></li>
-                                    <li><a ctr="{'change_to_country':'au'}" href="javascript:void(0);"><i class="litb-icon-flag au"></i><span class="english" data-abbr="au">Australia</span></a></li>
-                                </ul>
-                            </li>
                             <li><a href="#"><i class="glyphicon glyphicon-user"></i>My account</a></li>
                             <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Help center</a></li>
                         </ul>
@@ -1762,7 +1749,7 @@
                                 <div class="acc-banner-icon">
                                     <span class="icon-half-l"></span>
                                     <span class="icon-half-r"></span>
-                                    <i class="glyphicon glyphicon-usd"></i>
+                                    <i class="ifont i-qiandai"></i>
                                 </div>
                                 1. Complete Transfer
                                 <div class="progress-dot-r">
@@ -1770,7 +1757,7 @@
                                     <span></span>
                                 </div>
                             </div>
-                            <div class="pure-u-1-3 text-center active">
+                            <div class="pure-u-1-3 text-center">
                                 <div class="progress-dot-l">
                                     <span></span>
                                     <span></span>
@@ -1778,7 +1765,7 @@
                                 <div class="acc-banner-icon">
                                     <span class="icon-half-l"></span>
                                     <span class="icon-half-r"></span>
-                                    <i class="glyphicon glyphicon-copy"></i>
+                                    <i class="ifont i-wenjian"></i>
                                 </div>
                                 2. Submit Form
                                 <div class="progress-dot-r">
@@ -1786,7 +1773,7 @@
                                     <span></span>
                                 </div>
                             </div>
-                            <div class="pure-u-1-3 text-center active">
+                            <div class="pure-u-1-3 text-center">
                                 <div class="progress-dot-l">
                                     <span></span>
                                     <span></span>
@@ -1794,7 +1781,7 @@
                                 <div class="acc-banner-icon">
                                     <span class="icon-half-l"></span>
                                     <span class="icon-half-r"></span>
-                                    <i class="glyphicon glyphicon-time"></i>
+                                    <i class="ifont i-wenjiandengdai"></i>
                                 </div>
                                 3. Waiting For Verification
                             </div>
@@ -1940,7 +1927,7 @@
                                 <div class="acc-banner-icon">
                                     <span class="icon-half-l"></span>
                                     <span class="icon-half-r"></span>
-                                    <i class="glyphicon glyphicon-usd"></i>
+                                    <i class="ifont i-qiandai"></i>
                                 </div>
                                 1. Complete Transfer
                                 <div class="progress-dot-r">
@@ -1956,7 +1943,7 @@
                                 <div class="acc-banner-icon">
                                     <span class="icon-half-l"></span>
                                     <span class="icon-half-r"></span>
-                                    <i class="glyphicon glyphicon-copy"></i>
+                                    <i class="ifont i-wenjian"></i>
                                 </div>
                                 2. Submit Form
                                 <div class="progress-dot-r">
@@ -1972,7 +1959,7 @@
                                 <div class="acc-banner-icon">
                                     <span class="icon-half-l"></span>
                                     <span class="icon-half-r"></span>
-                                    <i class="glyphicon glyphicon-time"></i>
+                                    <i class="ifont i-wenjiandengdai"></i>
                                 </div>
                                 3. Waiting For Verification
                             </div>
@@ -2615,7 +2602,7 @@
     <!--[if lt IE 9]> 
     <script>
         //html5 form validator for browser lower than ie9
-        H5F.setup($('form[data-toggle="validator"]'));
+        H5F.setup(document.getElementsByTagName("form"));
     </script>
     <![endif]-->
 </body>

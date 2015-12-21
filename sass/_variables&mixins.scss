@@ -24,6 +24,8 @@ $btn_color: #ff6801;
 $icons-catogory-w: 16px;
 $icons-catogory: sprite-map("icon-category/*.png", $layout: diagonal); // 使用对角线拼接方式,可确保生成的两张图片排列顺序一样,且是两倍size
 $icons-catogory2x: sprite-map("icon-category2x/*.png", $layout: diagonal);
+//index floors
+$floor-item-height: 310px;
 //login modal
 $loginMod-bw: 14px; //border width
 $header-bg: #242424;
@@ -156,7 +158,7 @@ $about-block-padding: 60px;
 //import pixeled font face
 //@include font-face("Pixel Font", font-files("XPDR_02.ttf"));
 html {
-    font: normal 14px/20px "Microsoft YaHei", Arial, "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+    font: normal 14px/20px "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
 }
 
 body {
@@ -308,9 +310,10 @@ $caret-nav-width: 6px;
             padding: 8px;
         }
         // @include animation(zmload 1.8s cubic-bezier(.5, 1.6, .5, -0.4) infinite);
-        @include animation(1s steps(8, end) 0s normal none infinite running zmload);
+        @include animation(zmload 1s steps(8, end) 0s normal none infinite);
         // @include transform-origin(50% 55%);//circle center offset
         transform-origin: 50% 51.5%;
+        -webkit-transform-origin: 50% 51.5%;
         -moz-transform-origin: 50% 55%;
         @include keyframes(zmload) {
             0% {

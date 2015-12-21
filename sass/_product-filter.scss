@@ -35,12 +35,12 @@
         padding: 20px 35px;
         background: #fff;
         @include box-shadow(0 4px 8px $gray-lightee);
-        a{
-            color: $gray;
-            &:hover{
-                color: $btn_color;
-            }
-        }
+        // a{
+        //     color: $gray;
+        //     &:hover{
+        //         color: $btn_color;
+        //     }
+        // }
     }
     // remove box
     &-remove{
@@ -55,7 +55,6 @@
             }
         }
         .glyphicon-remove{
-            @include fsize(12);
             margin-right: 8px;
             @include transition(all .2s);
             @include transform(rotateZ(45deg))

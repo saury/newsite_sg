@@ -27,14 +27,18 @@ header {
             @include box-shadow(0 0 4px darken($nav_dark, 6.5%));
         }
     }
-    .container{
+    .container {
         width: $min_w;
+    }
+    a,
+    button {
+        @include transition(all .2s linear);
     }
 }
 
-//limit the max-width of the nav
+// limit the max-width of the nav
 .navbar {
-    @include transition(all .2s linear);
+    // @include transition(all .2s linear);
     &-header {
         width: 205px\0;
     }
@@ -100,7 +104,7 @@ header {
     max-width: 220px;
     overflow: hidden;
     height: 80px;
-    @include transition(all .2s linear);
+    // @include transition(all .2s linear);
     // &:hover {
     //     max-width: 210px;
     // }
@@ -150,7 +154,7 @@ header {
         background: #fff;
         border: 1px solid $gray-lighte;
         color: #666;
-        i{
+        i {
             @include fsize(18);
             line-height: 34px;
         }

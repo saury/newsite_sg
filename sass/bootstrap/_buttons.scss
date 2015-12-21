@@ -114,6 +114,9 @@ a.btn {
         color: #fff;
         @include box-shadow(none);
     }
+    i{
+        line-height: 14px;
+    }
 }
 
 // Link buttons

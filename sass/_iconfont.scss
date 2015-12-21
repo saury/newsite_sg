@@ -43,13 +43,15 @@
 .i-shangyiup               { &:before { content: "\e60f"; } }            
 .glyphicon-chevron-down,
 .i-arrowdown               { &:before { content: "\e610"; } }            
+.glyphicon-chevron-left,
 .glyphicon-menu-left,
 .i-arrowleft               { &:before { content: "\e611"; } }            
 .glyphicon-chevron-up,
 .i-arrowup                 { &:before { content: "\e612"; } }          
 .i-yinxingqia              { &:before { content: "\e613"; } }              
+.glyphicon-chevron-right,
 .glyphicon-menu-right,
-.i-xiangyou                { &:before { content: "\e614"; } }            
+.i-arrowRight              { &:before { content: "\e614"; } }            
 .i-xunzhanghover           { &:before { content: "\e615"; } }                
 .icon-category-8,
 .i-shouji                  { &:before { content: "\e616"; } }          
@@ -135,3 +137,13 @@
 .i-time                    { &:before { content: "\e64b"; } }
 .glyphicon-pencil,
 .i-pencil                  { &:before { content: "\e64c"; } }
+//sort
+.icon-sort                 { &:before { content: "\e64e"; } }
+.glyphicon-sort-by-attributes-alt,
+.icon-sort-attr-down       { &:before { content: "\e64f"; } }
+.glyphicon-sort-by-attributes,
+.icon-sort-attr-up         { &:before { content: "\e650"; } }
+.glyphicon-arrow-down,
+.icon-sort-down            { &:before { content: "\e651"; } }
+.glyphicon-arrow-up,
+.icon-sort-up              { &:before { content: "\e652"; } }

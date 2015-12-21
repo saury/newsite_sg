@@ -290,7 +290,7 @@
             margin: 0px;
             padding: 0px;
             margin: 0 (-$grid-gutter-width / 2);
-            min-height: (310*2+8*2-32*2-4px);
+            min-height: ($floor-item-height*2+20-32*2-4);//20: floor item padding; 32: floor-countDown's height; 4: margin-bottom
             li {
                 text-align: left;
                 padding: 0 14px;
@@ -308,7 +308,7 @@
             &-wrap {
                 border: 1px solid $brandFloor_gray;
                 cursor: pointer;
-                height: 310px;
+                height: $floor-item-height;
                 @include hoverGray;
                 position: relative;
             }
@@ -341,17 +341,17 @@
     }
 }
 
-//colors
-.floor-purple {
-    $floor_purple_bg: #9a3585;
-    $floor_purple_bg_lite: #c360a0;
-    @include floorColor($floor_purple_bg,
-    $floor_purple_bg_lite);
-}
+// //colors
+// .floor-purple {
+//     $floor_purple_bg: #9a3585;
+//     $floor_purple_bg_lite: #c360a0;
+//     @include floorColor($floor_purple_bg,
+//     $floor_purple_bg_lite);
+// }
 
-.floor-red {
-    $floor_red_bg: #ff649d;
-    $floor_red_bg_lite: #fe98bf;
-    @include floorColor($floor_red_bg,
-    $floor_red_bg_lite);
-}
+// .floor-red {
+//     $floor_red_bg: #ff649d;
+//     $floor_red_bg_lite: #fe98bf;
+//     @include floorColor($floor_red_bg,
+//     $floor_red_bg_lite);
+// }

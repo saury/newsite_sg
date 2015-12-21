@@ -80,6 +80,6 @@ define(function(require, exports, module) {
     var toolTip = require('./zmall/cartFly.js');
 
     //mini cart
-    var miniCart = require('./zmall/miniCart.js');
+    // var miniCart = require('./zmall/miniCart.js');
 
 });

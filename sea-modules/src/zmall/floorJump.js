@@ -2,8 +2,9 @@ define(function(require) {
     var $ = jQuery = require('$');
     var jumpFunc = require('./consAndFunc.js');
     //floor jump
+    //use .on() for the dom's defer
     //glyphicon go down
-    $(".indexMain-floor-elevator .glyphicon-chevron-down").click(function() {
+    $(document).on("click",".indexMain-floor-elevator .glyphicon-chevron-down",function() {
         var ele = $(".indexMain-floor-elevator .glyphicon-chevron-down");
         var index = ele.index(this) + 1;
         var dom = $("#floor_" + (index + 1));
@@ -14,7 +15,7 @@ define(function(require) {
         jumpFunc.scrollToFloor(dom);
     });
     //glyphicon go up
-    $(".indexMain-floor-elevator .glyphicon-chevron-up").click(function() {
+    $(document).on("click",".indexMain-floor-elevator .glyphicon-chevron-up",function() {
         var ele = $(".indexMain-floor-elevator .glyphicon-chevron-up");
         var index = ele.index(this);
         var dom = $("#floor_" + (index));
