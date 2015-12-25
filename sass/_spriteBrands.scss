@@ -1,0 +1,32 @@
+//import category icons
+.brand-sprite {
+    background-image: sprite-url($brand-logos); // 只用使用过图片才会触发图片拼接,所以这两行代码只为这个而存在
+}
+
+@mixin fnBrandsSprite($name) {
+    // 传入icon名称
+    // $brand-logos: 拼接的图片, $name: icon名称
+    width: $brand-logos-w; // icon宽度
+    height: $brand-logos-h; // icon高度
+    background-image: sprite-url($brand-logos); // *引用拼接图片
+    background-position: sprite-position($brand-logos, $name);
+    background-repeat: no-repeat;
+    //background-size: image-width('icon-category-sdead192e6d.png') image-height('icon-category-sdead192e6d.png'); // *缩放引用的大图至小图的大小
+}
+
+.brand-logos {
+    width: $brand-logos-w;
+    height: $brand-logos-h;
+    display: inline-block;
+    // margin-right: 8px;
+    // vertical-align: middle;
+    cursor: pointer;
+}
+
+//loop to generate
+@for $i from 1 to 25 {
+  //@debug fnBrandsSprite($i);
+    .brand-logos-#{$i} {
+        @include fnBrandsSprite($i);
+    }
+}

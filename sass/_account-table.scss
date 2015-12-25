@@ -50,6 +50,19 @@
     }
     &-thead {
         padding: 5px 10px;
+        .i-dhl,
+        .i-toll{
+            @include fsize(20);
+            margin: 0px 4px 0 4px;
+        }
+        .i-dhl{
+            color: $brand-danger;
+            line-height: 16px;
+        }
+        .i-toll{
+            color: $brand-success;
+            line-height: 6px;
+        }
     }
     //collections
     &-collect {
@@ -58,6 +71,11 @@
         .pure-u-1-4,
         .pure-u-1-5 {
             padding: 10px;
+        }
+        //override the height then put it to the center
+        .pure-u-1-4 .img-responsive{
+            height: 210.5px;
+            margin: 0 auto;
         }
         // em {
         //     margin: 0;

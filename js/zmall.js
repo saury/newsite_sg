@@ -6,12 +6,13 @@ $(function() {
         $(".zm-checkbox input").change(function() {
             var ele = $(this);
             if (this.checked) {
-                ele.parent().children("i").css("display", "inline");
+                ele.parent().children("i").css("display", "block");
             } else {
                 ele.parent().children("i").css("display", "none");
             }
         });
         //scrollspy for brands page
+        $('#brandNav').parents("body").addClass('zmBrandsPage');//add class name to the body to active the scrollspy
         $('.zmBrandsPage').scrollspy({
             target: '#brandNav',
             offset: navOffset + 1
@@ -37,6 +38,19 @@ $(function() {
                 });
             });
         };
+
+        //left menu affix in account page
+        $('[data-affix="aside"]').each(function() {
+            var ele = $(this);
+            ele.affix({
+                offset: {
+                    top: ele.offset().top - navOffset - 18, //no accuracy
+                    bottom: function() {
+                        return (this.bottom = $('footer').outerHeight(!0) + 44) //no accuracy
+                    }
+                }
+            });
+        });
 
         //active the tab inside the modal
         function activeModalTab() {
@@ -72,14 +86,27 @@ $(function() {
             });
         };
 
+        // filter modal
+        $('[data-target^="#filter"]').each(function() {
+            var ele = $(this);
+            ele.on("click", function() {
+                ele.parent().parent().css('visibility','hidden'); //hide the default filter panel
+            });
+        });
+        // revert the default filter panel
+        $('.prod-filter-detail').on('hide.bs.modal', function () {
+          $(this).siblings().css('visibility','');
+        });
+
         // function for setting the html template of the cart details
         function setCartContent(item, overflow) {
             //hide the "You have xx more items" when the num is 0
-            if (overflow) var _overflowStr = '<div class="mini-cart-hint cf"><p class="fll">You have <em>' + overflow + '</em> more items</p><p class="flr">Total: <em>S$234.23</em></p></div>';
+            var _overflowStr = '';
+            if (overflow) _overflowStr = '<div class="mini-cart-hint cf"><p class="fll">You have <em>' + overflow + '</em> more items</p><p class="flr">Total: <em>S$234.23</em></p></div>';
             else _overflowStr = '';
             var _item=''; 
             $.each(item, function(i,data) {
-                 _item +='<li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="'+data.cart_p_image+'" class="img-responsive"></div><div class="pure-u-7-12"><p>'+data.cart_p_name+'</p><span>'+data.cart_p_attr+'</span></div><div class="pure-u-1-4 text-right"><em>'+data.cart_p_exchange_price+'</em><a href="#" class="btn btn-warning hollow btn-xs cart_delete" cart_id="'+data.cart_id+'">Delete</a></div><li>';
+                 _item +='<li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="'+data.cart_p_image+'" class="img-responsive"></div><div class="pure-u-7-12"><p>'+data.cart_p_name+'</p><span>'+data.cart_p_attr+'</span></div><div class="pure-u-1-4 text-right"><em>'+data.cart_p_exchange_price+'</em><a href="#" class="btn-block cart_delete" cart_id="'+data.cart_id+'"><i class="ifont">&#xe60e;</i></a></div><li>';
             });
             
             //var _item = '<li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="img/brands-thumb.jpg" class="img-responsive"></div><div class="pure-u-7-12"><p>Content content content</p><span>color: 1 Size: M</span></div><div class="pure-u-1-4 text-right"><em>S$234.56</em><a href="#" class="btn btn-warning hollow btn-xs">Delete</a></div><li>';
@@ -106,13 +133,59 @@ $(function() {
             return false;
         };
 
+        // select cascade
+        function selectCascade(target, cnt) {
+                var select = $('[select-cascade="' + target + '"]'); //targets
+        var p_sel = select.eq(0); // 1st select
+        var c_sel = select.eq(1); // 2st select
+        var p_opt_arr = [];
+        var c_opt = '<option value="0">Please select...</option>'; // default options
+        var p_opt = c_opt; // default options
+        for (var i in cnt) {
+            p_opt_arr.push(i); // push the key to the options array
+        }
+        p_opt_arr.forEach(function(item) {
+            p_opt += "<option value='" + (p_opt_arr.indexOf(item)+1) + "'>" + item + "</option>"; //loop and pack the options
+        });
+
+        //init the selects
+        p_sel.empty().append(p_opt);
+        c_sel.empty().append(c_opt);
+        c_sel.prop('disabled', true);
+        select.selectpicker('refresh');
+
+        //cascading work when value changes
+        p_sel.on('change', function() {
+            var sel_val = $(this).val() - 1;
+            for (var j in cnt) {
+                // change according to the key
+                if (p_opt_arr[sel_val] == j) {
+                    c_sel.prop('disabled', false); //make the 2nd select selectable
+                    c_opt = '<option value="0">Please select...</option>'; //init the option again
+                    cnt[j].forEach(function(item) {
+                        c_opt += "<option value='" + (cnt[j].indexOf(item)+1) + "'>" + item + "</option>"; //loop and pack the options
+                    });
+                    c_sel.empty().append(c_opt);
+                    c_sel.selectpicker('refresh');
+                }
+                // recover the 2nd select to unselectable if the first's got no value or 0
+                else if ($(this).val() == ''||$(this).val() == '0') {
+                    c_sel.empty().append(c_opt);
+                    c_sel.prop('disabled', true); //disable the select
+                    c_sel.selectpicker('refresh');
+                }
+            }
+        });
+
+    };
         //return all the functions
         return {
             navOffset: navOffset,
             setCartCnt: setCartContent,
             scroll: scrollToPosition,
             activeMTab: activeModalTab,
-            callAOF: callAffixOverflow
+            callAOF: callAffixOverflow,
+            selCas:selectCascade
         };
     })();
     // bootstrap dropdown
@@ -172,6 +245,13 @@ $(function() {
             $("header").removeClass("hide");
         }
     });
+    // adjust the mainbody to make the footer always stick to the bottom
+    var doc_height = $(document).height(),
+        footerBottom_to_docTop = $('footer').offset().top + $('footer').height() + parseInt($('footer').css('padding-top')) + parseInt($('footer').css('padding-bottom'))
+    var footer_suspend = doc_height - footerBottom_to_docTop;
+    if(footer_suspend>0){
+        $('.indexMain').css('min-height',$('.indexMain').height()+footer_suspend);
+    }
     //active the tab inside the modal
     zmModual.activeMTab();
     //hover to show the category detail in banner left side
@@ -189,24 +269,28 @@ $(function() {
     });
     //floor jump
     //go down
-    $(".glyphicon-chevron-down").click(function() {
-        var index = $(".glyphicon-chevron-down").index(this) + 1;
+    $(document).on("click",".indexMain-floor-elevator .glyphicon-chevron-down",function() {
+        var ele = $(".indexMain-floor-elevator .glyphicon-chevron-down");
+        var index = ele.index(this) + 1;
         var dom = $("#floor_" + (index + 1));
         //to bottom if it's the last icon-down
-        if (index == $(".glyphicon-chevron-down").length) {
+        if (index == ele.length) {
             dom = $("footer");
         }
         zmModual.scroll(dom);
+        return false;
     });
     //go up
-    $(".glyphicon-chevron-up").click(function() {
-        var index = $(".glyphicon-chevron-up").index(this);
+    $(document).on("click",".indexMain-floor-elevator .glyphicon-chevron-up",function() {
+        var ele = $(".indexMain-floor-elevator .glyphicon-chevron-up");
+        var index = ele.index(this);
         var dom = $("#floor_" + (index));
         //back to top if it's the 1st icon-up
         if (index == 0) {
             dom = $("html");
         }
         zmModual.scroll(dom);
+        return false;
     });
     //brands floor nav - click jump
     $("#brandNav a").each(function() {
@@ -240,16 +324,6 @@ $(function() {
     //call Affix Overflow
     zmModual.callAOF();
     // gallary photo override
-    // $("[gallary-override]").each(function() {
-    //     var ele = $(this),
-    //         target = $(".detail-gallary-override");
-    //     var arg = ele.attr("gallary-override");
-    //     ele.on("click", function() {
-    //         if (arg == "true") target.show();
-    //         else target.hide();
-    //     });
-    // });
-        // src pass added
     $("[gallary-override]").each(function() {
         var ele = $(this),
             target = $(".detail-gallary-override");
@@ -279,16 +353,16 @@ $(function() {
         $(this).ekkoLightbox();
     });
     //delete the collections
-    $(document).on('click', '.acc-collect-op', function() {
-        var parentEle = $(this).parent().parent();
-        if (confirm("Delete it?")) {
-            parentEle.fadeOut();
-            setTimeout(function() {
-                parentEle.remove();
-            }, 400);
-        }
-        return false;
-    });
+//    $(document).on('click', '.acc-collect-op', function() {
+//        var parentEle = $(this).parent().parent();
+//        if (confirm("Delete it?")) {
+//            parentEle.fadeOut();
+//            setTimeout(function() {
+//                parentEle.remove();
+//            }, 400);
+//        }
+//        return false;
+//    });
     // date picker general
     $('[data-active*="date_picker"]').each(function() {
         var ele = $(this);
@@ -297,7 +371,7 @@ $(function() {
             case "birth": //birthday date picker
                 ele.datetimepicker({
                     viewMode: 'years', //show the year 1st
-                    defaultDate: "1988-01-01",
+                    // defaultDate: "",
                     format: 'YYYY-MM-DD',
                     pickTime: false
                 });
@@ -306,9 +380,30 @@ $(function() {
                 ele.datetimepicker({
                     viewMode: 'days',
                     showToday: true,
-                    format: 'YYYY-MM-DD HH:mm A',
+                    format: 'YYYY-MM-DD HH:mm',
                 });
                 break;
         }
     });
+
+    // mock up data
+    var select_cnt = {
+        "Return": ["Merchandise does not match description", "Broken", "Poor Quality"],
+        "Missing": ["Did not receive merchandise（More than 10 days）"]
+    };
+    // call cascading function
+    zmModual.selCas("cascade1",select_cnt);//(target:"cascade1", data:select_cnt)
+    // hide the img upload dom when the "Missing" is choosen
+    $('[select-cascade="cascade1"]').eq(0).on("change",function(){
+        if($(this).val()=="2"){
+            $("." + $(this).attr("select-hide")).addClass("sr-only");
+        }
+        else{
+            $("." + $(this).attr("select-hide")).removeClass("sr-only");
+        }
+    });
+    //call normal tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+    //call lazyload
+    $(".lazy-sec img").lazyload();
 });

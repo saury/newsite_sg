@@ -21,7 +21,7 @@ define(function(require) {
     });
 
     //left menu affix in account page
-    $('.left-menu').each(function() {
+    $('[data-affix="aside"]').each(function() {
         var ele = $(this);
         ele.affix({
             offset: {

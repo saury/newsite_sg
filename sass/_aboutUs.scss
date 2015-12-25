@@ -67,5 +67,9 @@
             @include fsize(48);
             margin-bottom: 10px;
         }
+        &-post{
+            background: image-url("about_us_post.jpg") no-repeat center center;
+            height: image-height("about_us_post.jpg");
+        }
     }
 }

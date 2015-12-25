@@ -1,4 +1,4 @@
-define("dist/js/1.0.0/zmall-debug", [ "$-debug", "./depends/bootstrap/transition-debug", "./depends/bootstrap/dropdown-debug", "./depends/bootstrap/carousel-debug", "./depends/bootstrap/button-debug", "./zmall/selectCascade-debug", "./depends/bootstrap/bootstrap-select-debug", "./depends/bootstrap/validator-debug", "./zmall/consAndFunc-debug", "./zmall/dataHref-debug", "./zmall/checkbox_toggle-debug", "./zmall/floorJump-debug", "./zmall/bNav_scrollspy-debug", "./depends/bootstrap/scrollspy-debug", "./zmall/datepicker-debug", "./depends/bootstrap/bootstrap-datetimepicker.min-debug", "./depends/bootstrap/moment.min-debug", "./zmall/activeModalTab-debug", "./depends/bootstrap/modal-debug", "./depends/bootstrap/tab-debug", "./zmall/affixOverflow-debug", "./depends/bootstrap/affix-debug", "./zmall/lightBox-debug", "./depends/bootstrap/ekko-lightbox-debug", "./zmall/menuAccordion-debug", "./depends/bootstrap/collapse-debug", "./zmall/itemGallery-debug", "./depends/jquery.jcarousel.min-debug", "./depends/gallary-carousels-debug", "./zmall/toolTips-debug", "./depends/bootstrap/tooltip-debug", "./zmall/cartFly-debug", "./depends/fly-debug" ], function(require, exports, module) {
+define("dist/js/1.0.0/zmall-debug", [ "$-debug", "./depends/bootstrap/transition-debug", "./depends/bootstrap/dropdown-debug", "./depends/bootstrap/carousel-debug", "./depends/bootstrap/button-debug", "./zmall/selectCascade-debug", "./depends/bootstrap/bootstrap-select-debug", "./depends/bootstrap/validator-debug", "./zmall/consAndFunc-debug", "./zmall/dataHref-debug", "./zmall/checkbox_toggle-debug", "./zmall/floorJump-debug", "./zmall/bNav_scrollspy-debug", "./depends/bootstrap/scrollspy-debug", "./zmall/datepicker-debug", "./depends/bootstrap/bootstrap-datetimepicker.min-debug", "./depends/bootstrap/moment.min-debug", "./zmall/activeModalTab-debug", "./depends/bootstrap/modal-debug", "./depends/bootstrap/tab-debug", "./zmall/affixOverflow-debug", "./depends/bootstrap/affix-debug", "./zmall/lightBox-debug", "./depends/bootstrap/ekko-lightbox-debug", "./zmall/menuAccordion-debug", "./depends/bootstrap/collapse-debug", "./zmall/itemGallery-debug", "./depends/jquery.jcarousel.min-debug", "./depends/gallary-carousels-debug", "./zmall/toolTips-debug", "./depends/bootstrap/tooltip-debug", "./zmall/cartFly-debug", "./depends/fly-debug", "./zmall/miniCart-debug", "./depends/bootstrap/popover-debug" ], function(require, exports, module) {
     var $ = jQuery = require("$-debug");
     // bootstrap transition
     var transition = require("./depends/bootstrap/transition-debug");
@@ -61,6 +61,8 @@ define("dist/js/1.0.0/zmall-debug", [ "$-debug", "./depends/bootstrap/transition
     var toolTip = require("./zmall/toolTips-debug");
     //fly to cart
     var toolTip = require("./zmall/cartFly-debug");
+    //mini cart
+    var miniCart = require("./zmall/miniCart-debug");
 });
 
 define("dist/js/1.0.0/depends/bootstrap/transition-debug", [ "$-debug" ], function(require, exports, module) {
@@ -7162,4 +7164,136 @@ define("dist/js/1.0.0/depends/fly-debug", [ "$-debug" ], function(require, expor
             }
         });
     };
+});
+
+define("dist/js/1.0.0/zmall/miniCart-debug", [ "$-debug", "dist/js/1.0.0/depends/bootstrap/popover-debug", "dist/js/1.0.0/depends/bootstrap/tooltip-debug" ], function(require) {
+    var $ = jQuery = require("$-debug");
+    var lightbox = require("dist/js/1.0.0/depends/bootstrap/popover-debug");
+    // function for setting the html template of the cart details
+    function setCartContent(item, overflow) {
+        //hide the "You have xx more items" when the num is 0
+        if (overflow) var _overflowStr = '<div class="mini-cart-hint cf"><p class="fll">You have <em>' + overflow + '</em> more items</p><p class="flr">Total: <em>S$234.23</em></p></div>'; else _overflowStr = "";
+        var _item = "";
+        $.each(item, function(i, data) {
+            _item += '<li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="' + data.cart_p_image + '" class="img-responsive"></div><div class="pure-u-7-12"><p>' + data.cart_p_name + "</p><span>" + data.cart_p_attr + '</span></div><div class="pure-u-1-4 text-right"><em>' + data.cart_p_exchange_price + '</em><a href="#" class="btn btn-warning hollow btn-xs cart_delete" cart_id="' + data.cart_id + '">Delete</a></div><li>';
+        });
+        //var _item = '<li class="mini-cart-item pure-g"><div class="pure-u-1-6"><img src="img/brands-thumb.jpg" class="img-responsive"></div><div class="pure-u-7-12"><p>Content content content</p><span>color: 1 Size: M</span></div><div class="pure-u-1-4 text-right"><em>S$234.56</em><a href="#" class="btn btn-warning hollow btn-xs">Delete</a></div><li>';
+        // for (var i = 0; i < item.length; i++) {
+        //     _item += "<li>"+item[i]+"</li>";
+        // }
+        //return the whole cart list string
+        return '<ul class="list-unstyled mini-cart">' + _item + "</ul>" + _overflowStr + '<a class="btn btn-warning btn-sm flr" href="/shoppingcart/cart">Checking my cart</a>';
+    }
+    // bootstrap popover
+    $('[data-toggle="popover"]').each(function() {
+        var ele = $(this);
+        var tiktak = function() {};
+        //        console.log(item);
+        //        console.log(shopcart_no);
+        //var item = ["aaa", "bbb", "ccc", "ddd", "eee", "fff"]; //商品内容
+        var overflow = shopcart_no > 5 ? shopcart_no - 5 : 0;
+        //超出商品显示限制条数
+        ele.on("mouseenter", function() {
+            ele.popover({
+                trigger: "manual",
+                placement: "bottom",
+                html: "true",
+                content: setCartContent(item, overflow)
+            });
+            clearTimeout(tiktak);
+            ele.popover("show");
+            ele.siblings(".popover").on("mouseleave", function() {
+                //ele.popover('hide');
+                ele.popover("destroy");
+            });
+        }).on("mouseleave", function() {
+            //item = ["aaa", "bbb", "ccc", "ddd", "eee"];
+            overflow = shopcart_no > 5 ? shopcart_no - 5 : 0;
+            tiktak = setTimeout(function() {
+                if (!$(".popover:hover").length) {
+                    //ele.popover("hide");
+                    ele.popover("destroy");
+                }
+            }, 500);
+        });
+    });
+});
+
+define("dist/js/1.0.0/depends/bootstrap/popover-debug", [ "$-debug", "dist/js/1.0.0/depends/bootstrap/tooltip-debug" ], function(require, exports, module) {
+    var $ = jQuery = require("$-debug");
+    var tooltip = require("dist/js/1.0.0/depends/bootstrap/tooltip-debug");
+    /* ========================================================================
+ * Bootstrap: popover.js v3.3.5
+ * http://getbootstrap.com/javascript/#popovers
+ * ========================================================================
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+    +function($) {
+        "use strict";
+        // POPOVER PUBLIC CLASS DEFINITION
+        // ===============================
+        var Popover = function(element, options) {
+            this.init("popover", element, options);
+        };
+        if (!$.fn.tooltip) throw new Error("Popover requires tooltip.js");
+        Popover.VERSION = "3.3.5";
+        Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
+            placement: "right",
+            trigger: "click",
+            content: "",
+            template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+        });
+        // NOTE: POPOVER EXTENDS tooltip.js
+        // ================================
+        Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype);
+        Popover.prototype.constructor = Popover;
+        Popover.prototype.getDefaults = function() {
+            return Popover.DEFAULTS;
+        };
+        Popover.prototype.setContent = function() {
+            var $tip = this.tip();
+            var title = this.getTitle();
+            var content = this.getContent();
+            $tip.find(".popover-title")[this.options.html ? "html" : "text"](title);
+            $tip.find(".popover-content").children().detach().end()[// we use append for html objects to maintain js events
+            this.options.html ? typeof content == "string" ? "html" : "append" : "text"](content);
+            $tip.removeClass("fade top bottom left right in");
+            // IE8 doesn't accept hiding via the `:empty` pseudo selector, we have to do
+            // this manually by checking the contents.
+            if (!$tip.find(".popover-title").html()) $tip.find(".popover-title").hide();
+        };
+        Popover.prototype.hasContent = function() {
+            return this.getTitle() || this.getContent();
+        };
+        Popover.prototype.getContent = function() {
+            var $e = this.$element;
+            var o = this.options;
+            return $e.attr("data-content") || (typeof o.content == "function" ? o.content.call($e[0]) : o.content);
+        };
+        Popover.prototype.arrow = function() {
+            return this.$arrow = this.$arrow || this.tip().find(".arrow");
+        };
+        // POPOVER PLUGIN DEFINITION
+        // =========================
+        function Plugin(option) {
+            return this.each(function() {
+                var $this = $(this);
+                var data = $this.data("bs.popover");
+                var options = typeof option == "object" && option;
+                if (!data && /destroy|hide/.test(option)) return;
+                if (!data) $this.data("bs.popover", data = new Popover(this, options));
+                if (typeof option == "string") data[option]();
+            });
+        }
+        var old = $.fn.popover;
+        $.fn.popover = Plugin;
+        $.fn.popover.Constructor = Popover;
+        // POPOVER NO CONFLICT
+        // ===================
+        $.fn.popover.noConflict = function() {
+            $.fn.popover = old;
+            return this;
+        };
+    }(jQuery);
 });

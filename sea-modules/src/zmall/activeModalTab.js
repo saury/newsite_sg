@@ -35,4 +35,19 @@ var $ = jQuery = require('$');
             };
         });
     });
+
+    // filter modal
+    $('[data-target^="#filter"]').each(function() {
+        var ele = $(this);
+        ele.on("click", function() {
+            ele.parent().parent().css('visibility','hidden'); //hide the default filter panel
+        });
+    });
+    // revert the default filter panel
+    $('.prod-filter-detail').on('shown.bs.modal', function () {
+      $('body').removeClass('modal-open').css('padding-right','0');
+      $('header').css('padding-right','0')
+    }).on('hide.bs.modal', function () {
+      $(this).siblings().css('visibility','');
+    });
 });

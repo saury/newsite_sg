@@ -87,13 +87,14 @@
     .ifont{
         @include fsize(16);
         margin-right: 4px;
+        margin-left: -2px;
     }
 }
 
 //loop all the brands color for right side's title
 @for $i from 1 through length($brands-color) {
     #floor_#{$i} {
-        @include floorColor(nth($brands-color, $i), darken(nth($brands-color, $i),5%));
+        @include floorColor(nth($brands-color, $i), darken(nth($brands-color, $i),8%));
         .brandMain-floor-titleBar {
             background: nth($brands-color, $i) !important;
         }

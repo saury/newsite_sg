@@ -23,7 +23,13 @@ define(function(require, exports, module) {
                             $("header").removeClass("hide");
                         }
                     });
-
+                    // adjust the mainbody to make the footer always stick to the bottom
+                    var doc_height = $(document).height(),
+                        footerBottom_to_docTop = $('footer').offset().top + $('footer').height() + parseInt($('footer').css('padding-top')) + parseInt($('footer').css('padding-bottom'))
+                    var footer_suspend = doc_height - footerBottom_to_docTop;
+                    if(footer_suspend>0){
+                        $('.indexMain').css('min-height',$('.indexMain').height()+footer_suspend);
+                    }
                     /* // for index // */
                     //hover to show the category detail in banner left side of index
                     $(".indexMain-category li").each(function() {

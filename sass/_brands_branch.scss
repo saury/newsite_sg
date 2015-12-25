@@ -20,7 +20,7 @@
             height: auto;
             background: #fff;
             border-top: 1px solid $gray-lighter;
-            @include box-shadow(0 4px 8px $gray-lightee);
+            @include box-shadow(0 2px 8px $gray-lightee);
         }
         >span {
             display: inline-block;
@@ -37,6 +37,11 @@
         padding: 0;
         .pure-u-1-5 {
             padding: 15px;
+            //limit the max-height then put it to the center
+            .img-responsive{
+                height: 204px;
+                margin: 0 auto;
+            }
         }
         &-wrap {
             padding: 4px;
@@ -45,7 +50,7 @@
             span,
             p {
                 padding: 0;
-                line-height: unset;
+                line-height: 16px;
             }
             p {
                 @include fsize(16);
@@ -53,7 +58,7 @@
             span {
                 display: inline-block;
                 margin-top: 6px;
-                position: unset;
+                position: static;
                 line-height: 16px;
             }
         }

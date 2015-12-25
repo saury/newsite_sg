@@ -21,9 +21,12 @@ $nav_dark_hover: #424242;
 $nav_gray: #afafaf;
 $btn_color: #ff6801;
 //icon-category
-$icons-catogory-w: 16px;
 $icons-catogory: sprite-map("icon-category/*.png", $layout: diagonal); // 使用对角线拼接方式,可确保生成的两张图片排列顺序一样,且是两倍size
 $icons-catogory2x: sprite-map("icon-category2x/*.png", $layout: diagonal);
+//brand logos
+$brand-logos: sprite-map("brands/*.png", $layout: smart);
+$brand-logos-w: 132px;
+$brand-logos-h: 81px;
 //index floors
 $floor-item-height: 310px;
 //login modal
@@ -34,13 +37,13 @@ $close-w:34px;
 //brands page
 //brands color for 12 floors
 $brands-color: #993585,
+#3a4446,
 #ff649d,
-#f02681,
-#f135cc,
-#12a3dc,
-#5f7cd0,
-#3036a4,
-#154484,
+#5fd5ee,
+#607cd0,
+#ff9393,
+#3b4fc5,
+#6b34cf,
 #3989da,
 #209e55,
 #ecbc13,
@@ -101,7 +104,7 @@ $about-block-padding: 60px;
 @mixin hoverGray {
     @include transition(all 0.2s linear);
     &:hover {
-        @include box-shadow(0 9.27px 30px rgba(0, 0, 0, 0.2));
+        @include box-shadow(0 9px 30px rgba(0, 0, 0, 0.2));
         @include transform(translate3d(0, -1px, 0));
         z-index: 10;
     }
@@ -295,14 +298,33 @@ $caret-nav-width: 6px;
             cursor: pointer;
             z-index: 99;
         }
-        &-sm {
+        &-sm,
+        &.sm {
             width: 16px;
             height: 16px;
             @include fsize(12);
         }
+        &.xs {
+            width: 12px;
+            height: 12px;
+            @include fsize(11);
+            .glyphicon-ok{
+                line-height: 6px;
+            }
+        }
     }
     // load icon
     &-load {
+        &-wrap{
+            position: absolute;
+            display: table;
+            width: 100%;
+            z-index: 1;
+            > div{
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
         @include fsize(60);
         padding: 20px;
         &.sm {
